@@ -1,0 +1,236 @@
+/* Owner: Archana — navbar, hero, features, footer */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(11, 15, 26, 0.85);
+  border-bottom: 1px solid var(--border);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.brand__logo {
+  font-size: 1.4rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  font-size: 1.1rem;
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0 2.5rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  line-height: 1.1;
+  margin: 0.5rem 0 1rem;
+  max-width: 720px;
+  background: linear-gradient(135deg, #fff 0%, #c4b5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__text {
+  max-width: 620px;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Features */
+.features {
+  padding: 2.5rem 0;
+}
+
+.features h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.features__card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.features__card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.features__card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+  padding: 2.5rem 0;
+  background: rgba(11, 15, 26, 0.5);
+}
+
+.footer__inner {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer a {
+  color: #c4b5fd;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: #e9d5ff;
+}
+
+.page {
+  padding: 1rem 0 3rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero {
+    padding: 2.5rem 0 1.5rem;
+  }
+}
+
+/*
+Padding 1
+Padding 2
+Padding 3
+Padding 4
+Padding 5
+Padding 6
+Padding 7
+Padding 8
+Padding 9
+Padding 10
+Padding 11
+Padding 12
+Padding 13
+Padding 14
+Padding 15
+Padding 16
+Padding 17
+Padding 18
+Padding 19
+Padding 20
+Padding 21
+Padding 22
+Padding 23
+Padding 24
+Padding 25
+Padding 26
+Padding 27
+Padding 28
+Padding 29
+Padding 30
+Padding 31
+Padding 32
+Padding 33
+Padding 34
+Padding 35
+Padding 36
+Padding 37
+Padding 38
+Padding 39
+*/
