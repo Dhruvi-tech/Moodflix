@@ -1,4 +1,4 @@
-﻿<p align="center">
+<p align="center">
   <img src="assets/logo.svg" alt="MoodFlix Logo" width="600" />
 </p>
 
@@ -9,10 +9,10 @@
 </p>
 
 <p align="center">
-  <a href="#-the-moods">The Moods</a> â€¢
-  <a href="#-key-features">Key Features</a> â€¢
-  <a href="#-vibe-gallery">Vibe Gallery</a> â€¢
-  <a href="#-getting-started">Getting Started</a> â€¢
+  <a href="#-the-moods">The Moods</a> •
+  <a href="#-key-features">Key Features</a> •
+  <a href="#-vibe-gallery">Vibe Gallery</a> •
+  <a href="#-getting-started">Getting Started</a> •
   <a href="#-project-architecture">Architecture</a>
 </p>
 
@@ -20,7 +20,7 @@
   <img src="assets/divider.svg" alt="Divider" width="800" />
 </p>
 
-## ðŸ“– Introduction
+## 📖 Introduction
 
 **MoodFlix** is a serverless, interactive web application designed to recommend movies based on your current emotional state. Whether you want to boost a happy mood, dive into an intense thriller, or relax with a comforting chill vibe, MoodFlix uses a lightweight client-side filter engine to curate the perfect watchlist instantly.
 
@@ -36,12 +36,12 @@ MoodFlix categorizes recommendations into six distinct emotional palettes, desig
 
 | Mood | Vibe Tagline |
 | :---: | :--- |
-| **â˜€ï¸ Happy** | Wholesome, feel-good films to lift your spirits and make you smile. |
-| **ðŸŒ§ï¸ Sad** | Deep, emotional stories with heart and poignant narrative arcs. |
-| **ðŸ”ª Thriller** | High-stakes suspense, mysteries, and jaw-dropping plot twists. |
-| **ðŸ’« Romantic** | Lighthearted, cozy, and heartwarming tales of connection. |
-| **ðŸŒ™ Chill** | Relaxing, easy-going movies to help you wind down after a long day. |
-| **âš¡ Adventurous** | Action-packed exploration, fantasy quests, and epic journeys. |
+| **☀️ Happy** | Wholesome, feel-good films to lift your spirits and make you smile. |
+| **🌧️ Sad** | Deep, emotional stories with heart and poignant narrative arcs. |
+| **🔪 Thriller** | High-stakes suspense, mysteries, and jaw-dropping plot twists. |
+| **💫 Romantic** | Lighthearted, cozy, and heartwarming tales of connection. |
+| **🌙 Chill** | Relaxing, easy-going movies to help you wind down after a long day. |
+| **⚡ Adventurous** | Action-packed exploration, fantasy quests, and epic journeys. |
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />
@@ -49,11 +49,11 @@ MoodFlix categorizes recommendations into six distinct emotional palettes, desig
 
 <img src="assets/header-features.svg" alt="Key Features" width="800" />
 
-### ðŸŽ¬ **Smart Recommendation Engine**
+### 🎬 **Smart Recommendation Engine**
 - Filters and loads customized movie recommendations dynamically upon clicking a mood.
 - Displays rich media cards showing movie titles, release years, genre tags, platform availability (Netflix, Prime Video, YouTube), and concise summaries.
 
-### ðŸ”” **Polished UI & Micro-Animations**
+### 🔔 **Polished UI & Micro-Animations**
 - Custom-designed glassmorphism components with soft gradient backgrounds.
 - Responsive navigation bar with active scrolling shadow effects and a modular mobile hamburger menu.
 - Smooth transitions and hover animations on the interactive mood selector cards.
@@ -98,32 +98,32 @@ The exact repository files and directory layout are structured as follows:
 
 ```
 Moodflix/
-â”œâ”€â”€ .gitignore              â† Git ignore configuration rules
-â”œâ”€â”€ HOW_TO_RUN.txt          â† Plaintext quick-start usage guidelines
-â”œâ”€â”€ LICENSE                 â† Project open-source license permissions
-â”œâ”€â”€ README.md               â† Project documentation (this file)
-â”œâ”€â”€ index.html              â† Main HTML document skeleton and UI container
-â”œâ”€â”€ assets/
-â”‚   â”œâ”€â”€ divider.svg         â† Animated gradient divider line
-â”‚   â”œâ”€â”€ logo.svg            â† Animated text logo
-â”‚   â”œâ”€â”€ header-moods.svg        â† Animated section header (The Moods)
-â”‚   â”œâ”€â”€ header-features.svg     â† Animated section header (Key Features)
-â”‚   â”œâ”€â”€ header-gallery.svg      â† Animated section header (Vibe Gallery)
-â”‚   â”œâ”€â”€ header-start.svg        â† Animated section header (Getting Started)
-â”‚   â”œâ”€â”€ header-architecture.svg â† Animated section header (Architecture)
-â”‚   â”œâ”€â”€ header-walkthrough.svg  â† Animated section header (Walkthrough)
-â”‚   â”œâ”€â”€ header-contributors.svg  â† Animated section header (Contributors)
-â”‚   â””â”€â”€ posters/            â† Local movie poster image repository (.jpg)
-â”œâ”€â”€ css/
-â”‚   â”œâ”€â”€ components.css      â† Toast banners & movie recommendation card layout
-â”‚   â”œâ”€â”€ layout.css          â† Core grid layout, header, footer, & navigation bar
-â”‚   â”œâ”€â”€ mood-picker.css     â† Mood selection grid, glassmorphic cards, and hover FX
-â”‚   â””â”€â”€ variables.css       â† Theme colors, custom design tokens, and root styles
-â””â”€â”€ js/
-    â”œâ”€â”€ components.js       â† Dynamic HTML template parsing & DOM element factories
-    â”œâ”€â”€ layout.js           â† Mobile navigation drawer handler & navbar scroll shadow
-    â”œâ”€â”€ mood-engine.js      â† Main recommendations filter & alert handlers
-    â””â”€â”€ movie-data.js       â† Local structured movie list object database
+├── .gitignore              ← Git ignore configuration rules
+├── HOW_TO_RUN.txt          ← Plaintext quick-start usage guidelines
+├── LICENSE                 ← Project open-source license permissions
+├── README.md               ← Project documentation (this file)
+├── index.html              ← Main HTML document skeleton and UI container
+├── assets/
+│   ├── divider.svg         ← Animated gradient divider line
+│   ├── logo.svg            ← Animated text logo
+│   ├── header-moods.svg        ← Animated section header (The Moods)
+│   ├── header-features.svg     ← Animated section header (Key Features)
+│   ├── header-gallery.svg      ← Animated section header (Vibe Gallery)
+│   ├── header-start.svg        ← Animated section header (Getting Started)
+│   ├── header-architecture.svg ← Animated section header (Architecture)
+│   ├── header-walkthrough.svg  ← Animated section header (Walkthrough)
+│   ├── header-contributors.svg  ← Animated section header (Contributors)
+│   └── posters/            ← Local movie poster image repository (.jpg)
+├── css/
+│   ├── components.css      ← Toast banners & movie recommendation card layout
+│   ├── layout.css          ← Core grid layout, header, footer, & navigation bar
+│   ├── mood-picker.css     ← Mood selection grid, glassmorphic cards, and hover FX
+│   └── variables.css       ← Theme colors, custom design tokens, and root styles
+└── js/
+    ├── components.js       ← Dynamic HTML template parsing & DOM element factories
+    ├── layout.js           ← Mobile navigation drawer handler & navbar scroll shadow
+    ├── mood-engine.js      ← Main recommendations filter & alert handlers
+    └── movie-data.js       ← Local structured movie list object database
 ```
 
 <p align="center">
@@ -144,6 +144,25 @@ Experience all the features of MoodFlix by trying these quick steps:
 
 <img src="assets/header-contributors.svg" alt="Contributors" width="800" />
 
-- ðŸš€ **Dhruvi Mittal** (@Dhruvi-tech)
-- ðŸŽ¨ **Archana** (@Archana4413)
-- ðŸ’» **Gedila Bimala** (@gedilabimalabsc24-code)
+<table align="center" style="border-collapse: collapse; border: none; margin-top: 20px;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 20px; width: 220px;">
+      <a href="https://github.com/Dhruvi-tech">
+        <img src="https://github.com/Dhruvi-tech.png" width="100" style="border-radius: 50%; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4); border: 3px solid #3b82f6;" alt="Dhruvi Mittal" /><br />
+        <strong style="font-size: 16px; color: #3b82f6;">Dhruvi Mittal</strong>
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 20px; width: 220px;">
+      <a href="https://github.com/Archana4413">
+        <img src="https://github.com/Archana4413.png" width="100" style="border-radius: 50%; box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4); border: 3px solid #ec4899;" alt="Archana" /><br />
+        <strong style="font-size: 16px; color: #ec4899;">Archana</strong>
+      </a>
+    </td>
+    <td align="center" style="border: none; padding: 20px; width: 220px;">
+      <a href="https://github.com/gedilabimalabsc24-code">
+        <img src="https://github.com/gedilabimalabsc24-code.png" width="100" style="border-radius: 50%; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4); border: 3px solid #10b981;" alt="Gedila Bimala" /><br />
+        <strong style="font-size: 16px; color: #10b981;">Gedila Bimala</strong>
+      </a>
+    </td>
+  </tr>
+</table>
