@@ -1,0 +1,44 @@
+============================================
+  MOODFLIX — HOW TO UPDATE AND RUN
+============================================
+
+FASTEST (Windows):
+  Double-click  UPDATE_AND_OPEN.bat
+  (pulls latest code + opens index.html)
+
+--------------------------------------------
+
+MANUAL UPDATE (if you already have the folder):
+
+  1. Open this folder in File Explorer
+  2. Type  cmd  in the address bar, press Enter
+  3. Run:
+       git pull origin main
+  4. Hard-refresh the browser: Ctrl+Shift+R (or Ctrl+F5)
+  5. Double-click  index.html  (or run UPDATE_AND_OPEN.bat)
+
+  If Romantic mood still shows old movies, your browser cached
+  old JavaScript — use Ctrl+Shift+R after opening the page.
+
+--------------------------------------------
+
+FRESH DOWNLOAD (if posters still missing):
+
+  1. Delete your old Moodflix folder
+  2. Open cmd on Desktop and run:
+       git clone https://github.com/Dhruvi-tech/Moodflix.git
+  3. Open the Moodflix folder
+  4. Double-click  UPDATE_AND_OPEN.bat  or  index.html
+
+--------------------------------------------
+
+VS CODE:
+  - Open the Moodflix folder
+  - Right-click index.html → Open with Live Server
+
+--------------------------------------------
+TEAM (3 members):
+  - Dhruvi   → mood picker (core)
+  - Archana  → navbar, hero, features, footer
+  - Bimala   → how it works, CTA button
+============================================

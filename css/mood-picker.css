@@ -1,0 +1,261 @@
+/* Owner: Dhruvi — MoodFlix Phase 1 mood picker & movie cards */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700;800&display=swap');
+#moodflix-engine {
+  --mf-bg: #0c0c0f;
+  --mf-surface: #16161c;
+  --mf-border: rgba(255, 255, 255, 0.09);
+  --mf-text: #f8f8fa;
+  --mf-muted: #9ca3af;
+  --mf-accent: #4f8cff;
+  --mf-gold: #e8b84a;
+  --netflix: #e50914;
+  --prime: #00a8e1;
+  --youtube: #ff0000;
+}
+/* ── Sections ───────────────────────────────────────── */
+.mood-picker,
+.movie-preview {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--mf-bg);
+  border: 1px solid var(--mf-border);
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+.mood-picker::before,
+.movie-preview::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--mf-accent), var(--mf-gold), var(--netflix));
+}
+.mf-section-head {
+  margin-bottom: 1.25rem;
+}
+.mf-step {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mf-accent);
+  margin-bottom: 0.4rem;
+}
+.mf-section-head h2,
+.movie-preview__top h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.45rem, 3.5vw, 2.1rem);
+  font-weight: 800;
+  color: var(--mf-text);
+  line-height: 1.15;
+}
+.mf-section-head p {
+  margin-top: 0.35rem;
+  color: var(--mf-muted);
+  font-size: 0.9rem;
+}
+/* ── Mood grid ───────────────────────────────────────── */
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+.mood-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  padding: 0.9rem 1rem;
+  background: var(--mf-surface);
+  border: 1px solid var(--mf-border);
+  border-radius: 8px;
+  color: var(--mf-text);
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.mood-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--mood-accent, var(--mf-accent));
+  background: #1c1c24;
+}
+
+.mood-chip.is-active {
+  border-color: var(--mood-accent, var(--mf-accent));
+  background: color-mix(in srgb, var(--mood-accent, var(--mf-accent)) 14%, #16161c);
+  box-shadow: 0 0 24px color-mix(in srgb, var(--mood-accent) 30%, transparent);
+  transform: translateY(-2px);
+}
+
+.mood-chip__emoji {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.mood-chip__name {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.mood-chip__tag {
+  font-size: 0.7rem;
+  color: var(--mf-muted);
+  line-height: 1.35;
+}
+
+/* ── Preview header ──────────────────────────────────── */
+.movie-preview__top {
+  margin-bottom: 0.75rem;
+}
+
+.movie-preview__top h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-top: 0.15rem;
+}
+
+.movie-preview__sub {
+  color: var(--mf-muted);
+  font-size: 0.88rem;
+  margin-top: 0.25rem;
+}
+
+.prototype-note {
+  font-size: 0.78rem;
+  color: var(--mf-muted);
+  padding: 0.55rem 0.75rem;
+  margin-bottom: 1rem;
+  border-left: 3px solid var(--mf-gold);
+  background: var(--mf-surface);
+  border-radius: 0 6px 6px 0;
+}
+
+#preview-hint {
+  color: var(--mf-muted);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border: 1px dashed var(--mf-border);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.movie-preview.is-live #preview-hint {
+  display: none;
+}
+
+/* ── Movie grid ──────────────────────────────────────── */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.movie-card {
+  background: var(--mf-surface);
+  border: 1px solid var(--mf-border);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: cardIn 0.45s ease both;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.movie-card--netflix:hover { border-color: rgba(229, 9, 20, 0.45); }
+.movie-card--prime:hover { border-color: rgba(0, 168, 225, 0.45); }
+.movie-card--youtube:hover { border-color: rgba(255, 0, 0, 0.45); }
+
+@keyframes cardIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.movie-card__poster {
+  position: relative;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+
+.movie-card__poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.movie-card:hover .movie-card__poster img {
+  transform: scale(1.05);
+}
+
+.movie-card__badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.25rem 0.45rem;
+  border-radius: 4px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.movie-card__badge--netflix { background: var(--netflix); }
+.movie-card__badge--prime { background: var(--prime); }
+.movie-card__badge--youtube { background: var(--youtube); }
+
+.movie-card__body {
+  padding: 0.75rem 0.85rem 0.9rem;
+}
+
+.movie-card__title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--mf-text);
+  margin-bottom: 0.3rem;
+}
+
+.movie-card__meta {
+  font-size: 0.72rem;
+  color: var(--mf-accent);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.movie-card__desc {
+  font-size: 0.75rem;
+  color: var(--mf-muted);
+  line-height: 1.45;
+}
+
+/* ── Responsive ──────────────────────────────────────── */
+@media (max-width: 640px) {
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .mood-grid,
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+}
