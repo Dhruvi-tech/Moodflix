@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 60" width="100%">
+  <defs>
+    <linearGradient id="textGrad-contributors" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6">
+        <animate attributeName="stop-color" values="#3b82f6;#ec4899;#3b82f6" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#8b5cf6">
+        <animate attributeName="stop-color" values="#8b5cf6;#10b981;#8b5cf6" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  
+  <style>
+    .header-text {
+      font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+      font-weight: 800;
+      font-size: 28px;
+      fill: url(#textGrad-contributors);
+    }
+    .header-icon {
+      animation: float-contributors 3s ease-in-out infinite;
+      transform-origin: 20px 30px;
+    }
+    @keyframes float-contributors {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-5px) rotate(6deg); }
+    }
+  </style>
+
+  <g transform="translate(10, 42)">
+    <text x="0" y="0" font-size="32" class="header-icon">👥</text>
+    <text x="48" y="-6" class="header-text">Contributors</text>
+  </g>
+</svg>
