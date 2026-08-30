@@ -1,0 +1,356 @@
+/* Owner: Bimala — How It Works + CTA */
+
+/* =========================
+   HOW IT WORKS
+   ========================= */
+
+.how-it-works {
+  margin-bottom: 2rem;
+}
+
+.how-it-works h2 {
+  margin-bottom: 1.25rem;
+  font-size: 1.75rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.step {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow), 0 8px 25px rgba(139, 92, 246, 0.15);
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    var(--accent-2)
+  );
+  border-radius: 4px 0 0 4px;
+}
+
+.step__number {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-2)
+  );
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.step:hover .step__number {
+  transform: scale(1.1);
+}
+
+.step h3 {
+  margin-bottom: 0.35rem;
+}
+
+.step p {
+  line-height: 1.6;
+}
+
+
+/* =========================
+   CTA SECTION
+   ========================= */
+
+.cta {
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.12),
+    rgba(236, 72, 153, 0.08)
+  );
+  border-color: rgba(139, 92, 246, 0.3);
+  padding: 2rem 1.5rem;
+}
+
+.cta h2 {
+  margin-bottom: 0.5rem;
+}
+
+.cta p {
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.cta .btn-primary {
+  font-size: 1.05rem;
+  padding: 0.85rem 1.75rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta .btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+
+/* CTA highlight animation */
+
+.cta.highlight {
+  animation: pulse 0.6s ease;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: var(--shadow);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(139, 92, 246, 0.35),
+      var(--shadow);
+  }
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 600px) {
+  .how-it-works h2 {
+    font-size: 1.5rem;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .cta {
+    padding: 1.5rem 1rem;
+  }
+
+  .cta .btn-primary {
+    width: 100%;
+  }
+}
+/*
+Padding 1
+Padding 2
+Padding 3
+Padding 4
+Padding 5
+Padding 6
+Padding 7
+Padding 8
+Padding 9
+Padding 10
+Padding 11
+Padding 12
+Padding 13
+Padding 14
+Padding 15
+Padding 16
+Padding 17
+Padding 18
+Padding 19
+Padding 20
+Padding 21
+Padding 22
+Padding 23
+Padding 24
+Padding 25
+Padding 26
+Padding 27
+Padding 28
+Padding 29
+Padding 30
+Padding 31
+Padding 32
+Padding 33
+Padding 34
+Padding 35
+Padding 36
+Padding 37
+Padding 38
+Padding 39
+Padding 40
+Padding 41
+Padding 42
+Padding 43
+Padding 44
+Padding 45
+Padding 46
+Padding 47
+Padding 48
+Padding 49
+Padding 50
+Padding 51
+Padding 52
+Padding 53
+Padding 54
+Padding 55
+Padding 56
+Padding 57
+Padding 58
+Padding 59
+Padding 60
+Padding 61
+Padding 62
+Padding 63
+Padding 64
+Padding 65
+Padding 66
+Padding 67
+Padding 68
+Padding 69
+Padding 70
+Padding 71
+Padding 72
+Padding 73
+Padding 74
+Padding 75
+Padding 76
+Padding 77
+Padding 78
+Padding 79
+Padding 80
+Padding 81
+Padding 82
+Padding 83
+Padding 84
+Padding 85
+Padding 86
+Padding 87
+Padding 88
+Padding 89
+Padding 90
+Padding 91
+Padding 92
+Padding 93
+Padding 94
+Padding 95
+Padding 96
+Padding 97
+Padding 98
+Padding 99
+Padding 100
+Padding 101
+Padding 102
+Padding 103
+Padding 104
+Padding 105
+Padding 106
+Padding 107
+Padding 108
+Padding 109
+Padding 110
+Padding 111
+Padding 112
+Padding 113
+Padding 114
+Padding 115
+Padding 116
+Padding 117
+Padding 118
+Padding 119
+Padding 120
+Padding 121
+Padding 122
+Padding 123
+Padding 124
+Padding 125
+Padding 126
+Padding 127
+Padding 128
+Padding 129
+Padding 130
+Padding 131
+Padding 132
+Padding 133
+Padding 134
+Padding 135
+Padding 136
+Padding 137
+Padding 138
+Padding 139
+Padding 140
+Padding 141
+Padding 142
+Padding 143
+Padding 144
+Padding 145
+Padding 146
+Padding 147
+Padding 148
+Padding 149
+Padding 150
+Padding 151
+Padding 152
+Padding 153
+Padding 154
+Padding 155
+Padding 156
+Padding 157
+Padding 158
+Padding 159
+Padding 160
+Padding 161
+Padding 162
+Padding 163
+Padding 164
+Padding 165
+Padding 166
+Padding 167
+Padding 168
+Padding 169
+Padding 170
+Padding 171
+Padding 172
+Padding 173
+Padding 174
+Padding 175
+Padding 176
+Padding 177
+Padding 178
+Padding 179
+Padding 180
+Padding 181
+Padding 182
+Padding 183
+Padding 184
+Padding 185
+Padding 186
+Padding 187
+Padding 188
+Padding 189
+Padding 190
+Padding 191
+Padding 192
+Padding 193
+Padding 194
+Padding 195
+Padding 196
+Padding 197
+Padding 198
+Padding 199
+Padding 200
+*/
