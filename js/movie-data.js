@@ -1,4 +1,3 @@
-// Owner: Dhruvi — static movie data for MoodFlix Phase 1 (easy to update)
 (function (global) {
   function movie(title, year, genre, platform, overview, posterSlug) {
     return {

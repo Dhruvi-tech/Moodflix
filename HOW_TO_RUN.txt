@@ -36,9 +36,4 @@ VS CODE:
   - Open the Moodflix folder
   - Right-click index.html → Open with Live Server
 
---------------------------------------------
-TEAM (3 members):
-  - Dhruvi   → mood picker (core)
-  - Archana  → navbar, hero, features, footer
-  - Bimala   → how it works, CTA button
 ============================================

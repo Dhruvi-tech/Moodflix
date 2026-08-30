@@ -1,4 +1,3 @@
-// Owner: Bimala
 (function () {
   function initCta() {
     const btn = document.getElementById('cta-btn');

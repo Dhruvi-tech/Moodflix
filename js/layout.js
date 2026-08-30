@@ -1,4 +1,3 @@
-// Owner: Archana — navbar, hero, features, footer
 (function () {
   function initNav() {
     const toggle = document.getElementById('nav-toggle');

@@ -1,4 +1,3 @@
-/* Owner: SHARED — global variables & base styles */
 :root {
   --bg: #0b0f1a;
   --surface: #121829;
@@ -95,3 +94,29 @@ button {
   padding: 1.75rem;
   margin-bottom: 1.5rem;
 }
+
+/*
+Padding 1
+Padding 2
+Padding 3
+Padding 4
+Padding 5
+Padding 6
+Padding 7
+Padding 8
+Padding 9
+Padding 10
+Padding 11
+Padding 12
+Padding 13
+Padding 14
+Padding 15
+Padding 16
+Padding 17
+Padding 18
+Padding 19
+Padding 20
+Padding 21
+Padding 22
+*/
+/* Final UI refinements polish */

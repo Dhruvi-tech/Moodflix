@@ -1,4 +1,3 @@
-// Owner: Dhruvi — MoodFlix Phase 1 mood picker (frontend only)
 (function () {
   const data = () => window.MOODFLIX_DATA;
 
