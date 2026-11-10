@@ -143,17 +143,18 @@ describe('MoodFlix REST API Test Suite', async () => {
   });
 
   test('9. Login succeeds with correct credentials and fails with wrong password', async () => {
-    // Correct
-    const successRes = await request('POST', '/api/auth/login', {
-      email: 'dhruvi@moodflix.com',
-      password: 'User@123456',
+    // Guest Login
+    const guestRes = await request('POST', '/api/auth/login', {
+      email: 'guest@moodflix.com',
+      password: 'Guest@123456',
     });
-    assert.strictEqual(successRes.status, 200);
-    assert.ok(successRes.data.token);
+    assert.strictEqual(guestRes.status, 200);
+    assert.ok(guestRes.data.token);
+    assert.strictEqual(guestRes.data.user.email, 'guest@moodflix.com');
 
-    // Wrong
+    // Wrong password test
     const failRes = await request('POST', '/api/auth/login', {
-      email: 'dhruvi@moodflix.com',
+      email: 'guest@moodflix.com',
       password: 'WrongPassword123',
     });
     assert.strictEqual(failRes.status, 401);

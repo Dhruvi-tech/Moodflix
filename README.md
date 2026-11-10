@@ -232,14 +232,15 @@ cp .env.example .env
 npm run dev
 ```
 
-### Pre-Configured Test Accounts
+### Pre-Configured Test & Evaluation Accounts
 
-| Account Type | Email Address | Password | Permissions |
+Anyone can register their own independent account anytime by clicking **"Sign Up"** or **"Create Free Account"**. For quick evaluation without registering, use these pre-seeded accounts:
+
+| Account Type | Email Address | Password | Permissions & Pre-seeded Data |
 | :--- | :--- | :--- | :--- |
-| **Administrator** | `admin@moodflix.com` | `Admin@123456` | Full platform access, Admin dashboard, Add/Edit/Delete movies, Review moderation |
-| **Demo User** | `dhruvi@moodflix.com` | `User@123456` | Standard user, Watchlist, Favourites, Reviews, History, Profile updates |
-
-*(Note: The Login page includes convenient **1-Click Quick Login** buttons for instant evaluator demonstration!)*
+| **Guest User (Demo)** | `guest@moodflix.com` | `Guest@123456` | Pre-populated Watchlist, Favourites, Reviews & History (Also available via the **1-Click "Continue as Guest"** button on the Login page!) |
+| **Administrator** | `admin@moodflix.com` | `Admin@123456` | Full platform access, Admin dashboard (`/admin`), Add/Edit/Delete movies, Platform metrics |
+| **Public Registration** | *Any email* | *User-chosen* | Any visitor can create a personal account to maintain a private watchlist, favourites, reviews, and history. |
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />

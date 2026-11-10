@@ -9,69 +9,82 @@ const ViewingHistory = require('../models/ViewingHistory');
 const seedMovies = require('./seedData');
 
 const seedInitialData = async () => {
-  console.log('[Seed] Checking and seeding users...');
-  const adminUser = await User.findOneAndUpdate(
-    { email: 'admin@moodflix.com' },
-    {
-      name: 'MoodFlix Admin',
-      email: 'admin@moodflix.com',
-      password: 'Admin@123456',
-      role: 'admin',
-      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
-      preferences: {
-        favoriteMoods: ['thriller', 'adventurous'],
-        preferredLanguages: ['English'],
-      },
-    },
-    { upsert: true, new: true, setDefaultsOnInsert: true }
-  );
+  console.log('[Seed] Cleaning old demo users...');
+  await User.deleteMany({ email: { $in: ['admin@moodflix.com', 'guest@moodflix.com', 'dhruvi@moodflix.com'] } });
 
-  const demoUser = await User.findOneAndUpdate(
-    { email: 'dhruvi@moodflix.com' },
-    {
-      name: 'Dhruvi Mittal',
-      email: 'dhruvi@moodflix.com',
-      password: 'User@123456',
-      role: 'user',
-      avatar: 'https://github.com/Dhruvi-tech.png',
-      preferences: {
-        favoriteMoods: ['happy', 'feel-good', 'romantic'],
-        preferredLanguages: ['English'],
-      },
+  console.log('[Seed] Seeding users with hashed credentials...');
+  
+  // 1. Admin Account
+  const adminUser = await User.create({
+    name: 'MoodFlix Admin',
+    email: 'admin@moodflix.com',
+    password: 'Admin@123456',
+    role: 'admin',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
+    preferences: {
+      favoriteMoods: ['thriller', 'adventurous'],
+      preferredLanguages: ['English'],
     },
-    { upsert: true, new: true, setDefaultsOnInsert: true }
-  );
+  });
+
+  // 2. Primary Guest / Demo User
+  const guestUser = await User.create({
+    name: 'Guest User',
+    email: 'guest@moodflix.com',
+    password: 'Guest@123456',
+    role: 'user',
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150',
+    preferences: {
+      favoriteMoods: ['happy', 'feel-good', 'romantic', 'chill'],
+      preferredLanguages: ['English'],
+    },
+  });
+
+  // 3. Optional Dhruvi Account for CIE-3 evaluation
+  const dhruviUser = await User.create({
+    name: 'Dhruvi Mittal',
+    email: 'dhruvi@moodflix.com',
+    password: 'User@123456',
+    role: 'user',
+    avatar: 'https://github.com/Dhruvi-tech.png',
+    preferences: {
+      favoriteMoods: ['happy', 'feel-good', 'romantic'],
+      preferredLanguages: ['English'],
+    },
+  });
 
   console.log('[Seed] Seeding movies with verified free availability...');
   const createdMovies = await Movie.insertMany(seedMovies);
   console.log(`[Seed] Inserted ${createdMovies.length} movies.`);
 
-  // Seed sample interactions for demoUser
+  // Seed sample interactions for guestUser
   const movie1 = createdMovies[0]; // The General
   const movie2 = createdMovies[1]; // The Kid
   const movie3 = createdMovies[3]; // It's a Wonderful Life
   const movie4 = createdMovies[7]; // Charade
 
-  console.log('[Seed] Seeding sample watchlist, favourites, reviews & history...');
+  console.log('[Seed] Seeding sample watchlist, favourites, reviews & history for Guest user...');
   await Watchlist.create([
-    { user: demoUser._id, movie: movie1._id },
-    { user: demoUser._id, movie: movie3._id },
+    { user: guestUser._id, movie: movie1._id },
+    { user: guestUser._id, movie: movie3._id },
+    { user: dhruviUser._id, movie: movie1._id },
   ]);
 
   await Favourite.create([
-    { user: demoUser._id, movie: movie2._id },
-    { user: demoUser._id, movie: movie4._id },
+    { user: guestUser._id, movie: movie2._id },
+    { user: guestUser._id, movie: movie4._id },
+    { user: dhruviUser._id, movie: movie2._id },
   ]);
 
   await Review.create([
     {
-      user: demoUser._id,
+      user: guestUser._id,
       movie: movie1._id,
       rating: 5,
       comment: 'Buster Keaton does his own train stunts with zero CGI! Absolute comedic brilliance that holds up a century later.',
     },
     {
-      user: demoUser._id,
+      user: guestUser._id,
       movie: movie3._id,
       rating: 5,
       comment: 'An uplifting reminder that every person matters in their community. Frank Capra at his finest.',
@@ -85,12 +98,12 @@ const seedInitialData = async () => {
   ]);
 
   await ViewingHistory.create([
-    { user: demoUser._id, movie: movie1._id, viewedAt: new Date(Date.now() - 3600000) },
-    { user: demoUser._id, movie: movie2._id, viewedAt: new Date(Date.now() - 7200000) },
-    { user: demoUser._id, movie: movie4._id, viewedAt: new Date(Date.now() - 14400000) },
+    { user: guestUser._id, movie: movie1._id, viewedAt: new Date(Date.now() - 3600000) },
+    { user: guestUser._id, movie: movie2._id, viewedAt: new Date(Date.now() - 7200000) },
+    { user: guestUser._id, movie: movie4._id, viewedAt: new Date(Date.now() - 14400000) },
   ]);
 
-  return { adminUser, demoUser, totalMovies: createdMovies.length };
+  return { adminUser, guestUser, dhruviUser, totalMovies: createdMovies.length };
 };
 
 const seedDB = async () => {
@@ -114,7 +127,8 @@ const seedDB = async () => {
     console.log('====================================================');
     console.log('🎉 MOODFLIX DATABASE SEEDING COMPLETED SUCCESSFULLY!');
     console.log(`👤 Admin Account : admin@moodflix.com (Password: Admin@123456)`);
-    console.log(`👤 Demo User     : dhruvi@moodflix.com (Password: User@123456)`);
+    console.log(`👤 Guest User    : guest@moodflix.com (Password: Guest@123456)`);
+    console.log(`👤 Dhruvi Account: dhruvi@moodflix.com (Password: User@123456)`);
     console.log(`🎬 Total Movies  : ${result.totalMovies}`);
     console.log(`⭐ Total Moods   : 12 covered`);
     console.log(`🆓 Availability  : 100% Free (Public Domain / Free Streaming)`);

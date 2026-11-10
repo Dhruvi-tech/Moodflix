@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { LogIn, Key, Mail, AlertCircle, Shield } from 'lucide-react';
+import { LogIn, Key, Mail, AlertCircle, Shield, User } from 'lucide-react';
 
 const Login = () => {
   const { login } = useAuth();
@@ -29,6 +29,19 @@ const Login = () => {
     }
   };
 
+  const handleGuestLogin = async () => {
+    setError('');
+    setLoading(true);
+    try {
+      await login('guest@moodflix.com', 'Guest@123456');
+      navigate(from, { replace: true });
+    } catch (err) {
+      setError(err.response?.data?.message || err.message || 'Guest login failed');
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleQuickLogin = (demoEmail, demoPass) => {
     setEmail(demoEmail);
     setPassword(demoPass);
@@ -39,8 +52,8 @@ const Login = () => {
       <div className="auth-card glass-panel animate-fade-in">
         <div className="auth-header text-center">
           <span className="auth-icon">🎬</span>
-          <h2>Welcome Back to MoodFlix</h2>
-          <p>Log in to access your custom watchlist, favourites, and personal reviews.</p>
+          <h2>Welcome to MoodFlix</h2>
+          <p>Sign in to your account or jump straight in as a Guest.</p>
         </div>
 
         {error && (
@@ -49,6 +62,21 @@ const Login = () => {
             <span>{error}</span>
           </div>
         )}
+
+        {/* 1-Click Instant Guest Login */}
+        <button
+          type="button"
+          onClick={handleGuestLogin}
+          disabled={loading}
+          className="btn btn-secondary guest-instant-btn"
+        >
+          <User size={18} />
+          <span>{loading ? 'Entering...' : 'Continue as Guest (1-Click Demo)'}</span>
+        </button>
+
+        <div className="guest-action-divider">
+          <span>OR SIGN IN WITH EMAIL</span>
+        </div>
 
         <form onSubmit={handleSubmit} className="auth-form">
           <div className="form-group">
@@ -91,16 +119,16 @@ const Login = () => {
           </button>
         </form>
 
-        {/* Evaluator Quick Demo Accounts */}
+        {/* Quick Demo Pre-fill for Evaluators */}
         <div className="demo-credentials-box">
-          <span className="demo-title">Evaluation / CIE-3 Quick Login:</span>
+          <span className="demo-title">Fill Pre-seeded Account:</span>
           <div className="demo-btns-row">
             <button
               type="button"
-              onClick={() => handleQuickLogin('dhruvi@moodflix.com', 'User@123456')}
-              className="btn btn-sm btn-secondary"
+              onClick={() => handleQuickLogin('guest@moodflix.com', 'Guest@123456')}
+              className="btn btn-sm btn-outline"
             >
-              Demo User (Dhruvi)
+              Guest User
             </button>
             <button
               type="button"
@@ -115,9 +143,9 @@ const Login = () => {
 
         <div className="auth-footer text-center">
           <p>
-            Don't have an account yet?{' '}
+            Want your own personal watchlist?{' '}
             <Link to="/register" className="auth-link">
-              Create free account
+              Create a free account
             </Link>
           </p>
         </div>
@@ -133,11 +161,11 @@ const Login = () => {
         .auth-card {
           width: 100%;
           max-width: 460px;
-          padding: 2.75rem 2.25rem;
+          padding: 2.5rem 2rem;
           margin: 1rem auto;
         }
         .auth-header {
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
         }
         .auth-icon {
           font-size: 2.5rem;
@@ -154,6 +182,45 @@ const Login = () => {
           color: var(--text-muted);
           font-size: 0.9rem;
         }
+        .guest-instant-btn {
+          width: 100%;
+          padding: 0.85rem;
+          margin-bottom: 1.25rem;
+          background: rgba(139, 92, 246, 0.15);
+          border: 1px solid rgba(139, 92, 246, 0.35);
+          color: #c4b5fd;
+          font-weight: 600;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          transition: all 0.2s ease;
+        }
+        .guest-instant-btn:hover {
+          background: rgba(139, 92, 246, 0.28);
+          border-color: #a78bfa;
+          color: #fff;
+          transform: translateY(-1px);
+        }
+        .guest-action-divider {
+          display: flex;
+          align-items: center;
+          text-align: center;
+          margin: 1.25rem 0;
+        }
+        .guest-action-divider::before,
+        .guest-action-divider::after {
+          content: '';
+          flex: 1;
+          border-bottom: 1px solid var(--border);
+        }
+        .guest-action-divider span {
+          padding: 0 0.75rem;
+          color: var(--text-dim);
+          font-size: 0.72rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+        }
         .auth-error-box {
           display: flex;
           align-items: center;
@@ -164,7 +231,7 @@ const Login = () => {
           border-radius: var(--radius-sm);
           color: #f87171;
           font-size: 0.88rem;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1.25rem;
         }
         .input-with-icon {
           position: relative;
@@ -186,20 +253,20 @@ const Login = () => {
           padding: 0.85rem;
         }
         .demo-credentials-box {
-          margin-top: 2rem;
-          padding: 1rem;
-          background: rgba(255, 255, 255, 0.03);
+          margin-top: 1.75rem;
+          padding: 0.85rem 1rem;
+          background: rgba(255, 255, 255, 0.02);
           border-radius: var(--radius-sm);
           border: 1px dashed var(--border);
         }
         .demo-title {
           display: block;
-          font-size: 0.75rem;
+          font-size: 0.72rem;
           text-transform: uppercase;
           letter-spacing: 0.05em;
           color: var(--text-dim);
           font-weight: 700;
-          margin-bottom: 0.65rem;
+          margin-bottom: 0.5rem;
           text-align: center;
         }
         .demo-btns-row {
@@ -212,7 +279,7 @@ const Login = () => {
           border-color: rgba(192, 132, 252, 0.4);
         }
         .auth-footer {
-          margin-top: 2rem;
+          margin-top: 1.75rem;
           font-size: 0.9rem;
           color: var(--text-muted);
         }

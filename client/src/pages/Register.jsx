@@ -73,7 +73,7 @@ const Register = () => {
               <User size={18} className="input-icon" />
               <input
                 type="text"
-                placeholder="Dhruvi Mittal"
+                placeholder="Alex Morgan"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="form-input"
@@ -88,7 +88,7 @@ const Register = () => {
               <Mail size={18} className="input-icon" />
               <input
                 type="email"
-                placeholder="dhruvi@example.com"
+                placeholder="alex@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="form-input"
@@ -159,9 +159,9 @@ const Register = () => {
 
         <div className="auth-footer text-center">
           <p>
-            Already have an account?{' '}
+            Already have an account, or want to explore as Guest?{' '}
             <Link to="/login" className="auth-link">
-              Log in instead
+              Sign In or Continue as Guest
             </Link>
           </p>
         </div>
