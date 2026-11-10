@@ -14,6 +14,8 @@ import {
   Menu,
   X,
   Search,
+  Scale,
+  Dices,
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -66,6 +68,17 @@ const Navbar = () => {
           <Link to="/moods" className={`nav-link ${isActive('/moods') ? 'active' : ''}`}>
             Moods
           </Link>
+          <Link to="/compare" className={`nav-link ${isActive('/compare') ? 'active' : ''}`}>
+            Compare
+          </Link>
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent('open-surprise-modal'))}
+            className="nav-link text-purple-400 hover:text-purple-300 font-semibold"
+            title="Surprise Movie Picker"
+          >
+            🎲 Surprise
+          </button>
           <button
             type="button"
             onClick={() => window.dispatchEvent(new CustomEvent('open-platform-preferences'))}
@@ -162,6 +175,19 @@ const Navbar = () => {
             <Link to="/moods" onClick={() => setMobileMenuOpen(false)}>
               <Smile size={18} /> Mood Recommendations
             </Link>
+            <Link to="/compare" onClick={() => setMobileMenuOpen(false)}>
+              <Scale size={18} /> Compare Movies
+            </Link>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-surprise-modal'));
+              }}
+              className="mobile-pref-btn text-purple-300"
+            >
+              🎲 Surprise Movie Picker
+            </button>
             <button
               type="button"
               onClick={() => {

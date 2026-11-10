@@ -22,6 +22,9 @@ import {
   MessageSquare,
   Edit2,
   Trash2,
+  Share2,
+  Check,
+  Scale,
 } from 'lucide-react';
 
 const getPlatformWatchUrl = (movie, platformName = '', rawUrl = '') => {
@@ -95,6 +98,7 @@ const MovieDetails = () => {
   const [submittingReview, setSubmittingReview] = useState(false);
   const [reviewError, setReviewError] = useState('');
   const [editingReviewId, setEditingReviewId] = useState(null);
+  const [copiedToast, setCopiedToast] = useState(false);
 
   useEffect(() => {
     const fetchMovieData = async () => {
@@ -243,6 +247,29 @@ const MovieDetails = () => {
     setMyRating(review.rating);
     setMyComment(review.comment);
     window.scrollTo({ top: document.getElementById('review-form')?.offsetTop - 100, behavior: 'smooth' });
+  };
+
+  const handleShare = async () => {
+    const url = window.location.href;
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `${movie.title} (${movie.releaseYear}) on MoodFlix`,
+          text: `Check out ${movie.title} on MoodFlix! Verified free & streaming discovery.`,
+          url,
+        });
+        return;
+      } catch (e) {
+        // user cancelled or share failed, fallback to copy
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiedToast(true);
+      setTimeout(() => setCopiedToast(false), 2500);
+    } catch (e) {
+      alert(`Share link: ${url}`);
+    }
   };
 
   const verifiedDateFormatted = movie.freeAvailability?.verifiedDate
@@ -398,6 +425,27 @@ const MovieDetails = () => {
                   <span>Watch Trailer</span>
                   <ExternalLink size={14} />
                 </a>
+
+                {/* Compare Button */}
+                <Link
+                  to={`/compare?movies=${encodeURIComponent(movie.slug || movie.title)}`}
+                  className="btn btn-secondary"
+                  title="Compare this movie with another"
+                >
+                  <Scale size={16} />
+                  <span>Compare</span>
+                </Link>
+
+                {/* Share Movie Button */}
+                <button
+                  type="button"
+                  onClick={handleShare}
+                  className={`btn btn-secondary relative ${copiedToast ? 'text-emerald-400 border-emerald-400/40 bg-emerald-500/10' : ''}`}
+                  title="Share movie link"
+                >
+                  {copiedToast ? <Check size={16} className="text-emerald-400" /> : <Share2 size={16} />}
+                  <span>{copiedToast ? 'Link Copied!' : 'Share'}</span>
+                </button>
 
                 {/* Watchlist & Favourite Buttons */}
                 {user && (

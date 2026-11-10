@@ -257,17 +257,24 @@ export default function Home() {
             and world cinema. Zero subscription traps, honest verified badges.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-3">
-            <a href="#mood-selector" className="btn btn-primary px-7 py-3.5 rounded-2xl font-bold flex items-center gap-2.5 shadow-xl shadow-purple-600/35 hover:scale-105 transition-all">
-              <Play size={18} fill="#fff" />
+          <div className="flex flex-wrap items-center justify-center gap-3 pt-3">
+            <a href="#mood-selector" className="btn btn-primary px-6 py-3 rounded-2xl font-bold flex items-center gap-2 shadow-xl shadow-purple-600/35 hover:scale-105 transition-all">
+              <Play size={16} fill="#fff" />
               <span>Explore by Mood</span>
             </a>
-            <a href="#free-movies" className="btn btn-secondary px-7 py-3.5 rounded-2xl font-bold flex items-center gap-2.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 hover:scale-105 transition-all shadow-lg shadow-emerald-500/20">
+            <a href="#free-movies" className="btn btn-secondary px-6 py-3 rounded-2xl font-bold flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 hover:scale-105 transition-all shadow-lg shadow-emerald-500/20">
               <span>🆓 Watch Free Movies</span>
             </a>
-            <Link to="/explore" className="btn btn-outline px-6 py-3.5 rounded-2xl font-semibold flex items-center gap-2 hover:scale-105 transition-all">
-              <Compass size={18} />
-              <span>Browse 500+ Catalog</span>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('open-surprise-modal'))}
+              className="btn btn-secondary px-6 py-3 rounded-2xl font-bold flex items-center gap-2 bg-purple-500/20 text-purple-200 border border-purple-500/40 hover:bg-purple-500/30 hover:scale-105 transition-all shadow-lg shadow-purple-500/20"
+            >
+              <span>🎲 Surprise Me!</span>
+            </button>
+            <Link to="/compare" className="btn btn-outline px-5 py-3 rounded-2xl font-semibold flex items-center gap-2 hover:scale-105 transition-all">
+              <Compass size={16} />
+              <span>Compare Movies</span>
             </Link>
           </div>
 

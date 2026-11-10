@@ -7,6 +7,7 @@ const {
   deleteMovie,
   getAllUsers,
   getAllReviews,
+  verifyMovieLinks,
 } = require('../controllers/adminController');
 const { protect, admin } = require('../middleware/authMiddleware');
 
@@ -16,6 +17,7 @@ router.use(protect, admin);
 router.get('/dashboard', getDashboardStats);
 router.get('/users', getAllUsers);
 router.get('/reviews', getAllReviews);
+router.post('/verify-links', verifyMovieLinks);
 
 // Movie management
 router.post('/movies', createMovie);

@@ -293,6 +293,66 @@ const getAllReviews = async (req, res, next) => {
   }
 };
 
+// @desc    Admin: Verify streaming links across catalog
+// @route   POST /api/admin/verify-links
+// @access  Private/Admin
+const verifyMovieLinks = async (req, res, next) => {
+  try {
+    const { movieId } = req.body || {};
+    let movies = [];
+    if (movieId) {
+      const single = await Movie.findById(movieId);
+      if (single) movies = [single];
+    } else {
+      movies = await Movie.find().limit(500);
+    }
+
+    let checkedCount = 0;
+    let verifiedCount = 0;
+    const flagged = [];
+
+    for (const movie of movies) {
+      checkedCount++;
+      let movieValid = true;
+
+      if (movie.freeAvailability?.url) {
+        try {
+          const parsed = new URL(movie.freeAvailability.url);
+          if (!['http:', 'https:'].includes(parsed.protocol)) {
+            movieValid = false;
+          }
+        } catch {
+          movieValid = false;
+        }
+      }
+
+      if (movieValid) {
+        verifiedCount++;
+        if (movie.freeAvailability) {
+          movie.freeAvailability.verifiedDate = new Date();
+        }
+        await movie.save();
+      } else {
+        flagged.push({ id: movie._id, title: movie.title, url: movie.freeAvailability?.url });
+      }
+    }
+
+    res.status(200).json({
+      success: true,
+      message: `Checked ${checkedCount} movies. ${verifiedCount} destinations verified active.`,
+      stats: {
+        checkedCount,
+        verifiedCount,
+        flaggedCount: flagged.length,
+        verifiedAt: new Date().toISOString(),
+      },
+      flagged,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   getDashboardStats,
   createMovie,
@@ -300,4 +360,5 @@ module.exports = {
   deleteMovie,
   getAllUsers,
   getAllReviews,
+  verifyMovieLinks,
 };

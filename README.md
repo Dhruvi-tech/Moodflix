@@ -20,17 +20,24 @@
   <a href="https://moodflix-free.vercel.app" target="_blank">
     <img src="https://img.shields.io/badge/🌐_Live_Platform-moodflix--free.vercel.app-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Platform" />
   </a>
+  <a href="https://moodflix-api.vercel.app/api/health" target="_blank">
+    <img src="https://img.shields.io/badge/⚡_Live_API-moodflix--api.vercel.app-10B981?style=for-the-badge&logo=fastapi&logoColor=white" alt="Live API" />
+  </a>
+  <a href="./DEMO_GUIDE.md">
+    <img src="https://img.shields.io/badge/📋_Viva_Demo_Guide-DEMO__GUIDE.md-F59E0B?style=for-the-badge&logo=gitbook&logoColor=white" alt="Demo Guide" />
+  </a>
 </p>
 
 <p align="center">
   <a href="#-project-overview">Overview</a> •
   <a href="#-full-stack-architecture">Architecture</a> •
-  <a href="#-12-mood-palettes">The 12 Moods</a> •
+  <a href="#-16-mood-palettes">The 16 Moods</a> •
+  <a href="#-indian-regional-languages">Indian Languages</a> •
+  <a href="#-interactive-tools">Compare & Surprise</a> •
   <a href="#-100-legal-free-streaming-pledge">Free Streaming Pledge</a> •
   <a href="#-api-endpoints-reference">REST APIs</a> •
   <a href="#-local-installation--quick-start">Quick Start</a> •
-  <a href="#-cloud-deployment-guide">Cloud Deployment</a> •
-  <a href="#-team--contributors">Team</a>
+  <a href="./DEMO_GUIDE.md">Demo Guide</a>
 </p>
 
 <p align="center">
@@ -100,9 +107,9 @@ Moodflix/
 
 <img src="assets/header-moods.svg" alt="The 12 Moods" width="800" />
 
-## 🎭 The 12 Mood Palettes
+## 🎭 The 16 Mood Palettes
 
-MoodFlix categorizes free cinema into twelve distinct emotional states using deterministic metadata matching (genres, emotional tone, pace, and themes):
+MoodFlix categorizes free cinema into sixteen distinct emotional states using deterministic metadata matching (genres, emotional tone, pace, and themes):
 
 | Mood | Emoji | Accent Color | Vibe Tagline | Sample Curated Film |
 | :--- | :---: | :---: | :--- | :--- |

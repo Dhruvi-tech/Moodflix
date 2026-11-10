@@ -7,12 +7,14 @@ import { WatchlistProvider } from './context/WatchlistContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import PlatformPreferenceModal from './components/PlatformPreferenceModal';
+import SurpriseModal from './components/SurpriseModal';
 import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute';
 
 // Pages
 import Home from './pages/Home';
 import Explore from './pages/Explore';
 import Moods from './pages/Moods';
+import Compare from './pages/Compare';
 import MovieDetails from './pages/MovieDetails';
 import Search from './pages/Search';
 import Login from './pages/Login';
@@ -26,6 +28,7 @@ import NotFound from './pages/NotFound';
 
 function AppContent() {
   const [isPrefModalOpen, setIsPrefModalOpen] = useState(false);
+  const [isSurpriseModalOpen, setIsSurpriseModalOpen] = useState(false);
 
   useEffect(() => {
     // Check first-time visit
@@ -38,8 +41,15 @@ function AppContent() {
 
   useEffect(() => {
     const handleOpen = () => setIsPrefModalOpen(true);
+    const handleSurpriseOpen = () => setIsSurpriseModalOpen(true);
+
     window.addEventListener('open-platform-preferences', handleOpen);
-    return () => window.removeEventListener('open-platform-preferences', handleOpen);
+    window.addEventListener('open-surprise-modal', handleSurpriseOpen);
+
+    return () => {
+      window.removeEventListener('open-platform-preferences', handleOpen);
+      window.removeEventListener('open-surprise-modal', handleSurpriseOpen);
+    };
   }, []);
 
   return (
@@ -51,6 +61,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
           <Route path="/moods" element={<Moods />} />
+          <Route path="/compare" element={<Compare />} />
           <Route path="/movies/:id" element={<MovieDetails />} />
           <Route path="/search" element={<Search />} />
 
@@ -113,6 +124,12 @@ function AppContent() {
         isOpen={isPrefModalOpen}
         onClose={() => setIsPrefModalOpen(false)}
         onSave={() => window.dispatchEvent(new CustomEvent('platform-preferences-updated'))}
+      />
+
+      {/* Global Surprise Me Roulette Modal */}
+      <SurpriseModal
+        isOpen={isSurpriseModalOpen}
+        onClose={() => setIsSurpriseModalOpen(false)}
       />
     </div>
   );

@@ -13,6 +13,9 @@ import {
   CheckCircle,
   AlertTriangle,
   X,
+  RefreshCw,
+  Globe,
+  ShieldCheck,
 } from 'lucide-react';
 
 const AdminDashboard = () => {
@@ -23,6 +26,22 @@ const AdminDashboard = () => {
   const [reviewsList, setReviewsList] = useState([]);
   const [activeTab, setActiveTab] = useState('movies');
   const [loading, setLoading] = useState(true);
+  const [verifyingLinks, setVerifyingLinks] = useState(false);
+  const [linkVerifyResult, setLinkVerifyResult] = useState(null);
+
+  const handleVerifyLinks = async () => {
+    setVerifyingLinks(true);
+    try {
+      const res = await api.post('/admin/verify-links');
+      if (res.data?.success) {
+        setLinkVerifyResult(res.data);
+      }
+    } catch (err) {
+      console.error('Error verifying links:', err);
+    } finally {
+      setVerifyingLinks(false);
+    }
+  };
 
   // Movie Modal State (Add or Edit)
   const [modalOpen, setModalOpen] = useState(false);
@@ -252,6 +271,41 @@ const AdminDashboard = () => {
                 <span className="stat-title">Public Domain Works</span>
               </div>
             </div>
+          </div>
+
+          {/* ── Link Health & Streaming Verification Card ─── */}
+          <div className="mb-6 p-4 rounded-2xl bg-gradient-to-r from-purple-950/40 via-[#0e1628] to-emerald-950/30 border border-purple-500/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-300">
+                <ShieldCheck size={22} />
+              </div>
+              <div>
+                <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                  <span>Stream Link Health & Verification Engine</span>
+                  <span className="px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-emerald-500/20 border border-emerald-500/40 text-emerald-300">
+                    Active
+                  </span>
+                </h4>
+                <p className="text-xs text-gray-400 mt-0.5">
+                  Audit YouTube full movie search routes, subscription platform queries, and ensure zero dead links for users.
+                </p>
+                {linkVerifyResult && (
+                  <p className="text-[11px] text-emerald-400 font-semibold mt-1">
+                    ✓ Audit complete: Checked {linkVerifyResult.totalChecked} movies. Verified: {linkVerifyResult.verifiedCount}, Auto-healed: {linkVerifyResult.updatedCount}.
+                  </p>
+                )}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={handleVerifyLinks}
+              disabled={verifyingLinks}
+              className="px-4 py-2 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold text-xs shadow-md shadow-purple-500/25 flex items-center gap-2 transition-all flex-shrink-0 active:scale-95 disabled:opacity-60"
+            >
+              <RefreshCw size={13} className={verifyingLinks ? 'animate-spin' : ''} />
+              <span>{verifyingLinks ? 'Auditing Links...' : 'Audit & Verify Stream Links'}</span>
+            </button>
           </div>
 
           {/* ── Dashboard Tabs ─────────────────────────────── */}
