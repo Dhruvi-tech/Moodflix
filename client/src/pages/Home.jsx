@@ -6,16 +6,20 @@ import MoodChip from '../components/MoodChip';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { useAuth } from '../context/AuthContext';
 import { Sparkles, ShieldCheck, Film, Compass, ArrowRight, Play, Star } from 'lucide-react';
+import fallbackMovies from '../data/fallbackMovies';
+import { FALLBACK_MOODS } from '../data/fallbackMoods';
 
 const Home = () => {
   const { user } = useAuth();
-  const [moods, setMoods] = useState([]);
+  const [moods, setMoods] = useState(FALLBACK_MOODS);
   const [selectedMood, setSelectedMood] = useState('happy');
-  const [moodMovies, setMoodMovies] = useState([]);
-  const [moodMeta, setMoodMeta] = useState(null);
-  const [featuredMovies, setFeaturedMovies] = useState([]);
+  const [moodMovies, setMoodMovies] = useState(() =>
+    fallbackMovies.filter((m) => m.moodTags?.includes('happy')).slice(0, 6)
+  );
+  const [moodMeta, setMoodMeta] = useState(FALLBACK_MOODS[0]);
+  const [featuredMovies, setFeaturedMovies] = useState(() => fallbackMovies.slice(0, 6));
   const [recentHistory, setRecentHistory] = useState([]);
-  const [loadingMoodMovies, setLoadingMoodMovies] = useState(true);
+  const [loadingMoodMovies, setLoadingMoodMovies] = useState(false);
 
   // Load initial moods and featured
   useEffect(() => {
@@ -26,14 +30,14 @@ const Home = () => {
           api.get('/movies/featured'),
         ]);
 
-        if (moodsRes.data.success) {
+        if (moodsRes.data.success && moodsRes.data.moods?.length) {
           setMoods(moodsRes.data.moods);
         }
-        if (featRes.data.success) {
+        if (featRes.data.success && featRes.data.movies?.length) {
           setFeaturedMovies(featRes.data.movies);
         }
       } catch (err) {
-        console.error('Error fetching home data:', err);
+        console.warn('API sync fallback active:', err.message);
       }
     };
 
@@ -46,12 +50,17 @@ const Home = () => {
       setLoadingMoodMovies(true);
       try {
         const res = await api.get(`/movies/mood/${selectedMood}?limit=6`);
-        if (res.data.success) {
+        if (res.data.success && res.data.movies?.length) {
           setMoodMovies(res.data.movies);
-          setMoodMeta(res.data.mood);
+          setMoodMeta(res.data.mood || FALLBACK_MOODS.find((m) => m.id === selectedMood));
+        } else {
+          const fallback = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
+          setMoodMovies(fallback.slice(0, 6));
         }
       } catch (err) {
-        console.error('Error fetching mood movies:', err);
+        const fallback = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
+        setMoodMovies(fallback.slice(0, 6));
+        setMoodMeta(FALLBACK_MOODS.find((m) => m.id === selectedMood));
       } finally {
         setLoadingMoodMovies(false);
       }

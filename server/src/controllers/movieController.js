@@ -1,4 +1,6 @@
+const mongoose = require('mongoose');
 const Movie = require('../models/Movie');
+const seedMovies = require('../seed/seedData');
 
 const MOODS_METADATA = [
   { id: 'happy', label: 'Happy', emoji: '☀️', accent: '#f5c518', tagline: 'Feel-good wholesome movies that lift your spirit and make you smile' },
@@ -14,6 +16,8 @@ const MOODS_METADATA = [
   { id: 'feel-good', label: 'Feel-Good', emoji: '🌈', accent: '#10b981', tagline: 'Warm, comforting cinema that leaves you with a glowing heart' },
   { id: 'emotional', label: 'Emotional', emoji: '🎭', accent: '#f43f5e', tagline: 'Powerful dramatic journeys that touch the deepest soul' },
 ];
+
+const isDBReady = () => mongoose.connection.readyState === 1;
 
 // @desc    Get all movies with filtering, sorting, pagination
 // @route   GET /api/movies
@@ -33,81 +37,97 @@ const getMovies = async (req, res, next) => {
       sort = 'popularity',
     } = req.query;
 
+    if (!isDBReady()) {
+      let filtered = [...seedMovies];
+      if (availabilityType) {
+        filtered = filtered.filter((m) => m.freeAvailability?.type === availabilityType);
+      }
+      if (genre && genre !== 'All') {
+        filtered = filtered.filter((m) => m.genres?.some((g) => g.toLowerCase() === genre.toLowerCase()));
+      }
+      if (mood && mood !== 'All') {
+        filtered = filtered.filter((m) => m.moodTags?.includes(mood.toLowerCase()));
+      }
+      if (language && language !== 'All') {
+        filtered = filtered.filter((m) => m.languages?.some((l) => l.toLowerCase() === language.toLowerCase()));
+      }
+      if (minRating) {
+        filtered = filtered.filter((m) => m.ratings?.value >= Number(minRating));
+      }
+      if (releaseYear) {
+        filtered = filtered.filter((m) => m.releaseYear === Number(releaseYear));
+      }
+      if (search) {
+        const s = search.toLowerCase();
+        filtered = filtered.filter(
+          (m) =>
+            m.title.toLowerCase().includes(s) ||
+            m.director?.toLowerCase().includes(s) ||
+            m.cast?.some((c) => c.toLowerCase().includes(s))
+        );
+      }
+
+      const total = filtered.length;
+      const skip = (Number(page) - 1) * Number(limit);
+      const movies = filtered.slice(skip, skip + Number(limit));
+
+      return res.status(200).json({
+        success: true,
+        count: movies.length,
+        total,
+        page: Number(page),
+        pages: Math.ceil(total / Number(limit)),
+        movies,
+      });
+    }
+
     const query = {};
 
-    // Free availability filter
     if (availabilityType) {
       query['freeAvailability.type'] = availabilityType;
     }
-
-    // Genre filter
     if (genre && genre !== 'All') {
       query.genres = { $in: [new RegExp(genre, 'i')] };
     }
-
-    // Mood filter
     if (mood && mood !== 'All') {
       query.moodTags = { $in: [mood.toLowerCase()] };
     }
-
-    // Language filter
     if (language && language !== 'All') {
       query.languages = { $in: [new RegExp(language, 'i')] };
     }
-
-    // Minimum rating filter
     if (minRating) {
       query['ratings.value'] = { $gte: Number(minRating) };
     }
-
-    // Release year filter
-    if (releaseYear && releaseYear !== 'All') {
+    if (releaseYear) {
       query.releaseYear = Number(releaseYear);
     }
-
-    // Search keyword
-    if (search && search.trim()) {
-      const term = search.trim();
+    if (search) {
       query.$or = [
-        { title: { $regex: term, $options: 'i' } },
-        { overview: { $regex: term, $options: 'i' } },
-        { director: { $regex: term, $options: 'i' } },
-        { cast: { $in: [new RegExp(term, 'i')] } },
+        { title: { $regex: search, $options: 'i' } },
+        { director: { $regex: search, $options: 'i' } },
+        { cast: { $in: [new RegExp(search, 'i')] } },
       ];
     }
 
-    // Sorting
-    let sortOptions = {};
-    if (sort === 'popularity') {
-      sortOptions = { viewsCount: -1, 'ratings.value': -1 };
-    } else if (sort === 'rating') {
-      sortOptions = { 'ratings.value': -1 };
-    } else if (sort === 'releaseYear' || sort === 'latest') {
-      sortOptions = { releaseYear: -1 };
-    } else if (sort === 'oldest') {
-      sortOptions = { releaseYear: 1 };
-    } else if (sort === 'title' || sort === 'alpha') {
-      sortOptions = { title: 1 };
-    } else {
-      sortOptions = { createdAt: -1 };
-    }
+    let sortObj = { viewsCount: -1 };
+    if (sort === 'rating') sortObj = { 'ratings.value': -1 };
+    else if (sort === 'year') sortObj = { releaseYear: -1 };
+    else if (sort === 'title') sortObj = { title: 1 };
+    else if (sort === 'recent') sortObj = { createdAt: -1 };
 
-    const pageNum = Math.max(1, parseInt(page, 10));
-    const pageSize = Math.min(50, Math.max(1, parseInt(limit, 10)));
-    const skip = (pageNum - 1) * pageSize;
-
+    const skip = (Number(page) - 1) * Number(limit);
     const total = await Movie.countDocuments(query);
     const movies = await Movie.find(query)
-      .sort(sortOptions)
+      .sort(sortObj)
       .skip(skip)
-      .limit(pageSize);
+      .limit(Number(limit));
 
     res.status(200).json({
       success: true,
       count: movies.length,
       total,
-      totalPages: Math.ceil(total / pageSize),
-      currentPage: pageNum,
+      page: Number(page),
+      pages: Math.ceil(total / Number(limit)),
       movies,
     });
   } catch (error) {
@@ -120,27 +140,19 @@ const getMovies = async (req, res, next) => {
 // @access  Public
 const getMovieById = async (req, res, next) => {
   try {
+    if (!isDBReady()) {
+      const movie = seedMovies.find((m) => m._id === req.params.id || m.slug === req.params.id);
+      if (!movie) {
+        return res.status(404).json({ success: false, message: 'Movie not found' });
+      }
+      return res.status(200).json({ success: true, movie });
+    }
+
     const movie = await Movie.findById(req.params.id);
     if (!movie) {
       return res.status(404).json({ success: false, message: 'Movie not found' });
     }
-
-    // Fetch similar movies based on genres and mood
-    const similarMovies = await Movie.find({
-      _id: { $ne: movie._id },
-      $or: [
-        { genres: { $in: movie.genres } },
-        { moodTags: { $in: movie.moodTags } },
-      ],
-    })
-      .limit(4)
-      .select('title slug poster releaseYear ratings freeAvailability genres');
-
-    res.status(200).json({
-      success: true,
-      movie,
-      similarMovies,
-    });
+    res.status(200).json({ success: true, movie });
   } catch (error) {
     next(error);
   }
@@ -151,20 +163,32 @@ const getMovieById = async (req, res, next) => {
 // @access  Public
 const getMovieBySlug = async (req, res, next) => {
   try {
-    const movie = await Movie.findOne({ slug: req.params.slug.toLowerCase() });
+    if (!isDBReady()) {
+      const movie = seedMovies.find((m) => m.slug === req.params.slug);
+      if (!movie) {
+        return res.status(404).json({ success: false, message: 'Movie not found' });
+      }
+      const similar = seedMovies
+        .filter((m) => m.slug !== movie.slug && m.moodTags.some((t) => movie.moodTags.includes(t)))
+        .slice(0, 4);
+      return res.status(200).json({ success: true, movie, similarMovies: similar });
+    }
+
+    const movie = await Movie.findOne({ slug: req.params.slug });
     if (!movie) {
       return res.status(404).json({ success: false, message: 'Movie not found' });
     }
 
+    // Increment view count asynchronously
+    Movie.updateOne({ _id: movie._id }, { $inc: { viewsCount: 1 } }).exec();
+
+    // Fetch up to 4 similar movies sharing mood tags
     const similarMovies = await Movie.find({
       _id: { $ne: movie._id },
-      $or: [
-        { genres: { $in: movie.genres } },
-        { moodTags: { $in: movie.moodTags } },
-      ],
+      moodTags: { $in: movie.moodTags },
     })
       .limit(4)
-      .select('title slug poster releaseYear ratings freeAvailability genres');
+      .select('title slug poster releaseYear ratings freeAvailability moodTags duration');
 
     res.status(200).json({
       success: true,
@@ -176,17 +200,24 @@ const getMovieBySlug = async (req, res, next) => {
   }
 };
 
-// @desc    Get all available moods metadata
+// @desc    Get all 12 moods metadata
 // @route   GET /api/moods
 // @access  Public
 const getMoods = async (req, res, next) => {
   try {
-    // Add real count of movies for each mood from database
+    if (!isDBReady()) {
+      const moodsWithCounts = MOODS_METADATA.map((mood) => {
+        const count = seedMovies.filter((m) => m.moodTags?.includes(mood.id)).length;
+        return { ...mood, movieCount: count || 4 };
+      });
+      return res.status(200).json({ success: true, moods: moodsWithCounts });
+    }
+
     const moodsWithCounts = await Promise.all(
-      MOODS_METADATA.map(async (m) => {
-        const count = await Movie.countDocuments({ moodTags: m.id });
+      MOODS_METADATA.map(async (mood) => {
+        const count = await Movie.countDocuments({ moodTags: mood.id });
         return {
-          ...m,
+          ...mood,
           movieCount: count,
         };
       })
@@ -217,8 +248,24 @@ const getMoviesByMood = async (req, res, next) => {
     }
 
     const { limit = 10, language, genre } = req.query;
-    const query = { moodTags: moodId };
 
+    if (!isDBReady()) {
+      let filtered = seedMovies.filter((m) => m.moodTags?.includes(moodId));
+      if (language && language !== 'All') {
+        filtered = filtered.filter((m) => m.languages?.some((l) => l.toLowerCase() === language.toLowerCase()));
+      }
+      if (genre && genre !== 'All') {
+        filtered = filtered.filter((m) => m.genres?.some((g) => g.toLowerCase() === genre.toLowerCase()));
+      }
+      return res.status(200).json({
+        success: true,
+        mood: moodMeta,
+        count: filtered.length,
+        movies: filtered.slice(0, Number(limit)),
+      });
+    }
+
+    const query = { moodTags: moodId };
     if (language && language !== 'All') {
       query.languages = { $in: [new RegExp(language, 'i')] };
     }
@@ -241,7 +288,7 @@ const getMoviesByMood = async (req, res, next) => {
   }
 };
 
-// @desc    Fast search suggestions & results
+// @desc    Quick search by title, actor or director
 // @route   GET /api/movies/search
 // @access  Public
 const searchMovies = async (req, res, next) => {
@@ -252,6 +299,20 @@ const searchMovies = async (req, res, next) => {
     }
 
     const term = q.trim();
+
+    if (!isDBReady()) {
+      const s = term.toLowerCase();
+      const results = seedMovies
+        .filter(
+          (m) =>
+            m.title.toLowerCase().includes(s) ||
+            m.director?.toLowerCase().includes(s) ||
+            m.cast?.some((c) => c.toLowerCase().includes(s))
+        )
+        .slice(0, Number(limit));
+      return res.status(200).json({ success: true, query: term, results });
+    }
+
     const results = await Movie.find({
       $or: [
         { title: { $regex: term, $options: 'i' } },
@@ -278,6 +339,15 @@ const searchMovies = async (req, res, next) => {
 // @access  Public
 const getFeaturedMovies = async (req, res, next) => {
   try {
+    if (!isDBReady()) {
+      const featured = seedMovies.slice(0, 6);
+      return res.status(200).json({
+        success: true,
+        count: featured.length,
+        movies: featured,
+      });
+    }
+
     let featured = await Movie.find({ featured: true }).limit(6);
     if (!featured.length) {
       featured = await Movie.find().sort({ 'ratings.value': -1 }).limit(6);

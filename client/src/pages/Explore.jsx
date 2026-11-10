@@ -5,6 +5,7 @@ import MovieCard from '../components/MovieCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import EmptyState from '../components/EmptyState';
 import { Filter, SlidersHorizontal, RotateCcw, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import fallbackMovies from '../data/fallbackMovies';
 
 const GENRES_LIST = ['All', 'Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Drama', 'Family', 'Fantasy', 'Horror', 'Music', 'Mystery', 'Romance', 'Thriller'];
 const MOODS_LIST = ['All', 'happy', 'sad', 'thriller', 'romantic', 'chill', 'adventurous', 'horror', 'comedy', 'inspirational', 'mystery', 'feel-good', 'emotional'];
@@ -22,10 +23,10 @@ const Explore = () => {
   const [sort, setSort] = useState(searchParams.get('sort') || 'popularity');
   const [page, setPage] = useState(parseInt(searchParams.get('page') || '1', 10));
 
-  const [movies, setMovies] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [totalPages, setTotalPages] = useState(1);
-  const [loading, setLoading] = useState(true);
+  const [movies, setMovies] = useState(fallbackMovies);
+  const [total, setTotal] = useState(fallbackMovies.length);
+  const [totalPages, setTotalPages] = useState(Math.ceil(fallbackMovies.length / 12));
+  const [loading, setLoading] = useState(false);
 
   // Fetch movies whenever filters or page changes
   useEffect(() => {
@@ -44,13 +45,13 @@ const Explore = () => {
         if (minRating) params.minRating = minRating;
 
         const res = await api.get('/movies', { params });
-        if (res.data.success) {
+        if (res.data.success && res.data.movies?.length) {
           setMovies(res.data.movies);
           setTotal(res.data.total);
           setTotalPages(res.data.totalPages || 1);
         }
       } catch (err) {
-        console.error('Error fetching catalog:', err);
+        console.warn('Using local fallback catalog:', err.message);
       } finally {
         setLoading(false);
       }

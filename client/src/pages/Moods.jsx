@@ -6,28 +6,34 @@ import MoodChip from '../components/MoodChip';
 import LoadingSpinner from '../components/LoadingSpinner';
 import EmptyState from '../components/EmptyState';
 import { Sparkles, SlidersHorizontal, Info } from 'lucide-react';
+import fallbackMovies from '../data/fallbackMovies';
+import { FALLBACK_MOODS } from '../data/fallbackMoods';
 
 const Moods = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialVibe = searchParams.get('vibe') || 'happy';
 
-  const [moods, setMoods] = useState([]);
+  const [moods, setMoods] = useState(FALLBACK_MOODS);
   const [selectedMoodId, setSelectedMoodId] = useState(initialVibe);
-  const [currentMood, setCurrentMood] = useState(null);
-  const [movies, setMovies] = useState([]);
+  const [currentMood, setCurrentMood] = useState(
+    () => FALLBACK_MOODS.find((m) => m.id === initialVibe) || FALLBACK_MOODS[0]
+  );
+  const [movies, setMovies] = useState(() =>
+    fallbackMovies.filter((m) => m.moodTags?.includes(initialVibe))
+  );
   const [genreFilter, setGenreFilter] = useState('All');
   const [languageFilter, setLanguageFilter] = useState('All');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   // Fetch all moods
   useEffect(() => {
     api.get('/moods').then((res) => {
-      if (res.data.success) {
+      if (res.data.success && res.data.moods?.length) {
         setMoods(res.data.moods);
         const match = res.data.moods.find((m) => m.id === selectedMoodId) || res.data.moods[0];
         setCurrentMood(match);
       }
-    });
+    }).catch(() => {});
   }, []);
 
   // Fetch movies for active mood
@@ -40,12 +46,16 @@ const Moods = () => {
         if (languageFilter !== 'All') params.language = languageFilter;
 
         const res = await api.get(`/movies/mood/${selectedMoodId}`, { params });
-        if (res.data.success) {
+        if (res.data.success && res.data.movies?.length) {
           setMovies(res.data.movies);
-          setCurrentMood(res.data.mood);
+          setCurrentMood(res.data.mood || FALLBACK_MOODS.find((m) => m.id === selectedMoodId));
+        } else {
+          const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMoodId));
+          setMovies(fb);
         }
       } catch (err) {
-        console.error('Error fetching mood movies:', err);
+        const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMoodId));
+        setMovies(fb);
       } finally {
         setLoading(false);
       }
