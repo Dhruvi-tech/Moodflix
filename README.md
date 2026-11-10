@@ -17,6 +17,12 @@
 </p>
 
 <p align="center">
+  <a href="https://moodflix-free.vercel.app" target="_blank">
+    <img src="https://img.shields.io/badge/🌐_Live_Platform-moodflix--free.vercel.app-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Platform" />
+  </a>
+</p>
+
+<p align="center">
   <a href="#-project-overview">Overview</a> •
   <a href="#-full-stack-architecture">Architecture</a> •
   <a href="#-12-mood-palettes">The 12 Moods</a> •
