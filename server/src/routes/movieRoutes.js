@@ -8,10 +8,18 @@ const {
   getMoviesByMood,
   searchMovies,
   getFeaturedMovies,
+  getFreeMovies,
+  getMoviesByLanguage,
+  getMoviesByPlatform,
+  getSmartRecommendations,
 } = require('../controllers/movieController');
 
 router.get('/featured', getFeaturedMovies);
 router.get('/search', searchMovies);
+router.get('/free', getFreeMovies);
+router.get('/recommendations', getSmartRecommendations);
+router.get('/language/:lang', getMoviesByLanguage);
+router.get('/platform/:platform', getMoviesByPlatform);
 router.get('/mood/:mood', getMoviesByMood);
 router.get('/slug/:slug', getMovieBySlug);
 router.get('/:id', getMovieById);

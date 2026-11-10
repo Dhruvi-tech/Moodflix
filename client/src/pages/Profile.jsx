@@ -151,6 +151,42 @@ const Profile = () => {
             </form>
           </div>
 
+          {/* Platform & Viewing Preferences Card */}
+          <div className="settings-card glass-panel">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="settings-title" style={{ margin: 0 }}>Platform & Free Movie Preferences</h3>
+              <button
+                type="button"
+                onClick={() => window.dispatchEvent(new CustomEvent('open-platform-preferences'))}
+                className="btn btn-sm btn-outline"
+                style={{ fontSize: '0.78rem', padding: '0.35rem 0.75rem' }}
+              >
+                ⚙️ Change Platforms
+              </button>
+            </div>
+            <p className="text-xs text-gray-300" style={{ fontSize: '0.82rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
+              MoodFlix prioritizes movies you can legally watch for free, while catering to your streaming subscriptions.
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
+                <div>
+                  <strong style={{ fontSize: '0.9rem', color: '#fff', display: 'block' }}>Default Mode</strong>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Always prioritize verified free-to-watch cinema first</span>
+                </div>
+                <span className="badge badge-free-streaming">Active</span>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.75rem 1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '8px', border: '1px solid var(--border-subtle)' }}>
+                <div>
+                  <strong style={{ fontSize: '0.9rem', color: '#fff', display: 'block' }}>Indian Languages</strong>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>Over 20 regional languages supported in catalog</span>
+                </div>
+                <span className="badge badge-ad-supported">20+ Languages</span>
+              </div>
+            </div>
+          </div>
+
           {/* Change Password Form */}
           <div className="settings-card glass-panel">
             <h3 className="settings-title">Security & Password</h3>

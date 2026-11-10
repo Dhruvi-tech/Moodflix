@@ -85,6 +85,21 @@ export const AuthProvider = ({ children }) => {
     return res.data;
   };
 
+  const updatePreferences = async (newPrefs) => {
+    try {
+      if (token) {
+        const res = await api.put('/auth/preferences', newPrefs);
+        if (res.data.success && user) {
+          const updated = { ...user, preferences: { ...user.preferences, ...newPrefs } };
+          setUser(updated);
+          localStorage.setItem('moodflix_user', JSON.stringify(updated));
+        }
+      }
+    } catch (err) {
+      console.warn('Failed to sync preferences to server, persisting locally:', err);
+    }
+  };
+
   const isAdmin = user && user.role === 'admin';
 
   return (
@@ -98,6 +113,7 @@ export const AuthProvider = ({ children }) => {
         register,
         logout,
         updateProfile,
+        updatePreferences,
         changePassword,
       }}
     >

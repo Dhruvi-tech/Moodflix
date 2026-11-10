@@ -4,28 +4,108 @@ import api from '../services/api';
 import MovieCard from '../components/MovieCard';
 import LoadingSpinner from '../components/LoadingSpinner';
 import EmptyState from '../components/EmptyState';
-import { Filter, SlidersHorizontal, RotateCcw, Search, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Filter, SlidersHorizontal, RotateCcw, Search, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
 
-const GENRES_LIST = ['All', 'Action', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Drama', 'Family', 'Fantasy', 'Horror', 'Music', 'Mystery', 'Romance', 'Thriller'];
-const MOODS_LIST = ['All', 'happy', 'sad', 'thriller', 'romantic', 'chill', 'adventurous', 'horror', 'comedy', 'inspirational', 'mystery', 'feel-good', 'emotional'];
-const AVAILABILITY_TYPES = ['All', 'Public Domain', 'Free Official Streaming', 'Ad-Supported Free'];
+const GENRES_LIST = [
+  'All',
+  'Action',
+  'Adventure',
+  'Animation',
+  'Biography',
+  'Comedy',
+  'Crime',
+  'Drama',
+  'Family',
+  'Fantasy',
+  'Horror',
+  'Musical',
+  'Mystery',
+  'Romance',
+  'Sci-Fi',
+  'Sport',
+  'Thriller',
+  'War',
+];
 
-const Explore = () => {
+const MOODS_LIST = [
+  'All',
+  'happy',
+  'sad',
+  'thriller',
+  'romantic',
+  'chill',
+  'adventurous',
+  'horror',
+  'comedy',
+  'inspirational',
+  'mystery',
+  'feel-good',
+  'emotional',
+  'family',
+  'motivational',
+  'suspense',
+  'relaxing',
+];
+
+const PLATFORMS_LIST = [
+  'All',
+  'Free',
+  'YouTube',
+  'Netflix',
+  'Amazon Prime Video',
+  'JioCinema',
+  'Hotstar',
+];
+
+const LANGUAGES_LIST = [
+  'All',
+  'Hindi',
+  'Kannada',
+  'Telugu',
+  'Tamil',
+  'Malayalam',
+  'Bengali',
+  'Marathi',
+  'Punjabi',
+  'Gujarati',
+  'Odia',
+  'Assamese',
+  'Urdu',
+  'Konkani',
+  'Sanskrit',
+  'Bhojpuri',
+  'Nepali',
+  'English',
+];
+
+const AVAILABILITY_STATUSES = [
+  'All',
+  'FREE TO WATCH',
+  'FREE WITH ADS',
+  'PUBLIC DOMAIN',
+  'SUBSCRIPTION REQUIRED',
+];
+
+export default function Explore() {
   const [searchParams, setSearchParams] = useSearchParams();
 
   // Filters state initialized from URL query params
-  const [search, setSearch] = useState(searchParams.get('search') || '');
+  const [search, setSearch] = useState(searchParams.get('search') || searchParams.get('q') || '');
   const [genre, setGenre] = useState(searchParams.get('genre') || 'All');
   const [mood, setMood] = useState(searchParams.get('mood') || 'All');
-  const [availabilityType, setAvailabilityType] = useState(searchParams.get('availabilityType') || 'All');
+  const [platform, setPlatform] = useState(searchParams.get('platform') || 'All');
+  const [language, setLanguage] = useState(searchParams.get('language') || 'All');
+  const [availabilityStatus, setAvailabilityStatus] = useState(searchParams.get('availabilityStatus') || 'All');
+  const [freeOnly, setFreeOnly] = useState(searchParams.get('freeOnly') === 'true');
+  const [isIndian, setIsIndian] = useState(searchParams.get('isIndian') === 'true');
   const [minRating, setMinRating] = useState(searchParams.get('minRating') || '');
   const [sort, setSort] = useState(searchParams.get('sort') || 'popularity');
   const [page, setPage] = useState(parseInt(searchParams.get('page') || '1', 10));
 
-  const [movies, setMovies] = useState(fallbackMovies);
+  const [movies, setMovies] = useState(fallbackMovies.slice(0, 24));
   const [total, setTotal] = useState(fallbackMovies.length);
-  const [totalPages, setTotalPages] = useState(Math.ceil(fallbackMovies.length / 12));
+  const [totalPages, setTotalPages] = useState(Math.ceil(fallbackMovies.length / 24));
   const [loading, setLoading] = useState(false);
 
   // Fetch movies whenever filters or page changes
@@ -35,20 +115,55 @@ const Explore = () => {
       try {
         const params = {
           page,
-          limit: 12,
+          limit: 24,
           sort,
         };
         if (search.trim()) params.search = search.trim();
         if (genre !== 'All') params.genre = genre;
         if (mood !== 'All') params.mood = mood;
-        if (availabilityType !== 'All') params.availabilityType = availabilityType;
+        if (platform !== 'All') params.platform = platform;
+        if (language !== 'All') params.language = language;
+        if (availabilityStatus !== 'All') params.availabilityStatus = availabilityStatus;
+        if (freeOnly) params.freeOnly = 'true';
+        if (isIndian) params.isIndian = 'true';
         if (minRating) params.minRating = minRating;
 
         const res = await api.get('/movies', { params });
         if (res.data.success && res.data.movies?.length) {
           setMovies(res.data.movies);
           setTotal(res.data.total);
-          setTotalPages(res.data.totalPages || 1);
+          setTotalPages(res.data.pages || Math.ceil(res.data.total / 24) || 1);
+        } else {
+          // Client-side fallback filter
+          let pool = [...fallbackMovies];
+          if (freeOnly) pool = pool.filter((m) => m.isFree === true);
+          if (platform !== 'All') {
+            if (platform === 'Free') pool = pool.filter((m) => m.isFree === true);
+            else {
+              pool = pool.filter(
+                (m) =>
+                  m.primaryPlatform?.toLowerCase().includes(platform.toLowerCase()) ||
+                  m.platforms?.some((p) => p.name?.toLowerCase().includes(platform.toLowerCase()))
+              );
+            }
+          }
+          if (language !== 'All') {
+            pool = pool.filter(
+              (m) =>
+                m.languages?.some((l) => l.toLowerCase() === language.toLowerCase()) ||
+                m.originalLanguage?.toLowerCase() === language.toLowerCase()
+            );
+          }
+          if (genre !== 'All') pool = pool.filter((m) => m.genres?.some((g) => g.toLowerCase() === genre.toLowerCase()));
+          if (mood !== 'All') pool = pool.filter((m) => m.moodTags?.includes(mood.toLowerCase()));
+          if (search.trim()) {
+            const s = search.toLowerCase();
+            pool = pool.filter((m) => m.title.toLowerCase().includes(s) || m.director?.toLowerCase().includes(s));
+          }
+          setTotal(pool.length);
+          setTotalPages(Math.ceil(pool.length / 24) || 1);
+          const skip = (page - 1) * 24;
+          setMovies(pool.slice(skip, skip + 24));
         }
       } catch (err) {
         console.warn('Using local fallback catalog:', err.message);
@@ -58,13 +173,17 @@ const Explore = () => {
     };
 
     fetchMovies();
-  }, [search, genre, mood, availabilityType, minRating, sort, page]);
+  }, [search, genre, mood, platform, language, availabilityStatus, freeOnly, isIndian, minRating, sort, page]);
 
   const handleResetFilters = () => {
     setSearch('');
     setGenre('All');
     setMood('All');
-    setAvailabilityType('All');
+    setPlatform('All');
+    setLanguage('All');
+    setAvailabilityStatus('All');
+    setFreeOnly(false);
+    setIsIndian(false);
     setMinRating('');
     setSort('popularity');
     setPage(1);
@@ -72,182 +191,262 @@ const Explore = () => {
   };
 
   return (
-    <div className="explore-page page-wrapper container">
+    <div className="explore-page page-wrapper container text-slate-100">
       {/* ── Section Header ───────────────────────────────── */}
-      <div className="section-head">
-        <h2>Explore Free Movies</h2>
-        <p>Browse our catalog of verified legal free-to-watch cinema with advanced filtering.</p>
+      <div className="section-head mb-8">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#f72585] px-3 py-1 rounded-full bg-[#f72585]/10 border border-[#f72585]/30 inline-block mb-2">
+          500+ Verified Titles Catalog
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-bold font-serif text-white">Explore Movies</h2>
+        <p className="text-sm text-gray-300">
+          Discover films across verified free services and premium streaming platforms tailored to your language and mood.
+        </p>
       </div>
 
-      {/* ── Advanced Filter Bar ──────────────────────────── */}
-      <div className="filter-panel glass-panel">
-        <div className="filter-row-top">
-          <div className="search-filter-box">
-            <Search size={18} className="search-filter-icon" />
+      {/* ── Platform Tabs ─────────────────────────────────── */}
+      <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
+        {PLATFORMS_LIST.map((plat) => (
+          <button
+            key={plat}
+            onClick={() => {
+              setPlatform(plat);
+              if (plat === 'Free') setFreeOnly(true);
+              setPage(1);
+            }}
+            className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
+              platform === plat
+                ? 'bg-gradient-to-r from-[#9d4edd] to-[#f72585] text-white shadow-lg shadow-[#9d4edd]/30 scale-105'
+                : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
+            }`}
+          >
+            {plat === 'All' ? '🌐 All Platforms' : plat === 'Free' ? '🆓 Free Movies Only' : plat}
+          </button>
+        ))}
+      </div>
+
+      {/* ── Advanced Filter Panel ─────────────────────────── */}
+      <div className="p-5 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md shadow-2xl mb-8 space-y-4">
+        {/* Top search & sorting row */}
+        <div className="flex flex-col md:flex-row items-center gap-3">
+          <div className="relative flex-1 w-full">
+            <Search size={18} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
             <input
               type="text"
-              placeholder="Filter by title, actor, or director..."
+              placeholder="Search by title, director, or cast..."
               value={search}
               onChange={(e) => {
                 setSearch(e.target.value);
                 setPage(1);
               }}
-              className="search-filter-input"
+              className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-black/40 border border-white/15 text-sm text-white placeholder-gray-400 focus:outline-none focus:border-[#9d4edd] transition-colors"
             />
           </div>
 
-          <div className="sort-box">
-            <SlidersHorizontal size={16} />
-            <select
-              value={sort}
-              onChange={(e) => {
-                setSort(e.target.value);
+          <div className="flex items-center gap-3 w-full md:w-auto">
+            {/* Free only toggle switch */}
+            <button
+              type="button"
+              onClick={() => {
+                setFreeOnly(!freeOnly);
                 setPage(1);
               }}
-              className="filter-select"
+              className={`px-4 py-2.5 rounded-xl text-xs font-bold border transition-all flex items-center gap-2 whitespace-nowrap ${
+                freeOnly
+                  ? 'bg-emerald-500/20 text-emerald-300 border-emerald-400 shadow-lg shadow-emerald-500/20'
+                  : 'bg-white/5 border-white/15 text-gray-300 hover:bg-white/10'
+              }`}
             >
-              <option value="popularity">Most Popular</option>
-              <option value="rating">Highest Rated</option>
-              <option value="releaseYear">Newest Release</option>
-              <option value="oldest">Classic (Oldest)</option>
-              <option value="title">Alphabetical (A-Z)</option>
-            </select>
-          </div>
+              <span>🆓</span>
+              <span>Free Movies Only</span>
+              {freeOnly && <span className="text-xs">✓</span>}
+            </button>
 
-          <button
-            type="button"
-            onClick={handleResetFilters}
-            className="btn btn-secondary btn-sm reset-btn"
-            title="Reset Filters"
-          >
-            <RotateCcw size={14} />
-            <span>Reset</span>
-          </button>
+            {/* Sort Select */}
+            <div className="flex items-center gap-2 px-3 py-2 rounded-xl bg-black/40 border border-white/15">
+              <SlidersHorizontal size={14} className="text-gray-400" />
+              <select
+                value={sort}
+                onChange={(e) => {
+                  setSort(e.target.value);
+                  setPage(1);
+                }}
+                className="bg-transparent text-xs text-white focus:outline-none cursor-pointer"
+              >
+                <option value="popularity" className="bg-[#18122B]">Most Popular</option>
+                <option value="rating" className="bg-[#18122B]">Highest Rated</option>
+                <option value="year" className="bg-[#18122B]">Newest Release</option>
+                <option value="title" className="bg-[#18122B]">Alphabetical (A-Z)</option>
+              </select>
+            </div>
+
+            {/* Reset Button */}
+            <button
+              type="button"
+              onClick={handleResetFilters}
+              className="p-2.5 rounded-xl bg-white/5 border border-white/15 text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
+              title="Reset All Filters"
+            >
+              <RotateCcw size={16} />
+            </button>
+          </div>
         </div>
 
-        <div className="filter-row-bottom">
-          {/* Genre */}
-          <div className="filter-select-group">
-            <label className="filter-label">Genre</label>
+        {/* Bottom Filter Selectors */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+          {/* Language */}
+          <div>
+            <label className="text-xs font-semibold text-gray-400 block mb-1">Language</label>
             <select
-              value={genre}
+              value={language}
               onChange={(e) => {
-                setGenre(e.target.value);
+                setLanguage(e.target.value);
                 setPage(1);
               }}
-              className="filter-select"
+              className="w-full p-2.5 rounded-xl bg-black/40 border border-white/15 text-xs text-white focus:outline-none focus:border-[#9d4edd]"
             >
-              {GENRES_LIST.map((g) => (
-                <option key={g} value={g}>{g}</option>
+              {LANGUAGES_LIST.map((lang) => (
+                <option key={lang} value={lang} className="bg-[#18122B]">
+                  {lang === 'All' ? 'All Languages (20+)' : lang}
+                </option>
               ))}
             </select>
           </div>
 
           {/* Mood */}
-          <div className="filter-select-group">
-            <label className="filter-label">Mood / Vibe</label>
+          <div>
+            <label className="text-xs font-semibold text-gray-400 block mb-1">Mood Tonight</label>
             <select
               value={mood}
               onChange={(e) => {
                 setMood(e.target.value);
                 setPage(1);
               }}
-              className="filter-select"
+              className="w-full p-2.5 rounded-xl bg-black/40 border border-white/15 text-xs text-white focus:outline-none focus:border-[#9d4edd]"
             >
               {MOODS_LIST.map((m) => (
-                <option key={m} value={m}>
-                  {m === 'All' ? 'All Moods' : m.charAt(0).toUpperCase() + m.slice(1)}
+                <option key={m} value={m} className="bg-[#18122B]">
+                  {m === 'All' ? 'All 16 Moods' : m.charAt(0).toUpperCase() + m.slice(1)}
                 </option>
               ))}
             </select>
           </div>
 
-          {/* Availability */}
-          <div className="filter-select-group">
-            <label className="filter-label">Free Type</label>
+          {/* Genre */}
+          <div>
+            <label className="text-xs font-semibold text-gray-400 block mb-1">Genre</label>
             <select
-              value={availabilityType}
+              value={genre}
               onChange={(e) => {
-                setAvailabilityType(e.target.value);
+                setGenre(e.target.value);
                 setPage(1);
               }}
-              className="filter-select"
+              className="w-full p-2.5 rounded-xl bg-black/40 border border-white/15 text-xs text-white focus:outline-none focus:border-[#9d4edd]"
             >
-              {AVAILABILITY_TYPES.map((a) => (
-                <option key={a} value={a}>{a}</option>
+              {GENRES_LIST.map((g) => (
+                <option key={g} value={g} className="bg-[#18122B]">
+                  {g}
+                </option>
               ))}
             </select>
           </div>
 
-          {/* Minimum Rating */}
-          <div className="filter-select-group">
-            <label className="filter-label">Min Rating</label>
+          {/* Rating */}
+          <div>
+            <label className="text-xs font-semibold text-gray-400 block mb-1">Minimum IMDb</label>
             <select
               value={minRating}
               onChange={(e) => {
                 setMinRating(e.target.value);
                 setPage(1);
               }}
-              className="filter-select"
+              className="w-full p-2.5 rounded-xl bg-black/40 border border-white/15 text-xs text-white focus:outline-none focus:border-[#9d4edd]"
             >
-              <option value="">Any Rating</option>
-              <option value="7.0">★ 7.0 & above</option>
-              <option value="7.5">★ 7.5 & above</option>
-              <option value="8.0">★ 8.0 & above</option>
+              <option value="" className="bg-[#18122B]">Any Rating</option>
+              <option value="7.0" className="bg-[#18122B]">★ 7.0 & above</option>
+              <option value="7.5" className="bg-[#18122B]">★ 7.5 & above</option>
+              <option value="8.0" className="bg-[#18122B]">★ 8.0 & above</option>
+              <option value="8.5" className="bg-[#18122B]">★ 8.5 & above</option>
             </select>
           </div>
         </div>
       </div>
 
-      {/* ── Results Count ─────────────────────────────────── */}
-      <div className="results-meta-bar">
-        <span>Showing <strong>{movies.length}</strong> of <strong>{total}</strong> verified free movies</span>
-        {genre !== 'All' && <span className="active-filter-pill">Genre: {genre}</span>}
-        {mood !== 'All' && <span className="active-filter-pill">Mood: {mood}</span>}
-        {availabilityType !== 'All' && <span className="active-filter-pill">Type: {availabilityType}</span>}
+      {/* ── Results Count Bar ─────────────────────────────── */}
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 px-1">
+        <span className="text-sm text-gray-300">
+          Showing <strong>{movies.length}</strong> of <strong>{total}</strong> verified movies
+        </span>
+        <div className="flex flex-wrap items-center gap-2">
+          {freeOnly && (
+            <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+              Free Only
+            </span>
+          )}
+          {platform !== 'All' && (
+            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#9d4edd]/20 text-[#e0aaff] border border-[#9d4edd]/40">
+              Platform: {platform}
+            </span>
+          )}
+          {language !== 'All' && (
+            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-sky-500/20 text-sky-400 border border-sky-500/40">
+              Language: {language}
+            </span>
+          )}
+          {mood !== 'All' && (
+            <span className="px-2.5 py-1 rounded-full text-xs font-medium bg-[#f72585]/20 text-[#f72585] border border-[#f72585]/40">
+              Mood: {mood}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* ── Movie Grid / Loading / Empty State ────────────── */}
       {loading ? (
-        <LoadingSpinner text="Filtering cinematic database..." />
+        <LoadingSpinner text="Searching master cinema catalog..." />
       ) : movies.length === 0 ? (
         <EmptyState
-          title="No movies match your criteria"
-          description="Try broadening your genre or rating filter to discover more free films."
+          title="No movies found for these filters"
+          description="Try selecting 'All Platforms' or clearing language filters to see more results."
           actionText="Clear All Filters"
           actionLink="#"
           onActionClick={handleResetFilters}
         />
       ) : (
         <>
-          <div className="movie-grid animate-fade-in">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 animate-fade-in mb-10">
             {movies.map((movie) => (
-              <MovieCard key={movie._id} movie={movie} />
+              <MovieCard key={movie._id || movie.slug} movie={movie} />
             ))}
           </div>
 
           {/* ── Pagination ──────────────────────────────────── */}
           {totalPages > 1 && (
-            <div className="pagination-wrapper">
+            <div className="flex items-center justify-center gap-4 py-8 border-t border-white/10">
               <button
                 type="button"
                 disabled={page <= 1}
-                onClick={() => setPage((p) => Math.max(1, p - 1))}
-                className="btn btn-secondary btn-sm"
+                onClick={() => {
+                  setPage((p) => Math.max(1, p - 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="btn btn-secondary btn-sm px-4 py-2 rounded-xl flex items-center gap-1.5 disabled:opacity-40"
               >
                 <ChevronLeft size={16} />
-                <span>Prev</span>
+                <span>Previous</span>
               </button>
 
-              <span className="pagination-info">
-                Page <strong>{page}</strong> of <strong>{totalPages}</strong>
+              <span className="text-sm text-gray-400">
+                Page <strong className="text-white">{page}</strong> of <strong className="text-white">{totalPages}</strong>
               </span>
 
               <button
                 type="button"
                 disabled={page >= totalPages}
-                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
-                className="btn btn-secondary btn-sm"
+                onClick={() => {
+                  setPage((p) => Math.min(totalPages, p + 1));
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+                className="btn btn-secondary btn-sm px-4 py-2 rounded-xl flex items-center gap-1.5 disabled:opacity-40"
               >
                 <span>Next</span>
                 <ChevronRight size={16} />
@@ -256,121 +455,6 @@ const Explore = () => {
           )}
         </>
       )}
-
-      <style>{`
-        .filter-panel {
-          padding: 1.5rem;
-          margin-bottom: 2rem;
-          display: flex;
-          flex-direction: column;
-          gap: 1.25rem;
-        }
-        .filter-row-top {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          flex-wrap: wrap;
-        }
-        .search-filter-box {
-          position: relative;
-          display: flex;
-          align-items: center;
-          flex: 1;
-          min-width: 260px;
-        }
-        .search-filter-icon {
-          position: absolute;
-          left: 1rem;
-          color: var(--text-dim);
-        }
-        .search-filter-input {
-          width: 100%;
-          background: var(--surface-2);
-          border: 1px solid var(--border-subtle);
-          border-radius: var(--radius-full);
-          padding: 0.65rem 1.25rem 0.65rem 2.6rem;
-          color: #fff;
-          font-size: 0.9rem;
-        }
-        .search-filter-input:focus {
-          outline: none;
-          border-color: var(--primary);
-        }
-        .sort-box {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          background: var(--surface-2);
-          padding: 0.35rem 0.85rem;
-          border-radius: var(--radius-full);
-          border: 1px solid var(--border-subtle);
-          color: var(--text-muted);
-        }
-        .filter-row-bottom {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-          gap: 1rem;
-        }
-        .filter-select-group {
-          display: flex;
-          flex-direction: column;
-          gap: 0.35rem;
-        }
-        .filter-label {
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          color: var(--text-dim);
-          font-weight: 700;
-        }
-        .filter-select {
-          background: var(--surface-2);
-          border: 1px solid var(--border-subtle);
-          border-radius: var(--radius-sm);
-          padding: 0.55rem 0.85rem;
-          color: #fff;
-          font-size: 0.88rem;
-          cursor: pointer;
-        }
-        .filter-select:focus {
-          outline: none;
-          border-color: var(--primary);
-        }
-        .reset-btn {
-          height: 38px;
-        }
-        .results-meta-bar {
-          display: flex;
-          align-items: center;
-          gap: 0.75rem;
-          margin-bottom: 1.5rem;
-          font-size: 0.88rem;
-          color: var(--text-muted);
-          flex-wrap: wrap;
-        }
-        .active-filter-pill {
-          padding: 0.2rem 0.6rem;
-          background: rgba(139, 92, 246, 0.15);
-          border: 1px solid var(--border);
-          border-radius: var(--radius-full);
-          color: #c4b5fd;
-          font-size: 0.75rem;
-          font-weight: 600;
-        }
-        .pagination-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 1.5rem;
-          margin-top: 3.5rem;
-        }
-        .pagination-info {
-          font-size: 0.9rem;
-          color: var(--text-muted);
-        }
-      `}</style>
     </div>
   );
-};
-
-export default Explore;
+}

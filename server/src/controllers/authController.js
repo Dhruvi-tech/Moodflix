@@ -275,10 +275,55 @@ const changePassword = async (req, res, next) => {
   }
 };
 
+// @desc    Update user viewing and platform preferences
+// @route   PUT /api/auth/preferences
+// @access  Private
+const updatePreferences = async (req, res, next) => {
+  try {
+    const { preferredLanguages, preferredPlatforms, freeOnly, favoriteMoods, preferredGenres } = req.body;
+
+    if (!isDBReady()) {
+      return res.status(200).json({
+        success: true,
+        message: 'Preferences saved successfully',
+        preferences: {
+          preferredLanguages: preferredLanguages || [],
+          preferredPlatforms: preferredPlatforms || [],
+          freeOnly: freeOnly ?? false,
+          favoriteMoods: favoriteMoods || [],
+          preferredGenres: preferredGenres || [],
+        },
+      });
+    }
+
+    const user = await User.findById(req.user._id);
+    if (!user) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+
+    if (preferredLanguages !== undefined) user.preferences.preferredLanguages = preferredLanguages;
+    if (preferredPlatforms !== undefined) user.preferences.preferredPlatforms = preferredPlatforms;
+    if (freeOnly !== undefined) user.preferences.freeOnly = freeOnly;
+    if (favoriteMoods !== undefined) user.preferences.favoriteMoods = favoriteMoods;
+    if (preferredGenres !== undefined) user.preferences.preferredGenres = preferredGenres;
+
+    await user.save();
+
+    res.status(200).json({
+      success: true,
+      message: 'Preferences saved successfully',
+      preferences: user.preferences,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
 module.exports = {
   register,
   login,
   getMe,
   updateProfile,
+  updatePreferences,
   changePassword,
 };

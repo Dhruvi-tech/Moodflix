@@ -36,34 +36,43 @@ The project was structured following the enterprise-grade architecture pattern o
 
 ## 3. New Features Implemented
 
-1. **Expanded 12-Mood Emotional Palette:**
-   - Added six new mood states: **Horror** (👻), **Comedy** (😂), **Inspirational** (🌟), **Mystery** (🕵️), **Feel-Good** (🌈), and **Emotional** (🎭).
+1. **Expanded 16-Mood Emotional Palette:**
+   - Features 16 distinct moods: **Happy** (☀️), **Sad** (🌧️), **Thriller** (🔪), **Romantic** (💫), **Chill** (🌙), **Adventurous** (⚡), **Horror** (👻), **Comedy** (😂), **Inspirational** (🌟), **Mystery** (🕵️), **Feel-Good** (🌈), **Emotional** (🎭), **Family** (👨‍👩‍👧‍👦), **Motivational** (🚀), **Suspense** (⏳), and **Relaxing** (🍃).
    - Each mood features custom accent colors, taglines, and deterministic metadata matching.
 2. **Deterministic Recommendation Matching with Explanations:**
-   - Every recommendation dynamically explains *why* it fits the selected emotional state (e.g. pacing, comedic timing, emotional resolution).
-3. **Real MongoDB Database (Mongoose ORM):**
-   - In-memory JavaScript arrays replaced with permanent MongoDB collections with compound indexes and unique constraints.
-4. **JWT Authentication & Security:**
+   - Every recommendation dynamically explains *why* it fits the selected emotional state and user preferences (e.g. *"Recommended because you selected Kannada, Comedy and Free Movies"*).
+3. **Comprehensive 500+ Movies Catalog with 20+ Indian Languages:**
+   - 507 authentic movies across Hindi, Kannada, Telugu, Tamil, Malayalam, Bengali, Marathi, Punjabi, Gujarati, Odia, Assamese, Urdu, Konkani, Sanskrit, Bhojpuri, Manipuri, Kashmiri, Nepali, and World Cinema.
+   - 222 verified legally free non-subscription titles on YouTube and Public Domain.
+4. **Platform Preference Engine:**
+   - Interactive prompt asking *"Where would you prefer to watch your movies?"*
+   - Dedicated one-click option: *"I don't have any paid subscriptions. Show me only free movies."*
+   - Multi-platform selection: Free Movies, Netflix, Amazon Prime Video, YouTube, Show Me Everything.
+   - Default behavior: Free Movies First.
+   - Synchronized to user profile in MongoDB and preserved locally in localStorage.
+5. **Real MongoDB Database (Mongoose ORM):**
+   - Permanent MongoDB Atlas collections with compound indexes and unique constraints.
+6. **JWT Authentication & Security:**
    - Registration, Login, Logout, BCrypt password hashing (salt factor 10), JWT verification, and protected profile routes.
-5. **Role-Based Access Control (RBAC):**
+7. **Role-Based Access Control (RBAC):**
    - Distinct roles: `user` (default for public signups) and `admin`. Admin routes strictly protected by `admin` middleware.
-6. **User Watchlist Management:**
+8. **User Watchlist Management:**
    - Authenticated users can save and remove movies from a persistent watchlist in MongoDB, with duplicate prevention.
-7. **User Favourites Management:**
+9. **User Favourites Management:**
    - Authenticated users can bookmark favourite titles with persistent database storage.
-8. **Audience Reviews & Star Rating System:**
-   - Authenticated users can post a 1-to-5 star rating and comment on any movie. Automatically recalculates the movie's overall average rating. Users can edit or delete their own reviews. Duplicate reviews from the same user for the same movie are blocked.
-9. **Recently Viewed & Viewing History:**
-   - Automatically logs viewed movies to the user's history with timestamps, displaying a "Recently Viewed" section on the homepage and profile, with a "Clear History" action.
-10. **Advanced Catalog Search & Multi-Filtering:**
+10. **Audience Reviews & Star Rating System:**
+    - Authenticated users can post a 1-to-5 star rating and comment on any movie. Automatically recalculates the movie's overall average rating. Users can edit or delete their own reviews. Duplicate reviews from the same user for the same movie are blocked.
+11. **Recently Viewed & Viewing History:**
+    - Automatically logs viewed movies to the user's history with timestamps, displaying a "Recently Viewed" section on the homepage and profile, with a "Clear History" action.
+12. **Advanced Catalog Search & Multi-Filtering:**
     - Live text search matching titles, actors, directors, and genres.
-    - Multi-filtering by Genre, Mood, Free Availability Type, Minimum Rating, and Release Year.
+    - Multi-filtering by Platform, Language, Genre, Mood, Availability Type, Minimum Rating, and Release Year.
     - Sorting by Popularity, Rating, Release Year, and Alphabetical order.
-11. **Comprehensive Admin Dashboard:**
+13. **Comprehensive Admin Dashboard:**
     - Real-time MongoDB metrics (total movies, users, reviews, free category breakdown).
     - Full CRUD controls: Add new verified free movies, Edit movie metadata and stream URLs, Delete movies with cascade cleanup, User list inspection, and Review moderation.
-12. **Verified Legal Free Viewing Engine:**
-    - Movie detail view displays provider name, geographic region, verification date, and a direct "Watch Legally Free Now" external button. Optional official trailer embed player.
+14. **15-Section Homepage Redesign:**
+    - 15 structured glassmorphism sections including Free Movies marquee, 16 moods selector, Indian cinema spotlight, dynamic regional language tabs, Free YouTube cinema, and smart recommendations.
 
 ---
 

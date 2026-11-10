@@ -42,8 +42,21 @@ const movieSchema = new mongoose.Schema(
     },
     languages: {
       type: [String],
-      default: ['English'],
+      default: ['Hindi', 'English'],
       index: true,
+    },
+    originalLanguage: {
+      type: String,
+      default: 'Hindi',
+      index: true,
+    },
+    dubbedLanguages: {
+      type: [String],
+      default: [],
+    },
+    subtitleLanguages: {
+      type: [String],
+      default: ['English'],
     },
     runtime: {
       type: Number,
@@ -85,23 +98,62 @@ const movieSchema = new mongoose.Schema(
       type: String,
       default: 'Curated recommendation perfectly matching this emotional state.',
     },
+    availabilityStatus: {
+      type: String,
+      enum: ['FREE TO WATCH', 'FREE WITH ADS', 'PUBLIC DOMAIN', 'SUBSCRIPTION REQUIRED', 'RENTAL OR PURCHASE'],
+      default: 'FREE TO WATCH',
+      index: true,
+    },
+    isFree: {
+      type: Boolean,
+      default: true,
+      index: true,
+    },
+    primaryPlatform: {
+      type: String,
+      default: 'Free',
+      index: true,
+    },
+    platforms: [
+      {
+        name: {
+          type: String,
+          default: 'Free',
+        },
+        type: {
+          type: String,
+          default: 'Free',
+        },
+        url: {
+          type: String,
+          default: '',
+        },
+        verified: {
+          type: Boolean,
+          default: true,
+        },
+        subscriptionRequired: {
+          type: Boolean,
+          default: false,
+        },
+      },
+    ],
     freeAvailability: {
       type: {
         type: String,
-        enum: ['Public Domain', 'Free Official Streaming', 'Ad-Supported Free'],
-        required: [true, 'Free availability type is mandatory'],
+        default: 'Free to Watch',
       },
       provider: {
         type: String,
-        required: [true, 'Free streaming provider is required'],
+        default: 'YouTube / Archive',
       },
       region: {
         type: String,
-        default: 'Global',
+        default: 'India & Global',
       },
       url: {
         type: String,
-        required: [true, 'Verified viewing URL is required'],
+        default: '',
       },
       verifiedDate: {
         type: Date,
@@ -109,8 +161,18 @@ const movieSchema = new mongoose.Schema(
       },
       notes: {
         type: String,
-        default: 'Officially verified legal free watch link',
+        default: 'Officially verified legal viewing option',
       },
+    },
+    country: {
+      type: String,
+      default: 'India',
+      index: true,
+    },
+    isIndianCinema: {
+      type: Boolean,
+      default: true,
+      index: true,
     },
     trailerUrl: {
       type: String,
@@ -131,13 +193,15 @@ const movieSchema = new mongoose.Schema(
   }
 );
 
-// Compound text index for robust searching
+// Compound text index for robust multi-field searching
 movieSchema.index({
   title: 'text',
   overview: 'text',
   director: 'text',
   cast: 'text',
   genres: 'text',
+  languages: 'text',
+  originalLanguage: 'text',
 });
 
 module.exports = mongoose.model('Movie', movieSchema);

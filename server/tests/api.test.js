@@ -76,14 +76,31 @@ describe('MoodFlix REST API Test Suite', async () => {
     assert.strictEqual(res.data.status, 'healthy');
   });
 
-  test('2. Moods endpoint returns all 12 moods with real movie counts', async () => {
+  test('2. Moods endpoint returns all 16 moods with real movie counts', async () => {
     const res = await request('GET', '/api/moods');
     assert.strictEqual(res.status, 200);
     assert.strictEqual(res.data.success, true);
-    assert.strictEqual(res.data.moods.length, 12);
+    assert.strictEqual(res.data.moods.length, 16);
     const happy = res.data.moods.find((m) => m.id === 'happy');
     assert.ok(happy);
     assert.ok(happy.movieCount > 0);
+  });
+
+  test('2b. Free movies endpoint returns legal non-subscription movies', async () => {
+    const res = await request('GET', '/api/movies/free?limit=6');
+    assert.strictEqual(res.status, 200);
+    assert.strictEqual(res.data.success, true);
+    assert.ok(res.data.movies.length > 0);
+    assert.ok(res.data.movies.every((m) => m.isFree === true));
+  });
+
+  test('2c. Smart recommendations endpoint returns curated recommendations with explanations', async () => {
+    const res = await request('GET', '/api/movies/recommendations?mood=comedy&freeOnly=true&limit=4');
+    assert.strictEqual(res.status, 200);
+    assert.strictEqual(res.data.success, true);
+    assert.ok(res.data.movies.length > 0);
+    assert.ok(typeof res.data.explanation === 'string');
+    assert.ok(res.data.movies.every((m) => m.isFree === true));
   });
 
   test('3. Movies catalog supports pagination, sorting, and availability filter', async () => {

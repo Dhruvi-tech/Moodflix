@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { WatchlistProvider } from './context/WatchlistContext';
@@ -6,6 +6,7 @@ import { WatchlistProvider } from './context/WatchlistContext';
 // Components
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import PlatformPreferenceModal from './components/PlatformPreferenceModal';
 import { ProtectedRoute, AdminRoute } from './components/ProtectedRoute';
 
 // Pages
@@ -23,80 +24,108 @@ import History from './pages/History';
 import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
 
-function App() {
+function AppContent() {
+  const [isPrefModalOpen, setIsPrefModalOpen] = useState(false);
+
+  useEffect(() => {
+    // Check first-time visit
+    const saved = localStorage.getItem('moodflix_platform_pref');
+    if (!saved) {
+      const timer = setTimeout(() => setIsPrefModalOpen(true), 800);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleOpen = () => setIsPrefModalOpen(true);
+    window.addEventListener('open-platform-preferences', handleOpen);
+    return () => window.removeEventListener('open-platform-preferences', handleOpen);
+  }, []);
+
+  return (
+    <div className="app-layout">
+      <Navbar />
+      <main className="main-content">
+        <Routes>
+          {/* Public Discovery Routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/explore" element={<Explore />} />
+          <Route path="/moods" element={<Moods />} />
+          <Route path="/movies/:id" element={<MovieDetails />} />
+          <Route path="/search" element={<Search />} />
+
+          {/* Authentication Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
+          {/* Protected User Routes */}
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <Profile />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/watchlist"
+            element={
+              <ProtectedRoute>
+                <Watchlist />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/favourites"
+            element={
+              <ProtectedRoute>
+                <Favourites />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/history"
+            element={
+              <ProtectedRoute>
+                <History />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Protected Admin Route */}
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <AdminDashboard />
+              </AdminRoute>
+            }
+          />
+
+          {/* 404 Fallback */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+
+      {/* Global First-Time & Accessible Platform Preference Modal */}
+      <PlatformPreferenceModal
+        isOpen={isPrefModalOpen}
+        onClose={() => setIsPrefModalOpen(false)}
+        onSave={() => window.dispatchEvent(new CustomEvent('platform-preferences-updated'))}
+      />
+    </div>
+  );
+}
+
+export default function App() {
   return (
     <Router>
       <AuthProvider>
         <WatchlistProvider>
-          <div className="app-layout">
-            <Navbar />
-            <main className="main-content">
-              <Routes>
-                {/* Public Discovery Routes */}
-                <Route path="/" element={<Home />} />
-                <Route path="/explore" element={<Explore />} />
-                <Route path="/moods" element={<Moods />} />
-                <Route path="/movies/:id" element={<MovieDetails />} />
-                <Route path="/search" element={<Search />} />
-
-                {/* Authentication Routes */}
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-
-                {/* Protected User Routes */}
-                <Route
-                  path="/profile"
-                  element={
-                    <ProtectedRoute>
-                      <Profile />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/watchlist"
-                  element={
-                    <ProtectedRoute>
-                      <Watchlist />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/favourites"
-                  element={
-                    <ProtectedRoute>
-                      <Favourites />
-                    </ProtectedRoute>
-                  }
-                />
-                <Route
-                  path="/history"
-                  element={
-                    <ProtectedRoute>
-                      <History />
-                    </ProtectedRoute>
-                  }
-                />
-
-                {/* Protected Admin Route */}
-                <Route
-                  path="/admin"
-                  element={
-                    <AdminRoute>
-                      <AdminDashboard />
-                    </AdminRoute>
-                  }
-                />
-
-                {/* 404 Fallback */}
-                <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
-          </div>
+          <AppContent />
         </WatchlistProvider>
       </AuthProvider>
     </Router>
   );
 }
-
-export default App;

@@ -38,11 +38,23 @@ const userSchema = new mongoose.Schema(
     preferences: {
       favoriteMoods: {
         type: [String],
-        default: [],
+        default: ['happy', 'feel-good'],
       },
       preferredLanguages: {
         type: [String],
-        default: ['English'],
+        default: ['Hindi', 'English'],
+      },
+      preferredPlatforms: {
+        type: [String],
+        default: ['Free Movies'],
+      },
+      freeOnly: {
+        type: Boolean,
+        default: true,
+      },
+      preferredGenres: {
+        type: [String],
+        default: [],
       },
     },
   },

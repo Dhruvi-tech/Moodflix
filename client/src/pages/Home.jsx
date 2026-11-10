@@ -5,142 +5,386 @@ import MovieCard from '../components/MovieCard';
 import MoodChip from '../components/MoodChip';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { useAuth } from '../context/AuthContext';
-import { Sparkles, ShieldCheck, Film, Compass, ArrowRight, Play, Star } from 'lucide-react';
+import {
+  Sparkles,
+  ShieldCheck,
+  Film,
+  Compass,
+  ArrowRight,
+  Play,
+  Star,
+  Settings,
+  Languages,
+  Tv,
+  CheckCircle,
+  TrendingUp,
+  Heart,
+  Clock,
+} from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
 import { FALLBACK_MOODS } from '../data/fallbackMoods';
 
-const Home = () => {
+const INDIAN_LANGUAGES = [
+  'Hindi',
+  'Kannada',
+  'Telugu',
+  'Tamil',
+  'Malayalam',
+  'Bengali',
+  'Marathi',
+  'Punjabi',
+  'Gujarati',
+  'Odia',
+  'Assamese',
+  'Urdu',
+];
+
+const FREE_SUBCATEGORIES = [
+  { id: 'all-free', label: 'All Free Movies' },
+  { id: 'free-indian', label: 'Free Indian Cinema' },
+  { id: 'free-hindi', label: 'Hindi Classics' },
+  { id: 'free-kannada', label: 'Kannada' },
+  { id: 'free-telugu', label: 'Telugu' },
+  { id: 'free-tamil', label: 'Tamil' },
+  { id: 'free-malayalam', label: 'Malayalam' },
+  { id: 'free-bengali', label: 'Bengali' },
+  { id: 'free-comedy', label: 'Free Comedy' },
+  { id: 'free-public-domain', label: 'Public Domain' },
+];
+
+export default function Home() {
   const { user } = useAuth();
+
+  // Moods state (16 moods)
   const [moods, setMoods] = useState(FALLBACK_MOODS);
   const [selectedMood, setSelectedMood] = useState('happy');
-  const [moodMovies, setMoodMovies] = useState(() =>
-    fallbackMovies.filter((m) => m.moodTags?.includes('happy')).slice(0, 6)
-  );
+  const [moodMovies, setMoodMovies] = useState([]);
   const [moodMeta, setMoodMeta] = useState(FALLBACK_MOODS[0]);
-  const [featuredMovies, setFeaturedMovies] = useState(() => fallbackMovies.slice(0, 6));
-  const [recentHistory, setRecentHistory] = useState([]);
   const [loadingMoodMovies, setLoadingMoodMovies] = useState(false);
 
-  // Load initial moods and featured
+  // Platform preference state
+  const [preferences, setPreferences] = useState(() => {
+    try {
+      const saved = localStorage.getItem('moodflix_platform_pref');
+      return saved ? JSON.parse(saved) : { platforms: ['free'], freeOnly: true };
+    } catch {
+      return { platforms: ['free'], freeOnly: true };
+    }
+  });
+
+  // Dedicated section states
+  const [freeSubcat, setFreeSubcat] = useState('all-free');
+  const [selectedLanguageTab, setSelectedLanguageTab] = useState('Kannada');
+  const [recentHistory, setRecentHistory] = useState([]);
+
+  // Sync preference updates across tabs / events
   useEffect(() => {
-    const fetchInitial = async () => {
+    const handlePrefUpdate = () => {
       try {
-        const [moodsRes, featRes] = await Promise.all([
-          api.get('/moods'),
-          api.get('/movies/featured'),
-        ]);
-
-        if (moodsRes.data.success && moodsRes.data.moods?.length) {
-          setMoods(moodsRes.data.moods);
-        }
-        if (featRes.data.success && featRes.data.movies?.length) {
-          setFeaturedMovies(featRes.data.movies);
-        }
-      } catch (err) {
-        console.warn('API sync fallback active:', err.message);
-      }
+        const saved = localStorage.getItem('moodflix_platform_pref');
+        if (saved) setPreferences(JSON.parse(saved));
+      } catch (e) {}
     };
+    window.addEventListener('platform-preferences-updated', handlePrefUpdate);
+    return () => window.removeEventListener('platform-preferences-updated', handlePrefUpdate);
+  }, []);
 
-    fetchInitial();
+  // Fetch moods metadata from API or fallback
+  useEffect(() => {
+    api.get('/moods')
+      .then((res) => {
+        if (res.data.success && res.data.moods?.length) {
+          setMoods(res.data.moods);
+        }
+      })
+      .catch(() => {});
   }, []);
 
   // Fetch movies for selected mood
   useEffect(() => {
-    const fetchMoodMovies = async () => {
-      setLoadingMoodMovies(true);
-      try {
-        const res = await api.get(`/movies/mood/${selectedMood}?limit=6`);
+    setLoadingMoodMovies(true);
+    api.get(`/movies/mood/${selectedMood}?limit=6`)
+      .then((res) => {
         if (res.data.success && res.data.movies?.length) {
           setMoodMovies(res.data.movies);
-          setMoodMeta(res.data.mood || FALLBACK_MOODS.find((m) => m.id === selectedMood));
+          setMoodMeta(res.data.mood || moods.find((m) => m.id === selectedMood) || FALLBACK_MOODS[0]);
         } else {
-          const fallback = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
-          setMoodMovies(fallback.slice(0, 6));
+          const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
+          setMoodMovies(fb.slice(0, 6));
+          setMoodMeta(moods.find((m) => m.id === selectedMood) || FALLBACK_MOODS[0]);
         }
-      } catch (err) {
-        const fallback = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
-        setMoodMovies(fallback.slice(0, 6));
-        setMoodMeta(FALLBACK_MOODS.find((m) => m.id === selectedMood));
-      } finally {
-        setLoadingMoodMovies(false);
-      }
-    };
+      })
+      .catch(() => {
+        const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
+        setMoodMovies(fb.slice(0, 6));
+        setMoodMeta(moods.find((m) => m.id === selectedMood) || FALLBACK_MOODS[0]);
+      })
+      .finally(() => setLoadingMoodMovies(false));
+  }, [selectedMood, moods]);
 
-    if (selectedMood) {
-      fetchMoodMovies();
-    }
-  }, [selectedMood]);
-
-  // Fetch viewing history for logged-in user
+  // Fetch user viewing history
   useEffect(() => {
     if (user) {
       api.get('/history')
         .then((res) => {
-          if (res.data.success) setRecentHistory(res.data.movies.slice(0, 4));
+          if (res.data.success && res.data.movies?.length) {
+            setRecentHistory(res.data.movies.slice(0, 4));
+          }
         })
         .catch(() => {});
     }
   }, [user]);
 
+  // Filter free movies according to subcategory chip
+  const getFreeSectionMovies = () => {
+    let freePool = fallbackMovies.filter((m) => m.isFree === true);
+    if (freeSubcat === 'free-indian') {
+      return freePool.filter((m) => m.isIndianCinema).slice(0, 8);
+    }
+    if (freeSubcat === 'free-hindi') {
+      return freePool.filter((m) => m.languages?.includes('Hindi')).slice(0, 8);
+    }
+    if (freeSubcat === 'free-kannada') {
+      return freePool.filter((m) => m.languages?.includes('Kannada')).slice(0, 8);
+    }
+    if (freeSubcat === 'free-telugu') {
+      return freePool.filter((m) => m.languages?.includes('Telugu')).slice(0, 8);
+    }
+    if (freeSubcat === 'free-tamil') {
+      return freePool.filter((m) => m.languages?.includes('Tamil')).slice(0, 8);
+    }
+    if (freeSubcat === 'free-malayalam') {
+      return freePool.filter((m) => m.languages?.includes('Malayalam')).slice(0, 8);
+    }
+    if (freeSubcat === 'free-bengali') {
+      return freePool.filter((m) => m.languages?.includes('Bengali')).slice(0, 8);
+    }
+    if (freeSubcat === 'free-comedy') {
+      return freePool.filter((m) => m.genres?.includes('Comedy')).slice(0, 8);
+    }
+    if (freeSubcat === 'free-public-domain') {
+      return freePool.filter((m) => m.availabilityStatus === 'PUBLIC DOMAIN').slice(0, 8);
+    }
+    return freePool.slice(0, 8);
+  };
+
+  // Section 5: Popular Indian Movies
+  const popularIndianMovies = fallbackMovies
+    .filter((m) => m.isIndianCinema && (m.ratings?.value >= 7.8 || m.featured))
+    .slice(0, 8);
+
+  // Section 6: Language-based movies
+  const languageTabMovies = fallbackMovies
+    .filter((m) =>
+      m.languages?.some((l) => l.toLowerCase() === selectedLanguageTab.toLowerCase()) ||
+      m.originalLanguage?.toLowerCase() === selectedLanguageTab.toLowerCase()
+    )
+    .slice(0, 8);
+
+  // Section 7: Free Hindi Movies
+  const freeHindiMovies = fallbackMovies
+    .filter((m) => m.isFree && m.languages?.includes('Hindi'))
+    .slice(0, 8);
+
+  // Section 8: Free Regional Cinema
+  const freeRegionalMovies = fallbackMovies
+    .filter(
+      (m) =>
+        m.isFree &&
+        m.isIndianCinema &&
+        m.originalLanguage !== 'Hindi' &&
+        m.languages?.some((l) => ['Kannada', 'Tamil', 'Telugu', 'Malayalam', 'Bengali', 'Marathi', 'Gujarati', 'Odia', 'Assamese'].includes(l))
+    )
+    .slice(0, 8);
+
+  // Section 9: Free YouTube Movies
+  const freeYoutubeMovies = fallbackMovies
+    .filter((m) => m.isFree && (m.primaryPlatform === 'YouTube' || m.platforms?.some((p) => p.name === 'YouTube')))
+    .slice(0, 8);
+
+  // Section 10: Trending Movies
+  const trendingMovies = fallbackMovies
+    .filter((m) => m.ratings?.value >= 8.0)
+    .slice(0, 8);
+
+  // Section 11: Smart Recommendations
+  const smartRecommendations = (() => {
+    let pool = fallbackMovies;
+    if (preferences.freeOnly) {
+      pool = pool.filter((m) => m.isFree);
+    } else if (preferences.platforms?.length && !preferences.platforms.includes('all')) {
+      pool = pool.filter((m) =>
+        preferences.platforms.some(
+          (p) =>
+            m.primaryPlatform?.toLowerCase().includes(p) ||
+            m.platforms?.some((plat) => plat.name?.toLowerCase().includes(p)) ||
+            (p === 'free' && m.isFree)
+        )
+      );
+    }
+    return pool.slice(0, 8);
+  })();
+
+  const openPrefModal = () => {
+    window.dispatchEvent(new CustomEvent('open-platform-preferences'));
+  };
+
   return (
-    <div className="home-page page-wrapper">
-      {/* ── Hero Banner ─────────────────────────────────── */}
-      <section className="hero-section container">
-        <div className="hero-content">
-          <div className="hero-eyebrow">
+    <div className="home-page page-wrapper text-slate-100">
+      {/* ── SECTION 1: HERO BANNER ─────────────────────────────────── */}
+      <section className="hero-section container relative overflow-hidden py-12 md:py-20 text-center">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#7b2cbf]/25 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="relative z-10 max-w-4xl mx-auto space-y-6">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#9d4edd]/20 to-[#f72585]/20 border border-[#9d4edd]/40 text-[#f72585] text-xs md:text-sm font-semibold tracking-wide shadow-lg shadow-[#9d4edd]/10">
             <Sparkles size={16} />
-            <span>100% Legal & Free Movie Discovery</span>
+            <span>Personalized Free & Streaming Cinema Discovery</span>
           </div>
 
-          <h1 className="hero-headline">
-            Cinema that matches <br />
-            <span className="text-gradient">how you feel tonight.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif tracking-tight leading-tight">
+            Find Your Next Movie <br />
+            <span className="bg-gradient-to-r from-[#e0aaff] via-[#f72585] to-[#4cc9f0] bg-clip-text text-transparent">
+              Based on Your Mood.
+            </span>
           </h1>
 
-          <p className="hero-subtext">
-            No subscription traps, no paywalls. MoodFlix curates legally free-to-watch cinema
-            across Public Domain treasures and authorized free streaming platforms tailored to your emotional state.
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Discover over 500+ legally free and streaming movies across 20+ Indian regional languages
+            and world cinema. No subscription traps, honest platform badges.
           </p>
 
-          <div className="hero-actions">
-            <a href="#mood-selector" className="btn btn-primary">
-              <span>Find My Vibe</span>
-              <ArrowRight size={18} />
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+            <a href="#mood-selector" className="btn btn-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-xl shadow-[#9d4edd]/30">
+              <Play size={18} fill="#fff" />
+              <span>Explore by Mood</span>
             </a>
-            <Link to="/explore" className="btn btn-secondary">
+            <a href="#free-movies" className="btn btn-secondary px-6 py-3 rounded-xl font-bold flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30">
+              <span>🆓 Watch Free Movies</span>
+            </a>
+            <Link to="/explore" className="btn btn-outline px-6 py-3 rounded-xl font-semibold flex items-center gap-2">
               <Compass size={18} />
-              <span>Explore All Free Movies</span>
+              <span>Browse 500+ Catalog</span>
             </Link>
           </div>
 
           {/* Quick Metrics */}
-          <div className="hero-badges">
-            <div className="hero-badge-item">
-              <ShieldCheck size={18} className="badge-icon-green" />
-              <span>Zero Subscription Badges</span>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-3xl mx-auto text-left">
+            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="text-2xl font-bold text-emerald-400 block">220+</span>
+              <span className="text-xs text-gray-400">100% Free Legal Movies</span>
             </div>
-            <div className="hero-badge-item">
-              <Film size={18} className="badge-icon-purple" />
-              <span>12 Emotional Palettes</span>
+            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="text-2xl font-bold text-[#c77dff] block">20+</span>
+              <span className="text-xs text-gray-400">Indian Languages</span>
             </div>
-            <div className="hero-badge-item">
-              <Star size={18} className="badge-icon-amber" />
-              <span>Public Domain & Ad-Free Classics</span>
+            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="text-2xl font-bold text-[#f72585] block">16</span>
+              <span className="text-xs text-gray-400">Emotional Moods</span>
+            </div>
+            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <span className="text-2xl font-bold text-sky-400 block">507</span>
+              <span className="text-xs text-gray-400">Verified Titles</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── Mood Selector Section ──────────────────────── */}
-      <section className="mood-showcase-section container" id="mood-selector">
-        <div className="section-head">
-          <span className="step-tag">STEP 1</span>
-          <h2>Select Your Mood Tonight</h2>
-          <p>Click any vibe below to generate an instant shortlist of curated free movies.</p>
+      {/* ── SECTION 2: PLATFORM PREFERENCE QUICK BAR ──────────────── */}
+      <section className="container mb-12">
+        <div className="p-5 md:p-6 rounded-2xl bg-gradient-to-r from-[#18122B]/90 via-[#241442]/80 to-[#18122B]/90 border border-[#9d4edd]/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4 text-left">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#9d4edd]/30 to-[#f72585]/30 border border-[#9d4edd]/40 flex items-center justify-center text-2xl flex-shrink-0">
+              📺
+            </div>
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#f72585]">
+                Your Platform Filter
+              </span>
+              <h3 className="text-lg font-bold text-white">
+                {preferences.freeOnly
+                  ? 'Showing Free Movies Only (No Subscription Required)'
+                  : `Watching on: ${preferences.platforms?.join(', ') || 'Free Movies First'}`}
+              </h3>
+              <p className="text-xs text-gray-300">
+                You can change platforms anytime. We never assume you have paid streaming subscriptions.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 w-full md:w-auto">
+            <button
+              onClick={openPrefModal}
+              className="w-full md:w-auto px-5 py-2.5 rounded-xl text-xs md:text-sm font-bold bg-[#9d4edd]/20 border border-[#9d4edd]/40 text-[#e0aaff] hover:bg-[#9d4edd]/30 transition-all flex items-center justify-center gap-2"
+            >
+              <Settings size={16} />
+              <span>Change Platform Preferences</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3: FREE MOVIES — WATCH WITHOUT A SUBSCRIPTION ───── */}
+      <section id="free-movies" className="container mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-3">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/40 mb-2">
+              <CheckCircle size={14} />
+              <span>100% Free Legal Streaming</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white">
+              FREE MOVIES — WATCH WITHOUT A SUBSCRIPTION
+            </h2>
+            <p className="text-sm text-gray-300 mt-1 max-w-xl">
+              Watch completely free legally on official YouTube channels, public domain archives, and verified free streaming networks.
+            </p>
+          </div>
+          <Link to="/explore?freeOnly=true" className="btn btn-sm btn-outline text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/20 self-start md:self-auto">
+            <span>Explore All 220+ Free Movies</span>
+            <ArrowRight size={14} />
+          </Link>
         </div>
 
-        {/* Mood Chips Grid */}
-        <div className="mood-chips-scroll">
+        {/* Free Subcategory Chips */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
+          {FREE_SUBCATEGORIES.map((chip) => (
+            <button
+              key={chip.id}
+              onClick={() => setFreeSubcat(chip.id)}
+              className={`px-4 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+                freeSubcat === chip.id
+                  ? 'bg-emerald-500 text-black shadow-lg shadow-emerald-500/25 font-bold'
+                  : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
+              }`}
+            >
+              {chip.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Free Movies Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+          {getFreeSectionMovies().map((movie) => (
+            <MovieCard key={movie._id || movie.slug} movie={movie} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECTION 4: CHOOSE YOUR MOOD (16 MOODS) ──────────────────── */}
+      <section id="mood-selector" className="mood-showcase-section container mb-16">
+        <div className="section-head mb-6">
+          <span className="step-tag text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#f72585]/20 text-[#f72585] border border-[#f72585]/30 inline-block mb-2">
+            16 EMOTIONAL PALETTES
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white">
+            How Are You Feeling Tonight?
+          </h2>
+          <p className="text-sm text-gray-300 max-w-xl">
+            Pick any vibe from our 16 curated mood palettes. Instant recommendations tailored to your emotional state.
+          </p>
+        </div>
+
+        {/* Mood Chips 16 Grids */}
+        <div className="mood-chips-scroll mb-8">
           {moods.map((m) => (
             <MoodChip
               key={m.id}
@@ -152,269 +396,335 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Dynamic Recommendations Box */}
-        <div className="mood-results-box glass-panel">
-          <div className="mood-results-header">
+        {/* Dynamic Mood Recommendations Preview */}
+        <div className="p-6 rounded-2xl bg-white/5 border border-[#9d4edd]/30 backdrop-blur-md shadow-2xl">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
             <div>
-              <h3 className="mood-active-title">
-                {moodMeta ? `${moodMeta.emoji} ${moodMeta.label} Recommendations` : 'Loading...'}
+              <h3 className="text-xl sm:text-2xl font-bold font-serif text-white flex items-center gap-2">
+                <span>{moodMeta?.emoji}</span>
+                <span>{moodMeta?.label} Movies</span>
               </h3>
-              <p className="mood-active-tagline">{moodMeta?.tagline}</p>
+              <p className="text-xs sm:text-sm text-gray-300 mt-1">{moodMeta?.tagline}</p>
             </div>
-            <Link to={`/moods?vibe=${selectedMood}`} className="btn btn-sm btn-outline">
-              <span>View Full {moodMeta?.label} Collection</span>
+            <Link to={`/explore?mood=${selectedMood}`} className="btn btn-sm btn-outline text-[#c77dff] border-[#9d4edd]/40 hover:bg-[#9d4edd]/20">
+              <span>View All {moodMeta?.label} Titles</span>
               <ArrowRight size={14} />
             </Link>
           </div>
 
           {loadingMoodMovies ? (
-            <LoadingSpinner text={`Finding ${moodMeta?.label || ''} films...`} />
+            <LoadingSpinner text={`Finding ${moodMeta?.label || ''} titles...`} />
           ) : (
-            <div className="movie-grid animate-fade-in">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 animate-fade-in">
               {moodMovies.map((movie) => (
-                <MovieCard key={movie._id} movie={movie} />
+                <MovieCard key={movie._id || movie.slug} movie={movie} />
               ))}
             </div>
           )}
         </div>
       </section>
 
-      {/* ── Featured Free Classics ─────────────────────── */}
-      <section className="featured-section container">
-        <div className="section-head">
-          <h2>Trending Free Cinema</h2>
-          <p>Hand-picked community favorites available to watch completely free right now.</p>
+      {/* ── SECTION 5: POPULAR INDIAN MOVIES ──────────────────────── */}
+      <section className="container mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-[#f72585] text-xs font-bold uppercase tracking-wider mb-1">
+              <Film size={14} />
+              <span>Pan-India Cinema</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Popular Indian Movies</h2>
+            <p className="text-xs sm:text-sm text-gray-300">From timeless blockbusters to legendary milestone achievements.</p>
+          </div>
+          <Link to="/explore?isIndian=true" className="btn btn-sm btn-outline">
+            <span>Explore Indian Cinema</span>
+            <ArrowRight size={14} />
+          </Link>
         </div>
 
-        <div className="movie-grid">
-          {featuredMovies.slice(0, 6).map((movie) => (
-            <MovieCard key={movie._id} movie={movie} />
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+          {popularIndianMovies.map((movie) => (
+            <MovieCard key={movie._id || movie.slug} movie={movie} />
           ))}
         </div>
       </section>
 
-      {/* ── Recently Viewed (If Logged In) ─────────────── */}
-      {user && recentHistory.length > 0 && (
-        <section className="history-preview-section container">
-          <div className="section-head">
-            <h2>Jump Back In</h2>
-            <p>Movies you recently explored on MoodFlix.</p>
+      {/* ── SECTION 6: MOVIES IN YOUR LANGUAGE (REGIONAL TABS) ────── */}
+      <section className="container mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-3">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-sky-400 text-xs font-bold uppercase tracking-wider mb-1">
+              <Languages size={14} />
+              <span>20+ Indian Languages</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Movies in Your Language</h2>
+            <p className="text-xs sm:text-sm text-gray-300">Switch tabs to explore authentic regional cinema with original audio and subtitles.</p>
+          </div>
+          <Link to={`/explore?language=${selectedLanguageTab}`} className="btn btn-sm btn-outline text-sky-400 border-sky-500/40 hover:bg-sky-500/20">
+            <span>More in {selectedLanguageTab}</span>
+            <ArrowRight size={14} />
+          </Link>
+        </div>
+
+        {/* Regional Language Tabs */}
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
+          {INDIAN_LANGUAGES.map((lang) => (
+            <button
+              key={lang}
+              onClick={() => setSelectedLanguageTab(lang)}
+              className={`px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
+                selectedLanguageTab === lang
+                  ? 'bg-gradient-to-r from-sky-500 to-indigo-600 text-white shadow-lg shadow-sky-500/20 font-bold scale-105'
+                  : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
+              }`}
+            >
+              {lang}
+            </button>
+          ))}
+        </div>
+
+        {/* Language Movies Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+          {languageTabMovies.map((movie) => (
+            <MovieCard key={movie._id || movie.slug} movie={movie} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECTION 7: FREE HINDI MOVIES ─────────────────────────── */}
+      <section className="container mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <span className="text-emerald-400 text-xs font-bold uppercase tracking-wider block mb-1">
+              🆓 No Subscription Required
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Free Hindi Movies</h2>
+            <p className="text-xs sm:text-sm text-gray-300">Immortal Hindi classics and comedies legally available on YouTube and public platforms.</p>
+          </div>
+          <Link to="/explore?language=Hindi&freeOnly=true" className="btn btn-sm btn-outline">
+            <span>View All Hindi Free</span>
+            <ArrowRight size={14} />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+          {freeHindiMovies.map((movie) => (
+            <MovieCard key={movie._id || movie.slug} movie={movie} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECTION 8: FREE REGIONAL CINEMA ───────────────────────── */}
+      <section className="container mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <span className="text-emerald-400 text-xs font-bold uppercase tracking-wider block mb-1">
+              🆓 South Indian & Regional Gems
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Free Regional Cinema</h2>
+            <p className="text-xs sm:text-sm text-gray-300">Explore Kannada, Tamil, Telugu, Malayalam, Bengali & Marathi cinema without paying subscriptions.</p>
+          </div>
+          <Link to="/explore?freeOnly=true&isIndian=true" className="btn btn-sm btn-outline">
+            <span>All Regional Free</span>
+            <ArrowRight size={14} />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+          {freeRegionalMovies.map((movie) => (
+            <MovieCard key={movie._id || movie.slug} movie={movie} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECTION 9: FREE YOUTUBE MOVIES ────────────────────────── */}
+      <section className="container mb-16">
+        <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-red-950/40 via-red-900/20 to-black/60 border border-red-500/30">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <div className="inline-flex items-center gap-1.5 text-red-400 text-xs font-bold uppercase tracking-wider mb-1">
+                <Play size={14} fill="currentColor" />
+                <span>YouTube Official Cinema</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Free Full YouTube Movies</h2>
+              <p className="text-xs sm:text-sm text-gray-300">Uploaded legally by production houses and official public broadcast networks.</p>
+            </div>
+            <Link to="/explore?platform=YouTube&freeOnly=true" className="btn btn-sm bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-xl">
+              <span>View All YouTube Movies</span>
+            </Link>
           </div>
 
-          <div className="movie-grid">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+            {freeYoutubeMovies.map((movie) => (
+              <MovieCard key={movie._id || movie.slug} movie={movie} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 10: TRENDING MOVIES ──────────────────────────── */}
+      <section className="container mb-16">
+        <div className="flex items-center justify-between mb-6">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider mb-1">
+              <TrendingUp size={14} />
+              <span>Highest Rated Cinema</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Trending Movies</h2>
+            <p className="text-xs sm:text-sm text-gray-300">Critically acclaimed films boasting IMDb ratings 8.0 and above.</p>
+          </div>
+          <Link to="/explore?sort=rating" className="btn btn-sm btn-outline">
+            <span>Explore High Rated</span>
+            <ArrowRight size={14} />
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+          {trendingMovies.map((movie) => (
+            <MovieCard key={movie._id || movie.slug} movie={movie} />
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECTION 11: SMART RECOMMENDATIONS FOR YOU ────────────── */}
+      <section className="container mb-16">
+        <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#7b2cbf]/20 via-[#f72585]/10 to-[#18122B] border border-[#9d4edd]/30 shadow-2xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+            <div>
+              <span className="text-[#f72585] text-xs font-bold uppercase tracking-wider block mb-1">
+                ⭐ Customized Discovery
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Smart Recommendations For You</h2>
+              <p className="text-xs sm:text-sm text-[#e0aaff] mt-1 font-mono">
+                {preferences.freeOnly
+                  ? 'Recommended because you prefer free movies without subscriptions.'
+                  : `Recommended based on your platform preferences: ${preferences.platforms?.join(', ') || 'All Platforms'}.`}
+              </p>
+            </div>
+            <button
+              onClick={openPrefModal}
+              className="btn btn-sm btn-outline text-white border-white/20 hover:bg-white/10 self-start md:self-auto"
+            >
+              <span>Refine Preferences</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
+            {smartRecommendations.map((movie) => (
+              <MovieCard key={movie._id || movie.slug} movie={movie} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 12: EXPLORE BY GENRE ─────────────────────────── */}
+      <section className="container mb-16">
+        <div className="section-head mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Explore by Genre</h2>
+          <p className="text-xs sm:text-sm text-gray-300">Dive into your favorite cinematic categories.</p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+          {[
+            { name: 'Action', emoji: '💥', count: 95 },
+            { name: 'Comedy', emoji: '😂', count: 140 },
+            { name: 'Drama', emoji: '🎭', count: 210 },
+            { name: 'Romance', emoji: '💖', count: 110 },
+            { name: 'Thriller', emoji: '🔪', count: 130 },
+            { name: 'Horror', emoji: '👻', count: 45 },
+            { name: 'Sci-Fi', emoji: '🚀', count: 55 },
+            { name: 'Family', emoji: '👨‍👩‍👧‍👦', count: 105 },
+            { name: 'Mystery', emoji: '🕵️', count: 70 },
+            { name: 'Adventure', emoji: '⚡', count: 120 },
+            { name: 'Musical', emoji: '🎵', count: 40 },
+            { name: 'Classic', emoji: '🏛️', count: 85 },
+          ].map((genre) => (
+            <Link
+              key={genre.name}
+              to={`/explore?genre=${genre.name}`}
+              className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#9d4edd] hover:bg-white/10 transition-all text-center group"
+            >
+              <span className="text-3xl block mb-1 group-hover:scale-110 transition-transform">{genre.emoji}</span>
+              <span className="text-sm font-bold text-white block">{genre.name}</span>
+              <span className="text-xs text-gray-400">{genre.count}+ titles</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECTION 13: EXPLORE BY PLATFORM ──────────────────────── */}
+      <section className="container mb-16">
+        <div className="section-head mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Explore by Platform</h2>
+          <p className="text-xs sm:text-sm text-gray-300">Filter the MoodFlix catalog specifically by the streaming platforms you subscribe to.</p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+          {[
+            { id: 'Free', name: 'Free Movies', icon: '🆓', border: 'border-emerald-500/40', bg: 'hover:bg-emerald-500/10' },
+            { id: 'YouTube', name: 'YouTube', icon: '▶️', border: 'border-red-500/40', bg: 'hover:bg-red-500/10' },
+            { id: 'Netflix', name: 'Netflix', icon: '🎬', border: 'border-red-600/40', bg: 'hover:bg-red-600/10' },
+            { id: 'Amazon Prime Video', name: 'Prime Video', icon: '🍿', border: 'border-sky-500/40', bg: 'hover:bg-sky-500/10' },
+            { id: 'JioCinema', name: 'JioCinema', icon: '📺', border: 'border-pink-500/40', bg: 'hover:bg-pink-500/10' },
+            { id: 'Hotstar', name: 'Disney+ Hotstar', icon: '⭐', border: 'border-blue-500/40', bg: 'hover:bg-blue-500/10' },
+          ].map((plat) => (
+            <Link
+              key={plat.id}
+              to={`/explore?platform=${encodeURIComponent(plat.id)}`}
+              className={`p-4 rounded-xl bg-white/5 border ${plat.border} ${plat.bg} transition-all text-center group`}
+            >
+              <span className="text-3xl block mb-1 group-hover:scale-110 transition-transform">{plat.icon}</span>
+              <span className="text-sm font-bold text-white block">{plat.name}</span>
+              <span className="text-xs text-gray-400">View Catalog</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ── SECTION 14: RECENTLY VIEWED ──────────────────────────── */}
+      {user && recentHistory.length > 0 && (
+        <section className="container mb-16">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center gap-2">
+              <Clock size={18} className="text-[#f72585]" />
+              <h2 className="text-2xl font-bold font-serif text-white">Recently Viewed</h2>
+            </div>
+            <Link to="/history" className="btn btn-sm btn-outline">
+              <span>Full History</span>
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {recentHistory.map((movie) => (
-              <MovieCard key={movie._id} movie={movie} />
+              <MovieCard key={movie._id || movie.slug} movie={movie} />
             ))}
           </div>
         </section>
       )}
 
-      {/* ── Free Streaming Ethics Banner ────────────────── */}
-      <section className="ethics-section container">
-        <div className="ethics-card glass-panel">
-          <div className="ethics-badge">THE MOODFLIX PLEDGE</div>
-          <h3>100% Free. 100% Legal. No Hidden Paywalls.</h3>
-          <p>
-            Unlike commercial platforms that lure users with recommendations only to demand a $15/month subscription,
-            MoodFlix operates on a strictly legal free-to-watch index. We catalog public domain treasures,
-            educational releases, and authorized ad-supported digital broadcasts.
-          </p>
-          <div className="ethics-grid">
-            <div className="ethics-item">
-              <span className="ethics-number">01</span>
-              <h4>Public Domain Treasures</h4>
-              <p>Preserved film heritage legally accessible to every citizen on Earth via cultural archives.</p>
-            </div>
-            <div className="ethics-item">
-              <span className="ethics-number">02</span>
-              <h4>Authorized Free Streams</h4>
-              <p>Official studio channels on YouTube and verified digital distributors offering free access.</p>
-            </div>
-            <div className="ethics-item">
-              <span className="ethics-number">03</span>
-              <h4>Zero Piracy</h4>
-              <p>We never link to illegal hosts, torrents, or unverified streams. Every single link is verified.</p>
+      {/* ── SECTION 15: COMMUNITY DISCOVERY & CIE-3 SUMMARY ───────── */}
+      <section className="container mb-12">
+        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#241442] via-[#1a0f30] to-[#120a21] border border-[#9d4edd]/30 text-center relative overflow-hidden">
+          <div className="max-w-2xl mx-auto space-y-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#f72585] px-3 py-1 rounded-full bg-[#f72585]/10 border border-[#f72585]/30 inline-block">
+              CS3301 Full Stack Development • CIE-3
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold font-serif text-white">
+              Discover Movies That Truly Fit Your Night.
+            </h2>
+            <p className="text-sm text-gray-300">
+              MoodFlix transforms discovery by pairing emotional sentiment with legal, cost-free viewing options.
+              Join millions finding cinema without endless paid subscriptions.
+            </p>
+            <div className="pt-2">
+              <Link to="/explore" className="btn btn-primary px-8 py-3 rounded-xl font-bold inline-flex items-center gap-2">
+                <span>Start Discovering Now</span>
+                <ArrowRight size={18} />
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
-      <style>{`
-        .hero-section {
-          padding: 3rem 0 4rem;
-        }
-        .hero-content {
-          max-width: 820px;
-        }
-        .hero-eyebrow {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
-          padding: 0.35rem 0.85rem;
-          background: rgba(139, 92, 246, 0.15);
-          border: 1px solid var(--border);
-          border-radius: var(--radius-full);
-          font-size: 0.82rem;
-          font-weight: 700;
-          color: #c4b5fd;
-          margin-bottom: 1.5rem;
-        }
-        .hero-headline {
-          font-family: var(--font-serif);
-          font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-          line-height: 1.1;
-          font-weight: 800;
-          letter-spacing: -0.03em;
-          margin-bottom: 1.5rem;
-        }
-        .text-gradient {
-          background: linear-gradient(135deg, #c4b5fd 0%, #ec4899 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        .hero-subtext {
-          font-size: 1.15rem;
-          color: var(--text-muted);
-          line-height: 1.6;
-          margin-bottom: 2rem;
-          max-width: 720px;
-        }
-        .hero-actions {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
-          flex-wrap: wrap;
-          margin-bottom: 2.5rem;
-        }
-        .hero-badges {
-          display: flex;
-          align-items: center;
-          gap: 1.75rem;
-          flex-wrap: wrap;
-          padding-top: 1.5rem;
-          border-top: 1px solid var(--border-subtle);
-        }
-        .hero-badge-item {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-size: 0.85rem;
-          color: var(--text-muted);
-          font-weight: 600;
-        }
-        .badge-icon-green { color: #34d399; }
-        .badge-icon-purple { color: #a78bfa; }
-        .badge-icon-amber { color: #fbbf24; }
-        .mood-showcase-section {
-          margin: 3rem auto;
-        }
-        .step-tag {
-          font-size: 0.72rem;
-          font-weight: 800;
-          letter-spacing: 0.15em;
-          color: var(--primary);
-          text-transform: uppercase;
-        }
-        .mood-chips-scroll {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.75rem;
-          margin-bottom: 2rem;
-        }
-        .mood-results-box {
-          padding: 2rem;
-        }
-        .mood-results-header {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin-bottom: 2rem;
-          flex-wrap: wrap;
-          gap: 1rem;
-        }
-        .mood-active-title {
-          font-family: var(--font-serif);
-          font-size: 1.6rem;
-          color: #fff;
-        }
-        .mood-active-tagline {
-          color: var(--text-muted);
-          font-size: 0.92rem;
-          margin-top: 0.2rem;
-        }
-        .featured-section, .history-preview-section {
-          margin: 4.5rem auto;
-        }
-        .ethics-section {
-          margin: 5rem auto 2rem;
-        }
-        .ethics-card {
-          padding: 3.5rem 2.5rem;
-          text-align: center;
-          background: linear-gradient(135deg, rgba(16, 22, 37, 0.9), rgba(30, 27, 75, 0.6));
-        }
-        .ethics-badge {
-          display: inline-block;
-          font-size: 0.72rem;
-          font-weight: 800;
-          letter-spacing: 0.18em;
-          color: #38bdf8;
-          margin-bottom: 1rem;
-        }
-        .ethics-card h3 {
-          font-family: var(--font-serif);
-          font-size: 2rem;
-          color: #fff;
-          margin-bottom: 1rem;
-        }
-        .ethics-card > p {
-          max-width: 700px;
-          margin: 0 auto 3rem;
-          color: var(--text-muted);
-          font-size: 1.05rem;
-          line-height: 1.6;
-        }
-        .ethics-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 2rem;
-          text-align: left;
-        }
-        .ethics-item {
-          padding: 1.5rem;
-          background: rgba(255, 255, 255, 0.03);
-          border-radius: var(--radius-md);
-          border: 1px solid var(--border-subtle);
-        }
-        .ethics-number {
-          font-family: var(--font-serif);
-          font-size: 1.8rem;
-          font-weight: 800;
-          color: var(--primary);
-          display: block;
-          margin-bottom: 0.5rem;
-        }
-        .ethics-item h4 {
-          font-size: 1.1rem;
-          color: #fff;
-          margin-bottom: 0.5rem;
-        }
-        .ethics-item p {
-          font-size: 0.88rem;
-          color: var(--text-muted);
-          line-height: 1.5;
-        }
-        @media (max-width: 768px) {
-          .ethics-grid {
-            grid-template-columns: 1fr;
-          }
-          .mood-results-box {
-            padding: 1.25rem;
-          }
-        }
-      `}</style>
     </div>
   );
-};
-
-export default Home;
+}

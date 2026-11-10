@@ -32,12 +32,27 @@ const MovieCard = ({ movie }) => {
   };
 
   // Availability badge styling
-  const getBadgeClass = (type) => {
-    if (type === 'Public Domain') return 'badge-public-domain';
-    if (type === 'Free Official Streaming') return 'badge-free-streaming';
-    return 'badge-ad-supported';
+  const renderBadge = () => {
+    if (movie.isFree) {
+      if (movie.availabilityStatus === 'PUBLIC DOMAIN') {
+        return <span className="badge badge-public-domain movie-badge">🏛️ Public Domain</span>;
+      }
+      if (movie.availabilityStatus === 'FREE WITH ADS') {
+        return <span className="badge badge-ad-supported movie-badge">📺 Free with Ads</span>;
+      }
+      return <span className="badge badge-free-streaming movie-badge">🆓 Free to Watch</span>;
+    }
+
+    // Subscription required
+    const platformName = movie.primaryPlatform || 'Subscription';
+    return (
+      <span className="badge badge-subscription movie-badge">
+        🔒 {platformName}
+      </span>
+    );
   };
 
+  const primaryLang = movie.originalLanguage || (movie.languages && movie.languages[0]) || '';
   const movieLink = `/movies/${movie.slug || movie._id}`;
 
   return (
@@ -54,10 +69,13 @@ const MovieCard = ({ movie }) => {
           }}
         />
 
-        {/* Free Availability Badge */}
-        {movie.freeAvailability?.type && (
-          <span className={`badge ${getBadgeClass(movie.freeAvailability.type)} movie-badge`}>
-            {movie.freeAvailability.type}
+        {/* Availability Badge */}
+        {renderBadge()}
+
+        {/* Language Pill */}
+        {primaryLang && (
+          <span className="movie-lang-badge">
+            {primaryLang}
           </span>
         )}
 
@@ -152,6 +170,46 @@ const MovieCard = ({ movie }) => {
           z-index: 2;
           font-size: 0.65rem;
           backdrop-filter: blur(8px);
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          padding: 0.2rem 0.5rem;
+          border-radius: 4px;
+        }
+        .badge-free-streaming {
+          background: rgba(16, 185, 129, 0.85);
+          color: #fff;
+          border: 1px solid rgba(52, 211, 153, 0.4);
+        }
+        .badge-public-domain {
+          background: rgba(139, 92, 246, 0.85);
+          color: #fff;
+          border: 1px solid rgba(167, 139, 250, 0.4);
+        }
+        .badge-ad-supported {
+          background: rgba(14, 165, 233, 0.85);
+          color: #fff;
+          border: 1px solid rgba(56, 189, 248, 0.4);
+        }
+        .badge-subscription {
+          background: rgba(245, 158, 11, 0.85);
+          color: #111827;
+          border: 1px solid rgba(251, 191, 36, 0.5);
+          font-weight: 800;
+        }
+        .movie-lang-badge {
+          position: absolute;
+          bottom: 0.6rem;
+          left: 0.6rem;
+          z-index: 2;
+          font-size: 0.65rem;
+          font-weight: 700;
+          padding: 0.15rem 0.45rem;
+          background: rgba(0, 0, 0, 0.75);
+          color: #e2e8f0;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          border-radius: 4px;
+          backdrop-filter: blur(6px);
+          text-transform: uppercase;
         }
         .movie-rating-badge {
           position: absolute;

@@ -76,10 +76,10 @@ const Moods = () => {
       {/* ── Section Header ───────────────────────────────── */}
       <div className="section-head text-center">
         <h2>Curated Mood Engine</h2>
-        <p>Explore twelve emotional palettes designed to find the exact free film matching your psychology right now.</p>
+        <p>Explore sixteen curated emotional palettes designed to find the exact free and streaming films matching your mood tonight.</p>
       </div>
 
-      {/* ── 12 Mood Grid ─────────────────────────────────── */}
+      {/* ── 16 Mood Grid ─────────────────────────────────── */}
       <div className="all-moods-grid">
         {moods.map((m) => (
           <MoodChip

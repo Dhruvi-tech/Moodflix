@@ -107,37 +107,53 @@ MoodFlix categorizes free cinema into twelve distinct emotional states using det
 | Mood | Emoji | Accent Color | Vibe Tagline | Sample Curated Film |
 | :--- | :---: | :---: | :--- | :--- |
 | **Happy** | ☀️ | `#f5c518` | Feel-good wholesome films to lift your spirits and make you smile | *The General* (1926) |
-| **Sad** | 🌧️ | `#6b9bd1` | Deep, poignant narratives with emotional resonance and heart | *Make Way for Tomorrow* (1937) |
-| **Thriller** | 🔪 | `#ef4444` | High-stakes suspense, mysteries, and pulse-pounding twists | *The 39 Steps* (1935) |
+| **Sad** | 🌧️ | `#6b9bd1` | Deep, poignant narratives with emotional resonance and heart | *Pather Panchali* (1955) |
+| **Thriller** | 🔪 | `#ef4444` | High-stakes suspense, mysteries, and pulse-pounding twists | *Drishyam* (2013) |
 | **Romantic** | 💫 | `#f472b6` | Cozy, heartwarming, and sweet tales of love and connection | *His Girl Friday* (1940) |
 | **Chill** | 🌙 | `#34d399` | Relaxing, zen cinema to unwind after a demanding day | *Paterson* (2016) |
-| **Adventurous** | ⚡ | `#fb923c` | Action-packed exploration, fantastical quests, and epic journeys | *Jason and the Argonauts* (1963) |
+| **Adventurous** | ⚡ | `#fb923c` | Action-packed exploration, fantastical quests, and epic journeys | *Kantara* (2022) |
 | **Horror** | 👻 | `#a855f7` | Spine-chilling dread, supernatural terror, and classic monsters | *Night of the Living Dead* (1968) |
-| **Comedy** | 😂 | `#eab308` | Laugh-out-loud humor, witty satire, and joyful misadventures | *School of Rock* (2003) |
-| **Inspirational** | 🌟 | `#38bdf8` | Triumphant true stories of courage, ingenuity, and moral strength | *The Boy Who Harnessed the Wind* (2019) |
+| **Comedy** | 😂 | `#eab308` | Laugh-out-loud humor, witty satire, and joyful misadventures | *Gol Maal* (1979) |
+| **Inspirational** | 🌟 | `#38bdf8` | Triumphant true stories of courage, ingenuity, and moral strength | *777 Charlie* (2022) |
 | **Mystery** | 🕵️ | `#818cf8` | Clever whodunits, investigative puzzles, and enigmas | *Charade* (1963) |
-| **Feel-Good** | 🌈 | `#10b981` | Warm, comforting cinema that leaves you with a glowing heart | *Paddington 2* (2017) |
-| **Emotional** | 🎭 | `#f43f5e` | Powerful dramatic journeys that touch the deepest soul | *Wonder* (2017) |
+| **Feel-Good** | 🌈 | `#10b981` | Warm, comforting cinema that leaves you with a glowing heart | *Kumbalangi Nights* (2019) |
+| **Emotional** | 🎭 | `#f43f5e` | Powerful dramatic journeys that touch the deepest soul | *Anand* (1971) |
+| **Family** | 👨‍👩‍👧‍👦 | `#14b8a6` | Wholesome entertainment suitable and beloved across all generations | *The Kid* (1921) |
+| **Motivational** | 🚀 | `#f97316` | Inspiring underdog triumphs, sports grit, and dream pursuit | *DAMaN* (2022) |
+| **Suspense** | ⏳ | `#e11d48` | Edge-of-your-seat tension with relentless ticking clocks | *D.O.A.* (1949) |
+| **Relaxing** | 🍃 | `#84cc16` | Calm, scenic, meditative cinema to soothe the mind after work | *Reva* (2018) |
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />
 </p>
 
-## 🛡️ 100% Legal Free Streaming Pledge
+## 🇮🇳 Indian Languages & Regional Cinema Support (20+ Languages)
 
-**Zero Commercial Subscriptions:** All references to paid subscription platforms (Netflix, Amazon Prime Video, Disney+) have been completely removed.
+MoodFlix features comprehensive discovery for Indian cinema, honoring regional linguistic diversity:
+- **Major Languages:** Hindi, Kannada, Telugu, Tamil, Malayalam, Bengali, Marathi, Punjabi, Gujarati, Odia, Assamese, Urdu.
+- **Classical & Heritage Languages:** Konkani, Sanskrit, Bhojpuri, Manipuri, Kashmiri, Nepali.
+- **Audio & Subtitle Metadata:** Every title tracks original audio language, dubbed audio options, and available subtitles.
+- **Dedicated Regional Collections:** Dynamic language tabs on the homepage and dedicated filters in the Explore page.
 
-Every movie card on MoodFlix features an authenticated free availability badge:
-1. **Public Domain:** Works whose copyrights have expired or were never formally registered (e.g. Charlie Chaplin, Buster Keaton, George A. Romero). Freely hosted by the **Internet Archive**, **Library of Congress**, and **Wikimedia**.
-2. **Free Official Streaming:** Officially uploaded and licensed full-length films streamed at no cost by verified studio channels (e.g. **YouTube Movies Free**, **Cult Cinema Classics**, **Mosfilm Official**, **BFI National Archive**).
-3. **Ad-Supported Free:** Licensed commercial releases provided legally for free viewing with brief ad sponsors on verified digital networks (e.g. **Plex TV**, **Tubi Free**).
+## 📺 Platform Preference Engine
 
-Every movie record tracks:
-- `freeAvailability.type`: Legal category
-- `freeAvailability.provider`: Host name
-- `freeAvailability.region`: Geographic availability (Global / IN / US)
-- `freeAvailability.url`: Direct verified viewing link
-- `freeAvailability.verifiedDate`: Verification audit date
+MoodFlix solves the modern dilemma where viewers without paid subscriptions are overwhelmed by paywalled recommendations:
+1. **First-Visit Personalization:** Asks *"Where would you prefer to watch your movies?"* with multi-platform selection (Free Movies, Netflix, Amazon Prime Video, YouTube, Show Me Everything).
+2. **Prominent Zero-Subscription Option:** *"I don't have any paid subscriptions. Show me only free movies."*
+3. **Default to Free Movies First:** Visitors who skip are automatically served legally free movies first.
+4. **Subscription Transparency:** Subscription requirements are prominently badged (`SUBSCRIPTION REQUIRED`, `FREE TO WATCH`, `FREE WITH ADS`, `PUBLIC DOMAIN`). Paid platforms are never mislabeled as free.
+
+<p align="center">
+  <img src="assets/divider.svg" alt="Divider" width="800" />
+</p>
+
+## 🛡️ Legal Free Streaming & Streaming Platform Pledge
+
+Every movie card on MoodFlix features an authenticated availability badge:
+1. **Free to Watch:** Officially uploaded and licensed full-length films streamed at no cost on official YouTube studio channels and partner networks.
+2. **Public Domain:** Works whose copyrights have expired (Charlie Chaplin, Buster Keaton, George A. Romero). Freely hosted by the **Internet Archive**, **Library of Congress**, and **Wikimedia**.
+3. **Free with Ads:** Licensed commercial releases provided legally for free viewing with brief ad sponsors on verified digital networks.
+4. **Subscription Streaming:** Explicitly labeled subscription movies on Netflix, Amazon Prime Video, Disney+ Hotstar, and JioCinema. Never mislabeled as free.
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />
@@ -151,19 +167,24 @@ All backend endpoints are prefixed with `/api` and return standardized JSON resp
 - `POST /api/auth/register` — Public registration (strictly creates `user` role)
 - `POST /api/auth/login` — Authenticates email/password; returns signed JWT & user profile
 - `GET /api/auth/me` — Protected: Returns current session user
-- `PUT /api/auth/profile` — Protected: Updates name, avatar, and mood preferences
+- `PUT /api/auth/profile` — Protected: Updates name, avatar, and preferences
+- `PUT /api/auth/preferences` — Protected: Updates preferred platforms, languages, and freeOnly mode
 - `PUT /api/auth/change-password` — Protected: Verifies current password and updates hash
 
 ### 2. Movies & Recommendations (`/api/movies`)
-- `GET /api/movies` — Paginated catalog with multi-filter query params (`genre`, `mood`, `availabilityType`, `minRating`, `sort`, `search`)
-- `GET /api/movies/:id` — Single movie by MongoDB ID + 4 similar recommendations
+- `GET /api/movies` — Paginated catalog with multi-filter query params (`genre`, `mood`, `platform`, `language`, `freeOnly`, `availabilityStatus`, `minRating`, `sort`, `search`)
+- `GET /api/movies/free` — Dedicated endpoint returning only legal free non-subscription cinema
+- `GET /api/movies/language/:lang` — Filter cinema by 20+ regional Indian languages
+- `GET /api/movies/platform/:platform` — Filter by Free, Netflix, Prime Video, YouTube, etc.
+- `GET /api/movies/recommendations` — Smart deterministic recommendations with human-readable rationale
+- `GET /api/movies/:id` — Single movie by MongoDB ID + similar recommendations
 - `GET /api/movies/slug/:slug` — Single movie by clean URL slug
 - `GET /api/movies/mood/:mood` — Tailored recommendations matching selected mood with why-it-matches explanation
 - `GET /api/movies/search?q=term` — Fast search suggestions matching title, cast, director, or genres
 - `GET /api/movies/featured` — Featured cinematic highlights for hero carousel
 
 ### 3. Moods Engine (`/api/moods`)
-- `GET /api/moods` — Returns all 12 moods with emojis, accent colors, taglines, and live database movie counts
+- `GET /api/moods` — Returns all 16 moods with emojis, accent colors, taglines, and live database movie counts
 
 ### 4. User Watchlist & Favourites (`/api`)
 - `GET /api/watchlist` — Protected: Returns saved watchlist movies

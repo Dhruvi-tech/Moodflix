@@ -205,15 +205,38 @@ const MovieDetails = () => {
               </span>
             </div>
 
-            {/* Genres */}
+            {/* Genres & Languages */}
             <div className="details-genres">
               {movie.genres?.map((g) => (
                 <span key={g} className="genre-tag">{g}</span>
               ))}
+              {movie.originalLanguage && (
+                <span className="genre-tag lang-tag">Audio: {movie.originalLanguage}</span>
+              )}
+              {movie.dubbedLanguages && movie.dubbedLanguages.length > 0 && (
+                <span className="genre-tag dub-tag">Dubbed: {movie.dubbedLanguages.join(', ')}</span>
+              )}
             </div>
 
             {/* Synopsis */}
             <p className="details-overview">{movie.overview}</p>
+
+            {/* Mood Explanation Card */}
+            {movie.moodExplanation && (
+              <div className="p-3.5 rounded-xl bg-purple-950/30 border border-purple-500/30 text-xs text-purple-200 mb-4">
+                <span className="font-bold text-[#f72585] block mb-1">🎭 Curated Mood Rationale:</span>
+                <p>{movie.moodExplanation}</p>
+                {movie.moodTags && (
+                  <div className="flex flex-wrap gap-1.5 mt-2">
+                    {movie.moodTags.map((tag) => (
+                      <span key={tag} className="px-2 py-0.5 rounded-md bg-purple-500/20 text-purple-300 font-medium">
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Cast & Director */}
             <div className="details-credits">
@@ -223,16 +246,50 @@ const MovieDetails = () => {
               )}
             </div>
 
-            {/* Verified Free Stream Callout Card */}
+            {/* Verified Viewing Callout Card */}
             <div className="verified-stream-card glass-panel">
               <div className="stream-badge-head">
-                <ShieldCheck size={18} className="verified-shield" />
-                <span>Verified Legal Free Stream</span>
-                <span className="verified-date">Checked {verifiedDateFormatted}</span>
+                <ShieldCheck size={18} className={movie.isFree ? 'verified-shield' : 'text-amber-400'} />
+                <span>{movie.isFree ? 'Verified Legal Free Stream' : 'Subscription Streaming'}</span>
+                <span className="verified-date">{movie.isFree ? `Checked ${verifiedDateFormatted}` : 'Subscription Required'}</span>
               </div>
               <p className="stream-provider-note">
-                Officially available at zero cost via <strong>{movie.freeAvailability?.provider}</strong> ({movie.freeAvailability?.region || 'Global'} Region). No subscription or credit card needed.
+                {movie.isFree ? (
+                  <>
+                    Officially available at zero cost via <strong>{movie.freeAvailability?.provider || movie.primaryPlatform}</strong> ({movie.freeAvailability?.region || 'Global'} Region). No subscription or credit card needed.
+                  </>
+                ) : (
+                  <>
+                    Streamable on <strong>{movie.primaryPlatform}</strong> with an active subscription. Never mislabeled as free.
+                  </>
+                )}
               </p>
+
+              {/* Multiple Platforms Availability Grid */}
+              {movie.platforms && movie.platforms.length > 0 && (
+                <div className="mt-3 mb-4 space-y-1.5">
+                  <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider block">Available On:</span>
+                  <div className="flex flex-wrap gap-2">
+                    {movie.platforms.map((plat, idx) => (
+                      <a
+                        key={idx}
+                        href={plat.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                          plat.type === 'Free' || !plat.subscriptionRequired
+                            ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30'
+                            : 'bg-white/10 text-gray-200 border border-white/20 hover:bg-white/20'
+                        }`}
+                      >
+                        <span>{plat.name}</span>
+                        <span className="text-[10px] opacity-75">({plat.type})</span>
+                        <ExternalLink size={12} />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="stream-cta-buttons">
                 {movie.freeAvailability?.url && (
@@ -243,7 +300,7 @@ const MovieDetails = () => {
                     className="btn btn-primary btn-watch-free"
                   >
                     <Play size={18} fill="#fff" />
-                    <span>Watch Free on {movie.freeAvailability.provider}</span>
+                    <span>{movie.isFree ? `Watch Free on ${movie.freeAvailability.provider || 'YouTube'}` : `Watch on ${movie.primaryPlatform}`}</span>
                     <ExternalLink size={15} />
                   </a>
                 )}

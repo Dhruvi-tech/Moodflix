@@ -66,6 +66,14 @@ const Navbar = () => {
           <Link to="/moods" className={`nav-link ${isActive('/moods') ? 'active' : ''}`}>
             Moods
           </Link>
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent('open-platform-preferences'))}
+            className="nav-link nav-pref-btn"
+            title="Where would you prefer to watch your movies?"
+          >
+            ⚙️ Platforms
+          </button>
           {user && (
             <>
               <Link to="/watchlist" className={`nav-link ${isActive('/watchlist') ? 'active' : ''}`}>
@@ -154,6 +162,16 @@ const Navbar = () => {
             <Link to="/moods" onClick={() => setMobileMenuOpen(false)}>
               <Smile size={18} /> Mood Recommendations
             </Link>
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                window.dispatchEvent(new CustomEvent('open-platform-preferences'));
+              }}
+              className="mobile-pref-btn"
+            >
+              ⚙️ Platform Preferences
+            </button>
             {user ? (
               <>
                 <Link to="/watchlist" onClick={() => setMobileMenuOpen(false)}>
@@ -382,6 +400,33 @@ const Navbar = () => {
         .mobile-nav-links a:hover {
           color: #fff;
           background: rgba(255, 255, 255, 0.05);
+        }
+        .nav-pref-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-family: inherit;
+          font-size: 0.9rem;
+          color: var(--text-muted);
+          transition: color 0.2s;
+        }
+        .nav-pref-btn:hover {
+          color: #f72585;
+        }
+        .mobile-pref-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.75rem;
+          padding: 0.65rem 0.75rem;
+          border-radius: var(--radius-sm);
+          color: #f72585;
+          font-weight: 600;
+          font-size: 0.95rem;
+          background: rgba(247, 37, 133, 0.1);
+          border: 1px solid rgba(247, 37, 133, 0.25);
+          cursor: pointer;
+          text-align: left;
+          width: 100%;
         }
         .mobile-admin-link {
           color: #c084fc !important;
