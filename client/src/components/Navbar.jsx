@@ -41,7 +41,6 @@ const Navbar = () => {
         <Link to="/" className="navbar-brand" onClick={() => setMobileMenuOpen(false)}>
           <span className="brand-icon">🎬</span>
           <span className="brand-text">MoodFlix</span>
-          <span className="brand-tag">FREE</span>
         </Link>
 
         {/* Search Bar in Navbar */}
