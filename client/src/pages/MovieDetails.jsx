@@ -100,6 +100,51 @@ const MovieDetails = () => {
   const [editingReviewId, setEditingReviewId] = useState(null);
   const [copiedToast, setCopiedToast] = useState(false);
 
+  const movieMatchesPlatform = (candidate) => {
+    if (!candidate) return false;
+    let pref;
+    try {
+      const saved = localStorage.getItem('moodflix_platform_pref');
+      if (saved) pref = JSON.parse(saved);
+    } catch {}
+    if (!pref) return true;
+    if (pref.freeOnly) {
+      return (
+        candidate.isFree === true ||
+        candidate.availabilityType === 'free' ||
+        candidate.availabilityType === 'free-with-ads' ||
+        candidate.availabilityType === 'public-domain' ||
+        candidate.availabilityStatus === 'FREE TO WATCH' ||
+        candidate.availabilityStatus === 'PUBLIC DOMAIN'
+      );
+    }
+    const plats = pref.platforms || ['free'];
+    if (plats.includes('all')) return true;
+
+    return plats.some((p) => {
+      const pLower = p.toLowerCase();
+      if (pLower === 'free') {
+        return candidate.isFree === true || candidate.availabilityStatus === 'FREE TO WATCH' || candidate.availabilityStatus === 'PUBLIC DOMAIN';
+      }
+      if (pLower === 'youtube') {
+        return candidate.primaryPlatform?.toLowerCase().includes('youtube') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('youtube')) || (candidate.isFree && !candidate.primaryPlatform);
+      }
+      if (pLower === 'netflix') {
+        return candidate.primaryPlatform?.toLowerCase().includes('netflix') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('netflix'));
+      }
+      if (pLower === 'prime' || pLower === 'amazon') {
+        return candidate.primaryPlatform?.toLowerCase().includes('prime') || candidate.primaryPlatform?.toLowerCase().includes('amazon') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('prime') || pl.name?.toLowerCase().includes('amazon'));
+      }
+      if (pLower === 'hotstar' || pLower === 'disney') {
+        return candidate.primaryPlatform?.toLowerCase().includes('hotstar') || candidate.primaryPlatform?.toLowerCase().includes('disney') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('hotstar') || pl.name?.toLowerCase().includes('disney'));
+      }
+      if (pLower === 'jiocinema' || pLower === 'jio') {
+        return candidate.primaryPlatform?.toLowerCase().includes('jio') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('jio'));
+      }
+      return candidate.primaryPlatform?.toLowerCase().includes(pLower) || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes(pLower));
+    });
+  };
+
   useEffect(() => {
     const fetchMovieData = async () => {
       setLoading(true);
@@ -113,11 +158,11 @@ const MovieDetails = () => {
         if (localMatch) {
           m = localMatch;
           setMovie(localMatch);
-          setSimilarMovies(
-            fallbackMovies
-              .filter((x) => x.slug !== localMatch.slug && x.moodTags?.some((t) => localMatch.moodTags?.includes(t)))
-              .slice(0, 4)
-          );
+          let sim = fallbackMovies.filter((x) => x.slug !== localMatch.slug && x.moodTags?.some((t) => localMatch.moodTags?.includes(t)) && movieMatchesPlatform(x));
+          if (sim.length === 0) {
+            sim = fallbackMovies.filter((x) => x.slug !== localMatch.slug && movieMatchesPlatform(x));
+          }
+          setSimilarMovies(sim.slice(0, 4));
         }
 
         // 2. Fetch fresh from API
@@ -133,7 +178,8 @@ const MovieDetails = () => {
             m = res.data.movie;
             setMovie(m);
             if (res.data.similarMovies?.length) {
-              setSimilarMovies(res.data.similarMovies);
+              const matched = res.data.similarMovies.filter(movieMatchesPlatform);
+              setSimilarMovies(matched.length > 0 ? matched : fallbackMovies.filter((x) => x.slug !== m.slug && movieMatchesPlatform(x)).slice(0, 4));
             }
           }
         } catch (apiErr) {

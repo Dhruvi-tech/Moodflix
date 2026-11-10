@@ -31,11 +31,8 @@ function AppContent() {
   const [isSurpriseModalOpen, setIsSurpriseModalOpen] = useState(false);
 
   useEffect(() => {
-    // Ask platform preference at first place on first visit
-    const answered = localStorage.getItem('moodflix_pref_answered');
-    if (!answered) {
-      setIsPrefModalOpen(true);
-    }
+    // Ask platform preference immediately on every open or reload
+    setIsPrefModalOpen(true);
   }, []);
 
   useEffect(() => {

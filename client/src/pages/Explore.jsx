@@ -240,29 +240,30 @@ export default function Explore() {
         </p>
       </div>
 
-      {/* ── Platform Tabs ─────────────────────────────────── */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
-        {PLATFORMS_LIST.map((plat) => (
-          <button
-            key={plat}
-            onClick={() => {
-              setPlatform(plat);
-              if (plat === 'Free') {
-                setFreeOnly(true);
-              } else {
-                setFreeOnly(false);
-              }
-              setPage(1);
-            }}
-            className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${
-              platform === plat
-                ? 'bg-gradient-to-r from-[#9d4edd] to-[#f72585] text-white shadow-lg shadow-[#9d4edd]/30 scale-105'
-                : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
-            }`}
-          >
-            {plat === 'All' ? '🌐 All Platforms' : plat === 'Free' ? '🆓 Free Movies Only' : plat}
-          </button>
-        ))}
+      {/* ── Active Platform Filter Status (No unselected platforms shown on top) ── */}
+      <div className="flex items-center justify-between p-3.5 px-4 rounded-2xl bg-white/[0.04] border border-white/10 mb-6 text-xs shadow-lg">
+        <div className="flex items-center gap-2.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span className="text-gray-400 font-medium">Selected Platform:</span>
+          <span className="font-extrabold text-white px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/10">
+            {platform === 'Free' || freeOnly
+              ? '🆓 Free Movies Only'
+              : platform !== 'All'
+              ? platform
+              : 'All Verified Platforms'}
+          </span>
+          <span className="text-gray-400 hidden sm:inline">
+            • Exclusively showing {total} verified movies. Unselected platforms are hidden.
+          </span>
+        </div>
+
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent('open-platform-preferences'))}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all flex-shrink-0"
+        >
+          <SlidersHorizontal size={13} />
+          <span>Change Platform</span>
+        </button>
       </div>
 
       {/* ── Advanced Filter Panel ─────────────────────────── */}

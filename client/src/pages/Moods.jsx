@@ -5,7 +5,7 @@ import MovieCard from '../components/MovieCard';
 import MoodChip from '../components/MoodChip';
 import LoadingSpinner from '../components/LoadingSpinner';
 import EmptyState from '../components/EmptyState';
-import { Sparkles, SlidersHorizontal, Info } from 'lucide-react';
+import { Sparkles, SlidersHorizontal, Info, CheckCircle } from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
 import { FALLBACK_MOODS } from '../data/fallbackMoods';
 
@@ -13,17 +13,110 @@ const Moods = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const initialVibe = searchParams.get('vibe') || 'happy';
 
+  const [preferences, setPreferences] = useState(() => {
+    try {
+      const saved = localStorage.getItem('moodflix_platform_pref');
+      return saved ? JSON.parse(saved) : { platforms: ['free'], freeOnly: true };
+    } catch {
+      return { platforms: ['free'], freeOnly: true };
+    }
+  });
+
   const [moods, setMoods] = useState(FALLBACK_MOODS);
   const [selectedMoodId, setSelectedMoodId] = useState(initialVibe);
   const [currentMood, setCurrentMood] = useState(
     () => FALLBACK_MOODS.find((m) => m.id === initialVibe) || FALLBACK_MOODS[0]
   );
-  const [movies, setMovies] = useState(() =>
-    fallbackMovies.filter((m) => m.moodTags?.includes(initialVibe))
-  );
+  const [movies, setMovies] = useState([]);
   const [genreFilter, setGenreFilter] = useState('All');
   const [languageFilter, setLanguageFilter] = useState('All');
   const [loading, setLoading] = useState(false);
+
+  // Sync preference updates across tabs / events
+  useEffect(() => {
+    const handlePrefUpdate = () => {
+      try {
+        const saved = localStorage.getItem('moodflix_platform_pref');
+        if (saved) setPreferences(JSON.parse(saved));
+      } catch (e) {}
+    };
+    window.addEventListener('platform-preferences-updated', handlePrefUpdate);
+    return () => window.removeEventListener('platform-preferences-updated', handlePrefUpdate);
+  }, []);
+
+  // Strict movie matcher: only shows movies available on the selected platform
+  const movieMatchesPlatform = (m) => {
+    if (!m) return false;
+    if (preferences.freeOnly) {
+      return (
+        m.isFree === true ||
+        m.availabilityType === 'free' ||
+        m.availabilityType === 'free-with-ads' ||
+        m.availabilityType === 'public-domain' ||
+        m.availabilityStatus === 'FREE TO WATCH' ||
+        m.availabilityStatus === 'PUBLIC DOMAIN'
+      );
+    }
+    const plats = preferences.platforms || ['free'];
+    if (plats.includes('all')) return true;
+
+    return plats.some((p) => {
+      const pLower = p.toLowerCase();
+      if (pLower === 'free') {
+        return (
+          m.isFree === true ||
+          m.availabilityType === 'free' ||
+          m.availabilityStatus === 'FREE TO WATCH' ||
+          m.availabilityStatus === 'PUBLIC DOMAIN'
+        );
+      }
+      if (pLower === 'youtube') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('youtube') ||
+          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('youtube')) ||
+          (m.isFree && !m.primaryPlatform)
+        );
+      }
+      if (pLower === 'netflix') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('netflix') ||
+          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('netflix'))
+        );
+      }
+      if (pLower === 'prime' || pLower === 'amazon') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('prime') ||
+          m.primaryPlatform?.toLowerCase().includes('amazon') ||
+          m.platforms?.some(
+            (plat) =>
+              plat.name?.toLowerCase().includes('prime') ||
+              plat.name?.toLowerCase().includes('amazon')
+          )
+        );
+      }
+      if (pLower === 'hotstar' || pLower === 'disney') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('hotstar') ||
+          m.primaryPlatform?.toLowerCase().includes('disney') ||
+          m.platforms?.some(
+            (plat) =>
+              plat.name?.toLowerCase().includes('hotstar') ||
+              plat.name?.toLowerCase().includes('disney')
+          )
+        );
+      }
+      if (pLower === 'jiocinema' || pLower === 'jio') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('jio') ||
+          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('jio'))
+        );
+      }
+      return (
+        m.primaryPlatform?.toLowerCase().includes(pLower) ||
+        m.platforms?.some((plat) => plat.name?.toLowerCase().includes(pLower))
+      );
+    });
+  };
 
   // Fetch all moods
   useEffect(() => {
@@ -36,25 +129,37 @@ const Moods = () => {
     }).catch(() => {});
   }, []);
 
-  // Fetch movies for active mood
+  // Fetch movies for active mood strictly matching platform
   useEffect(() => {
     const fetchRecommendations = async () => {
       setLoading(true);
       try {
-        const params = { limit: 12 };
+        const platParam = preferences.freeOnly
+          ? 'Free'
+          : preferences.platforms?.length === 1 && preferences.platforms[0] !== 'all'
+          ? preferences.platforms[0]
+          : 'All';
+
+        const params = { limit: 24, platform: platParam };
         if (genreFilter !== 'All') params.genre = genreFilter;
         if (languageFilter !== 'All') params.language = languageFilter;
 
         const res = await api.get(`/movies/mood/${selectedMoodId}`, { params });
         if (res.data.success && res.data.movies?.length) {
-          setMovies(res.data.movies);
+          const matched = res.data.movies.filter(movieMatchesPlatform);
+          if (matched.length > 0) {
+            setMovies(matched);
+          } else {
+            const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMoodId) && movieMatchesPlatform(m));
+            setMovies(fb);
+          }
           setCurrentMood(res.data.mood || FALLBACK_MOODS.find((m) => m.id === selectedMoodId));
         } else {
-          const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMoodId));
+          const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMoodId) && movieMatchesPlatform(m));
           setMovies(fb);
         }
       } catch (err) {
-        const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMoodId));
+        const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMoodId) && movieMatchesPlatform(m));
         setMovies(fb);
       } finally {
         setLoading(false);
@@ -63,7 +168,7 @@ const Moods = () => {
 
     fetchRecommendations();
     setSearchParams({ vibe: selectedMoodId });
-  }, [selectedMoodId, genreFilter, languageFilter]);
+  }, [selectedMoodId, genreFilter, languageFilter, preferences]);
 
   const handleMoodClick = (id) => {
     setSelectedMoodId(id);
@@ -72,15 +177,44 @@ const Moods = () => {
   };
 
   return (
-    <div className="moods-page page-wrapper container">
+    <div className="moods-page page-wrapper container text-slate-100">
       {/* ── Section Header ───────────────────────────────── */}
-      <div className="section-head text-center">
-        <h2>Curated Mood Engine</h2>
-        <p>Explore sixteen curated emotional palettes designed to find the exact free and streaming films matching your mood tonight.</p>
+      <div className="section-head text-center mb-6">
+        <span className="text-xs font-bold uppercase tracking-widest text-[#f72585] px-3 py-1 rounded-full bg-[#f72585]/10 border border-[#f72585]/30 inline-block mb-2">
+          16 Emotional Palettes
+        </span>
+        <h2 className="text-3xl sm:text-4xl font-bold font-serif text-white">Curated Mood Engine</h2>
+        <p className="text-sm text-gray-300 max-w-xl mx-auto mt-1">
+          Explore curated emotional palettes designed to find the exact films matching your mood on your selected platform.
+        </p>
+      </div>
+
+      {/* ── Active Platform Filter Status (No unselected platforms shown on top) ── */}
+      <div className="flex items-center justify-between p-3.5 px-4 rounded-2xl bg-white/[0.04] border border-white/10 mb-8 text-xs shadow-lg">
+        <div className="flex items-center gap-2.5">
+          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span className="text-gray-400 font-medium">Platform Filter:</span>
+          <span className="font-extrabold text-white px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/10">
+            {preferences.freeOnly
+              ? '🆓 Free Movies Only'
+              : preferences.platforms?.map((p) => p.toUpperCase()).join(', ')}
+          </span>
+          <span className="text-gray-400 hidden sm:inline">
+            • Mood recommendations strictly tailored to your active platform. Unselected platforms are hidden.
+          </span>
+        </div>
+
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent('open-platform-preferences'))}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all flex-shrink-0"
+        >
+          <SlidersHorizontal size={13} />
+          <span>Change Platform</span>
+        </button>
       </div>
 
       {/* ── 16 Mood Grid ─────────────────────────────────── */}
-      <div className="all-moods-grid">
+      <div className="all-moods-grid mb-8">
         {moods.map((m) => (
           <MoodChip
             key={m.id}
@@ -95,202 +229,42 @@ const Moods = () => {
       {/* ── Selected Mood Detail Banner ──────────────────── */}
       {currentMood && (
         <div
-          className="selected-mood-banner glass-panel"
+          className="selected-mood-banner glass-panel mb-8 p-6 rounded-2xl border border-white/10"
           style={{ '--accent-color': currentMood.accent || '#8b5cf6' }}
         >
-          <div className="mood-banner-left">
-            <span className="banner-emoji">{currentMood.emoji}</span>
-            <div>
-              <h3 className="banner-title">{currentMood.label} Recommendations</h3>
-              <p className="banner-tagline">{currentMood.tagline}</p>
+          <div className="mood-banner-content">
+            <span className="mood-banner-emoji text-4xl">{currentMood.emoji}</span>
+            <div className="mood-banner-text">
+              <h3 className="text-2xl font-bold font-serif text-white">{currentMood.label} Cinema</h3>
+              <p className="text-sm text-gray-300 mt-1">{currentMood.tagline}</p>
+              <div className="flex items-center gap-2 mt-2">
+                <span className="text-xs text-purple-300">
+                  Showing <strong>{movies.length}</strong> matching titles on your active platform
+                </span>
+              </div>
             </div>
-          </div>
-
-          <div className="mood-algorithm-note">
-            <Info size={16} className="info-icon" />
-            <span>Deterministic metadata matching across emotional tags, tone, and pacing.</span>
           </div>
         </div>
       )}
 
-      {/* ── Secondary In-Mood Filters ────────────────────── */}
-      <div className="in-mood-filters-bar">
-        <div className="filter-group-inline">
-          <label>Filter by Genre:</label>
-          <select
-            value={genreFilter}
-            onChange={(e) => setGenreFilter(e.target.value)}
-            className="filter-select-sm"
-          >
-            <option value="All">All Genres</option>
-            <option value="Comedy">Comedy</option>
-            <option value="Drama">Drama</option>
-            <option value="Adventure">Adventure</option>
-            <option value="Romance">Romance</option>
-            <option value="Mystery">Mystery</option>
-            <option value="Animation">Animation</option>
-          </select>
-        </div>
-
-        <div className="filter-group-inline">
-          <label>Filter by Language:</label>
-          <select
-            value={languageFilter}
-            onChange={(e) => setLanguageFilter(e.target.value)}
-            className="filter-select-sm"
-          >
-            <option value="All">All Languages</option>
-            <option value="English">English</option>
-            <option value="French">French</option>
-            <option value="Silent">Silent Cinema</option>
-          </select>
-        </div>
-      </div>
-
-      {/* ── Recommendations Grid ─────────────────────────── */}
+      {/* ── Movie Results Grid ───────────────────────────── */}
       {loading ? (
-        <LoadingSpinner text={`Curating ${currentMood?.label || ''} shortlist...`} />
+        <LoadingSpinner text={`Finding ${currentMood?.label || ''} titles on your platform...`} />
       ) : movies.length === 0 ? (
         <EmptyState
-          title={`No ${currentMood?.label} movies found with this filter`}
-          description="Try resetting genre and language filters to view all recommendations."
-          actionText="Show All Recommendations"
-          actionLink="#"
-          onActionClick={() => {
-            setGenreFilter('All');
-            setLanguageFilter('All');
-          }}
+          icon={Sparkles}
+          title={`No ${currentMood?.label || ''} movies on this platform`}
+          description="Try selecting another platform or explore our free movies collection."
+          actionText="Switch Platform"
+          actionLink="/"
         />
       ) : (
-        <div className="movie-grid animate-fade-in">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 animate-fade-in">
           {movies.map((movie) => (
-            <div key={movie._id} className="mood-movie-item">
-              <MovieCard movie={movie} />
-              {movie.moodExplanation && (
-                <div className="why-it-matches-box">
-                  <span className="why-label">Why it matches:</span>
-                  <p>{movie.moodExplanation}</p>
-                </div>
-              )}
-            </div>
+            <MovieCard key={movie._id || movie.slug} movie={movie} />
           ))}
         </div>
       )}
-
-      <style>{`
-        .text-center {
-          text-align: center;
-        }
-        .text-center p {
-          margin-inline: auto;
-        }
-        .all-moods-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-          gap: 0.85rem;
-          margin-bottom: 2.5rem;
-        }
-        .selected-mood-banner {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 1.75rem 2rem;
-          margin-bottom: 1.75rem;
-          border-left: 4px solid var(--accent-color);
-          background: linear-gradient(90deg, color-mix(in srgb, var(--accent-color) 12%, #101625), var(--surface-card));
-          flex-wrap: wrap;
-          gap: 1.5rem;
-        }
-        .mood-banner-left {
-          display: flex;
-          align-items: center;
-          gap: 1.25rem;
-        }
-        .banner-emoji {
-          font-size: 2.8rem;
-          line-height: 1;
-        }
-        .banner-title {
-          font-family: var(--font-serif);
-          font-size: 1.75rem;
-          color: #fff;
-        }
-        .banner-tagline {
-          color: var(--text-muted);
-          font-size: 0.95rem;
-          margin-top: 0.2rem;
-        }
-        .mood-algorithm-note {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-size: 0.78rem;
-          color: var(--text-dim);
-          background: rgba(0, 0, 0, 0.4);
-          padding: 0.45rem 0.85rem;
-          border-radius: var(--radius-full);
-          border: 1px solid var(--border-subtle);
-        }
-        .info-icon {
-          color: #38bdf8;
-          flex-shrink: 0;
-        }
-        .in-mood-filters-bar {
-          display: flex;
-          align-items: center;
-          gap: 1.5rem;
-          margin-bottom: 2rem;
-          flex-wrap: wrap;
-        }
-        .filter-group-inline {
-          display: flex;
-          align-items: center;
-          gap: 0.65rem;
-          font-size: 0.88rem;
-          color: var(--text-muted);
-        }
-        .filter-select-sm {
-          background: var(--surface-2);
-          border: 1px solid var(--border-subtle);
-          border-radius: var(--radius-sm);
-          padding: 0.45rem 0.85rem;
-          color: #fff;
-          font-size: 0.85rem;
-        }
-        .mood-movie-item {
-          display: flex;
-          flex-direction: column;
-          gap: 0.65rem;
-        }
-        .why-it-matches-box {
-          padding: 0.65rem 0.85rem;
-          background: var(--surface-2);
-          border-radius: var(--radius-sm);
-          border: 1px solid var(--border-subtle);
-          font-size: 0.75rem;
-          line-height: 1.45;
-        }
-        .why-label {
-          display: block;
-          font-weight: 700;
-          color: #c4b5fd;
-          margin-bottom: 0.2rem;
-          text-transform: uppercase;
-          font-size: 0.68rem;
-          letter-spacing: 0.05em;
-        }
-        .why-it-matches-box p {
-          color: var(--text-muted);
-        }
-        @media (max-width: 640px) {
-          .all-moods-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-          .selected-mood-banner {
-            padding: 1.25rem;
-          }
-        }
-      `}</style>
     </div>
   );
 };
