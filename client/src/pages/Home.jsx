@@ -232,58 +232,62 @@ export default function Home() {
   return (
     <div className="home-page page-wrapper text-slate-100">
       {/* ── SECTION 1: HERO BANNER ─────────────────────────────────── */}
-      <section className="hero-section container relative overflow-hidden py-12 md:py-20 text-center">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#7b2cbf]/25 rounded-full blur-3xl pointer-events-none" />
+      <section className="hero-section container relative overflow-hidden py-14 md:py-24 text-center">
+        {/* Animated Glow Ambient Mesh */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] h-[520px] bg-gradient-to-tr from-purple-600/35 via-pink-600/25 to-cyan-500/20 rounded-full blur-[110px] pointer-events-none animate-pulse-glow" />
+        <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-purple-700/20 rounded-full blur-[90px] pointer-events-none animate-float" />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-pink-600/20 rounded-full blur-[90px] pointer-events-none animate-float" style={{ animationDelay: '2s' }} />
 
-        <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#9d4edd]/20 to-[#f72585]/20 border border-[#9d4edd]/40 text-[#f72585] text-xs md:text-sm font-semibold tracking-wide shadow-lg shadow-[#9d4edd]/10">
-            <Sparkles size={16} />
+        <div className="relative z-10 max-w-4xl mx-auto space-y-7 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 border border-purple-500/40 text-pink-300 text-xs md:text-sm font-semibold tracking-wide shadow-lg shadow-purple-500/20 backdrop-blur-md">
+            <Sparkles size={16} className="text-pink-400 animate-spin-slow" />
             <span>Personalized Free & Streaming Cinema Discovery</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping inline-block"></span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif tracking-tight leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold font-serif tracking-tight leading-tight">
             Find Your Next Movie <br />
-            <span className="bg-gradient-to-r from-[#e0aaff] via-[#f72585] to-[#4cc9f0] bg-clip-text text-transparent">
+            <span className="text-gradient-cinema drop-shadow-[0_10px_25px_rgba(236,72,153,0.35)]">
               Based on Your Mood.
             </span>
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Discover over 500+ legally free and streaming movies across 20+ Indian regional languages
-            and world cinema. No subscription traps, honest platform badges.
+            and world cinema. Zero subscription traps, honest verified badges.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <a href="#mood-selector" className="btn btn-primary px-6 py-3 rounded-xl font-bold flex items-center gap-2 shadow-xl shadow-[#9d4edd]/30">
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-3">
+            <a href="#mood-selector" className="btn btn-primary px-7 py-3.5 rounded-2xl font-bold flex items-center gap-2.5 shadow-xl shadow-purple-600/35 hover:scale-105 transition-all">
               <Play size={18} fill="#fff" />
               <span>Explore by Mood</span>
             </a>
-            <a href="#free-movies" className="btn btn-secondary px-6 py-3 rounded-xl font-bold flex items-center gap-2 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30">
+            <a href="#free-movies" className="btn btn-secondary px-7 py-3.5 rounded-2xl font-bold flex items-center gap-2.5 bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30 hover:scale-105 transition-all shadow-lg shadow-emerald-500/20">
               <span>🆓 Watch Free Movies</span>
             </a>
-            <Link to="/explore" className="btn btn-outline px-6 py-3 rounded-xl font-semibold flex items-center gap-2">
+            <Link to="/explore" className="btn btn-outline px-6 py-3.5 rounded-2xl font-semibold flex items-center gap-2 hover:scale-105 transition-all">
               <Compass size={18} />
               <span>Browse 500+ Catalog</span>
             </Link>
           </div>
 
           {/* Quick Metrics */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-3xl mx-auto text-left">
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="text-2xl font-bold text-emerald-400 block">220+</span>
-              <span className="text-xs text-gray-400">100% Free Legal Movies</span>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 pt-6 max-w-3xl mx-auto text-left">
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:border-emerald-500/50 hover:bg-emerald-500/[0.08] transition-all duration-300 group">
+              <span className="text-3xl font-extrabold text-emerald-400 block group-hover:scale-105 transition-transform">220+</span>
+              <span className="text-xs text-gray-400 font-medium">100% Free Legal Movies</span>
             </div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="text-2xl font-bold text-[#c77dff] block">20+</span>
-              <span className="text-xs text-gray-400">Indian Languages</span>
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:border-purple-500/50 hover:bg-purple-500/[0.08] transition-all duration-300 group">
+              <span className="text-3xl font-extrabold text-purple-300 block group-hover:scale-105 transition-transform">20+</span>
+              <span className="text-xs text-gray-400 font-medium">Indian Languages</span>
             </div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="text-2xl font-bold text-[#f72585] block">16</span>
-              <span className="text-xs text-gray-400">Emotional Moods</span>
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:border-pink-500/50 hover:bg-pink-500/[0.08] transition-all duration-300 group">
+              <span className="text-3xl font-extrabold text-pink-400 block group-hover:scale-105 transition-transform">16</span>
+              <span className="text-xs text-gray-400 font-medium">Emotional Moods</span>
             </div>
-            <div className="p-3 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="text-2xl font-bold text-sky-400 block">507</span>
-              <span className="text-xs text-gray-400">Verified Titles</span>
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md hover:border-sky-500/50 hover:bg-sky-500/[0.08] transition-all duration-300 group">
+              <span className="text-3xl font-extrabold text-sky-400 block group-hover:scale-105 transition-transform">507</span>
+              <span className="text-xs text-gray-400 font-medium">Verified Titles</span>
             </div>
           </div>
         </div>

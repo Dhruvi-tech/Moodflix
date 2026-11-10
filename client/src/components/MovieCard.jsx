@@ -35,18 +35,33 @@ const MovieCard = ({ movie }) => {
   const renderBadge = () => {
     if (movie.isFree) {
       if (movie.availabilityStatus === 'PUBLIC DOMAIN') {
-        return <span className="badge badge-public-domain movie-badge">🏛️ Public Domain</span>;
+        return (
+          <span className="movie-badge badge-public-domain">
+            <span className="badge-dot dot-violet"></span>
+            Public Domain
+          </span>
+        );
       }
       if (movie.availabilityStatus === 'FREE WITH ADS') {
-        return <span className="badge badge-ad-supported movie-badge">📺 Free with Ads</span>;
+        return (
+          <span className="movie-badge badge-ad-supported">
+            <span className="badge-dot dot-amber"></span>
+            Free with Ads
+          </span>
+        );
       }
-      return <span className="badge badge-free-streaming movie-badge">🆓 Free to Watch</span>;
+      return (
+        <span className="movie-badge badge-free-streaming">
+          <span className="badge-dot dot-green"></span>
+          Free to Watch
+        </span>
+      );
     }
 
     // Subscription required
     const platformName = movie.primaryPlatform || 'Subscription';
     return (
-      <span className="badge badge-subscription movie-badge">
+      <span className="movie-badge badge-subscription">
         🔒 {platformName}
       </span>
     );
@@ -56,7 +71,7 @@ const MovieCard = ({ movie }) => {
   const movieLink = `/movies/${movie.slug || movie._id}`;
 
   return (
-    <article className="movie-card glass-card">
+    <article className="movie-card group">
       <Link to={movieLink} className="movie-card-poster-wrapper">
         <img
           src={movie.poster}
@@ -68,6 +83,9 @@ const MovieCard = ({ movie }) => {
             e.target.src = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400';
           }}
         />
+
+        {/* Top Gradient Vignette */}
+        <div className="poster-top-vignette" />
 
         {/* Availability Badge */}
         {renderBadge()}
@@ -82,7 +100,7 @@ const MovieCard = ({ movie }) => {
         {/* Rating Floating Badge */}
         {movie.ratings?.value && (
           <span className="movie-rating-badge">
-            <Star size={12} fill="#f59e0b" color="#f59e0b" />
+            <Star size={11} fill="#fbbf24" color="#fbbf24" />
             <span>{movie.ratings.value}</span>
           </span>
         )}
@@ -96,7 +114,7 @@ const MovieCard = ({ movie }) => {
               className={`quick-action-btn ${isWl ? 'active' : ''}`}
               title={isWl ? 'Remove from Watchlist' : 'Add to Watchlist'}
             >
-              <Bookmark size={15} fill={isWl ? '#8b5cf6' : 'none'} />
+              <Bookmark size={14} fill={isWl ? '#8b5cf6' : 'none'} color={isWl ? '#a78bfa' : '#fff'} />
             </button>
             <button
               type="button"
@@ -104,7 +122,7 @@ const MovieCard = ({ movie }) => {
               className={`quick-action-btn ${isFav ? 'active' : ''}`}
               title={isFav ? 'Remove from Favourites' : 'Add to Favourites'}
             >
-              <Heart size={15} fill={isFav ? '#ec4899' : 'none'} color={isFav ? '#ec4899' : 'currentColor'} />
+              <Heart size={14} fill={isFav ? '#ec4899' : 'none'} color={isFav ? '#f472b6' : '#fff'} />
             </button>
           </div>
         )}
@@ -112,7 +130,7 @@ const MovieCard = ({ movie }) => {
         {/* Hover Play Overlay */}
         <div className="poster-play-overlay">
           <div className="play-icon-circle">
-            <Play size={20} fill="#fff" />
+            <Play size={20} fill="#fff" className="translate-x-0.5" />
           </div>
         </div>
       </Link>
@@ -125,7 +143,7 @@ const MovieCard = ({ movie }) => {
         </Link>
 
         <div className="movie-card-meta">
-          <span>{movie.releaseYear}</span>
+          <span className="meta-year">{movie.releaseYear}</span>
           <span className="dot">•</span>
           <span className="genres-span">{Array.isArray(movie.genres) ? movie.genres.slice(0, 2).join(', ') : movie.genres}</span>
         </div>
@@ -143,100 +161,147 @@ const MovieCard = ({ movie }) => {
           display: flex;
           flex-direction: column;
           overflow: hidden;
-          border-radius: var(--radius-md);
-          background: var(--surface);
+          border-radius: 14px;
+          background: #0f1629;
+          border: 1px solid rgba(255, 255, 255, 0.08);
           position: relative;
+          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                      border-color 0.35s ease;
+        }
+        .movie-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          border-color: rgba(168, 85, 247, 0.55);
+          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.75), 0 0 25px rgba(139, 92, 246, 0.35);
         }
         .movie-card-poster-wrapper {
           position: relative;
           aspect-ratio: 2 / 3;
           overflow: hidden;
-          background: #0a0d14;
+          background: #090c15;
           display: block;
         }
         .movie-card-poster {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          transition: transform 0.4s ease;
+          transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .movie-card:hover .movie-card-poster {
-          transform: scale(1.06);
+          transform: scale(1.08);
+        }
+        .poster-top-vignette {
+          position: absolute;
+          inset: 0 0 50% 0;
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+          pointer-events: none;
+          z-index: 1;
         }
         .movie-badge {
           position: absolute;
-          top: 0.6rem;
-          left: 0.6rem;
+          top: 0.65rem;
+          left: 0.65rem;
           z-index: 2;
           font-size: 0.65rem;
-          backdrop-filter: blur(8px);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
           font-weight: 700;
-          letter-spacing: 0.02em;
-          padding: 0.2rem 0.5rem;
-          border-radius: 4px;
+          letter-spacing: 0.03em;
+          padding: 0.22rem 0.55rem;
+          border-radius: 9999px;
+          display: inline-flex;
+          align-items: center;
+          gap: 0.3rem;
+          text-transform: uppercase;
+        }
+        .badge-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .dot-green {
+          background: #10b981;
+          box-shadow: 0 0 8px #10b981;
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .dot-violet {
+          background: #a855f7;
+          box-shadow: 0 0 8px #a855f7;
+        }
+        .dot-amber {
+          background: #f59e0b;
+          box-shadow: 0 0 8px #f59e0b;
         }
         .badge-free-streaming {
-          background: rgba(16, 185, 129, 0.85);
-          color: #fff;
+          background: rgba(6, 78, 59, 0.85);
+          color: #6ee7b7;
           border: 1px solid rgba(52, 211, 153, 0.4);
+          box-shadow: 0 2px 10px rgba(16, 185, 129, 0.25);
         }
         .badge-public-domain {
-          background: rgba(139, 92, 246, 0.85);
-          color: #fff;
+          background: rgba(88, 28, 135, 0.85);
+          color: #d8b4fe;
           border: 1px solid rgba(167, 139, 250, 0.4);
+          box-shadow: 0 2px 10px rgba(139, 92, 246, 0.25);
         }
         .badge-ad-supported {
-          background: rgba(14, 165, 233, 0.85);
-          color: #fff;
-          border: 1px solid rgba(56, 189, 248, 0.4);
+          background: rgba(120, 53, 15, 0.85);
+          color: #fde68a;
+          border: 1px solid rgba(245, 158, 11, 0.4);
+          box-shadow: 0 2px 10px rgba(245, 158, 11, 0.25);
         }
         .badge-subscription {
-          background: rgba(245, 158, 11, 0.85);
-          color: #111827;
-          border: 1px solid rgba(251, 191, 36, 0.5);
-          font-weight: 800;
+          background: rgba(15, 23, 42, 0.85);
+          color: #cbd5e1;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          font-weight: 700;
         }
         .movie-lang-badge {
           position: absolute;
-          bottom: 0.6rem;
-          left: 0.6rem;
+          bottom: 0.65rem;
+          left: 0.65rem;
           z-index: 2;
           font-size: 0.65rem;
           font-weight: 700;
-          padding: 0.15rem 0.45rem;
-          background: rgba(0, 0, 0, 0.75);
+          padding: 0.2rem 0.5rem;
+          background: rgba(15, 23, 42, 0.82);
           color: #e2e8f0;
           border: 1px solid rgba(255, 255, 255, 0.15);
-          border-radius: 4px;
-          backdrop-filter: blur(6px);
-          text-transform: uppercase;
+          border-radius: 6px;
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+          letter-spacing: 0.04em;
         }
         .movie-rating-badge {
           position: absolute;
-          top: 0.6rem;
-          right: 0.6rem;
+          top: 0.65rem;
+          right: 0.65rem;
           z-index: 2;
           display: flex;
           align-items: center;
           gap: 0.25rem;
           padding: 0.2rem 0.5rem;
-          background: rgba(0, 0, 0, 0.75);
-          backdrop-filter: blur(8px);
-          border-radius: var(--radius-full);
+          background: rgba(0, 0, 0, 0.8);
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+          border: 1px solid rgba(251, 191, 36, 0.3);
+          border-radius: 9999px;
           font-size: 0.75rem;
-          font-weight: 700;
+          font-weight: 800;
           color: #fff;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
         .movie-quick-actions {
           position: absolute;
-          bottom: 0.6rem;
-          right: 0.6rem;
+          bottom: 0.65rem;
+          right: 0.65rem;
           z-index: 3;
           display: flex;
-          gap: 0.35rem;
+          gap: 0.4rem;
           opacity: 0;
-          transform: translateY(6px);
-          transition: all 0.25s ease;
+          transform: translateY(8px);
+          transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .movie-card:hover .movie-quick-actions {
           opacity: 1;
@@ -246,26 +311,27 @@ const MovieCard = ({ movie }) => {
           width: 32px;
           height: 32px;
           border-radius: 50%;
-          background: rgba(16, 22, 37, 0.9);
-          backdrop-filter: blur(8px);
-          border: 1px solid var(--border-subtle);
+          background: rgba(15, 22, 40, 0.9);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.18);
           color: #fff;
           display: grid;
           place-items: center;
-          transition: transform 0.2s, background 0.2s;
+          transition: transform 0.2s, background 0.2s, border-color 0.2s;
         }
         .quick-action-btn:hover {
-          transform: scale(1.1);
-          background: var(--surface-2);
-          border-color: var(--primary);
+          transform: scale(1.15);
+          background: #1e293b;
+          border-color: #a855f7;
         }
         .quick-action-btn.active {
-          border-color: var(--primary);
+          border-color: #ec4899;
+          background: rgba(236, 72, 153, 0.2);
         }
         .poster-play-overlay {
           position: absolute;
           inset: 0;
-          background: rgba(9, 12, 21, 0.4);
+          background: radial-gradient(circle, rgba(15, 22, 41, 0.4) 0%, rgba(7, 9, 19, 0.75) 100%);
           display: grid;
           place-items: center;
           opacity: 0;
@@ -275,67 +341,77 @@ const MovieCard = ({ movie }) => {
           opacity: 1;
         }
         .play-icon-circle {
-          width: 48px;
-          height: 48px;
+          width: 52px;
+          height: 52px;
           border-radius: 50%;
-          background: linear-gradient(135deg, var(--primary), var(--secondary));
+          background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
           display: grid;
           place-items: center;
-          box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
-          transform: scale(0.85);
-          transition: transform 0.25s ease;
+          box-shadow: 0 0 25px rgba(236, 72, 153, 0.65), 0 0 10px rgba(139, 92, 246, 0.8);
+          transform: scale(0.8);
+          transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         .movie-card:hover .play-icon-circle {
-          transform: scale(1);
+          transform: scale(1.05);
         }
         .movie-card-content {
-          padding: 0.85rem 0.95rem;
+          padding: 0.9rem 1rem 1rem;
           display: flex;
           flex-direction: column;
-          gap: 0.3rem;
+          gap: 0.35rem;
           flex: 1;
+          background: linear-gradient(180deg, rgba(15, 22, 41, 0.6) 0%, #0f1629 100%);
         }
         .movie-card-title {
-          font-size: 0.95rem;
+          font-size: 0.98rem;
           font-weight: 700;
-          color: #fff;
+          color: #f1f5f9;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          line-height: 1.3;
-          transition: color 0.2s;
+          line-height: 1.35;
+          letter-spacing: -0.01em;
+          transition: color 0.2s ease;
         }
-        .movie-card-title:hover {
-          color: var(--primary);
+        .movie-card:hover .movie-card-title {
+          color: #c084fc;
         }
         .movie-card-meta {
           display: flex;
           align-items: center;
-          gap: 0.4rem;
+          gap: 0.45rem;
           font-size: 0.78rem;
-          color: var(--text-muted);
+          color: #94a3b8;
+        }
+        .meta-year {
+          color: #cbd5e1;
+          font-weight: 500;
         }
         .dot {
-          color: var(--text-dim);
+          color: #64748b;
         }
         .genres-span {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+          color: #94a3b8;
         }
         .movie-provider-info {
           display: flex;
           align-items: center;
-          gap: 0.3rem;
+          gap: 0.35rem;
           font-size: 0.72rem;
-          margin-top: 0.2rem;
+          margin-top: 0.25rem;
+          padding-top: 0.35rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
         .provider-label {
-          color: var(--text-dim);
+          color: #64748b;
+          font-weight: 500;
         }
         .provider-name {
           color: #38bdf8;
-          font-weight: 600;
+          font-weight: 700;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
