@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="MoodFlix Logo" width="550" />
+  <img src="assets/logo.svg" alt="MoodFlix Logo" width="560" />
 </p>
 
 <p align="center">
-  <strong>Mood-Based Free Movie Discovery Platform — Full-Stack MERN Architecture</strong><br />
-  <em>CS3301 Full Stack Development — CIE-3 Technical Milestone</em>
+  <strong>Intelligent Mood-Based Free & Streaming Movie Discovery Platform</strong><br />
+  <em>CS3301 Full Stack Development — CIE-3 Capstone Project</em>
 </p>
 
 <p align="center">
@@ -14,53 +14,133 @@
   <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
   <img src="https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas" />
   <img src="https://img.shields.io/badge/JWT_Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
 </p>
 
 <p align="center">
   <a href="https://moodflix-free.vercel.app" target="_blank">
-    <img src="https://img.shields.io/badge/🌐_Live_Platform-moodflix--free.vercel.app-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Platform" />
+    <img src="https://img.shields.io/badge/🌐_Live_Web_App-moodflix--free.vercel.app-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Platform" />
   </a>
   <a href="https://moodflix-api.vercel.app/api/health" target="_blank">
-    <img src="https://img.shields.io/badge/⚡_Live_API-moodflix--api.vercel.app-10B981?style=for-the-badge&logo=fastapi&logoColor=white" alt="Live API" />
+    <img src="https://img.shields.io/badge/⚡_Live_REST_API-moodflix--api.vercel.app-10B981?style=for-the-badge&logo=fastapi&logoColor=white" alt="Live API" />
   </a>
-  <a href="./DEMO_GUIDE.md">
-    <img src="https://img.shields.io/badge/📋_Viva_Demo_Guide-DEMO__GUIDE.md-F59E0B?style=for-the-badge&logo=gitbook&logoColor=white" alt="Demo Guide" />
+  <a href="https://github.com/Dhruvi-tech/Moodflix" target="_blank">
+    <img src="https://img.shields.io/badge/⭐_GitHub_Repo-Dhruvi--tech%2FMoodflix-blue?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo" />
   </a>
 </p>
 
 <p align="center">
   <a href="#-project-overview">Overview</a> •
+  <a href="#-key-features">Key Features</a> •
+  <a href="#-strict-platform-isolation">Platform Isolation</a> •
+  <a href="#-the-16-mood-palettes">16 Moods</a> •
+  <a href="#-indian-regional-cinema">Indian Cinema</a> •
+  <a href="#-verified-streaming-links">Working Links</a> •
   <a href="#-full-stack-architecture">Architecture</a> •
-  <a href="#-16-mood-palettes">The 16 Moods</a> •
-  <a href="#-indian-regional-languages">Indian Languages</a> •
-  <a href="#-interactive-tools">Compare & Surprise</a> •
-  <a href="#-100-legal-free-streaming-pledge">Free Streaming Pledge</a> •
-  <a href="#-api-endpoints-reference">REST APIs</a> •
-  <a href="#-local-installation--quick-start">Quick Start</a> •
-  <a href="./DEMO_GUIDE.md">Demo Guide</a>
+  <a href="#-rest-api-reference">REST APIs</a> •
+  <a href="#-quick-start">Quick Start</a> •
+  <a href="#-team--contributors">Team</a>
 </p>
 
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
+---
 
 ## 📖 Project Overview
 
-**MoodFlix** is an intelligent, mood-based legal free movie discovery platform. Transformed from an initial Vanilla prototype into a professional full-stack **MERN (MongoDB, Express, React, Node.js)** web application, MoodFlix curates cinema strictly matching how the viewer feels *right now* while guaranteeing **100% legal, zero-subscription viewing links**.
+**MoodFlix** is an intelligent, mood-based movie discovery and recommendation platform built with the **MERN (MongoDB, Express, React, Node.js)** technology stack. 
 
-Unlike commercial streaming services that trap consumers in subscription paywalls ($15–$25/month), MoodFlix catalogs verified **Public Domain masterpieces, authorized studio releases (YouTube Movies Free), and licensed ad-supported digital broadcasts (Plex TV / Tubi)**.
+The core philosophy behind MoodFlix is that **not everyone can afford or maintains subscriptions to Netflix, Amazon Prime Video, or other paid streaming services**. Therefore, MoodFlix makes it effortless for viewers to discover movies they can watch legally for free, without ever mislabeling paid subscription titles as free.
 
-### Core Objectives
-1. **Eliminate Streaming Fatigue:** Replace 25 minutes of aimless catalog scrolling with a 1-click emotional vibe selection.
-2. **Promote Film Heritage & Zero Piracy:** Exclusively index legally free movies from accredited digital archives and verified studio channels with recorded verification timestamps.
-3. **Enterprise-Grade MERN Architecture:** Modular React + Vite frontend communicating with a scalable Express REST API and a MongoDB Atlas persistent cloud database.
-4. **Interactive User Engagement:** Role-based authentication (User & Admin), persistent watchlists, favourites, community reviews with average star ratings, and real-time viewing history.
+At the same time, users who already have subscriptions (Netflix, Amazon Prime Video, Disney+ Hotstar, JioCinema) can select their platforms to explore content available strictly within their subscriptions—with **100% strict platform isolation and zero cross-platform leakage**.
 
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
+---
 
-<img src="assets/header-architecture.svg" alt="Project Architecture" width="800" />
+## 🌟 Key Features
+
+| Feature | Description |
+| :--- | :--- |
+| 🆓 **Legal Free Movie Discovery** | Dedicated section prioritizing 220+ legal free movies across YouTube official studio channels, public domain archives, and licensed ad-supported networks. |
+| 🎬 **Strict Platform Isolation** | Choose one platform (e.g. Netflix) and see **only** movies available on that platform. Zero unselected platform leakage across Home, Explore, and Moods. |
+| 🔗 **100% Verified Working Links** | Every movie card features a direct **"▶ Watch on [Platform]"** button linking to the verified stream (YouTube full film, Netflix search, Prime Video search) with zero 404s or dead links. |
+| 📱 **Ultra-Compact Preference Selector** | Sleek, compact 390px floating dialog triggering on visit/reload so viewers choose their streaming preferences upfront. |
+| 🎭 **16 Curated Mood Palettes** | Discover cinema based on emotional vibes (Happy, Chill, Thriller, Romantic, Inspirational, etc.) with algorithmic reasoning. |
+| 🇮🇳 **Indian Regional Cinema** | Rich discovery across **19 Indian languages** (Hindi, Kannada, Telugu, Tamil, Malayalam, Bengali, Marathi, Gujarati, Punjabi, Odia, etc.) with audio and subtitle metadata. |
+| ⚖️ **Movie Comparison Arena** | Side-by-side cinematic comparison comparing runtimes, IMDb ratings, genres, directors, cast, and platform availability. |
+| 🎲 **Surprise Me Roulette** | Interactive random movie picker tailored to your selected platform, mood, and language preferences. |
+| 👤 **Authentication & Personalization** | JWT-based auth, secure bcrypt hashing, personal watchlists, favourites, history tracking, and user community reviews. |
+
+---
+
+## 🔒 Strict Platform Isolation (Zero Cross-Platform Mixing)
+
+MoodFlix eliminates the frustration of searching for movies only to find they belong to an unselected streaming provider:
+
+```
+Platform Selected: 🎬 ONLY NETFLIX
+├── Shows: 104 Verified Netflix Titles
+├── Amazon Prime Titles Mixed: 0
+├── YouTube / Free Titles Mixed: 0
+└── Unselected Platform Tabs: Hidden on Explore & Moods
+
+Platform Selected: 🍿 ONLY PRIME VIDEO
+├── Shows: 91 Verified Amazon Prime Titles
+├── Netflix Titles Mixed: 0
+└── Free Titles Mixed: 0
+
+Platform Selected: 🆓 ONLY FREE MOVIES
+├── Shows: 222 Legal Free Movies
+└── Subscription-Only Content: Strictly Excluded
+```
+
+---
+
+## 🔗 Verified Direct Streaming Links (Zero 404 Errors)
+
+Every movie link across MoodFlix has been audited and verified for 100% reliability:
+
+* **Netflix Titles:** Opens verified official Netflix titles or official Netflix deep-search query (`https://www.netflix.com/search?q=${movie.title}`). Eliminates **"Error Code NSES-404: Lost your way"**.
+* **Amazon Prime Video Titles:** Opens verified Amazon Prime Video deep-search query (`https://www.primevideo.com/search/ref=atv_nb_sr?phrase=${movie.title}`). Eliminates **"Page not found"** errors.
+* **YouTube Free Movies:** Opens verified official YouTube full-movie searches (`https://www.youtube.com/results?search_query=${movie.title}+${year}+full+movie`). Eliminates dead 11-char IDs and **"This video isn't available anymore"** errors.
+* **Disney+ Hotstar:** Opens direct search query (`https://www.hotstar.com/in/search?q=${movie.title}`).
+* **JioCinema:** Opens direct search query (`https://www.jiocinema.com/search/${movie.title}`).
+* **Public Domain Films:** Opens the Internet Archive stream and download catalog (`https://archive.org/search?query=...`).
+
+---
+
+## 🎭 The 16 Mood Palettes
+
+MoodFlix categorizes movies into sixteen distinct emotional palettes matching how viewers feel *right now*:
+
+| Mood | Emoji | Accent | Vibe Rationale | Example Curated Film |
+| :--- | :---: | :---: | :--- | :--- |
+| **Happy** | ☀️ | `#f5c518` | Wholesome, uplifting cinema guaranteed to make you smile | *The General* (1926) |
+| **Sad** | 🌧️ | `#6b9bd1` | Deep, poignant narratives with emotional resonance and heart | *Pather Panchali* (1955) |
+| **Thriller** | 🔪 | `#ef4444` | High-stakes suspense, mysteries, and pulse-pounding twists | *Drishyam* (2013) |
+| **Romantic** | 💫 | `#f472b6` | Cozy, heartwarming, and sweet tales of love and connection | *His Girl Friday* (1940) |
+| **Chill** | 🌙 | `#34d399` | Relaxing, easy-going films to unwind after a demanding day | *Paterson* (2016) |
+| **Adventurous** | ⚡ | `#fb923c` | Action-packed exploration, fantastical quests, and journeys | *Kantara* (2022) |
+| **Horror** | 👻 | `#a855f7` | Spine-chilling dread, supernatural terror, and classic monsters | *Night of the Living Dead* (1968) |
+| **Comedy** | 😂 | `#eab308` | Laugh-out-loud humor, witty satire, and joyful misadventures | *Gol Maal* (1979) |
+| **Inspirational** | 🌟 | `#38bdf8` | Triumphant true stories of courage, ingenuity, and moral grit | *777 Charlie* (2022) |
+| **Mystery** | 🕵️ | `#818cf8` | Clever whodunits, investigative puzzles, and enigmas | *Charade* (1963) |
+| **Feel-Good** | 🌈 | `#10b981` | Warm, comforting cinema that leaves you with a glowing heart | *Kumbalangi Nights* (2019) |
+| **Emotional** | 🎭 | `#f43f5e` | Powerful dramatic journeys that touch the deepest soul | *Anand* (1971) |
+| **Family** | 👨‍👩‍👧‍👦 | `#14b8a6` | Wholesome entertainment suitable and beloved for all ages | *The Kid* (1921) |
+| **Motivational** | 🚀 | `#f97316` | Inspiring underdog triumphs, sports grit, and dream pursuit | *DAMaN* (2022) |
+| **Suspense** | ⏳ | `#e11d48` | Edge-of-your-seat tension with relentless ticking clocks | *D.O.A.* (1949) |
+| **Relaxing** | 🍃 | `#84cc16` | Calm, scenic, meditative cinema to soothe the mind after work | *Reva* (2018) |
+
+---
+
+## 🇮🇳 Indian Regional Cinema (19 Languages)
+
+MoodFlix celebrates India's cinematic heritage by indexing movies across 19 distinct regional languages:
+
+* **Major Languages:** Hindi, Kannada, Telugu, Tamil, Malayalam, Bengali, Marathi, Gujarati, Punjabi, Odia, Assamese, Urdu.
+* **Heritage Languages:** Konkani, Sanskrit, Bhojpuri, Manipuri, Kashmiri, Nepali.
+* **Linguistic Metadata:** Original audio language, dubbed audio versions, and multi-language subtitle availability.
+* **Curated Collections:** Dedicated regional tabs on the Homepage and comprehensive filters on the Explore page.
+
+---
 
 ## 🏛️ Full-Stack Architecture
 
@@ -71,249 +151,110 @@ Moodflix/
 ├── client/                     ← React + Vite SPA Frontend
 │   ├── public/                 ← Static posters & brand SVG assets
 │   ├── src/
-│   │   ├── components/         ← Reusable UI (Navbar, Footer, MovieCard, MoodChip, etc.)
+│   │   ├── components/         ← MovieCard, PlatformPreferenceModal, SurpriseModal, Navbar, etc.
 │   │   ├── context/            ← React Context (AuthContext, WatchlistContext)
-│   │   ├── pages/              ← 13 Cinematic Views (Home, Explore, Details, Admin, etc.)
-│   │   ├── services/           ← Central Axios API instance with JWT interceptor
-│   │   ├── styles/             ← Dark cinematic design tokens & responsive CSS
-│   │   ├── App.jsx             ← React Router DOM routing & protected guards
-│   │   └── main.jsx            ← Client entry point
+│   │   ├── data/               ← Resilient offline fallback catalog (507 films)
+│   │   ├── pages/              ← Home, Explore, Moods, MovieDetails, Compare, Watchlist, Admin
+│   │   ├── services/           ← Central Axios instance with JWT interceptor
+│   │   ├── utils/              ← platformFilter.js (Strict isolation & URL resolver)
+│   │   ├── App.jsx             ← React Router DOM routing & global preference modal
+│   │   └── main.jsx            ← Client bootstrap
 │   ├── package.json
 │   ├── vite.config.js
-│   ├── vercel.json             ← Production SPA rewrites for Vercel
-│   └── .env.example
-├── server/                     ← Node.js & Express REST Backend
+│   └── vercel.json             ← Production SPA rewrites
+│
+├── server/                     ← Node.js & Express REST API Backend
 │   ├── src/
 │   │   ├── config/             ← MongoDB Atlas connection handler
-│   │   ├── controllers/        ← Modular business logic (Auth, Movie, Review, Admin)
-│   │   ├── middleware/         ← JWT protection, Role authorization, Central error handler
+│   │   ├── controllers/        ← movieController, authController, reviewController, adminController
+│   │   ├── middleware/         ← JWT auth, role validation, central error handler
 │   │   ├── models/             ← Mongoose Schemas (User, Movie, Review, Watchlist, etc.)
-│   │   ├── routes/             ← Express REST API routes
-│   │   ├── seed/               ← Database seed script with 29+ verified free movies
-│   │   ├── app.js              ← Express middleware & CORS configuration
-│   │   └── server.js           ← HTTP listener & server bootstrap
-│   ├── tests/                  ← Automated Node.js integration test suite
-│   ├── package.json
-│   └── .env.example
-├── render.yaml                 ← Production Blueprint for Render Cloud Backend
-├── vercel.json                 ← Monorepo Vercel configuration
-├── IMPLEMENTATION_REPORT.md    ← Exhaustive technical audit & verification log
-└── README.md                   ← Project documentation (this file)
+│   │   ├── routes/             ← Express REST API modular routes
+│   │   ├── seed/               ← Database seed script with 507 verified films
+│   │   ├── app.js              ← Express app, CORS & middleware
+│   │   └── server.js           ← HTTP listener
+│   └── package.json
+│
+├── README.md                   ← Project documentation (this file)
+├── DEMO_GUIDE.md               ← Faculty evaluation & viva demo walkthrough
+└── vercel.json                 ← Monorepo configuration
 ```
 
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
+---
 
-<img src="assets/header-moods.svg" alt="The 12 Moods" width="800" />
-
-## 🎭 The 16 Mood Palettes
-
-MoodFlix categorizes free cinema into sixteen distinct emotional states using deterministic metadata matching (genres, emotional tone, pace, and themes):
-
-| Mood | Emoji | Accent Color | Vibe Tagline | Sample Curated Film |
-| :--- | :---: | :---: | :--- | :--- |
-| **Happy** | ☀️ | `#f5c518` | Feel-good wholesome films to lift your spirits and make you smile | *The General* (1926) |
-| **Sad** | 🌧️ | `#6b9bd1` | Deep, poignant narratives with emotional resonance and heart | *Pather Panchali* (1955) |
-| **Thriller** | 🔪 | `#ef4444` | High-stakes suspense, mysteries, and pulse-pounding twists | *Drishyam* (2013) |
-| **Romantic** | 💫 | `#f472b6` | Cozy, heartwarming, and sweet tales of love and connection | *His Girl Friday* (1940) |
-| **Chill** | 🌙 | `#34d399` | Relaxing, zen cinema to unwind after a demanding day | *Paterson* (2016) |
-| **Adventurous** | ⚡ | `#fb923c` | Action-packed exploration, fantastical quests, and epic journeys | *Kantara* (2022) |
-| **Horror** | 👻 | `#a855f7` | Spine-chilling dread, supernatural terror, and classic monsters | *Night of the Living Dead* (1968) |
-| **Comedy** | 😂 | `#eab308` | Laugh-out-loud humor, witty satire, and joyful misadventures | *Gol Maal* (1979) |
-| **Inspirational** | 🌟 | `#38bdf8` | Triumphant true stories of courage, ingenuity, and moral strength | *777 Charlie* (2022) |
-| **Mystery** | 🕵️ | `#818cf8` | Clever whodunits, investigative puzzles, and enigmas | *Charade* (1963) |
-| **Feel-Good** | 🌈 | `#10b981` | Warm, comforting cinema that leaves you with a glowing heart | *Kumbalangi Nights* (2019) |
-| **Emotional** | 🎭 | `#f43f5e` | Powerful dramatic journeys that touch the deepest soul | *Anand* (1971) |
-| **Family** | 👨‍👩‍👧‍👦 | `#14b8a6` | Wholesome entertainment suitable and beloved across all generations | *The Kid* (1921) |
-| **Motivational** | 🚀 | `#f97316` | Inspiring underdog triumphs, sports grit, and dream pursuit | *DAMaN* (2022) |
-| **Suspense** | ⏳ | `#e11d48` | Edge-of-your-seat tension with relentless ticking clocks | *D.O.A.* (1949) |
-| **Relaxing** | 🍃 | `#84cc16` | Calm, scenic, meditative cinema to soothe the mind after work | *Reva* (2018) |
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-## 🇮🇳 Indian Languages & Regional Cinema Support (20+ Languages)
-
-MoodFlix features comprehensive discovery for Indian cinema, honoring regional linguistic diversity:
-- **Major Languages:** Hindi, Kannada, Telugu, Tamil, Malayalam, Bengali, Marathi, Punjabi, Gujarati, Odia, Assamese, Urdu.
-- **Classical & Heritage Languages:** Konkani, Sanskrit, Bhojpuri, Manipuri, Kashmiri, Nepali.
-- **Audio & Subtitle Metadata:** Every title tracks original audio language, dubbed audio options, and available subtitles.
-- **Dedicated Regional Collections:** Dynamic language tabs on the homepage and dedicated filters in the Explore page.
-
-## 📺 Platform Preference Engine
-
-MoodFlix solves the modern dilemma where viewers without paid subscriptions are overwhelmed by paywalled recommendations:
-1. **First-Visit Personalization:** Asks *"Where would you prefer to watch your movies?"* with multi-platform selection (Free Movies, Netflix, Amazon Prime Video, YouTube, Show Me Everything).
-2. **Prominent Zero-Subscription Option:** *"I don't have any paid subscriptions. Show me only free movies."*
-3. **Default to Free Movies First:** Visitors who skip are automatically served legally free movies first.
-4. **Subscription Transparency:** Subscription requirements are prominently badged (`SUBSCRIPTION REQUIRED`, `FREE TO WATCH`, `FREE WITH ADS`, `PUBLIC DOMAIN`). Paid platforms are never mislabeled as free.
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-## 🛡️ Legal Free Streaming & Streaming Platform Pledge
-
-Every movie card on MoodFlix features an authenticated availability badge:
-1. **Free to Watch:** Officially uploaded and licensed full-length films streamed at no cost on official YouTube studio channels and partner networks.
-2. **Public Domain:** Works whose copyrights have expired (Charlie Chaplin, Buster Keaton, George A. Romero). Freely hosted by the **Internet Archive**, **Library of Congress**, and **Wikimedia**.
-3. **Free with Ads:** Licensed commercial releases provided legally for free viewing with brief ad sponsors on verified digital networks.
-4. **Subscription Streaming:** Explicitly labeled subscription movies on Netflix, Amazon Prime Video, Disney+ Hotstar, and JioCinema. Never mislabeled as free.
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-## 📡 REST API Endpoints Reference
+## 📡 REST API Reference
 
 All backend endpoints are prefixed with `/api` and return standardized JSON responses:
 
-### 1. Authentication (`/api/auth`)
-- `POST /api/auth/register` — Public registration (strictly creates `user` role)
-- `POST /api/auth/login` — Authenticates email/password; returns signed JWT & user profile
-- `GET /api/auth/me` — Protected: Returns current session user
-- `PUT /api/auth/profile` — Protected: Updates name, avatar, and preferences
-- `PUT /api/auth/preferences` — Protected: Updates preferred platforms, languages, and freeOnly mode
-- `PUT /api/auth/change-password` — Protected: Verifies current password and updates hash
+### 1. Movies & Discovery (`/api/movies`)
+* `GET /api/movies` — Paginated catalog with multi-filter query parameters (`genre`, `mood`, `platform`, `language`, `freeOnly`, `availabilityStatus`, `minRating`, `sort`, `search`).
+* `GET /api/movies/free` — Dedicated endpoint returning exclusively verified legal free cinema.
+* `GET /api/movies/mood/:mood` — Tailored recommendations matching selected mood with curated rationale.
+* `GET /api/movies/slug/:slug` — Single movie by clean URL slug with similar movies.
+* `GET /api/movies/:id` — Single movie by MongoDB ObjectId.
 
-### 2. Movies & Recommendations (`/api/movies`)
-- `GET /api/movies` — Paginated catalog with multi-filter query params (`genre`, `mood`, `platform`, `language`, `freeOnly`, `availabilityStatus`, `minRating`, `sort`, `search`)
-- `GET /api/movies/free` — Dedicated endpoint returning only legal free non-subscription cinema
-- `GET /api/movies/language/:lang` — Filter cinema by 20+ regional Indian languages
-- `GET /api/movies/platform/:platform` — Filter by Free, Netflix, Prime Video, YouTube, etc.
-- `GET /api/movies/recommendations` — Smart deterministic recommendations with human-readable rationale
-- `GET /api/movies/:id` — Single movie by MongoDB ID + similar recommendations
-- `GET /api/movies/slug/:slug` — Single movie by clean URL slug
-- `GET /api/movies/mood/:mood` — Tailored recommendations matching selected mood with why-it-matches explanation
-- `GET /api/movies/search?q=term` — Fast search suggestions matching title, cast, director, or genres
-- `GET /api/movies/featured` — Featured cinematic highlights for hero carousel
+### 2. Authentication (`/api/auth`)
+* `POST /api/auth/register` — Public registration (creates standard `user` role).
+* `POST /api/auth/login` — Authenticates credentials; returns signed JWT & user profile.
+* `GET /api/auth/me` — Protected: Returns current authenticated session user.
+* `PUT /api/auth/preferences` — Protected: Saves user's streaming platform and free-only preferences to MongoDB.
 
-### 3. Moods Engine (`/api/moods`)
-- `GET /api/moods` — Returns all 16 moods with emojis, accent colors, taglines, and live database movie counts
+### 3. User Interactions
+* `GET /api/watchlist` — Protected: Returns user's saved watchlist.
+* `POST /api/watchlist/:movieId` — Protected: Adds movie to watchlist (enforces uniqueness).
+* `DELETE /api/watchlist/:movieId` — Protected: Removes movie from watchlist.
+* `GET /api/favourites` — Protected: Returns user's favourite movies.
+* `POST /api/favourites/:movieId` — Protected: Adds movie to favourites.
+* `DELETE /api/favourites/:movieId` — Protected: Removes movie from favourites.
+* `GET /api/reviews/movie/:movieId` — Public: Returns community reviews and ratings.
+* `POST /api/reviews/movie/:movieId` — Protected: Submits star rating (1–5) and review comment.
 
-### 4. User Watchlist & Favourites (`/api`)
-- `GET /api/watchlist` — Protected: Returns saved watchlist movies
-- `POST /api/watchlist/:movieId` — Protected: Adds movie (enforces unique constraint)
-- `DELETE /api/watchlist/:movieId` — Protected: Removes movie from watchlist
-- `GET /api/favourites` — Protected: Returns favourite movies
-- `POST /api/favourites/:movieId` — Protected: Adds movie to favourites
-- `DELETE /api/favourites/:movieId` — Protected: Removes movie from favourites
+### 4. System Health
+* `GET /api/health` — Cloud health monitor reporting uptime, service name, and timestamp.
 
-### 5. Viewing History (`/api/history`)
-- `GET /api/history` — Protected: Returns recently viewed films with relative timestamps
-- `POST /api/history/:movieId` — Protected: Upserts viewing timestamp & increments movie view count
-- `DELETE /api/history` — Protected: Clears viewing history log
+---
 
-### 6. Audience Reviews (`/api/reviews`)
-- `GET /api/reviews/movie/:movieId` — Public: Returns reviews with author profile & average rating
-- `POST /api/reviews/movie/:movieId` — Protected: Posts star rating (1-5) and comment (1 review per user)
-- `PUT /api/reviews/:id` — Protected: Author edits their review (auto-recalculates average)
-- `DELETE /api/reviews/:id` — Protected: Author or Admin deletes review
-
-### 7. Administrator Governance (`/api/admin`)
-- `GET /api/admin/dashboard` — Admin: Real-time metrics (total movies, users, reviews, availability breakdown)
-- `GET /api/admin/users` — Admin: User accounts list
-- `GET /api/admin/reviews` — Admin: All reviews for moderation
-- `POST /api/admin/movies` — Admin: Add verified free movie
-- `PUT /api/admin/movies/:id` — Admin: Edit movie & update free viewing link
-- `DELETE /api/admin/movies/:id` — Admin: Delete movie and cascade purge user references
-
-### 8. System Health
-- `GET /api/health` — Cloud health monitor reporting uptime, service name, and timestamp
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-## 💻 Local Installation & Quick Start
+## 💻 Quick Start & Local Setup
 
 ### Prerequisites
-- **Node.js:** v18.0.0 or later (v24.13.0 verified)
-- **npm:** v9.0.0 or later (v11.6.2 verified)
-- **MongoDB:** Local MongoDB server running on port 27017 or a MongoDB Atlas URI
+* **Node.js:** v18.0.0 or higher
+* **npm:** v9.0.0 or higher
+* **MongoDB:** Local MongoDB or MongoDB Atlas URI
 
-### Step-by-Step Setup
+### Installation Steps
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/Dhruvi-tech/Moodflix.git
 cd Moodflix
 
-# 2. Setup and install Backend dependencies
+# 2. Setup Backend
 cd server
 npm install
 cp .env.example .env
-
-# 3. Seed the MongoDB Database
-# This seeds 29+ free movies across all 12 moods, an Admin account, and a Demo user
-npm run seed
-
-# 4. Run Backend Integration Tests
-npm test
-# (All 17 tests will run and pass)
-
-# 5. Start Backend REST API Server (runs on http://localhost:5000)
 npm start
 
-# 6. Open a second terminal for the React Frontend
+# 3. Setup Frontend (in a second terminal)
 cd ../client
 npm install
 cp .env.example .env
-
-# 7. Start Vite Development Server (runs on http://localhost:5173)
 npm run dev
 ```
 
-### Pre-Configured Test & Evaluation Accounts
+Visit `http://localhost:5173` in your browser.
 
-Anyone can register their own independent account anytime by clicking **"Sign Up"** or **"Create Free Account"**. For quick evaluation without registering, use these pre-seeded accounts:
+### Pre-Configured Demo Credentials
 
-| Account Type | Email Address | Password | Permissions & Pre-seeded Data |
+For quick evaluation without registering a new account:
+
+| Account Type | Email Address | Password | Privileges |
 | :--- | :--- | :--- | :--- |
-| **Guest User (Demo)** | `guest@moodflix.com` | `Guest@123456` | Pre-populated Watchlist, Favourites, Reviews & History (Also available via the **1-Click "Continue as Guest"** button on the Login page!) |
-| **Administrator** | `admin@moodflix.com` | `Admin@123456` | Full platform access, Admin dashboard (`/admin`), Add/Edit/Delete movies, Platform metrics |
-| **Public Registration** | *Any email* | *User-chosen* | Any visitor can create a personal account to maintain a private watchlist, favourites, reviews, and history. |
+| **Demo User** | `guest@moodflix.com` | `Guest@123456` | Pre-populated Watchlist, Favourites, and Reviews |
+| **Administrator** | `admin@moodflix.com` | `Admin@123456` | Full platform access & Admin Dashboard (`/admin`) |
 
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
+*(Alternatively, click the **1-Click "Continue as Guest"** button on the Login page).*
 
-## 🚀 Cloud Deployment Guide
-
-MoodFlix is engineered for zero-friction cloud deployment across **MongoDB Atlas**, **Render**, and **Vercel**:
-
-### 1. Database — MongoDB Atlas
-1. Create a free cluster on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
-2. Create database user credentials and allow IP access (`0.0.0.0/0`).
-3. Obtain the connection string: `mongodb+srv://<username>:<password>@cluster.mongodb.net/moodflix?retryWrites=true&w=majority`.
-
-### 2. Backend — Render
-1. Create a new Web Service on [Render](https://render.com) linked to this repository.
-2. Root Directory: `server`.
-3. Build Command: `npm install`.
-4. Start Command: `npm start`.
-5. Health Check Path: `/api/health`.
-6. Add Environment Variables:
-   - `NODE_ENV`: `production`
-   - `MONGO_URI`: *Your MongoDB Atlas connection string*
-   - `JWT_SECRET`: *A secure random secret*
-   - `CLIENT_URL`: *Your Vercel frontend URL*
-
-### 3. Frontend — Vercel
-1. Import repository into [Vercel](https://vercel.com).
-2. Root Directory: `client`.
-3. Framework Preset: `Vite`.
-4. Add Environment Variable:
-   - `VITE_API_URL`: *Your Render backend URL + `/api` (e.g. `https://moodflix-api.onrender.com/api`)*
-5. Deploy! `client/vercel.json` ensures all client-side routes redirect seamlessly to `index.html`.
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-<img src="assets/header-contributors.svg" alt="Contributors" width="800" />
+---
 
 ## 👥 Team & Contributors
 
