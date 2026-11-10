@@ -68,6 +68,7 @@
 
 <a href="#-project-overview">Overview</a> •
 <a href="#-key-features">Key Features</a> •
+<a href="#-application-preview">Preview</a> •
 <a href="#-strict-platform-isolation-zero-mixing">Platform Isolation</a> •
 <a href="#-verified-direct-streaming-links-zero-404-errors">Working Links</a> •
 <a href="#-the-16-mood-palettes">16 Moods</a> •
@@ -126,6 +127,35 @@ Modern commercial streaming platforms lock audiences behind escalating subscript
 | ⚖️ **Movie Comparison Arena** | Multi-slot side-by-side spec comparison table | Compare runtimes, ratings, directors, cast, genres, and streaming availability. |
 | 🎲 **Surprise Me Roulette** | Randomized candidate pool roulette | Spin the dice for instant personalized picks filtered by your platform and vibe. |
 | 👤 **Authentication & Interaction** | JWT, bcryptjs, Context API, Mongoose Schemas | Private watchlists, favourites, history tracking, and user community reviews. |
+
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider" />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=110&color=0:8B5CF6,100:EC4899&section=header&text=Application%20Preview&fontColor=ffffff&fontSize=38&fontAlignY=40&animation=fadeIn" width="100%" alt="Application Preview" />
+
+## 📸 Application Preview
+
+<table align="center" style="border-collapse: collapse; border: none; margin: 0 auto;">
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 6px; width: 50%;">
+      <img src="assets/screenshots/01_hero_preview.png" alt="Homepage & Platform Hero" width="370" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" /><br />
+      <sub><b>1. Homepage & Platform Hero</b></sub>
+    </td>
+    <td align="center" style="border: none; padding: 6px; width: 50%;">
+      <img src="assets/screenshots/02_platform_modal.png" alt="Streaming Platform Preference" width="370" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" /><br />
+      <sub><b>2. Streaming Platform Preference</b></sub>
+    </td>
+  </tr>
+  <tr style="border: none;">
+    <td align="center" style="border: none; padding: 6px; width: 50%;">
+      <img src="assets/screenshots/03_mood_recommendations.png" alt="16 Mood-Based Discovery" width="370" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" /><br />
+      <sub><b>3. Mood-Based Movie Discovery</b></sub>
+    </td>
+    <td align="center" style="border: none; padding: 6px; width: 50%;">
+      <img src="assets/screenshots/04_movie_details.png" alt="Verified Movie Details & Streaming" width="370" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" /><br />
+      <sub><b>4. Movie Details & Direct Streaming</b></sub>
+    </td>
+  </tr>
+</table>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" alt="divider" />
 
