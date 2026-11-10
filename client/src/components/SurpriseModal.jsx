@@ -2,29 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { X, Sparkles, RefreshCw, Play, Info, ExternalLink, Dices } from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
-
-function getPlatformWatchUrl(movie, platform, rawUrl) {
-  if (rawUrl && typeof rawUrl === 'string' && rawUrl.startsWith('http')) {
-    return rawUrl;
-  }
-  const cleanTitle = encodeURIComponent(movie.title);
-  const year = movie.releaseYear || '';
-  const plat = (platform || '').toLowerCase();
-
-  if (plat.includes('netflix')) {
-    return `https://www.netflix.com/search?q=${cleanTitle}`;
-  }
-  if (plat.includes('prime') || plat.includes('amazon')) {
-    return `https://www.amazon.com/s?k=${cleanTitle}+movie&i=instant-video`;
-  }
-  if (plat.includes('hotstar') || plat.includes('disney')) {
-    return `https://www.hotstar.com/in/search?q=${cleanTitle}`;
-  }
-  if (plat.includes('jio')) {
-    return `https://www.jiocinema.com/search/${cleanTitle}`;
-  }
-  return `https://www.youtube.com/results?search_query=${cleanTitle}+${year}+full+movie`;
-}
+import { movieMatchesPlatform, getDirectMovieWatchUrl } from '../utils/platformFilter';
 
 const QUICK_MOODS = ['Any', 'happy', 'thriller', 'romantic', 'chill', 'comedy', 'inspirational', 'adventurous'];
 const QUICK_LANGS = ['Any', 'Hindi', 'Telugu', 'Tamil', 'Malayalam', 'Kannada', 'Bengali', 'English'];
@@ -60,15 +38,12 @@ export default function SurpriseModal({ isOpen, onClose }) {
 
   // Pick a candidate pool strictly matching the chosen platform
   const getCandidates = () => {
+    const prefOverride = {
+      platforms: platform === 'all' ? ['all'] : [platform],
+      freeOnly: platform === 'free',
+    };
     return fallbackMovies.filter((m) => {
-      if (platform === 'free') {
-        if (!m.isFree && m.availabilityType === 'subscription') return false;
-      } else if (platform !== 'all') {
-        const match =
-          m.primaryPlatform?.toLowerCase().includes(platform) ||
-          m.platforms?.some((p) => p.name?.toLowerCase().includes(platform));
-        if (!match) return false;
-      }
+      if (!movieMatchesPlatform(m, prefOverride)) return false;
       if (mood !== 'Any' && !m.moodTags?.includes(mood.toLowerCase())) return false;
       if (language !== 'Any') {
         const hasLang =
@@ -228,11 +203,7 @@ export default function SurpriseModal({ isOpen, onClose }) {
           {selectedMovie && !isSpinning && (
             <div className="grid grid-cols-2 gap-2">
               <a
-                href={getPlatformWatchUrl(
-                  selectedMovie,
-                  selectedMovie.streamingPlatforms?.[0]?.name,
-                  selectedMovie.streamingPlatforms?.[0]?.url
-                )}
+                href={getDirectMovieWatchUrl(selectedMovie, platform)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-xs shadow-md shadow-purple-500/25 hover:opacity-95 transition-all"

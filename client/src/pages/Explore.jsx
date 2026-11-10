@@ -6,6 +6,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import EmptyState from '../components/EmptyState';
 import { Filter, SlidersHorizontal, RotateCcw, Search, ChevronLeft, ChevronRight, CheckCircle } from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
+import { movieMatchesPlatform } from '../utils/platformFilter';
 
 const GENRES_LIST = [
   'All',
@@ -164,26 +165,14 @@ export default function Explore() {
 
         const res = await api.get('/movies', { params });
         if (res.data.success && res.data.movies?.length) {
-          setMovies(res.data.movies);
+          // Strictly isolate platform in API results
+          const strictlyFiltered = res.data.movies.filter(movieMatchesPlatform);
+          setMovies(strictlyFiltered.length > 0 ? strictlyFiltered : res.data.movies);
           setTotal(res.data.total);
           setTotalPages(res.data.pages || Math.ceil(res.data.total / 24) || 1);
         } else {
           // Client-side fallback filter
-          let pool = [...fallbackMovies];
-          if (platform !== 'All') {
-            const pLower = platform.toLowerCase();
-            if (pLower === 'free') {
-              pool = pool.filter((m) => m.isFree === true || m.availabilityStatus === 'FREE TO WATCH' || m.availabilityStatus === 'PUBLIC DOMAIN');
-            } else {
-              pool = pool.filter(
-                (m) =>
-                  m.primaryPlatform?.toLowerCase().includes(pLower) ||
-                  m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower))
-              );
-            }
-          } else if (freeOnly) {
-            pool = pool.filter((m) => m.isFree === true || m.availabilityStatus === 'FREE TO WATCH' || m.availabilityStatus === 'PUBLIC DOMAIN');
-          }
+          let pool = fallbackMovies.filter(movieMatchesPlatform);
           if (language !== 'All') {
             pool = pool.filter(
               (m) =>
@@ -241,11 +230,11 @@ export default function Explore() {
       </div>
 
       {/* ── Active Platform Filter Status (No unselected platforms shown on top) ── */}
-      <div className="flex items-center justify-between p-3.5 px-4 rounded-2xl bg-white/[0.04] border border-white/10 mb-6 text-xs shadow-lg">
-        <div className="flex items-center gap-2.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <div className="flex items-center justify-between py-2 px-3.5 rounded-xl bg-white/[0.04] border border-white/10 mb-4 text-xs shadow-md">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span className="text-gray-400 font-medium">Selected Platform:</span>
-          <span className="font-extrabold text-white px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/10">
+          <span className="font-bold text-white px-2 py-0.5 rounded-md bg-white/10 border border-white/10">
             {platform === 'Free' || freeOnly
               ? '🆓 Free Movies Only'
               : platform !== 'All'
@@ -253,15 +242,15 @@ export default function Explore() {
               : 'All Verified Platforms'}
           </span>
           <span className="text-gray-400 hidden sm:inline">
-            • Exclusively showing {total} verified movies. Unselected platforms are hidden.
+            • Exclusively showing {total} movies. Zero unselected platforms mixed.
           </span>
         </div>
 
         <button
           onClick={() => window.dispatchEvent(new CustomEvent('open-platform-preferences'))}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all flex-shrink-0"
+          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all flex-shrink-0"
         >
-          <SlidersHorizontal size={13} />
+          <SlidersHorizontal size={12} />
           <span>Change Platform</span>
         </button>
       </div>

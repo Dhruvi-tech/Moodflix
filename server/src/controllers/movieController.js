@@ -63,10 +63,21 @@ const getMovies = async (req, res, next) => {
         const pLower = platform.toLowerCase();
         if (pLower === 'free') {
           filtered = filtered.filter((m) => m.isFree === true);
+        } else if (pLower === 'netflix') {
+          filtered = filtered.filter((m) =>
+            m.primaryPlatform?.toLowerCase().includes('netflix') ||
+            m.platforms?.some((p) => p.name?.toLowerCase().includes('netflix') && p.url && !p.url.includes('google.com'))
+          );
+        } else if (pLower === 'prime' || pLower.includes('amazon')) {
+          filtered = filtered.filter((m) =>
+            m.primaryPlatform?.toLowerCase().includes('prime') ||
+            m.primaryPlatform?.toLowerCase().includes('amazon') ||
+            m.platforms?.some((p) => (p.name?.toLowerCase().includes('prime') || p.name?.toLowerCase().includes('amazon')) && p.url && !p.url.includes('google.com'))
+          );
         } else {
           filtered = filtered.filter((m) => 
             m.primaryPlatform?.toLowerCase().includes(pLower) ||
-            m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower))
+            m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower) && p.url && !p.url.includes('google.com'))
           );
         }
       }
@@ -134,11 +145,46 @@ const getMovies = async (req, res, next) => {
       const pLower = platform.toLowerCase();
       if (pLower === 'free') {
         query.isFree = true;
+      } else if (pLower === 'netflix') {
+        andConditions.push({
+          $or: [
+            { primaryPlatform: { $regex: '^netflix', $options: 'i' } },
+            {
+              platforms: {
+                $elemMatch: {
+                  name: { $regex: 'netflix', $options: 'i' },
+                  url: { $not: /google\.com/i },
+                },
+              },
+            },
+          ],
+        });
+      } else if (pLower === 'prime' || pLower.includes('amazon')) {
+        andConditions.push({
+          $or: [
+            { primaryPlatform: { $regex: 'prime', $options: 'i' } },
+            {
+              platforms: {
+                $elemMatch: {
+                  name: { $regex: 'prime', $options: 'i' },
+                  url: { $not: /google\.com/i },
+                },
+              },
+            },
+          ],
+        });
       } else {
         andConditions.push({
           $or: [
             { primaryPlatform: { $regex: platform, $options: 'i' } },
-            { 'platforms.name': { $regex: platform, $options: 'i' } },
+            {
+              platforms: {
+                $elemMatch: {
+                  name: { $regex: platform, $options: 'i' },
+                  url: { $not: /google\.com/i },
+                },
+              },
+            },
           ],
         });
       }
@@ -329,10 +375,21 @@ const getMoviesByMood = async (req, res, next) => {
         const pLower = platform.toLowerCase();
         if (pLower === 'free') {
           filtered = filtered.filter((m) => m.isFree === true);
+        } else if (pLower === 'netflix') {
+          filtered = filtered.filter((m) =>
+            m.primaryPlatform?.toLowerCase().includes('netflix') ||
+            m.platforms?.some((p) => p.name?.toLowerCase().includes('netflix') && p.url && !p.url.includes('google.com'))
+          );
+        } else if (pLower === 'prime' || pLower.includes('amazon')) {
+          filtered = filtered.filter((m) =>
+            m.primaryPlatform?.toLowerCase().includes('prime') ||
+            m.primaryPlatform?.toLowerCase().includes('amazon') ||
+            m.platforms?.some((p) => (p.name?.toLowerCase().includes('prime') || p.name?.toLowerCase().includes('amazon')) && p.url && !p.url.includes('google.com'))
+          );
         } else {
           filtered = filtered.filter((m) =>
             m.primaryPlatform?.toLowerCase().includes(pLower) ||
-            m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower))
+            m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower) && p.url && !p.url.includes('google.com'))
           );
         }
       }
@@ -360,11 +417,46 @@ const getMoviesByMood = async (req, res, next) => {
       const pLower = platform.toLowerCase();
       if (pLower === 'free') {
         query.isFree = true;
+      } else if (pLower === 'netflix') {
+        andConditions.push({
+          $or: [
+            { primaryPlatform: { $regex: '^netflix', $options: 'i' } },
+            {
+              platforms: {
+                $elemMatch: {
+                  name: { $regex: 'netflix', $options: 'i' },
+                  url: { $not: /google\.com/i },
+                },
+              },
+            },
+          ],
+        });
+      } else if (pLower === 'prime' || pLower.includes('amazon')) {
+        andConditions.push({
+          $or: [
+            { primaryPlatform: { $regex: 'prime', $options: 'i' } },
+            {
+              platforms: {
+                $elemMatch: {
+                  name: { $regex: 'prime', $options: 'i' },
+                  url: { $not: /google\.com/i },
+                },
+              },
+            },
+          ],
+        });
       } else {
         andConditions.push({
           $or: [
             { primaryPlatform: { $regex: platform, $options: 'i' } },
-            { 'platforms.name': { $regex: platform, $options: 'i' } },
+            {
+              platforms: {
+                $elemMatch: {
+                  name: { $regex: platform, $options: 'i' },
+                  url: { $not: /google\.com/i },
+                },
+              },
+            },
           ],
         });
       }

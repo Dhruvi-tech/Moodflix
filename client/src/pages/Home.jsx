@@ -23,6 +23,7 @@ import {
 } from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
 import { FALLBACK_MOODS } from '../data/fallbackMoods';
+import { movieMatchesPlatform } from '../utils/platformFilter';
 
 const INDIAN_LANGUAGES = [
   'Hindi',
@@ -98,80 +99,6 @@ export default function Home() {
     window.addEventListener('platform-preferences-updated', handlePrefUpdate);
     return () => window.removeEventListener('platform-preferences-updated', handlePrefUpdate);
   }, []);
-
-  // Strict movie matcher: Checks if a movie is available on the user's selected platform
-  const movieMatchesPlatform = (m) => {
-    if (!m) return false;
-    if (preferences.freeOnly) {
-      return (
-        m.isFree === true ||
-        m.availabilityType === 'free' ||
-        m.availabilityType === 'free-with-ads' ||
-        m.availabilityType === 'public-domain' ||
-        m.availabilityStatus === 'FREE TO WATCH' ||
-        m.availabilityStatus === 'PUBLIC DOMAIN'
-      );
-    }
-    const plats = preferences.platforms || ['free'];
-    if (plats.includes('all')) return true;
-
-    return plats.some((p) => {
-      const pLower = p.toLowerCase();
-      if (pLower === 'free') {
-        return (
-          m.isFree === true ||
-          m.availabilityType === 'free' ||
-          m.availabilityStatus === 'FREE TO WATCH' ||
-          m.availabilityStatus === 'PUBLIC DOMAIN'
-        );
-      }
-      if (pLower === 'youtube') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('youtube') ||
-          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('youtube')) ||
-          (m.isFree && !m.primaryPlatform)
-        );
-      }
-      if (pLower === 'netflix') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('netflix') ||
-          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('netflix'))
-        );
-      }
-      if (pLower === 'prime' || pLower === 'amazon') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('prime') ||
-          m.primaryPlatform?.toLowerCase().includes('amazon') ||
-          m.platforms?.some(
-            (plat) =>
-              plat.name?.toLowerCase().includes('prime') ||
-              plat.name?.toLowerCase().includes('amazon')
-          )
-        );
-      }
-      if (pLower === 'hotstar' || pLower === 'disney') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('hotstar') ||
-          m.primaryPlatform?.toLowerCase().includes('disney') ||
-          m.platforms?.some(
-            (plat) =>
-              plat.name?.toLowerCase().includes('hotstar') ||
-              plat.name?.toLowerCase().includes('disney')
-          )
-        );
-      }
-      if (pLower === 'jiocinema' || pLower === 'jio') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('jio') ||
-          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('jio'))
-        );
-      }
-      return (
-        m.primaryPlatform?.toLowerCase().includes(pLower) ||
-        m.platforms?.some((plat) => plat.name?.toLowerCase().includes(pLower))
-      );
-    });
-  };
 
   const isFreeOnly = preferences.freeOnly;
   const activeSinglePlatform = !isFreeOnly && preferences.platforms?.length === 1 && preferences.platforms[0] !== 'all' ? preferences.platforms[0] : null;

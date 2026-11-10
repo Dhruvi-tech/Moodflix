@@ -583,7 +583,7 @@ const seedMovies = [
     "director": "Yash Chopra",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 31000
     },
     "moodTags": [
@@ -817,13 +817,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/80166185",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dangal+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -893,13 +886,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/70089037",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Taare+Zameen+Par+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -975,13 +961,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/60020906",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Lagaan:+Once+Upon+a+Time+in+India+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -1049,13 +1028,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/70019490",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Swades:+We,+the+People+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -1121,13 +1093,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Chak+De!+India+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1202,13 +1167,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/81039381",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Andhadhun+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -1280,13 +1238,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Tumbbad+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -1355,13 +1306,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/70242544",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Gangs+of+Wasseypur+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1436,13 +1380,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/70202336",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Zindagi+Na+Milegi+Dobara+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -1511,13 +1448,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/80013872",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Queen+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -1581,13 +1511,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/70143825",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Udaan+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1657,13 +1580,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/70112443",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=A+Wednesday!+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -1728,13 +1644,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kahaani+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1802,13 +1711,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/70254350",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Barfi!+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1994,7 +1896,7 @@ const seedMovies = [
     "director": "Rajkumar Santoshi",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 58000
     },
     "moodTags": [
@@ -2061,7 +1963,7 @@ const seedMovies = [
     "director": "Anees Bazmee",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 38000
     },
     "moodTags": [
@@ -2263,7 +2165,7 @@ const seedMovies = [
     "director": "Priyadarshan",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 24000
     },
     "moodTags": [
@@ -2397,7 +2299,7 @@ const seedMovies = [
     "director": "Dibakar Banerjee",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 31000
     },
     "moodTags": [
@@ -2618,13 +2520,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/60031754",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kal+Ho+Naa+Ho+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -2692,13 +2587,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/60021525",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dil+Chahta+Hai+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -2772,13 +2660,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/70047320",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Rang+De+Basanti+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -2846,13 +2727,6 @@ const seedMovies = [
         "name": "SonyLIV",
         "type": "Subscription",
         "url": "https://www.sonyliv.com",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Piku+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -2985,13 +2859,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/80041653",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Masaan+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -3141,13 +3008,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/81113921",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Stree+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -3214,13 +3074,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/81154455",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Article+15+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -3361,13 +3214,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/80198888",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Bareilly+Ki+Barfi+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -3726,13 +3572,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sardar+Udham+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -3799,13 +3638,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Raazi+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -3876,13 +3708,6 @@ const seedMovies = [
         "url": "https://www.zee5.com",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Uri:+The+Surgical+Strike+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -3949,13 +3774,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Shershaah+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -4092,13 +3910,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/80080649",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Tamasha+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -4149,7 +3960,7 @@ const seedMovies = [
     "director": "Vishal Bhardwaj",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 58000
     },
     "moodTags": [
@@ -4218,7 +4029,7 @@ const seedMovies = [
     "director": "Vishal Bhardwaj",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 36000
     },
     "moodTags": [
@@ -4288,7 +4099,7 @@ const seedMovies = [
     "director": "Vishal Bhardwaj",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 29000
     },
     "moodTags": [
@@ -4386,13 +4197,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/81656709",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kantara+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -4467,13 +4271,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=K.G.F:+Chapter+1+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -4552,13 +4349,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=K.G.F:+Chapter+2+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -4635,13 +4425,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=777+Charlie+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -4920,13 +4703,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/80108502",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Thithi+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -5062,13 +4838,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dia+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -5120,7 +4889,7 @@ const seedMovies = [
     "director": "Jayathirtha",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 7800
     },
     "moodTags": [
@@ -5207,13 +4976,6 @@ const seedMovies = [
         "name": "Zee5",
         "type": "Subscription",
         "url": "https://www.zee5.com",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Garuda+Gamana+Vrishabha+Vahana+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -5493,13 +5255,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kavaludaari+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -5644,13 +5399,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Love+Mocktail+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -5717,13 +5465,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Rathnan+Prapancha+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -5793,13 +5534,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Gandhadagudi+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -6534,13 +6268,6 @@ const seedMovies = [
         "url": "https://www.zee5.com",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Hostel+Hudugaru+Bekagiddare+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -6611,13 +6338,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sapta+Saagaradaache+Ello+-+Side+A+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -6686,13 +6406,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sapta+Saagaradaache+Ello+-+Side+B+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7047,13 +6760,6 @@ const seedMovies = [
         "url": "https://www.zee5.com",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Vikram+Vedha+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -7123,13 +6829,6 @@ const seedMovies = [
         "name": "Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kaithi+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7206,13 +6905,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Vikram+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -7280,13 +6972,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Asuran+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7364,13 +7049,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Jai+Bhim+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -7443,13 +7121,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Soorarai+Pottru+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7585,13 +7256,6 @@ const seedMovies = [
         "name": "Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Vada+Chennai+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7735,13 +7399,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/81079361",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Super+Deluxe+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -7857,7 +7514,7 @@ const seedMovies = [
     "director": "Mari Selvaraj",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 28000
     },
     "moodTags": [
@@ -7874,13 +7531,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Karnan+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -8239,13 +7889,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/81775791",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Maharaja+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -8316,13 +7959,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/81775792",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Meiyazhagan+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -8397,13 +8033,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/81775793",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Amaran+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -8462,7 +8091,7 @@ const seedMovies = [
     "director": "S. S. Rajamouli",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 140000
     },
     "moodTags": [
@@ -8480,13 +8109,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/80203920",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Baahubali:+The+Beginning+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -8566,13 +8188,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/80203921",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Baahubali+2:+The+Conclusion+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -8648,13 +8263,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/81476453",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=RRR+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9073,13 +8681,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/81044544",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=C/o+Kancharapalem+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -9150,13 +8751,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Mahanati+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -9224,13 +8818,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Rangasthalam+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9353,7 +8940,7 @@ const seedMovies = [
     "director": "Vivek Athreya",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 14000
     },
     "moodTags": [
@@ -9371,13 +8958,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Brochevarevarura+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9447,13 +9027,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/81243160",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Mathu+Vadalara+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9532,13 +9105,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sita+Ramam+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -9614,13 +9180,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/81729792",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Hi+Nanna+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9747,7 +9306,7 @@ const seedMovies = [
     "director": "Puri Jagannadh",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 36000
     },
     "moodTags": [
@@ -9885,7 +9444,7 @@ const seedMovies = [
     "director": "Vikram Kumar",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 16000
     },
     "moodTags": [
@@ -10050,13 +9609,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/0N9B489X6G94ECLZ89T9K2Q9Z",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kumbalangi+Nights+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -10127,13 +9679,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/drishyam",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Drishyam+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10207,13 +9752,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/premam",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Premam+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -10285,13 +9823,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/bangalore-days",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Bangalore+Days+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10438,13 +9969,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/manjummel-boys",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Manjummel+Boys+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -10514,13 +10038,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/aavesham",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Aavesham+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10594,13 +10111,6 @@ const seedMovies = [
         "url": "https://www.sonyliv.com/movies/bramayugam",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Bramayugam+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -10670,13 +10180,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/premalu",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Premalu+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10750,13 +10253,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-goat-life",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Goat+Life+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10968,13 +10464,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/lucifer",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Lucifer+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -11046,13 +10535,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/minnal-murali",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Minnal+Murali+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -11673,13 +11155,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/joji",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Joji+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -11752,13 +11227,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/virus",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Virus+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -11827,13 +11295,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/thondimuthal",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Thondimuthalum+Driksakshiyum+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -11907,13 +11368,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/ustad-hotel",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Ustad+Hotel+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -11965,7 +11419,7 @@ const seedMovies = [
     "director": "Martin Prakkat",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 29000
     },
     "moodTags": [
@@ -12375,7 +11829,7 @@ const seedMovies = [
     "director": "Rajesh Pillai",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 18000
     },
     "moodTags": [
@@ -12444,7 +11898,7 @@ const seedMovies = [
     "director": "Rajiv Anchal",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 16000
     },
     "moodTags": [
@@ -12650,7 +12104,7 @@ const seedMovies = [
     "director": "Sachy",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 31000
     },
     "moodTags": [
@@ -12667,13 +12121,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/ayyappanum-koshiyum",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Ayyappanum+Koshiyum+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -13546,7 +12993,7 @@ const seedMovies = [
     "director": "Satyajit Ray",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 20000
     },
     "moodTags": [
@@ -13766,13 +13213,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/baishe-srabon",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Baishe+Srabon+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -13841,13 +13281,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/belaseshe",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Belaseshe+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -13981,13 +13414,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/chotushkone",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Chotushkone+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -14038,7 +13464,7 @@ const seedMovies = [
     "director": "Anik Dutta",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 22000
     },
     "moodTags": [
@@ -14188,13 +13614,6 @@ const seedMovies = [
         "name": "Hoichoi",
         "type": "Subscription",
         "url": "https://www.hoichoi.tv/movies/ballabhpurer-roopkotha",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Ballabhpurer+Roopkotha+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -14444,7 +13863,7 @@ const seedMovies = [
     "director": "Ajoy Kar",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 16000
     },
     "moodTags": [
@@ -14644,7 +14063,7 @@ const seedMovies = [
     "director": "Agragami",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 15000
     },
     "moodTags": [
@@ -14860,13 +14279,6 @@ const seedMovies = [
         "name": "Hoichoi",
         "type": "Subscription",
         "url": "https://www.hoichoi.tv/movies/byomkesh-bakshi",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Byomkesh+Bakshi+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -15200,13 +14612,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/autograph",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Autograph+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -15276,13 +14681,6 @@ const seedMovies = [
         "name": "ZEE5",
         "type": "Subscription",
         "url": "https://www.zee5.com/movies/details/sairat",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sairat+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -15473,7 +14871,7 @@ const seedMovies = [
     "director": "Avinash Arun",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 15000
     },
     "moodTags": [
@@ -15491,13 +14889,6 @@ const seedMovies = [
         "name": "ZEE5",
         "type": "Subscription",
         "url": "https://www.zee5.com/movies/details/killa",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Killa+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -15708,13 +15099,6 @@ const seedMovies = [
         "url": "https://www.zee5.com/movies/details/katyar-kaljat-ghusali",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Katyar+Kaljat+Ghusali+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -15784,13 +15168,6 @@ const seedMovies = [
         "url": "https://www.zee5.com/movies/details/natsamrat",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Natsamrat+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -15839,7 +15216,7 @@ const seedMovies = [
     "director": "Nagraj Manjule",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 13000
     },
     "moodTags": [
@@ -15926,13 +15303,6 @@ const seedMovies = [
         "name": "ZEE5",
         "type": "Subscription",
         "url": "https://www.zee5.com/movies/details/ventilator",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Ventilator+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -16207,13 +15577,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/baipan-bhaari-deva",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Baipan+Bhaari+Deva+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -16281,13 +15644,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/jhimma",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Jhimma+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -16358,13 +15714,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/ved",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Ved+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -16428,13 +15777,6 @@ const seedMovies = [
         "name": "ZEE5",
         "type": "Subscription",
         "url": "https://www.zee5.com/movies/details/timepass",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Timepass+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -16705,13 +16047,6 @@ const seedMovies = [
         "url": "https://www.zee5.com/movies/details/kaksparsh",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kaksparsh+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -16778,13 +16113,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/muramba",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Muramba+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -16984,13 +16312,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/ghanekar",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Aani...+Dr.+Kashinath+Ghanekar+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17195,13 +16516,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/carry-on-jatta-3",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Carry+On+Jatta+3+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17477,13 +16791,6 @@ const seedMovies = [
         "url": "https://www.zee5.com/movies/details/qismat",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Qismat+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -17670,7 +16977,7 @@ const seedMovies = [
     "director": "Tarnvir Singh Jagpal",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 16000
     },
     "moodTags": [
@@ -17757,13 +17064,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/chal-mera-putt",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Chal+Mera+Putt+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17966,13 +17266,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/sufna",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sufna+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -18037,13 +17330,6 @@ const seedMovies = [
         "name": "ZEE5",
         "type": "Subscription",
         "url": "https://www.zee5.com/movies/details/shadaa",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Shadaa+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -18249,13 +17535,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/honsla-rakh",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Honsla+Rakh+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -18458,13 +17737,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/hellaro",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Hellaro+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -18605,13 +17877,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/chaal-jeevi-laiye",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Chaal+Jeevi+Laiye!+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -18866,7 +18131,7 @@ const seedMovies = [
     "director": "Rahul Bhole, Vinit Kanojia",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 15000
     },
     "moodTags": [
@@ -18955,13 +18220,6 @@ const seedMovies = [
         "url": "https://www.zee5.com/movies/details/fakt-mahilao-maate",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Fakt+Mahilao+Maate+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -19026,13 +18284,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/3-ekka",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=3+Ekka+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -19238,13 +18489,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/kasoombo",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kasoombo+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -19310,13 +18554,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/daman",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=DAMaN+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -19435,7 +18672,7 @@ const seedMovies = [
     "director": "Nirad N. Mohapatra",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 9500
     },
     "moodTags": [
@@ -19566,7 +18803,7 @@ const seedMovies = [
     "director": "Mohan Sundar Deb Goswami",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 8000
     },
     "moodTags": [
@@ -20056,13 +19293,6 @@ const seedMovies = [
         "url": "https://www.sonyliv.com/movies/aamis",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Aamis+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -20128,13 +19358,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/dr-bezbarua-2",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dr.+Bezbarua+2+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -20527,7 +19750,7 @@ const seedMovies = [
     "director": "M. S. Sathyu",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 19000
     },
     "moodTags": [
@@ -20752,13 +19975,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/manto",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Manto+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -21216,7 +20432,7 @@ const seedMovies = [
     "director": "G. V. Iyer",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 11000
     },
     "moodTags": [
@@ -21371,13 +20587,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/punyakoti",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Punyakoti+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -21428,7 +20637,7 @@ const seedMovies = [
     "director": "Kundan Kumar",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 15000
     },
     "moodTags": [
@@ -21965,7 +21174,7 @@ const seedMovies = [
     "director": "Aribam Syam Sharma",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 11000
     },
     "moodTags": [
@@ -22297,7 +21506,7 @@ const seedMovies = [
     "director": "Min Bahadur Bham",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 15000
     },
     "moodTags": [
@@ -23296,7 +22505,7 @@ const seedMovies = [
     "director": "David Lean",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 41000
     },
     "moodTags": [
@@ -23781,13 +22990,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/interstellar",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Interstellar+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -23856,13 +23058,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/good-will-hunting",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Good+Will+Hunting+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -23913,7 +23108,7 @@ const seedMovies = [
     "director": "Damien Chazelle",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 680000
     },
     "moodTags": [
@@ -23931,13 +23126,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/la-la-land",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=La+La+Land+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24007,13 +23195,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/the-prestige",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Prestige+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24086,13 +23267,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/grand-budapest",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Grand+Budapest+Hotel+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -24160,13 +23334,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/shutter-island",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Shutter+Island+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24239,13 +23406,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/knives-out",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Knives+Out+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -24313,13 +23473,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/glass-onion",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Glass+Onion+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24393,13 +23546,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/dune-part-two",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dune:+Part+Two+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -24468,13 +23614,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/spirited-away",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Spirited+Away+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24546,13 +23685,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/totoro",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=My+Neighbor+Totoro+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -24619,13 +23751,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/a-silent-voice",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=A+Silent+Voice+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24698,13 +23823,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/paddington-2",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Paddington+2+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -24775,13 +23893,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/inside-out-2",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Inside+Out+2+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -24831,7 +23942,7 @@ const seedMovies = [
     "director": "Gabriele Muccino",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 560000
     },
     "moodTags": [
@@ -24849,13 +23960,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/pursuit-of-happyness",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Pursuit+of+Happyness+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24924,13 +24028,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/room",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Room+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -24997,13 +24094,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/moonlight",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Moonlight+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -25067,13 +24157,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/10-things",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=10+Things+I+Hate+About+You+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25143,13 +24226,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/about-time",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=About+Time+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -25216,13 +24292,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/before-sunrise",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Before+Sunrise+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25294,13 +24363,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/catch-me-if-you-can",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Catch+Me+If+You+Can+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -25368,13 +24430,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/chef",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Chef+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25448,13 +24503,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/deadpool-wolverine",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Deadpool+&+Wolverine+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -25523,13 +24571,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/enola-holmes",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Enola+Holmes+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25602,13 +24643,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/intouchables",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Intouchables+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -25676,13 +24710,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/stree-2",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Stree+2+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25756,13 +24783,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/pushpa-2",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Pushpa+2:+The+Rule+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -25834,13 +24854,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/leo",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Leo+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -25907,13 +24920,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/bhool-bhulaiyaa-3",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Bhool+Bhulaiyaa+3+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25987,13 +24993,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/panchayat",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Panchayat+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26065,13 +25064,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/chhaava",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Chhaava+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26122,7 +25114,7 @@ const seedMovies = [
     "director": "Kangana Ranaut",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 22000
     },
     "moodTags": [
@@ -26139,13 +25131,6 @@ const seedMovies = [
         "name": "ZEE5",
         "type": "Subscription",
         "url": "https://www.zee5.com/movies/details/emergency",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Emergency+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26212,13 +25197,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/raid-2",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Raid+2+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26288,13 +25266,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/sky-force",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sky+Force+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26360,13 +25331,6 @@ const seedMovies = [
         "url": "https://www.zee5.com/movies/details/deva",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Deva+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26420,7 +25384,7 @@ const seedMovies = [
     "director": "Geetu Mohandas",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 35000
     },
     "moodTags": [
@@ -26437,13 +25401,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/toxic",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Toxic:+A+Fairy+Tale+for+Grown-ups+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26516,13 +25473,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/war-2",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=War+2+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26590,13 +25540,6 @@ const seedMovies = [
         "url": "https://www.zee5.com/movies/details/border-2",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Border+2+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26661,13 +25604,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/bhooth-bangla",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Bhooth+Bangla+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26738,13 +25674,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/dhamaal-4",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dhamaal+4+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26812,13 +25741,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/dhurandhar",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dhurandhar+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -26881,13 +25803,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/dhurandhar-revenge",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Dhurandhar:+Revenge+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26957,13 +25872,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/housefull-5",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Housefull+5+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27030,13 +25938,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/kesari-2",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kesari+2+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27101,13 +26002,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/saiyaara",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Saiyaara+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27179,13 +26073,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/argo",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Argo+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27249,13 +26136,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/all-the-bright-places",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=All+the+Bright+Places+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27325,13 +26205,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/always-be-my-maybe",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Always+Be+My+Maybe+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27397,13 +26270,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/anyone-but-you",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Anyone+But+You+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27476,13 +26342,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/avatar-fire-ash",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Avatar:+Fire+and+Ash+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27546,13 +26405,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/beautiful-boy",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Beautiful+Boy+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27621,13 +26473,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/the-beekeeper",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Beekeeper+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27699,13 +26544,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/the-big-sick",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Big+Sick+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27771,13 +26609,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/big",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Big+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27849,13 +26680,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/bird-box",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Bird+Box+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27924,13 +26748,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/blue-miracle",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Blue+Miracle+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -27996,13 +26813,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-boy-who-harnessed-the-wind",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Boy+Who+Harnessed+the+Wind+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28074,13 +26884,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/bridgerton",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Bridgerton+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -28145,13 +26948,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/brittany-runs",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Brittany+Runs+a+Marathon+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28225,13 +27021,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/captain-america-brave-new-world",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Captain+America:+Brave+New+World+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -28296,13 +27085,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/carry-on",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Carry-On+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28371,13 +27153,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/challengers",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Challengers+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -28441,13 +27216,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/chemical-hearts",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Chemical+Hearts+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28519,13 +27287,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/the-crown",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Crown+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -28593,13 +27354,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/damsel",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Damsel+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28672,13 +27426,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/demon-slayer",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Demon+Slayer:+Infinity+Castle+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -28746,13 +27493,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/despicable-me-4",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Despicable+Me+4+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28824,13 +27564,6 @@ const seedMovies = [
         "url": "https://tv.apple.com/movie/f1",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=F1+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -28898,13 +27631,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/fall-guy",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Fall+Guy+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28978,13 +27704,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/fantastic-four-first-steps",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Fantastic+Four:+First+Steps+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29051,13 +27770,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/fault-in-our-stars",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Fault+in+Our+Stars+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29127,13 +27839,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/feel-the-beat",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Feel+the+Beat+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29199,13 +27904,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/five-feet-apart",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Five+Feet+Apart+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29268,13 +27966,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/florida-project",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Florida+Project+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29343,13 +28034,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/the-fundamentals-of-caring",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Fundamentals+of+Caring+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29416,13 +28100,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/furiosa",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Furiosa:+A+Mad+Max+Saga+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29494,13 +28171,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/gone-girl",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Gone+Girl+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29570,13 +28240,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/green-mile",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Green+Mile+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29642,13 +28305,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-half-of-it",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Half+of+It+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29721,13 +28377,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/hidden-figures",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Hidden+Figures+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29798,13 +28447,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/dragon-live-action",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=How+to+Train+Your+Dragon+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -29868,13 +28510,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/the-idea-of-you",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Idea+of+You+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29947,13 +28582,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/if",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=IF+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -30004,7 +28632,7 @@ const seedMovies = [
     "director": "Morten Tyldum",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 810000
     },
     "moodTags": [
@@ -30022,13 +28650,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-imitation-game",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Imitation+Game+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30098,13 +28719,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/the-iron-claw",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Iron+Claw+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -30152,7 +28766,7 @@ const seedMovies = [
     "director": "Don Chaffey",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 32000
     },
     "moodTags": [
@@ -30219,7 +28833,7 @@ const seedMovies = [
     "director": "Nora Ephron",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 130000
     },
     "moodTags": [
@@ -30237,13 +28851,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/julie-and-julia",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Julie+&+Julia+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30296,7 +28903,7 @@ const seedMovies = [
     "director": "Jake Kasdan",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 420000
     },
     "moodTags": [
@@ -30313,13 +28920,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/jumanji",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Jumanji:+Welcome+to+the+Jungle+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30391,13 +28991,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/jurassic-park",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Jurassic+Park+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -30467,13 +29060,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/jurassic-world-rebirth",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Jurassic+World+Rebirth+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -30541,13 +29127,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/kingdom-apes",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kingdom+of+the+Planet+of+the+Apes+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30620,13 +29199,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/kung-fu-panda-4",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Kung+Fu+Panda+4+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -30691,13 +29263,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/late-night",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Late+Night+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30767,13 +29332,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/leave-the-world-behind",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Leave+the+World+Behind+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30846,13 +29404,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/the-lego-movie",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Lego+Movie+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -30904,7 +29455,7 @@ const seedMovies = [
     "director": "Garth Davis",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 240000
     },
     "moodTags": [
@@ -30922,13 +29473,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/lion",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Lion+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30997,13 +29541,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/little-miss-sunshine",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Little+Miss+Sunshine+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31075,13 +29612,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/lotr-fellowship",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Lord+of+the+Rings:+The+Fellowship+of+the+Ring+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -31149,13 +29679,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/love-at-first-sight",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Love+at+First+Sight+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -31219,13 +29742,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/love-rosie",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Love,+Rosie+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31297,13 +29813,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/mad-max-fury-road",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Mad+Max:+Fury+Road+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -31366,13 +29875,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/manchester-by-the-sea",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Manchester+by+the+Sea+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31439,13 +29941,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/map-of-tiny-perfect-things",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Map+of+Tiny+Perfect+Things+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31515,13 +30010,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/marriage-story",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Marriage+Story+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -31588,13 +30076,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/me-before-you",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Me+Before+You+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -31645,7 +30126,7 @@ const seedMovies = [
     "director": "Antoine Fuqua",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 42000
     },
     "moodTags": [
@@ -31662,13 +30143,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/michael",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Michael+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31741,13 +30215,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/minecraft-movie",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=A+Minecraft+Movie+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -31818,13 +30285,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/mission-impossible-dead-reckoning",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Mission:+Impossible+-+Dead+Reckoning+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -31892,13 +30352,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/mission-impossible-final-reckoning",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Mission:+Impossible+-+The+Final+Reckoning+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31971,13 +30424,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/the-mitchells-vs-the-machines",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Mitchells+vs.+the+Machines+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -32027,7 +30473,7 @@ const seedMovies = [
     "director": "David G. Derrick Jr.",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 75000
     },
     "moodTags": [
@@ -32045,13 +30491,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/moana-2",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Moana+2+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32119,13 +30558,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/my-fault",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=My+Fault+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32197,13 +30629,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/national-treasure",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=National+Treasure+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -32268,13 +30693,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/nerve",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Nerve+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32343,13 +30761,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/no-country-for-old-men",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=No+Country+for+Old+Men+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -32416,13 +30827,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-notebook",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Notebook+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32496,13 +30900,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/now-you-see-me",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Now+You+See+Me+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -32549,7 +30946,7 @@ const seedMovies = [
     "director": "Lone Scherfig",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 175000
     },
     "moodTags": [
@@ -32566,13 +30963,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/one-day",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=One+Day+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32639,13 +31029,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/one-life",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=One+Life+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32718,13 +31101,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/over-the-moon",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Over+the+Moon+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -32795,13 +31171,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/paddington",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Paddington+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -32868,13 +31237,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/paterson",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Paterson+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -32938,13 +31300,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-perfect-date",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Perfect+Date+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33013,13 +31368,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/the-perks-of-being-a-wallflower",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Perks+of+Being+a+Wallflower+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -33065,7 +31413,7 @@ const seedMovies = [
     "director": "Kornel Mundruczo",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 72000
     },
     "moodTags": [
@@ -33081,13 +31429,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/pieces-of-a-woman",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Pieces+of+a+Woman+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33156,13 +31497,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/pride-and-prejudice",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Pride+&+Prejudice+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -33212,7 +31546,7 @@ const seedMovies = [
     "director": "Rob Reiner",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 460000
     },
     "moodTags": [
@@ -33231,13 +31565,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/the-princess-bride",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Princess+Bride+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33305,13 +31632,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/prisoners",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Prisoners+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33384,13 +31704,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/quiet-place-day-one",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=A+Quiet+Place:+Day+One+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -33457,13 +31770,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/raiders-of-the-lost-ark",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Raiders+of+the+Lost+Ark+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33535,13 +31841,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/rebel-ridge",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Rebel+Ridge+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -33588,7 +31887,7 @@ const seedMovies = [
     "director": "Matthew Lopez",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 78000
     },
     "moodTags": [
@@ -33606,13 +31905,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/red-white-royal-blue",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Red,+White+&+Royal+Blue+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33678,13 +31970,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/run-sweetheart-run",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Run+Sweetheart+Run+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33756,13 +32041,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/school-of-rock",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=School+of+Rock+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -33832,13 +32110,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/se7en",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Se7en+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -33888,7 +32159,7 @@ const seedMovies = [
     "director": "Chris Williams",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 58000
     },
     "moodTags": [
@@ -33906,13 +32177,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-sea-beast",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Sea+Beast+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33979,13 +32243,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/searching",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Searching+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34057,13 +32314,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/secret-life-of-pets",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Secret+Life+of+Pets+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -34131,13 +32381,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/set-it-up",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Set+It+Up+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -34202,13 +32445,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/a-simple-favor",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=A+Simple+Favor+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34281,13 +32517,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/sing-2",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sing+2+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -34355,13 +32584,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/sinners",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sinners+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -34412,7 +32634,7 @@ const seedMovies = [
     "director": "Pete Docter, Kemp Powers",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 360000
     },
     "moodTags": [
@@ -34430,13 +32652,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/soul",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Soul+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34506,13 +32721,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/sound-of-metal",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sound+of+Metal+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -34580,13 +32788,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/source-code",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Source+Code+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34659,13 +32860,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/spider-man-brand-new-day",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Spider-Man:+Brand+New+Day+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -34716,7 +32910,7 @@ const seedMovies = [
     "director": "James Gunn",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 48000
     },
     "moodTags": [
@@ -34733,13 +32927,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/superman",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Superman+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34806,13 +32993,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/sylvies-love",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Sylvie's+Love+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34885,13 +33065,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/the-adam-project",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Adam+Project+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -34962,13 +33135,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/the-bad-guys",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Bad+Guys+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -35034,13 +33200,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-guilty",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Guilty+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -35110,13 +33269,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/the-intern",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Intern+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -35167,7 +33319,7 @@ const seedMovies = [
     "director": "Ridley Scott",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 920000
     },
     "moodTags": [
@@ -35184,13 +33336,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/the-martian",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Martian+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -35257,13 +33402,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/the-odyssey",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Odyssey+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -35333,13 +33471,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/the-voyeurs",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Voyeurs+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -35405,13 +33536,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-theory-of-everything",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Theory+of+Everything+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -35480,13 +33604,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/things-heard-and-seen",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Things+Heard+&+Seen+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -35553,13 +33670,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/thirteen-lives",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Thirteen+Lives+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -35633,13 +33743,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/thunderbolts",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Thunderbolts*+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -35688,7 +33791,7 @@ const seedMovies = [
     "director": "Susan Johnson",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 125000
     },
     "moodTags": [
@@ -35706,13 +33809,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/to-all-the-boys",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=To+All+the+Boys+I've+Loved+Before+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -35763,7 +33859,7 @@ const seedMovies = [
     "director": "Michael Mann, Josef Kubota Wladyka",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 52000
     },
     "moodTags": [
@@ -35780,13 +33876,6 @@ const seedMovies = [
         "name": "JioCinema",
         "type": "Subscription",
         "url": "https://www.jiocinema.com/movies/tokyo-vice",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Tokyo+Vice+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -35857,13 +33946,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/troop-zero",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Troop+Zero+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -35913,7 +33995,7 @@ const seedMovies = [
     "director": "Domee Shi",
     "ratings": {
       "source": "IMDb",
-      "value": 7.0,
+      "value": 7,
       "count": 175000
     },
     "moodTags": [
@@ -35931,13 +34013,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/turning-red",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Turning+Red+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -36004,13 +34079,6 @@ const seedMovies = [
         "name": "Amazon Prime Video",
         "type": "Subscription",
         "url": "https://www.primevideo.com/detail/walk-to-remember",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=A+Walk+to+Remember+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -36081,13 +34149,6 @@ const seedMovies = [
         "url": "https://www.hotstar.com/movies/walter-mitty",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Secret+Life+of+Walter+Mitty+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -36156,13 +34217,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/war-of-the-worlds",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=War+of+the+Worlds+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -36227,13 +34281,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/the-weekend-away",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=The+Weekend+Away+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -36306,13 +34353,6 @@ const seedMovies = [
         "url": "https://www.jiocinema.com/movies/wicked",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Wicked+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -36362,7 +34402,7 @@ const seedMovies = [
     "director": "Stephen Chbosky",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 185000
     },
     "moodTags": [
@@ -36380,13 +34420,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/wonder",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Wonder+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -36455,13 +34488,6 @@ const seedMovies = [
         "name": "Netflix",
         "type": "Subscription",
         "url": "https://www.netflix.com/title/yes-day",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Yes+Day+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -36533,13 +34559,6 @@ const seedMovies = [
         "url": "https://www.netflix.com/title/you",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=You+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -36606,13 +34625,6 @@ const seedMovies = [
         "url": "https://www.primevideo.com/detail/zodiac",
         "verified": true,
         "subscriptionRequired": true
-      },
-      {
-        "name": "Netflix",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Zodiac+watch+online",
-        "verified": true,
-        "subscriptionRequired": true
       }
     ],
     "freeAvailability": {
@@ -36663,7 +34675,7 @@ const seedMovies = [
     "director": "Byron Howard, Rich Moore",
     "ratings": {
       "source": "IMDb",
-      "value": 8.0,
+      "value": 8,
       "count": 560000
     },
     "moodTags": [
@@ -36682,13 +34694,6 @@ const seedMovies = [
         "name": "Disney+ Hotstar",
         "type": "Subscription",
         "url": "https://www.hotstar.com/movies/zootopia",
-        "verified": true,
-        "subscriptionRequired": true
-      },
-      {
-        "name": "Amazon Prime Video",
-        "type": "Subscription",
-        "url": "https://www.google.com/search?q=Zootopia+watch+online",
         "verified": true,
         "subscriptionRequired": true
       }

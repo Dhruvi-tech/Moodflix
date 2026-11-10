@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Star, Bookmark, Heart, Play } from 'lucide-react';
+import { Star, Bookmark, Heart, Play, ExternalLink } from 'lucide-react';
 import { useWatchlist } from '../context/WatchlistContext';
 import { useAuth } from '../context/AuthContext';
+import { getDirectMovieWatchUrl, getWatchButtonInfo } from '../utils/platformFilter';
 
 const MovieCard = ({ movie }) => {
   const { user } = useAuth();
   const { inWatchlist, inFavourites, toggleWatchlist, toggleFavourite } = useWatchlist();
+
+  if (!movie) return null;
 
   const isWl = inWatchlist(movie._id || movie.id);
   const isFav = inFavourites(movie._id || movie.id);
@@ -30,6 +33,10 @@ const MovieCard = ({ movie }) => {
       alert(err.message);
     }
   };
+
+  // Determine watch info and verified direct streaming link
+  const watchInfo = getWatchButtonInfo(movie);
+  const directWatchUrl = getDirectMovieWatchUrl(movie);
 
   // Availability badge styling
   const renderBadge = () => {
@@ -58,25 +65,45 @@ const MovieCard = ({ movie }) => {
       );
     }
 
-    // Subscription required
-    const platformName = movie.primaryPlatform || 'Subscription';
+    const pLower = (movie.primaryPlatform || '').toLowerCase();
+    if (pLower.includes('netflix')) {
+      return (
+        <span className="movie-badge badge-netflix">
+          🎬 Netflix
+        </span>
+      );
+    }
+    if (pLower.includes('prime') || pLower.includes('amazon')) {
+      return (
+        <span className="movie-badge badge-prime">
+          🍿 Prime Video
+        </span>
+      );
+    }
+    if (pLower.includes('hotstar') || pLower.includes('disney')) {
+      return (
+        <span className="movie-badge badge-hotstar">
+          ⭐ Hotstar
+        </span>
+      );
+    }
+    if (pLower.includes('jio')) {
+      return (
+        <span className="movie-badge badge-jiocinema">
+          📺 JioCinema
+        </span>
+      );
+    }
+
     return (
       <span className="movie-badge badge-subscription">
-        🔒 {platformName}
+        🔒 {movie.primaryPlatform || 'Subscription'}
       </span>
     );
   };
 
   const primaryLang = movie.originalLanguage || (movie.languages && movie.languages[0]) || '';
   const movieLink = `/movies/${movie.slug || movie._id || movie.id}`;
-
-  const directWatchUrl = movie.isFree
-    ? `https://www.youtube.com/results?search_query=${encodeURIComponent(`${movie.title} ${movie.releaseYear || ''} full movie`)}`
-    : (movie.primaryPlatform === 'Netflix'
-        ? `https://www.netflix.com/search?q=${encodeURIComponent(movie.title)}`
-        : movie.primaryPlatform === 'Hotstar'
-          ? `https://www.hotstar.com/in/search?q=${encodeURIComponent(movie.title)}`
-          : `https://www.primevideo.com/search/ref=atv_nb_sr?phrase=${encodeURIComponent(movie.title)}`);
 
   return (
     <article className="movie-card group">
@@ -121,9 +148,9 @@ const MovieCard = ({ movie }) => {
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             className="quick-action-btn"
-            title={movie.isFree ? `Watch Free on ${movie.freeAvailability?.provider || 'YouTube'}` : `Watch on ${movie.primaryPlatform || 'Stream'}`}
+            title={watchInfo.label}
           >
-            <Play size={13} fill="#fff" />
+            <Play size={12} fill="#fff" />
           </a>
           {user && (
             <>
@@ -133,7 +160,7 @@ const MovieCard = ({ movie }) => {
                 className={`quick-action-btn ${isWl ? 'active' : ''}`}
                 title={isWl ? 'Remove from Watchlist' : 'Add to Watchlist'}
               >
-                <Bookmark size={14} fill={isWl ? '#8b5cf6' : 'none'} color={isWl ? '#a78bfa' : '#fff'} />
+                <Bookmark size={13} fill={isWl ? '#8b5cf6' : 'none'} color={isWl ? '#a78bfa' : '#fff'} />
               </button>
               <button
                 type="button"
@@ -141,7 +168,7 @@ const MovieCard = ({ movie }) => {
                 className={`quick-action-btn ${isFav ? 'active' : ''}`}
                 title={isFav ? 'Remove from Favourites' : 'Add to Favourites'}
               >
-                <Heart size={14} fill={isFav ? '#ec4899' : 'none'} color={isFav ? '#f472b6' : '#fff'} />
+                <Heart size={13} fill={isFav ? '#ec4899' : 'none'} color={isFav ? '#f472b6' : '#fff'} />
               </button>
             </>
           )}
@@ -150,7 +177,7 @@ const MovieCard = ({ movie }) => {
         {/* Hover Play Overlay */}
         <div className="poster-play-overlay">
           <div className="play-icon-circle">
-            <Play size={20} fill="#fff" className="translate-x-0.5" />
+            <Play size={18} fill="#fff" className="translate-x-0.5" />
           </div>
         </div>
       </Link>
@@ -165,15 +192,34 @@ const MovieCard = ({ movie }) => {
         <div className="movie-card-meta">
           <span className="meta-year">{movie.releaseYear}</span>
           <span className="dot">•</span>
-          <span className="genres-span">{Array.isArray(movie.genres) ? movie.genres.slice(0, 2).join(', ') : movie.genres}</span>
+          <span className="genres-span">
+            {Array.isArray(movie.genres) ? movie.genres.slice(0, 2).join(', ') : movie.genres}
+          </span>
         </div>
 
-        {movie.freeAvailability?.provider && (
-          <div className="movie-provider-info">
-            <span className="provider-label">Free on:</span>
-            <span className="provider-name">{movie.freeAvailability.provider}</span>
-          </div>
-        )}
+        {/* Direct Platform Streaming Button */}
+        <div className="mt-2 pt-2 border-t border-white/[0.08] flex items-center justify-between gap-1.5">
+          <a
+            href={directWatchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="direct-stream-link"
+            style={{ borderColor: `${watchInfo.color}60` }}
+          >
+            <Play size={11} fill="currentColor" color={watchInfo.color} />
+            <span className="truncate">{watchInfo.label}</span>
+            <ExternalLink size={10} className="flex-shrink-0 opacity-70" />
+          </a>
+
+          <Link
+            to={movieLink}
+            className="details-link-btn"
+            title="View Details & Reviews"
+          >
+            Details
+          </Link>
+        </div>
       </div>
 
       <style>{`
@@ -190,9 +236,9 @@ const MovieCard = ({ movie }) => {
                       border-color 0.35s ease;
         }
         .movie-card:hover {
-          transform: translateY(-8px) scale(1.02);
+          transform: translateY(-6px);
           border-color: rgba(168, 85, 247, 0.55);
-          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.75), 0 0 25px rgba(139, 92, 246, 0.35);
+          box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.75), 0 0 20px rgba(139, 92, 246, 0.3);
         }
         .movie-card-poster-wrapper {
           position: relative;
@@ -208,7 +254,7 @@ const MovieCard = ({ movie }) => {
           transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .movie-card:hover .movie-card-poster {
-          transform: scale(1.08);
+          transform: scale(1.06);
         }
         .poster-top-vignette {
           position: absolute;
@@ -219,139 +265,145 @@ const MovieCard = ({ movie }) => {
         }
         .movie-badge {
           position: absolute;
-          top: 0.65rem;
-          left: 0.65rem;
+          top: 0.55rem;
+          left: 0.55rem;
           z-index: 2;
-          font-size: 0.65rem;
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
+          font-size: 0.62rem;
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
           font-weight: 700;
           letter-spacing: 0.03em;
-          padding: 0.22rem 0.55rem;
+          padding: 0.2rem 0.5rem;
           border-radius: 9999px;
           display: inline-flex;
           align-items: center;
-          gap: 0.3rem;
+          gap: 0.25rem;
           text-transform: uppercase;
         }
         .badge-dot {
-          width: 6px;
-          height: 6px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
           display: inline-block;
         }
         .dot-green {
           background: #10b981;
-          box-shadow: 0 0 8px #10b981;
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+          box-shadow: 0 0 6px #10b981;
         }
         .dot-violet {
           background: #a855f7;
-          box-shadow: 0 0 8px #a855f7;
         }
         .dot-amber {
           background: #f59e0b;
-          box-shadow: 0 0 8px #f59e0b;
         }
         .badge-free-streaming {
-          background: rgba(6, 78, 59, 0.85);
+          background: rgba(6, 78, 59, 0.9);
           color: #6ee7b7;
-          border: 1px solid rgba(52, 211, 153, 0.4);
-          box-shadow: 0 2px 10px rgba(16, 185, 129, 0.25);
+          border: 1px solid rgba(52, 211, 153, 0.45);
+        }
+        .badge-netflix {
+          background: rgba(185, 28, 28, 0.9);
+          color: #fecaca;
+          border: 1px solid rgba(239, 68, 68, 0.5);
+          box-shadow: 0 2px 8px rgba(229, 9, 20, 0.3);
+        }
+        .badge-prime {
+          background: rgba(3, 105, 161, 0.9);
+          color: #bae6fd;
+          border: 1px solid rgba(14, 165, 233, 0.5);
+          box-shadow: 0 2px 8px rgba(0, 168, 225, 0.3);
+        }
+        .badge-hotstar {
+          background: rgba(30, 58, 138, 0.9);
+          color: #bfdbfe;
+          border: 1px solid rgba(59, 130, 246, 0.5);
+        }
+        .badge-jiocinema {
+          background: rgba(131, 24, 67, 0.9);
+          color: #fbcfe8;
+          border: 1px solid rgba(236, 72, 153, 0.5);
         }
         .badge-public-domain {
-          background: rgba(88, 28, 135, 0.85);
+          background: rgba(88, 28, 135, 0.9);
           color: #d8b4fe;
-          border: 1px solid rgba(167, 139, 250, 0.4);
-          box-shadow: 0 2px 10px rgba(139, 92, 246, 0.25);
+          border: 1px solid rgba(167, 139, 250, 0.45);
         }
         .badge-ad-supported {
-          background: rgba(120, 53, 15, 0.85);
+          background: rgba(120, 53, 15, 0.9);
           color: #fde68a;
-          border: 1px solid rgba(245, 158, 11, 0.4);
-          box-shadow: 0 2px 10px rgba(245, 158, 11, 0.25);
+          border: 1px solid rgba(245, 158, 11, 0.45);
         }
         .badge-subscription {
-          background: rgba(15, 23, 42, 0.85);
+          background: rgba(15, 23, 42, 0.9);
           color: #cbd5e1;
           border: 1px solid rgba(255, 255, 255, 0.2);
-          font-weight: 700;
         }
         .movie-lang-badge {
           position: absolute;
-          bottom: 0.65rem;
-          left: 0.65rem;
+          bottom: 0.55rem;
+          left: 0.55rem;
           z-index: 2;
-          font-size: 0.65rem;
+          font-size: 0.62rem;
           font-weight: 700;
-          padding: 0.2rem 0.5rem;
-          background: rgba(15, 23, 42, 0.82);
+          padding: 0.15rem 0.45rem;
+          background: rgba(15, 23, 42, 0.85);
           color: #e2e8f0;
           border: 1px solid rgba(255, 255, 255, 0.15);
           border-radius: 6px;
-          backdrop-filter: blur(8px);
-          -webkit-backdrop-filter: blur(8px);
-          letter-spacing: 0.04em;
+          backdrop-filter: blur(6px);
         }
         .movie-rating-badge {
           position: absolute;
-          top: 0.65rem;
-          right: 0.65rem;
+          top: 0.55rem;
+          right: 0.55rem;
           z-index: 2;
           display: flex;
           align-items: center;
-          gap: 0.25rem;
-          padding: 0.2rem 0.5rem;
-          background: rgba(0, 0, 0, 0.8);
-          backdrop-filter: blur(10px);
-          -webkit-backdrop-filter: blur(10px);
-          border: 1px solid rgba(251, 191, 36, 0.3);
+          gap: 0.2rem;
+          padding: 0.15rem 0.45rem;
+          background: rgba(0, 0, 0, 0.85);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(251, 191, 36, 0.35);
           border-radius: 9999px;
-          font-size: 0.75rem;
+          font-size: 0.7rem;
           font-weight: 800;
           color: #fff;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
         .movie-quick-actions {
           position: absolute;
-          bottom: 0.65rem;
-          right: 0.65rem;
+          bottom: 0.55rem;
+          right: 0.55rem;
           z-index: 3;
           display: flex;
-          gap: 0.4rem;
+          gap: 0.35rem;
           opacity: 0;
-          transform: translateY(8px);
-          transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+          transform: translateY(6px);
+          transition: all 0.25s ease;
         }
         .movie-card:hover .movie-quick-actions {
           opacity: 1;
           transform: translateY(0);
         }
         .quick-action-btn {
-          width: 32px;
-          height: 32px;
+          width: 28px;
+          height: 28px;
           border-radius: 50%;
-          background: rgba(15, 22, 40, 0.9);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.18);
+          background: rgba(15, 22, 40, 0.92);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
           color: #fff;
           display: grid;
           place-items: center;
-          transition: transform 0.2s, background 0.2s, border-color 0.2s;
+          transition: transform 0.2s, background 0.2s;
         }
         .quick-action-btn:hover {
           transform: scale(1.15);
           background: #1e293b;
-          border-color: #a855f7;
-        }
-        .quick-action-btn.active {
-          border-color: #ec4899;
-          background: rgba(236, 72, 153, 0.2);
         }
         .poster-play-overlay {
           position: absolute;
           inset: 0;
-          background: radial-gradient(circle, rgba(15, 22, 41, 0.4) 0%, rgba(7, 9, 19, 0.75) 100%);
+          background: radial-gradient(circle, rgba(15, 22, 41, 0.35) 0%, rgba(7, 9, 19, 0.7) 100%);
           display: grid;
           place-items: center;
           opacity: 0;
@@ -361,36 +413,30 @@ const MovieCard = ({ movie }) => {
           opacity: 1;
         }
         .play-icon-circle {
-          width: 52px;
-          height: 52px;
+          width: 44px;
+          height: 44px;
           border-radius: 50%;
           background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
           display: grid;
           place-items: center;
-          box-shadow: 0 0 25px rgba(236, 72, 153, 0.65), 0 0 10px rgba(139, 92, 246, 0.8);
-          transform: scale(0.8);
-          transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-        .movie-card:hover .play-icon-circle {
-          transform: scale(1.05);
+          box-shadow: 0 0 20px rgba(236, 72, 153, 0.6);
         }
         .movie-card-content {
-          padding: 0.9rem 1rem 1rem;
+          padding: 0.75rem 0.85rem 0.85rem;
           display: flex;
           flex-direction: column;
-          gap: 0.35rem;
+          gap: 0.3rem;
           flex: 1;
-          background: linear-gradient(180deg, rgba(15, 22, 41, 0.6) 0%, #0f1629 100%);
+          background: linear-gradient(180deg, rgba(15, 22, 41, 0.7) 0%, #0f1629 100%);
         }
         .movie-card-title {
-          font-size: 0.98rem;
+          font-size: 0.92rem;
           font-weight: 700;
           color: #f1f5f9;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-          line-height: 1.35;
-          letter-spacing: -0.01em;
+          line-height: 1.3;
           transition: color 0.2s ease;
         }
         .movie-card:hover .movie-card-title {
@@ -399,8 +445,8 @@ const MovieCard = ({ movie }) => {
         .movie-card-meta {
           display: flex;
           align-items: center;
-          gap: 0.45rem;
-          font-size: 0.78rem;
+          gap: 0.4rem;
+          font-size: 0.74rem;
           color: #94a3b8;
         }
         .meta-year {
@@ -416,25 +462,40 @@ const MovieCard = ({ movie }) => {
           text-overflow: ellipsis;
           color: #94a3b8;
         }
-        .movie-provider-info {
-          display: flex;
+        .direct-stream-link {
+          display: inline-flex;
           align-items: center;
-          gap: 0.35rem;
-          font-size: 0.72rem;
-          margin-top: 0.25rem;
-          padding-top: 0.35rem;
-          border-top: 1px solid rgba(255, 255, 255, 0.06);
-        }
-        .provider-label {
-          color: #64748b;
-          font-weight: 500;
-        }
-        .provider-name {
-          color: #38bdf8;
+          gap: 0.3rem;
+          padding: 0.32rem 0.6rem;
+          border-radius: 8px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          font-size: 0.7rem;
           font-weight: 700;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
+          color: #f1f5f9;
+          transition: all 0.2s ease;
+          flex: 1;
+          min-width: 0;
+        }
+        .direct-stream-link:hover {
+          background: rgba(255, 255, 255, 0.12);
+          color: #fff;
+          transform: translateY(-1px);
+        }
+        .details-link-btn {
+          padding: 0.32rem 0.55rem;
+          border-radius: 8px;
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          font-size: 0.68rem;
+          font-weight: 600;
+          color: #94a3b8;
+          transition: all 0.2s ease;
+          flex-shrink: 0;
+        }
+        .details-link-btn:hover {
+          background: rgba(255, 255, 255, 0.08);
+          color: #fff;
         }
       `}</style>
     </article>

@@ -8,6 +8,7 @@ import EmptyState from '../components/EmptyState';
 import { Sparkles, SlidersHorizontal, Info, CheckCircle } from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
 import { FALLBACK_MOODS } from '../data/fallbackMoods';
+import { movieMatchesPlatform } from '../utils/platformFilter';
 
 const Moods = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -43,80 +44,6 @@ const Moods = () => {
     window.addEventListener('platform-preferences-updated', handlePrefUpdate);
     return () => window.removeEventListener('platform-preferences-updated', handlePrefUpdate);
   }, []);
-
-  // Strict movie matcher: only shows movies available on the selected platform
-  const movieMatchesPlatform = (m) => {
-    if (!m) return false;
-    if (preferences.freeOnly) {
-      return (
-        m.isFree === true ||
-        m.availabilityType === 'free' ||
-        m.availabilityType === 'free-with-ads' ||
-        m.availabilityType === 'public-domain' ||
-        m.availabilityStatus === 'FREE TO WATCH' ||
-        m.availabilityStatus === 'PUBLIC DOMAIN'
-      );
-    }
-    const plats = preferences.platforms || ['free'];
-    if (plats.includes('all')) return true;
-
-    return plats.some((p) => {
-      const pLower = p.toLowerCase();
-      if (pLower === 'free') {
-        return (
-          m.isFree === true ||
-          m.availabilityType === 'free' ||
-          m.availabilityStatus === 'FREE TO WATCH' ||
-          m.availabilityStatus === 'PUBLIC DOMAIN'
-        );
-      }
-      if (pLower === 'youtube') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('youtube') ||
-          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('youtube')) ||
-          (m.isFree && !m.primaryPlatform)
-        );
-      }
-      if (pLower === 'netflix') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('netflix') ||
-          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('netflix'))
-        );
-      }
-      if (pLower === 'prime' || pLower === 'amazon') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('prime') ||
-          m.primaryPlatform?.toLowerCase().includes('amazon') ||
-          m.platforms?.some(
-            (plat) =>
-              plat.name?.toLowerCase().includes('prime') ||
-              plat.name?.toLowerCase().includes('amazon')
-          )
-        );
-      }
-      if (pLower === 'hotstar' || pLower === 'disney') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('hotstar') ||
-          m.primaryPlatform?.toLowerCase().includes('disney') ||
-          m.platforms?.some(
-            (plat) =>
-              plat.name?.toLowerCase().includes('hotstar') ||
-              plat.name?.toLowerCase().includes('disney')
-          )
-        );
-      }
-      if (pLower === 'jiocinema' || pLower === 'jio') {
-        return (
-          m.primaryPlatform?.toLowerCase().includes('jio') ||
-          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('jio'))
-        );
-      }
-      return (
-        m.primaryPlatform?.toLowerCase().includes(pLower) ||
-        m.platforms?.some((plat) => plat.name?.toLowerCase().includes(pLower))
-      );
-    });
-  };
 
   // Fetch all moods
   useEffect(() => {
@@ -190,25 +117,25 @@ const Moods = () => {
       </div>
 
       {/* ── Active Platform Filter Status (No unselected platforms shown on top) ── */}
-      <div className="flex items-center justify-between p-3.5 px-4 rounded-2xl bg-white/[0.04] border border-white/10 mb-8 text-xs shadow-lg">
-        <div className="flex items-center gap-2.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span className="text-gray-400 font-medium">Platform Filter:</span>
-          <span className="font-extrabold text-white px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/10">
+      <div className="flex items-center justify-between py-2 px-3.5 rounded-xl bg-white/[0.04] border border-white/10 mb-5 text-xs shadow-md">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span className="text-gray-400 font-medium">Platform:</span>
+          <span className="font-bold text-white px-2 py-0.5 rounded-md bg-white/10 border border-white/10">
             {preferences.freeOnly
               ? '🆓 Free Movies Only'
               : preferences.platforms?.map((p) => p.toUpperCase()).join(', ')}
           </span>
           <span className="text-gray-400 hidden sm:inline">
-            • Mood recommendations strictly tailored to your active platform. Unselected platforms are hidden.
+            • Mood recommendations tailored exclusively to your platform.
           </span>
         </div>
 
         <button
           onClick={() => window.dispatchEvent(new CustomEvent('open-platform-preferences'))}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all flex-shrink-0"
+          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-bold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all flex-shrink-0"
         >
-          <SlidersHorizontal size={13} />
+          <SlidersHorizontal size={12} />
           <span>Change Platform</span>
         </button>
       </div>

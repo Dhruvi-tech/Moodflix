@@ -1,85 +1,170 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { X, Check } from 'lucide-react';
+import { X, Check, SlidersHorizontal, Sparkles } from 'lucide-react';
 
-const PLATFORM_OPTIONS = [
-  { id: 'free', label: 'Free Movies', icon: '🆓' },
-  { id: 'youtube', label: 'YouTube', icon: '▶️' },
-  { id: 'netflix', label: 'Netflix', icon: '🎬' },
-  { id: 'prime', label: 'Amazon Prime', icon: '🍿' },
-  { id: 'hotstar', label: 'Disney+ Hotstar', icon: '⭐' },
-  { id: 'jiocinema', label: 'JioCinema', icon: '📺' },
+const PRESETS = [
+  {
+    id: 'free',
+    label: 'Only Free Movies',
+    icon: '🆓',
+    badge: '100% Free',
+    desc: 'No subscription required',
+    color: '#10b981',
+    ring: 'ring-emerald-500',
+    bg: 'bg-emerald-500/15 border-emerald-500/50 text-emerald-300',
+  },
+  {
+    id: 'netflix',
+    label: 'Only Netflix',
+    icon: '🎬',
+    badge: '104 Films',
+    desc: 'Exclusive Netflix titles',
+    color: '#e50914',
+    ring: 'ring-red-500',
+    bg: 'bg-red-500/15 border-red-500/50 text-red-300',
+  },
+  {
+    id: 'prime',
+    label: 'Only Prime Video',
+    icon: '🍿',
+    badge: '91 Films',
+    desc: 'Exclusive Prime titles',
+    color: '#00a8e1',
+    ring: 'ring-sky-500',
+    bg: 'bg-sky-500/15 border-sky-500/50 text-sky-300',
+  },
+  {
+    id: 'youtube',
+    label: 'Only YouTube',
+    icon: '▶️',
+    badge: '222 Films',
+    desc: 'Official free YouTube films',
+    color: '#ff0000',
+    ring: 'ring-rose-500',
+    bg: 'bg-rose-500/15 border-rose-500/50 text-rose-300',
+  },
+  {
+    id: 'hotstar',
+    label: 'Hotstar & Jio',
+    icon: '⭐',
+    badge: '67 Films',
+    desc: 'Regional & blockbuster hits',
+    color: '#a855f7',
+    ring: 'ring-purple-500',
+    bg: 'bg-purple-500/15 border-purple-500/50 text-purple-300',
+  },
+  {
+    id: 'all',
+    label: 'All Platforms',
+    icon: '🌐',
+    badge: '507 Films',
+    desc: 'Explore the full catalog',
+    color: '#c084fc',
+    ring: 'ring-indigo-500',
+    bg: 'bg-indigo-500/15 border-indigo-500/50 text-indigo-300',
+  },
 ];
 
 export default function PlatformPreferenceModal({ isOpen, onClose, onSave }) {
   const { user, updatePreferences } = useAuth();
-  const [selectedPlatforms, setSelectedPlatforms] = useState(['free']);
-  const [freeOnly, setFreeOnly] = useState(true);
+  const [selectedId, setSelectedId] = useState('free');
+  const [multiSelectMode, setMultiSelectMode] = useState(false);
+  const [customPlatforms, setCustomPlatforms] = useState(['free']);
 
   useEffect(() => {
     const saved = localStorage.getItem('moodflix_platform_pref');
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        if (parsed.platforms) setSelectedPlatforms(parsed.platforms);
-        if (parsed.freeOnly !== undefined) setFreeOnly(parsed.freeOnly);
+        if (parsed.freeOnly) {
+          setSelectedId('free');
+          setCustomPlatforms(['free']);
+        } else if (parsed.platforms?.length === 1) {
+          setSelectedId(parsed.platforms[0]);
+          setCustomPlatforms(parsed.platforms);
+        } else if (parsed.platforms?.includes('all')) {
+          setSelectedId('all');
+          setCustomPlatforms(['all']);
+        } else if (parsed.platforms?.length > 1) {
+          setSelectedId('custom');
+          setMultiSelectMode(true);
+          setCustomPlatforms(parsed.platforms);
+        }
       } catch (e) {}
-    } else if (user?.preferences?.preferredPlatforms?.length) {
-      setSelectedPlatforms(user.preferences.preferredPlatforms);
-      if (user.preferences.freeOnly !== undefined) {
-        setFreeOnly(user.preferences.freeOnly);
-      }
     }
   }, [user, isOpen]);
 
   if (!isOpen) return null;
 
-  // Single-platform exclusive select (e.g. "I only have Netflix")
-  const selectExclusive = (id) => {
+  const handleSelectPreset = (id) => {
+    setSelectedId(id);
     if (id === 'free') {
-      setSelectedPlatforms(['free']);
-      setFreeOnly(true);
+      setCustomPlatforms(['free']);
     } else if (id === 'all') {
-      setSelectedPlatforms(['free', 'youtube', 'netflix', 'prime', 'hotstar', 'jiocinema']);
-      setFreeOnly(false);
+      setCustomPlatforms(['all']);
+    } else if (id === 'hotstar') {
+      setCustomPlatforms(['hotstar', 'jiocinema']);
     } else {
-      setSelectedPlatforms([id]);
-      setFreeOnly(false);
+      setCustomPlatforms([id]);
     }
   };
 
-  const togglePlatform = (id) => {
-    let updated = [...selectedPlatforms];
-    if (updated.includes(id)) {
-      updated = updated.filter((p) => p !== id);
+  const handleToggleCustom = (id) => {
+    let next = [...customPlatforms];
+    if (next.includes(id)) {
+      next = next.filter((p) => p !== id);
     } else {
-      updated.push(id);
+      next.push(id);
     }
-
-    if (updated.length === 0) {
-      updated = ['free'];
-      setFreeOnly(true);
-    }
-
-    setSelectedPlatforms(updated);
-    if (!updated.includes('free') && !updated.includes('youtube')) {
-      setFreeOnly(false);
-    }
+    if (next.length === 0) next = ['free'];
+    setCustomPlatforms(next);
   };
 
-  const handleSave = () => {
-    const prefData = {
-      platforms: selectedPlatforms,
-      freeOnly: freeOnly && (selectedPlatforms.includes('free') || selectedPlatforms.includes('youtube')),
-      answered: true,
-      timestamp: Date.now(),
-    };
+  const handleSave = (chosenId = selectedId, chosenPlats = customPlatforms) => {
+    let prefData;
+    if (chosenId === 'free') {
+      prefData = {
+        platforms: ['free'],
+        freeOnly: true,
+        answered: true,
+        timestamp: Date.now(),
+      };
+    } else if (chosenId === 'all') {
+      prefData = {
+        platforms: ['all'],
+        freeOnly: false,
+        answered: true,
+        timestamp: Date.now(),
+      };
+    } else if (chosenId === 'hotstar') {
+      prefData = {
+        platforms: ['hotstar', 'jiocinema'],
+        freeOnly: false,
+        answered: true,
+        timestamp: Date.now(),
+      };
+    } else if (multiSelectMode) {
+      prefData = {
+        platforms: chosenPlats,
+        freeOnly: chosenPlats.length === 1 && chosenPlats[0] === 'free',
+        answered: true,
+        timestamp: Date.now(),
+      };
+    } else {
+      prefData = {
+        platforms: [chosenId],
+        freeOnly: false,
+        answered: true,
+        timestamp: Date.now(),
+      };
+    }
 
     localStorage.setItem('moodflix_platform_pref', JSON.stringify(prefData));
     localStorage.setItem('moodflix_pref_answered', 'true');
+
     if (updatePreferences) {
       updatePreferences({
-        preferredPlatforms: selectedPlatforms,
+        preferredPlatforms: prefData.platforms,
         freeOnly: prefData.freeOnly,
       });
     }
@@ -96,7 +181,6 @@ export default function PlatformPreferenceModal({ isOpen, onClose, onSave }) {
       answered: true,
       timestamp: Date.now(),
     };
-
     localStorage.setItem('moodflix_platform_pref', JSON.stringify(defaultData));
     localStorage.setItem('moodflix_pref_answered', 'true');
     window.dispatchEvent(new CustomEvent('platform-preferences-updated', { detail: defaultData }));
@@ -105,180 +189,88 @@ export default function PlatformPreferenceModal({ isOpen, onClose, onSave }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/85 backdrop-blur-md animate-fade-in">
-      <div className="relative w-full max-w-sm sm:max-w-md p-5 rounded-2xl bg-[#0e1424] border border-purple-500/40 shadow-2xl text-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-black/85 backdrop-blur-sm animate-fade-in">
+      <div className="relative w-full max-w-[390px] p-4 sm:p-5 rounded-2xl bg-[#0d1322] border border-purple-500/30 shadow-2xl text-white">
         {/* Close Button */}
         <button
           onClick={handleSkip}
-          className="absolute top-4 right-4 text-gray-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
-          title="Close / Skip"
+          className="absolute top-3.5 right-3.5 text-gray-400 hover:text-white p-1 rounded-lg hover:bg-white/10 transition-colors"
+          title="Close / Default to Free"
         >
-          <X size={16} />
+          <X size={15} />
         </button>
 
-        {/* Header */}
-        <div className="mb-3 text-left pr-6">
-          <div className="flex items-center gap-1.5 text-[11px] font-bold text-pink-400 uppercase tracking-wider mb-1">
-            <span>🎬</span>
-            <span>Platform Preference</span>
+        {/* Compact Header */}
+        <div className="mb-3 pr-6">
+          <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-purple-500/15 border border-purple-500/30 text-[10px] font-bold text-purple-300 uppercase tracking-wider mb-1">
+            <Sparkles size={10} />
+            <span>Platform Selection</span>
           </div>
-          <h3 className="text-base sm:text-lg font-bold text-white leading-tight">
-            Where would you prefer to watch your movies?
+          <h3 className="text-sm sm:text-base font-extrabold text-white leading-snug">
+            Where do you prefer to watch?
           </h3>
-          <p className="text-xs text-gray-400 mt-0.5">
-            If you select one platform, only that platform's movies will show.
+          <p className="text-[11px] text-gray-400 mt-0.5">
+            Select one platform. Movies from other platforms are completely hidden.
           </p>
         </div>
 
-        {/* 1-Click Exclusive Quick Picks */}
-        <div className="mb-3 p-2.5 rounded-xl bg-purple-950/30 border border-purple-500/20 text-xs">
-          <span className="text-[11px] font-bold text-purple-300 block mb-1.5 uppercase tracking-wider">
-            Quick 1-Click Select:
-          </span>
-          <div className="flex flex-wrap gap-1.5">
-            <button
-              type="button"
-              onClick={() => selectExclusive('free')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
-                freeOnly && selectedPlatforms.length === 1 && selectedPlatforms[0] === 'free'
-                  ? 'bg-emerald-500 text-black shadow-md shadow-emerald-500/25 ring-2 ring-emerald-400'
-                  : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10'
-              }`}
-            >
-              🆓 Only Free
-            </button>
-            <button
-              type="button"
-              onClick={() => selectExclusive('netflix')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
-                !freeOnly && selectedPlatforms.length === 1 && selectedPlatforms[0] === 'netflix'
-                  ? 'bg-red-600 text-white shadow-md shadow-red-600/30 ring-2 ring-red-400'
-                  : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10'
-              }`}
-            >
-              🎬 Only Netflix
-            </button>
-            <button
-              type="button"
-              onClick={() => selectExclusive('prime')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
-                !freeOnly && selectedPlatforms.length === 1 && selectedPlatforms[0] === 'prime'
-                  ? 'bg-sky-600 text-white shadow-md shadow-sky-600/30 ring-2 ring-sky-400'
-                  : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10'
-              }`}
-            >
-              🍿 Only Prime
-            </button>
-            <button
-              type="button"
-              onClick={() => selectExclusive('youtube')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
-                selectedPlatforms.length === 1 && selectedPlatforms[0] === 'youtube'
-                  ? 'bg-red-500 text-white shadow-md shadow-red-500/30 ring-2 ring-red-400'
-                  : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10'
-              }`}
-            >
-              ▶️ Only YouTube
-            </button>
-            <button
-              type="button"
-              onClick={() => selectExclusive('all')}
-              className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all ${
-                selectedPlatforms.length > 2 && !freeOnly
-                  ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30 ring-2 ring-purple-400'
-                  : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10'
-              }`}
-            >
-              🌐 Show All
-            </button>
-          </div>
-        </div>
-
-        {/* Multi-select Platform Pills */}
-        <div className="mb-3">
-          <span className="text-[11px] text-gray-400 font-medium block mb-1.5">
-            Or customize multiple platforms:
-          </span>
-          <div className="grid grid-cols-2 gap-2">
-            {PLATFORM_OPTIONS.map((plat) => {
-              const isSelected = selectedPlatforms.includes(plat.id);
-              return (
-                <button
-                  key={plat.id}
-                  type="button"
-                  onClick={() => togglePlatform(plat.id)}
-                  className={`py-2 px-2.5 rounded-xl border text-left flex items-center justify-between transition-all text-xs ${
-                    isSelected
-                      ? 'bg-purple-600/25 border-purple-400 text-white font-semibold shadow-sm shadow-purple-500/20'
-                      : 'bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-gray-200'
-                  }`}
-                >
-                  <div className="flex items-center gap-2 truncate">
-                    <span>{plat.icon}</span>
-                    <span className="truncate">{plat.label}</span>
-                  </div>
-                  <div
-                    className={`w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 ml-1.5 transition-colors ${
-                      isSelected
-                        ? 'bg-purple-500 border-purple-400 text-white'
-                        : 'border-white/20 bg-transparent'
+        {/* Compact 2-Column Grid */}
+        <div className="grid grid-cols-2 gap-2 mb-3">
+          {PRESETS.map((item) => {
+            const isSelected = selectedId === item.id;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleSelectPreset(item.id)}
+                className={`p-2.5 rounded-xl border text-left transition-all relative flex flex-col justify-between ${
+                  isSelected
+                    ? `${item.bg} ring-2 ${item.ring} shadow-lg scale-[1.02]`
+                    : 'bg-white/[0.04] border-white/10 text-gray-300 hover:bg-white/[0.08] hover:text-white'
+                }`}
+              >
+                <div className="flex items-center justify-between w-full mb-1">
+                  <span className="text-base">{item.icon}</span>
+                  <span
+                    className={`text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded ${
+                      isSelected ? 'bg-white/20 text-white' : 'bg-white/5 text-gray-400'
                     }`}
                   >
-                    {isSelected && <Check size={11} strokeWidth={3} />}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
+                    {item.badge}
+                  </span>
+                </div>
+                <div>
+                  <span className="text-xs font-bold block leading-tight truncate">
+                    {item.label}
+                  </span>
+                  <span className="text-[10px] opacity-75 block truncate">
+                    {item.desc}
+                  </span>
+                </div>
+                {isSelected && (
+                  <span className="absolute top-2 right-2 text-white">
+                    <Check size={12} strokeWidth={3} />
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
 
-        {/* Question 2: Free Only Choice */}
-        <div className="mb-4 p-2.5 rounded-xl bg-white/[0.03] border border-white/10 text-xs">
-          <label className="font-semibold text-gray-200 block mb-1.5">
-            Do you want to see only free movies?
-          </label>
-          <div className="grid grid-cols-2 gap-2">
-            <button
-              type="button"
-              onClick={() => {
-                setFreeOnly(true);
-                setSelectedPlatforms(['free']);
-              }}
-              className={`py-1.5 px-2 rounded-lg border text-center transition-all ${
-                freeOnly
-                  ? 'bg-emerald-500/20 border-emerald-400 text-emerald-300 font-bold shadow-sm ring-1 ring-emerald-400/40'
-                  : 'bg-white/5 border-white/10 text-gray-400 hover:text-white'
-              }`}
-            >
-              <span>💎 Yes, only free</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => setFreeOnly(false)}
-              className={`py-1.5 px-2 rounded-lg border text-center transition-all ${
-                !freeOnly
-                  ? 'bg-purple-500/20 border-purple-400 text-purple-300 font-bold shadow-sm ring-1 ring-purple-400/40'
-                  : 'bg-white/5 border-white/10 text-gray-400 hover:text-white'
-              }`}
-            >
-              <span>🌐 Selected Platforms</span>
-            </button>
-          </div>
-        </div>
-
-        {/* Footer actions */}
+        {/* Action Controls */}
         <div className="flex items-center justify-between gap-2 pt-2 border-t border-white/10 text-xs">
           <button
             type="button"
             onClick={handleSkip}
-            className="text-gray-400 hover:text-white transition-colors py-1.5 px-2 font-medium"
+            className="text-[11px] text-gray-400 hover:text-white transition-colors py-1 px-1.5 font-medium"
           >
             Skip (Free First)
           </button>
+
           <button
             type="button"
-            onClick={handleSave}
-            className="py-2 px-6 rounded-xl font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md shadow-purple-500/30 hover:opacity-95 active:scale-95 transition-all"
+            onClick={() => handleSave()}
+            className="py-1.5 px-5 rounded-xl text-xs font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-md shadow-purple-500/25 hover:opacity-95 active:scale-95 transition-all"
           >
             Apply Preference
           </button>

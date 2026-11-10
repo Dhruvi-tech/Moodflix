@@ -26,59 +26,13 @@ import {
   Check,
   Scale,
 } from 'lucide-react';
+import { movieMatchesPlatform, getDirectMovieWatchUrl } from '../utils/platformFilter';
 
 const getPlatformWatchUrl = (movie, platformName = '', rawUrl = '') => {
-  const title = movie?.title || '';
-  const year = movie?.releaseYear || '';
-  const plat = (platformName || movie?.primaryPlatform || movie?.freeAvailability?.provider || '').toLowerCase();
-
-  // If rawUrl is an official YouTube search query, it always works
-  if (rawUrl && rawUrl.includes('results?search_query=')) {
+  if (rawUrl && typeof rawUrl === 'string' && rawUrl.startsWith('http') && !rawUrl.includes('google.com/search')) {
     return rawUrl;
   }
-
-  // 1. YouTube Free Movie: Direct full-movie query on official YouTube
-  if (plat.includes('youtube') || movie?.isFree) {
-    return `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} ${year} full movie`)}`;
-  }
-
-  // 2. Netflix
-  if (plat.includes('netflix')) {
-    return `https://www.netflix.com/search?q=${encodeURIComponent(title)}`;
-  }
-
-  // 3. Amazon Prime Video
-  if (plat.includes('prime') || plat.includes('amazon')) {
-    return `https://www.primevideo.com/search/ref=atv_nb_sr?phrase=${encodeURIComponent(title)}`;
-  }
-
-  // 4. Disney+ Hotstar
-  if (plat.includes('hotstar') || plat.includes('disney')) {
-    return `https://www.hotstar.com/in/search?q=${encodeURIComponent(title)}`;
-  }
-
-  // 5. JioCinema
-  if (plat.includes('jio')) {
-    return `https://www.jiocinema.com/search/${encodeURIComponent(title)}`;
-  }
-
-  // 6. ZEE5
-  if (plat.includes('zee')) {
-    return `https://www.zee5.com/search?q=${encodeURIComponent(title)}`;
-  }
-
-  // 7. SonyLIV
-  if (plat.includes('sony')) {
-    return `https://www.sonyliv.com/search?q=${encodeURIComponent(title)}`;
-  }
-
-  // 8. Public Domain Archive
-  if (movie?.availabilityStatus === 'PUBLIC DOMAIN') {
-    return `https://archive.org/search?query=${encodeURIComponent(`${title} ${year}`)}`;
-  }
-
-  // Default: Verified YouTube full movie stream search
-  return `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} ${year} full movie`)}`;
+  return getDirectMovieWatchUrl(movie, platformName);
 };
 
 const MovieDetails = () => {
@@ -99,51 +53,6 @@ const MovieDetails = () => {
   const [reviewError, setReviewError] = useState('');
   const [editingReviewId, setEditingReviewId] = useState(null);
   const [copiedToast, setCopiedToast] = useState(false);
-
-  const movieMatchesPlatform = (candidate) => {
-    if (!candidate) return false;
-    let pref;
-    try {
-      const saved = localStorage.getItem('moodflix_platform_pref');
-      if (saved) pref = JSON.parse(saved);
-    } catch {}
-    if (!pref) return true;
-    if (pref.freeOnly) {
-      return (
-        candidate.isFree === true ||
-        candidate.availabilityType === 'free' ||
-        candidate.availabilityType === 'free-with-ads' ||
-        candidate.availabilityType === 'public-domain' ||
-        candidate.availabilityStatus === 'FREE TO WATCH' ||
-        candidate.availabilityStatus === 'PUBLIC DOMAIN'
-      );
-    }
-    const plats = pref.platforms || ['free'];
-    if (plats.includes('all')) return true;
-
-    return plats.some((p) => {
-      const pLower = p.toLowerCase();
-      if (pLower === 'free') {
-        return candidate.isFree === true || candidate.availabilityStatus === 'FREE TO WATCH' || candidate.availabilityStatus === 'PUBLIC DOMAIN';
-      }
-      if (pLower === 'youtube') {
-        return candidate.primaryPlatform?.toLowerCase().includes('youtube') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('youtube')) || (candidate.isFree && !candidate.primaryPlatform);
-      }
-      if (pLower === 'netflix') {
-        return candidate.primaryPlatform?.toLowerCase().includes('netflix') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('netflix'));
-      }
-      if (pLower === 'prime' || pLower === 'amazon') {
-        return candidate.primaryPlatform?.toLowerCase().includes('prime') || candidate.primaryPlatform?.toLowerCase().includes('amazon') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('prime') || pl.name?.toLowerCase().includes('amazon'));
-      }
-      if (pLower === 'hotstar' || pLower === 'disney') {
-        return candidate.primaryPlatform?.toLowerCase().includes('hotstar') || candidate.primaryPlatform?.toLowerCase().includes('disney') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('hotstar') || pl.name?.toLowerCase().includes('disney'));
-      }
-      if (pLower === 'jiocinema' || pLower === 'jio') {
-        return candidate.primaryPlatform?.toLowerCase().includes('jio') || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes('jio'));
-      }
-      return candidate.primaryPlatform?.toLowerCase().includes(pLower) || candidate.platforms?.some((pl) => pl.name?.toLowerCase().includes(pLower));
-    });
-  };
 
   useEffect(() => {
     const fetchMovieData = async () => {
