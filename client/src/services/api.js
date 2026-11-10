@@ -3,7 +3,7 @@ import fallbackMovies from '../data/fallbackMovies';
 import { FALLBACK_MOODS } from '../data/fallbackMoods';
 
 // Deployed Vercel API is default fallback if env var is not specified
-const API_BASE = import.meta.env.VITE_API_URL || 'https://server-six-topaz-45.vercel.app/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://moodflix-api.vercel.app/api';
 
 const api = axios.create({
   baseURL: API_BASE,
@@ -175,7 +175,24 @@ api.interceptors.response.use(
       // 4. Single Movie by Slug: /movies/slug/:slug
       if (url.includes('/movies/slug/')) {
         const slug = url.split('/movies/slug/')[1]?.split('?')[0];
-        const movie = fallbackMovies.find((m) => m.slug === slug) || fallbackMovies[0];
+        const movie = fallbackMovies.find((m) => m.slug === slug || m._id === slug || String(m.id) === String(slug)) || fallbackMovies[0];
+        const similar = fallbackMovies
+          .filter((m) => m.slug !== movie.slug && m.moodTags?.some((t) => movie.moodTags?.includes(t)))
+          .slice(0, 4);
+        return Promise.resolve({
+          data: {
+            success: true,
+            movie,
+            similarMovies: similar,
+          },
+        });
+      }
+
+      // 4b. Single Movie by ID or generic path: /movies/:idOrSlug
+      const singleMatch = url.match(/^\/movies\/([a-zA-Z0-9_-]+)$/);
+      if (singleMatch && !['free', 'featured', 'recommendations', 'search'].includes(singleMatch[1])) {
+        const idOrSlug = singleMatch[1];
+        const movie = fallbackMovies.find((m) => m.slug === idOrSlug || m._id === idOrSlug || String(m.id) === String(idOrSlug)) || fallbackMovies[0];
         const similar = fallbackMovies
           .filter((m) => m.slug !== movie.slug && m.moodTags?.some((t) => movie.moodTags?.includes(t)))
           .slice(0, 4);

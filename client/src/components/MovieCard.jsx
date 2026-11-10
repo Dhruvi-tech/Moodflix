@@ -68,7 +68,15 @@ const MovieCard = ({ movie }) => {
   };
 
   const primaryLang = movie.originalLanguage || (movie.languages && movie.languages[0]) || '';
-  const movieLink = `/movies/${movie.slug || movie._id}`;
+  const movieLink = `/movies/${movie.slug || movie._id || movie.id}`;
+
+  const directWatchUrl = movie.isFree
+    ? `https://www.youtube.com/results?search_query=${encodeURIComponent(`${movie.title} ${movie.releaseYear || ''} full movie`)}`
+    : (movie.primaryPlatform === 'Netflix'
+        ? `https://www.netflix.com/search?q=${encodeURIComponent(movie.title)}`
+        : movie.primaryPlatform === 'Hotstar'
+          ? `https://www.hotstar.com/in/search?q=${encodeURIComponent(movie.title)}`
+          : `https://www.primevideo.com/search/ref=atv_nb_sr?phrase=${encodeURIComponent(movie.title)}`);
 
   return (
     <article className="movie-card group">
@@ -106,26 +114,38 @@ const MovieCard = ({ movie }) => {
         )}
 
         {/* Quick Action Overlay Buttons */}
-        {user && (
-          <div className="movie-quick-actions">
-            <button
-              type="button"
-              onClick={handleWlClick}
-              className={`quick-action-btn ${isWl ? 'active' : ''}`}
-              title={isWl ? 'Remove from Watchlist' : 'Add to Watchlist'}
-            >
-              <Bookmark size={14} fill={isWl ? '#8b5cf6' : 'none'} color={isWl ? '#a78bfa' : '#fff'} />
-            </button>
-            <button
-              type="button"
-              onClick={handleFavClick}
-              className={`quick-action-btn ${isFav ? 'active' : ''}`}
-              title={isFav ? 'Remove from Favourites' : 'Add to Favourites'}
-            >
-              <Heart size={14} fill={isFav ? '#ec4899' : 'none'} color={isFav ? '#f472b6' : '#fff'} />
-            </button>
-          </div>
-        )}
+        <div className="movie-quick-actions">
+          <a
+            href={directWatchUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="quick-action-btn"
+            title={movie.isFree ? `Watch Free on ${movie.freeAvailability?.provider || 'YouTube'}` : `Watch on ${movie.primaryPlatform || 'Stream'}`}
+          >
+            <Play size={13} fill="#fff" />
+          </a>
+          {user && (
+            <>
+              <button
+                type="button"
+                onClick={handleWlClick}
+                className={`quick-action-btn ${isWl ? 'active' : ''}`}
+                title={isWl ? 'Remove from Watchlist' : 'Add to Watchlist'}
+              >
+                <Bookmark size={14} fill={isWl ? '#8b5cf6' : 'none'} color={isWl ? '#a78bfa' : '#fff'} />
+              </button>
+              <button
+                type="button"
+                onClick={handleFavClick}
+                className={`quick-action-btn ${isFav ? 'active' : ''}`}
+                title={isFav ? 'Remove from Favourites' : 'Add to Favourites'}
+              >
+                <Heart size={14} fill={isFav ? '#ec4899' : 'none'} color={isFav ? '#f472b6' : '#fff'} />
+              </button>
+            </>
+          )}
+        </div>
 
         {/* Hover Play Overlay */}
         <div className="poster-play-overlay">

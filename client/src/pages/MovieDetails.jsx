@@ -6,6 +6,7 @@ import RatingStars from '../components/RatingStars';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { useAuth } from '../context/AuthContext';
 import { useWatchlist } from '../context/WatchlistContext';
+import fallbackMovies from '../data/fallbackMovies';
 import {
   Play,
   Bookmark,
@@ -22,6 +23,60 @@ import {
   Edit2,
   Trash2,
 } from 'lucide-react';
+
+const getPlatformWatchUrl = (movie, platformName = '', rawUrl = '') => {
+  const title = movie?.title || '';
+  const year = movie?.releaseYear || '';
+  const plat = (platformName || movie?.primaryPlatform || movie?.freeAvailability?.provider || '').toLowerCase();
+
+  // If rawUrl is an official YouTube search query, it always works
+  if (rawUrl && rawUrl.includes('results?search_query=')) {
+    return rawUrl;
+  }
+
+  // 1. YouTube Free Movie: Direct full-movie query on official YouTube
+  if (plat.includes('youtube') || movie?.isFree) {
+    return `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} ${year} full movie`)}`;
+  }
+
+  // 2. Netflix
+  if (plat.includes('netflix')) {
+    return `https://www.netflix.com/search?q=${encodeURIComponent(title)}`;
+  }
+
+  // 3. Amazon Prime Video
+  if (plat.includes('prime') || plat.includes('amazon')) {
+    return `https://www.primevideo.com/search/ref=atv_nb_sr?phrase=${encodeURIComponent(title)}`;
+  }
+
+  // 4. Disney+ Hotstar
+  if (plat.includes('hotstar') || plat.includes('disney')) {
+    return `https://www.hotstar.com/in/search?q=${encodeURIComponent(title)}`;
+  }
+
+  // 5. JioCinema
+  if (plat.includes('jio')) {
+    return `https://www.jiocinema.com/search/${encodeURIComponent(title)}`;
+  }
+
+  // 6. ZEE5
+  if (plat.includes('zee')) {
+    return `https://www.zee5.com/search?q=${encodeURIComponent(title)}`;
+  }
+
+  // 7. SonyLIV
+  if (plat.includes('sony')) {
+    return `https://www.sonyliv.com/search?q=${encodeURIComponent(title)}`;
+  }
+
+  // 8. Public Domain Archive
+  if (movie?.availabilityStatus === 'PUBLIC DOMAIN') {
+    return `https://archive.org/search?query=${encodeURIComponent(`${title} ${year}`)}`;
+  }
+
+  // Default: Verified YouTube full movie stream search
+  return `https://www.youtube.com/results?search_query=${encodeURIComponent(`${title} ${year} full movie`)}`;
+};
 
 const MovieDetails = () => {
   const { id } = useParams();
@@ -45,29 +100,58 @@ const MovieDetails = () => {
     const fetchMovieData = async () => {
       setLoading(true);
       try {
-        // Try fetching by slug first, fallback to id
-        let res;
-        try {
-          res = await api.get(`/movies/slug/${id}`);
-        } catch {
-          res = await api.get(`/movies/${id}`);
+        let m = null;
+
+        // 1. Instant match from fallback catalog (0ms latency, never breaks)
+        const localMatch = fallbackMovies.find(
+          (item) => item.slug === id || item._id === id || String(item.id) === String(id)
+        );
+        if (localMatch) {
+          m = localMatch;
+          setMovie(localMatch);
+          setSimilarMovies(
+            fallbackMovies
+              .filter((x) => x.slug !== localMatch.slug && x.moodTags?.some((t) => localMatch.moodTags?.includes(t)))
+              .slice(0, 4)
+          );
         }
 
-        if (res.data.success) {
-          const m = res.data.movie;
+        // 2. Fetch fresh from API
+        try {
+          let res;
+          try {
+            res = await api.get(`/movies/slug/${id}`);
+          } catch {
+            res = await api.get(`/movies/${id}`);
+          }
+
+          if (res?.data?.success && res.data.movie) {
+            m = res.data.movie;
+            setMovie(m);
+            if (res.data.similarMovies?.length) {
+              setSimilarMovies(res.data.similarMovies);
+            }
+          }
+        } catch (apiErr) {
+          console.warn('API fetch failed, local fallback retained:', apiErr);
+        }
+
+        // 3. Fallback to first movie if still not found
+        if (!m && fallbackMovies.length > 0) {
+          m = fallbackMovies[0];
           setMovie(m);
-          setSimilarMovies(res.data.similarMovies || []);
+        }
 
-          // Automatically record viewing history if user is logged in
+        // 4. Record history & load reviews
+        if (m) {
           if (user) {
-            api.post(`/history/${m._id}`).catch(() => {});
+            api.post(`/history/${m._id || m.id}`).catch(() => {});
           }
-
-          // Fetch reviews
-          const revRes = await api.get(`/reviews/movie/${m._id}`);
-          if (revRes.data.success) {
-            setReviews(revRes.data.reviews);
-          }
+          api.get(`/reviews/movie/${m._id || m.id}`)
+            .then((revRes) => {
+              if (revRes.data?.success) setReviews(revRes.data.reviews || []);
+            })
+            .catch(() => {});
         }
       } catch (err) {
         console.error('Error loading movie:', err);
@@ -273,9 +357,9 @@ const MovieDetails = () => {
                     {movie.platforms.map((plat, idx) => (
                       <a
                         key={idx}
-                        href={plat.url}
+                        href={getPlatformWatchUrl(movie, plat.name, plat.url)}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
                           plat.type === 'Free' || !plat.subscriptionRequired
                             ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 hover:bg-emerald-500/30'
@@ -283,7 +367,7 @@ const MovieDetails = () => {
                         }`}
                       >
                         <span>{plat.name}</span>
-                        <span className="text-[10px] opacity-75">({plat.type})</span>
+                        <span className="text-[10px] opacity-75">({plat.type || (movie.isFree ? 'Free' : 'Subscription')})</span>
                         <ExternalLink size={12} />
                       </a>
                     ))}
@@ -292,29 +376,28 @@ const MovieDetails = () => {
               )}
 
               <div className="stream-cta-buttons">
-                {movie.freeAvailability?.url && (
-                  <a
-                    href={movie.freeAvailability.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary btn-watch-free"
-                  >
-                    <Play size={18} fill="#fff" />
-                    <span>{movie.isFree ? `Watch Free on ${movie.freeAvailability.provider || 'YouTube'}` : `Watch on ${movie.primaryPlatform}`}</span>
-                    <ExternalLink size={15} />
-                  </a>
-                )}
+                <a
+                  href={getPlatformWatchUrl(movie, movie.freeAvailability?.provider || movie.primaryPlatform, movie.freeAvailability?.url)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary btn-watch-free"
+                >
+                  <Play size={18} fill="#fff" />
+                  <span>{movie.isFree ? `Watch Free on ${movie.freeAvailability?.provider || 'YouTube'}` : `Watch on ${movie.primaryPlatform || 'Stream'}`}</span>
+                  <ExternalLink size={15} />
+                </a>
 
-                {movie.trailerUrl && (
-                  <button
-                    type="button"
-                    onClick={() => setTrailerOpen(!trailerOpen)}
-                    className="btn btn-secondary"
-                  >
-                    <Film size={18} />
-                    <span>{trailerOpen ? 'Hide Trailer' : 'Watch Trailer'}</span>
-                  </button>
-                )}
+                {/* Watch Trailer */}
+                <a
+                  href={`https://www.youtube.com/results?search_query=${encodeURIComponent(`${movie.title} ${movie.releaseYear || ''} official trailer`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary"
+                >
+                  <Film size={18} />
+                  <span>Watch Trailer</span>
+                  <ExternalLink size={14} />
+                </a>
 
                 {/* Watchlist & Favourite Buttons */}
                 {user && (
@@ -340,19 +423,6 @@ const MovieDetails = () => {
               </div>
             </div>
 
-            {/* Trailer Embed Modal / Box */}
-            {trailerOpen && movie.trailerUrl && (
-              <div className="trailer-embed-container animate-fade-in">
-                <div className="trailer-video-box">
-                  <iframe
-                    src={movie.trailerUrl.replace('watch?v=', 'embed/')}
-                    title={`${movie.title} Official Trailer`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            )}
           </div>
         </div>
       </section>
