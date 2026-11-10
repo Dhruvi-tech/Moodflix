@@ -2,30 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Search, X, Plus, Play, ExternalLink, Check, Sparkles, Scale, Info, Film } from 'lucide-react';
 import fallbackMovies from '../data/fallbackMovies';
-
-// Helper for watch URL
-function getPlatformWatchUrl(movie, platform, rawUrl) {
-  if (rawUrl && typeof rawUrl === 'string' && rawUrl.startsWith('http')) {
-    return rawUrl;
-  }
-  const cleanTitle = encodeURIComponent(movie.title);
-  const year = movie.releaseYear || '';
-  const plat = (platform || '').toLowerCase();
-
-  if (plat.includes('netflix')) {
-    return `https://www.netflix.com/search?q=${cleanTitle}`;
-  }
-  if (plat.includes('prime') || plat.includes('amazon')) {
-    return `https://www.amazon.com/s?k=${cleanTitle}+movie&i=instant-video`;
-  }
-  if (plat.includes('hotstar') || plat.includes('disney')) {
-    return `https://www.hotstar.com/in/search?q=${cleanTitle}`;
-  }
-  if (plat.includes('jio')) {
-    return `https://www.jiocinema.com/search/${cleanTitle}`;
-  }
-  return `https://www.youtube.com/results?search_query=${cleanTitle}+${year}+full+movie`;
-}
+import { getDirectMovieWatchUrl } from '../utils/platformFilter';
 
 const PRESET_COMPARISONS = [
   { name: 'Classic Action Clash', titles: ['Sholay', 'Deewaar'] },
@@ -297,11 +274,7 @@ export default function Compare() {
                         </div>
                         <div className="flex flex-col gap-1.5 max-w-[200px] mx-auto">
                           <a
-                            href={getPlatformWatchUrl(
-                              m,
-                              m.streamingPlatforms?.[0]?.name,
-                              m.streamingPlatforms?.[0]?.url
-                            )}
+                            href={getDirectMovieWatchUrl(m)}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold text-xs shadow-md shadow-purple-500/25 transition-all"

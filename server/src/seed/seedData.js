@@ -52,7 +52,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Sholay%201975%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -61,7 +61,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Sholay%201975%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -122,7 +122,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Pyaasa%201957%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -131,7 +131,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Pyaasa%201957%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -193,7 +193,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Mughal-e-Azam%201960%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -202,7 +202,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Mughal-e-Azam%201960%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -261,7 +261,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Anand%201971%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -270,7 +270,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Anand%201971%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -328,7 +328,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Gol%20Maal%201979%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -337,7 +337,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Gol%20Maal%201979%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -395,7 +395,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Chupke%20Chupke%201975%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -404,7 +404,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Chupke%20Chupke%201975%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -462,7 +462,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Jaane%20Bhi%20Do%20Yaaro%201983%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -471,7 +471,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Jaane%20Bhi%20Do%20Yaaro%201983%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -529,7 +529,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Angoor%201982%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -538,7 +538,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Angoor%201982%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -596,7 +596,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+        "url": "https://www.youtube.com/results?search_query=Deewaar%201975%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -605,7 +605,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+      "url": "https://www.youtube.com/results?search_query=Deewaar%201975%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -666,7 +666,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+        "url": "https://www.youtube.com/results?search_query=Amar%20Akbar%20Anthony%201977%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -675,7 +675,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+      "url": "https://www.youtube.com/results?search_query=Amar%20Akbar%20Anthony%201977%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -739,7 +739,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=K0eDlFX9GMc",
+        "url": "https://www.youtube.com/results?search_query=3%20Idiots%202009%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -748,7 +748,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=K0eDlFX9GMc",
+      "url": "https://www.youtube.com/results?search_query=3%20Idiots%202009%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -820,7 +820,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80166185",
+      "url": "https://www.netflix.com/search?q=Dangal",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -891,7 +891,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70089037",
+      "url": "https://www.netflix.com/search?q=Taare%20Zameen%20Par",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -964,7 +964,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/60020906",
+      "url": "https://www.netflix.com/search?q=Lagaan%3A%20Once%20Upon%20a%20Time%20in%20India",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1031,7 +1031,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70019490",
+      "url": "https://www.netflix.com/search?q=Swades%3A%20We%2C%20the%20People",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1089,7 +1089,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chak%20De!%20India",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1098,7 +1098,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chak%20De!%20India",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1170,7 +1170,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81039381",
+      "url": "https://www.netflix.com/search?q=Andhadhun",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1232,7 +1232,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Tumbbad",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1241,7 +1241,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Tumbbad",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1311,7 +1311,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70242544",
+      "url": "https://www.netflix.com/search?q=Gangs%20of%20Wasseypur",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1383,7 +1383,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70202336",
+      "url": "https://www.netflix.com/search?q=Zindagi%20Na%20Milegi%20Dobara",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1451,7 +1451,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80013872",
+      "url": "https://www.netflix.com/search?q=Queen",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1516,7 +1516,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70143825",
+      "url": "https://www.netflix.com/search?q=Udaan",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1583,7 +1583,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70112443",
+      "url": "https://www.netflix.com/search?q=A%20Wednesday!",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1640,7 +1640,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kahaani",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -1649,7 +1649,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kahaani",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1716,7 +1716,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70254350",
+      "url": "https://www.netflix.com/search?q=Barfi!",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -1774,7 +1774,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=TIQ5hrfermg",
+        "url": "https://www.youtube.com/results?search_query=Hera%20Pheri%202000%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -1783,7 +1783,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=TIQ5hrfermg",
+      "url": "https://www.youtube.com/results?search_query=Hera%20Pheri%202000%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -1841,7 +1841,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=0h9VqY6N3M2",
+        "url": "https://www.youtube.com/results?search_query=Phir%20Hera%20Pheri%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -1850,7 +1850,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=0h9VqY6N3M2",
+      "url": "https://www.youtube.com/results?search_query=Phir%20Hera%20Pheri%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -1909,7 +1909,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=5rQ8Y6L2W9k",
+        "url": "https://www.youtube.com/results?search_query=Andaz%20Apna%20Apna%201994%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -1918,7 +1918,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=5rQ8Y6L2W9k",
+      "url": "https://www.youtube.com/results?search_query=Andaz%20Apna%20Apna%201994%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -1976,7 +1976,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=eK9bQ2L4M8Y",
+        "url": "https://www.youtube.com/results?search_query=Welcome%202007%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -1985,7 +1985,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=eK9bQ2L4M8Y",
+      "url": "https://www.youtube.com/results?search_query=Welcome%202007%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2044,7 +2044,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wX8K9L2M4Y7",
+        "url": "https://www.youtube.com/results?search_query=Dhamaal%202007%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2053,7 +2053,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wX8K9L2M4Y7",
+      "url": "https://www.youtube.com/results?search_query=Dhamaal%202007%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2111,7 +2111,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=yK8M9L2Y4X3",
+        "url": "https://www.youtube.com/results?search_query=Bhagam%20Bhag%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2120,7 +2120,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=yK8M9L2Y4X3",
+      "url": "https://www.youtube.com/results?search_query=Bhagam%20Bhag%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2178,7 +2178,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=vK9M8L2X4Y1",
+        "url": "https://www.youtube.com/results?search_query=Chup%20Chup%20Ke%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2187,7 +2187,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=vK9M8L2X4Y1",
+      "url": "https://www.youtube.com/results?search_query=Chup%20Chup%20Ke%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2245,7 +2245,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=xK9M8L2Y4X0",
+        "url": "https://www.youtube.com/results?search_query=Hungama%202003%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2254,7 +2254,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=xK9M8L2Y4X0",
+      "url": "https://www.youtube.com/results?search_query=Hungama%202003%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2313,7 +2313,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=cK8M9L2Y4X5",
+        "url": "https://www.youtube.com/results?search_query=Khosla%20Ka%20Ghosla!%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2322,7 +2322,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=cK8M9L2Y4X5",
+      "url": "https://www.youtube.com/results?search_query=Khosla%20Ka%20Ghosla!%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2378,7 +2378,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=dK8M9L2Y4X7",
+        "url": "https://www.youtube.com/results?search_query=Bheja%20Fry%202007%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2387,7 +2387,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=dK8M9L2Y4X7",
+      "url": "https://www.youtube.com/results?search_query=Bheja%20Fry%202007%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2445,7 +2445,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Jab%20We%20Met%202007%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2454,7 +2454,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Jab%20We%20Met%202007%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2523,7 +2523,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/60031754",
+      "url": "https://www.netflix.com/search?q=Kal%20Ho%20Naa%20Ho",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -2592,7 +2592,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/60021525",
+      "url": "https://www.netflix.com/search?q=Dil%20Chahta%20Hai",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -2663,7 +2663,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/70047320",
+      "url": "https://www.netflix.com/search?q=Rang%20De%20Basanti",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -2790,7 +2790,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=The%20Lunchbox%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2799,7 +2799,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=The%20Lunchbox%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -2864,7 +2864,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80041653",
+      "url": "https://www.netflix.com/search?q=Masaan",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -2928,14 +2928,14 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Free",
-        "url": "https://www.jiocinema.com",
+        "url": "https://www.youtube.com/results?search_query=English%20Vinglish%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       },
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/results?search_query=English+Vinglish+full+movie",
+        "url": "https://www.youtube.com/results?search_query=English%20Vinglish%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -2944,7 +2944,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "JioCinema",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com",
+      "url": "https://www.youtube.com/results?search_query=English%20Vinglish%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -3011,7 +3011,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81113921",
+      "url": "https://www.netflix.com/search?q=Stree",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -3079,7 +3079,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81154455",
+      "url": "https://www.netflix.com/search?q=Article%2015",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -3137,14 +3137,14 @@ module.exports = [
       {
         "name": "Hotstar",
         "type": "Free",
-        "url": "https://www.hotstar.com",
+        "url": "https://www.youtube.com/results?search_query=Badhaai%20Ho%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       },
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/results?search_query=Badhaai+Ho+full+movie",
+        "url": "https://www.youtube.com/results?search_query=Badhaai%20Ho%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -3153,7 +3153,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "Hotstar",
       "region": "India & Global",
-      "url": "https://www.hotstar.com",
+      "url": "https://www.youtube.com/results?search_query=Badhaai%20Ho%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -3219,7 +3219,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80198888",
+      "url": "https://www.netflix.com/search?q=Bareilly%20Ki%20Barfi",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -3276,7 +3276,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Vicky%20Donor%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -3285,7 +3285,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Vicky%20Donor%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -3343,14 +3343,14 @@ module.exports = [
       {
         "name": "Hotstar",
         "type": "Free",
-        "url": "https://www.hotstar.com",
+        "url": "https://www.youtube.com/results?search_query=Chhichhore%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       },
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/results?search_query=Chhichhore+full+movie",
+        "url": "https://www.youtube.com/results?search_query=Chhichhore%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -3359,7 +3359,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "Hotstar",
       "region": "India & Global",
-      "url": "https://www.hotstar.com",
+      "url": "https://www.youtube.com/results?search_query=Chhichhore%202019%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -3415,14 +3415,14 @@ module.exports = [
       {
         "name": "Hotstar",
         "type": "Free",
-        "url": "https://www.hotstar.com",
+        "url": "https://www.youtube.com/results?search_query=Super%2030%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       },
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/results?search_query=Super+30+full+movie",
+        "url": "https://www.youtube.com/results?search_query=Super%2030%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -3431,7 +3431,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "Hotstar",
       "region": "India & Global",
-      "url": "https://www.hotstar.com",
+      "url": "https://www.youtube.com/results?search_query=Super%2030%202019%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -3490,14 +3490,14 @@ module.exports = [
       {
         "name": "Hotstar",
         "type": "Free",
-        "url": "https://www.hotstar.com",
+        "url": "https://www.youtube.com/results?search_query=Bhaag%20Milkha%20Bhaag%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       },
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/results?search_query=Bhaag+Milkha+Bhaag+full+movie",
+        "url": "https://www.youtube.com/results?search_query=Bhaag%20Milkha%20Bhaag%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -3506,7 +3506,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "Hotstar",
       "region": "India & Global",
-      "url": "https://www.hotstar.com",
+      "url": "https://www.youtube.com/results?search_query=Bhaag%20Milkha%20Bhaag%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -3566,7 +3566,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sardar%20Udham",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -3575,7 +3575,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sardar%20Udham",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -3634,7 +3634,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Raazi",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -3643,7 +3643,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Raazi",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -3770,7 +3770,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Shershaah",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -3779,7 +3779,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Shershaah",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -3837,7 +3837,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Rockstar%202011%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -3846,7 +3846,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Rockstar%202011%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -3913,7 +3913,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80080649",
+      "url": "https://www.netflix.com/search?q=Tamasha",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -3974,7 +3974,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Haider%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -3983,7 +3983,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Haider%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -4043,7 +4043,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Omkara%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -4052,7 +4052,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Omkara%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -4112,7 +4112,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Maqbool%202003%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -4121,7 +4121,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Maqbool%202003%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -4200,7 +4200,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81656709",
+      "url": "https://www.netflix.com/search?q=Kantara",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -4267,7 +4267,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=K.G.F%3A%20Chapter%201",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -4276,7 +4276,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=K.G.F%3A%20Chapter%201",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -4343,7 +4343,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=K.G.F%3A%20Chapter%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -4352,7 +4352,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=K.G.F%3A%20Chapter%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -4421,7 +4421,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=777%20Charlie",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -4430,7 +4430,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=777%20Charlie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -4491,7 +4491,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Lucia%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -4500,7 +4500,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Lucia%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -4560,7 +4560,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Ulidavaru%20Kandanthe%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -4569,7 +4569,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Ulidavaru%20Kandanthe%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -4631,7 +4631,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=U-Turn%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -4640,7 +4640,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=U-Turn%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -4706,7 +4706,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80108502",
+      "url": "https://www.netflix.com/search?q=Thithi",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -4764,7 +4764,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=RangiTaranga%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -4773,7 +4773,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=RangiTaranga%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -4832,7 +4832,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Dia",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -4841,7 +4841,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Dia",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -4903,7 +4903,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Bell%20Bottom%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -4912,7 +4912,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Bell%20Bottom%202019%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5040,7 +5040,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Sarkari%20Hi.%20Pra.%20Shaale%2C%20Kasaragodu%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5049,7 +5049,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Sarkari%20Hi.%20Pra.%20Shaale%2C%20Kasaragodu%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5110,7 +5110,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Kirik%20Party%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5119,7 +5119,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Kirik%20Party%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5180,7 +5180,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Godhi%20Banna%20Sadharana%20Mykattu%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5189,7 +5189,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Godhi%20Banna%20Sadharana%20Mykattu%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5249,7 +5249,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kavaludaari",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -5258,7 +5258,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kavaludaari",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -5325,7 +5325,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+        "url": "https://www.youtube.com/results?search_query=Avane%20Srimannarayana%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5334,7 +5334,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+      "url": "https://www.youtube.com/results?search_query=Avane%20Srimannarayana%202019%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5393,7 +5393,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Love%20Mocktail",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -5402,7 +5402,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Love%20Mocktail",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -5461,7 +5461,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Rathnan%20Prapancha",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -5470,7 +5470,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Rathnan%20Prapancha",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -5530,7 +5530,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Gandhadagudi",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -5539,7 +5539,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Gandhadagudi",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -5595,7 +5595,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+        "url": "https://www.youtube.com/results?search_query=Kasturi%20Nivasa%201971%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5604,7 +5604,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+      "url": "https://www.youtube.com/results?search_query=Kasturi%20Nivasa%201971%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5662,7 +5662,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=0h9VqY6N3M2",
+        "url": "https://www.youtube.com/results?search_query=Bangaarada%20Manushya%201972%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5671,7 +5671,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=0h9VqY6N3M2",
+      "url": "https://www.youtube.com/results?search_query=Bangaarada%20Manushya%201972%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5729,7 +5729,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=5rQ8Y6L2W9k",
+        "url": "https://www.youtube.com/results?search_query=Babruvahana%201977%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5738,7 +5738,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=5rQ8Y6L2W9k",
+      "url": "https://www.youtube.com/results?search_query=Babruvahana%201977%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5796,7 +5796,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=eK9bQ2L4M8Y",
+        "url": "https://www.youtube.com/results?search_query=Mayura%201975%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5805,7 +5805,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=eK9bQ2L4M8Y",
+      "url": "https://www.youtube.com/results?search_query=Mayura%201975%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5863,7 +5863,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wX8K9L2M4Y7",
+        "url": "https://www.youtube.com/results?search_query=Naagarahaavu%201972%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5872,7 +5872,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wX8K9L2M4Y7",
+      "url": "https://www.youtube.com/results?search_query=Naagarahaavu%201972%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5928,7 +5928,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=yK8M9L2Y4X3",
+        "url": "https://www.youtube.com/results?search_query=Bhootayyana%20Maga%20Ayyu%201974%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -5937,7 +5937,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=yK8M9L2Y4X3",
+      "url": "https://www.youtube.com/results?search_query=Bhootayyana%20Maga%20Ayyu%201974%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -5995,7 +5995,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=vK9M8L2X4Y1",
+        "url": "https://www.youtube.com/results?search_query=Mungaru%20Male%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6004,7 +6004,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=vK9M8L2X4Y1",
+      "url": "https://www.youtube.com/results?search_query=Mungaru%20Male%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6063,7 +6063,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=xK9M8L2Y4X0",
+        "url": "https://www.youtube.com/results?search_query=Raajakumara%202017%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6072,7 +6072,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=xK9M8L2Y4X0",
+      "url": "https://www.youtube.com/results?search_query=Raajakumara%202017%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6130,7 +6130,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=cK8M9L2Y4X5",
+        "url": "https://www.youtube.com/results?search_query=Tagaru%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6139,7 +6139,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=cK8M9L2Y4X5",
+      "url": "https://www.youtube.com/results?search_query=Tagaru%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6197,7 +6197,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=dK8M9L2Y4X7",
+        "url": "https://www.youtube.com/results?search_query=Daredevil%20Musthafa%202023%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6206,7 +6206,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=dK8M9L2Y4X7",
+      "url": "https://www.youtube.com/results?search_query=Daredevil%20Musthafa%202023%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6332,7 +6332,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sapta%20Saagaradaache%20Ello%20-%20Side%20A",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -6341,7 +6341,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sapta%20Saagaradaache%20Ello%20-%20Side%20A",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -6402,7 +6402,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sapta%20Saagaradaache%20Ello%20-%20Side%20B",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -6411,7 +6411,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sapta%20Saagaradaache%20Ello%20-%20Side%20B",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -6471,7 +6471,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Nayakan%201987%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6480,7 +6480,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Nayakan%201987%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6542,7 +6542,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Anbe%20Sivam%202003%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6551,7 +6551,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Anbe%20Sivam%202003%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6613,7 +6613,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Thalapathi%201991%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6622,7 +6622,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Thalapathi%201991%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6683,7 +6683,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Baashha%201995%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -6692,7 +6692,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Baashha%201995%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -6825,7 +6825,7 @@ module.exports = [
       {
         "name": "Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com",
+        "url": "https://www.hotstar.com/in/search?q=Kaithi",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -6834,7 +6834,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com",
+      "url": "https://www.hotstar.com/in/search?q=Kaithi",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -6899,7 +6899,7 @@ module.exports = [
       {
         "name": "Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com",
+        "url": "https://www.hotstar.com/in/search?q=Vikram",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -6908,7 +6908,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com",
+      "url": "https://www.hotstar.com/in/search?q=Vikram",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -6968,7 +6968,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Asuran",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -6977,7 +6977,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Asuran",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -7043,7 +7043,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Jai%20Bhim",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7052,7 +7052,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Jai%20Bhim",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -7117,7 +7117,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Soorarai%20Pottru",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7126,7 +7126,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Soorarai%20Pottru",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -7185,7 +7185,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=96%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -7194,7 +7194,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=96%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -7252,7 +7252,7 @@ module.exports = [
       {
         "name": "Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com",
+        "url": "https://www.hotstar.com/in/search?q=Vada%20Chennai",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7261,7 +7261,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com",
+      "url": "https://www.hotstar.com/in/search?q=Vada%20Chennai",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -7322,7 +7322,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Jigarthanda%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -7331,7 +7331,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Jigarthanda%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -7402,7 +7402,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81079361",
+      "url": "https://www.netflix.com/search?q=Super%20Deluxe",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -7458,7 +7458,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Pariyerum%20Perumal%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -7467,7 +7467,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Pariyerum%20Perumal%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -7527,7 +7527,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Karnan",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -7536,7 +7536,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Karnan",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -7599,7 +7599,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Ratsasan%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -7608,7 +7608,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Ratsasan%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -7668,7 +7668,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+        "url": "https://www.youtube.com/results?search_query=Thani%20Oruvan%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -7677,7 +7677,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+      "url": "https://www.youtube.com/results?search_query=Thani%20Oruvan%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -7739,7 +7739,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+        "url": "https://www.youtube.com/results?search_query=Roja%201992%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -7748,7 +7748,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+      "url": "https://www.youtube.com/results?search_query=Roja%201992%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -7809,7 +7809,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=0h9VqY6N3M2",
+        "url": "https://www.youtube.com/results?search_query=Bombay%201995%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -7818,7 +7818,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=0h9VqY6N3M2",
+      "url": "https://www.youtube.com/results?search_query=Bombay%201995%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -7892,7 +7892,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81775791",
+      "url": "https://www.netflix.com/search?q=Maharaja",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -7964,7 +7964,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81775792",
+      "url": "https://www.netflix.com/search?q=Meiyazhagan",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8036,7 +8036,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81775793",
+      "url": "https://www.netflix.com/search?q=Amaran",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8114,7 +8114,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80203920",
+      "url": "https://www.netflix.com/search?q=Baahubali%3A%20The%20Beginning",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8191,7 +8191,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/80203921",
+      "url": "https://www.netflix.com/search?q=Baahubali%202%3A%20The%20Conclusion",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8268,7 +8268,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81476453",
+      "url": "https://www.netflix.com/search?q=RRR",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8331,7 +8331,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Mayabazar%201957%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -8340,7 +8340,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Mayabazar%201957%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -8399,7 +8399,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Sankarabharanam%201980%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -8408,7 +8408,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Sankarabharanam%201980%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -8467,7 +8467,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Sagara%20Sangamam%201983%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -8476,7 +8476,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Sagara%20Sangamam%201983%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -8537,7 +8537,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Siva%201989%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -8546,7 +8546,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Siva%201989%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -8607,7 +8607,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Jersey%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -8616,7 +8616,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Jersey%202019%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -8684,7 +8684,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81044544",
+      "url": "https://www.netflix.com/search?q=C%2Fo%20Kancharapalem",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8745,7 +8745,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Mahanati",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -8754,7 +8754,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Mahanati",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8814,7 +8814,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Rangasthalam",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -8823,7 +8823,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Rangasthalam",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -8884,7 +8884,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Agent%20Sai%20Srinivasa%20Athreya%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -8893,7 +8893,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Agent%20Sai%20Srinivasa%20Athreya%202019%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -8954,7 +8954,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Brochevarevarura",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -8963,7 +8963,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Brochevarevarura",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9032,7 +9032,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81243160",
+      "url": "https://www.netflix.com/search?q=Mathu%20Vadalara",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9099,7 +9099,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sita%20Ramam",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9108,7 +9108,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0S3C2K3G9T1V",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sita%20Ramam",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9185,7 +9185,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/81729792",
+      "url": "https://www.netflix.com/search?q=Hi%20Nanna",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9249,7 +9249,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Eega%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -9258,7 +9258,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Eega%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -9319,7 +9319,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Pokiri%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -9328,7 +9328,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Pokiri%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -9389,7 +9389,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+        "url": "https://www.youtube.com/results?search_query=Bommarillu%202006%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -9398,7 +9398,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=mD9K8L2Y4X1",
+      "url": "https://www.youtube.com/results?search_query=Bommarillu%202006%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -9458,7 +9458,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+        "url": "https://www.youtube.com/results?search_query=Manam%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -9467,7 +9467,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=aA7bL9K3Y2X",
+      "url": "https://www.youtube.com/results?search_query=Manam%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -9530,7 +9530,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=gT5_y8W_QkM",
+        "url": "https://www.youtube.com/results?search_query=Manichitrathazhu%201993%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -9539,7 +9539,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=gT5_y8W_QkM",
+      "url": "https://www.youtube.com/results?search_query=Manichitrathazhu%201993%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -9603,7 +9603,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/0N9B489X6G94ECLZ89T9K2Q9Z",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kumbalangi%20Nights",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9612,7 +9612,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/0N9B489X6G94ECLZ89T9K2Q9Z",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kumbalangi%20Nights",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9675,7 +9675,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/drishyam",
+        "url": "https://www.hotstar.com/in/search?q=Drishyam",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9684,7 +9684,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/drishyam",
+      "url": "https://www.hotstar.com/in/search?q=Drishyam",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9746,7 +9746,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/premam",
+        "url": "https://www.hotstar.com/in/search?q=Premam",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9755,7 +9755,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/premam",
+      "url": "https://www.hotstar.com/in/search?q=Premam",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9819,7 +9819,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/bangalore-days",
+        "url": "https://www.hotstar.com/in/search?q=Bangalore%20Days",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9828,7 +9828,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/bangalore-days",
+      "url": "https://www.hotstar.com/in/search?q=Bangalore%20Days",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -9889,7 +9889,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=9jP4m8K3L1A",
+        "url": "https://www.youtube.com/results?search_query=Maheshinte%20Prathikaaram%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -9898,7 +9898,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=9jP4m8K3L1A",
+      "url": "https://www.youtube.com/results?search_query=Maheshinte%20Prathikaaram%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -9963,7 +9963,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/manjummel-boys",
+        "url": "https://www.hotstar.com/in/search?q=Manjummel%20Boys",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -9972,7 +9972,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/manjummel-boys",
+      "url": "https://www.hotstar.com/in/search?q=Manjummel%20Boys",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -10034,7 +10034,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/aavesham",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Aavesham",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10043,7 +10043,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/aavesham",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Aavesham",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -10176,7 +10176,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/premalu",
+        "url": "https://www.hotstar.com/in/search?q=Premalu",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10185,7 +10185,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/premalu",
+      "url": "https://www.hotstar.com/in/search?q=Premalu",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -10249,7 +10249,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-goat-life",
+        "url": "https://www.netflix.com/search?q=The%20Goat%20Life",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10258,7 +10258,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-goat-life",
+      "url": "https://www.netflix.com/search?q=The%20Goat%20Life",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -10318,7 +10318,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=8mK2n9P5L1Y",
+        "url": "https://www.youtube.com/results?search_query=Sudani%20from%20Nigeria%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10327,7 +10327,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=8mK2n9P5L1Y",
+      "url": "https://www.youtube.com/results?search_query=Sudani%20from%20Nigeria%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -10387,7 +10387,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=6vN9K2L4P1W",
+        "url": "https://www.youtube.com/results?search_query=Android%20Kunjappan%20Version%205.25%202019%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10396,7 +10396,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=6vN9K2L4P1W",
+      "url": "https://www.youtube.com/results?search_query=Android%20Kunjappan%20Version%205.25%202019%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -10458,7 +10458,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/lucifer",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Lucifer",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10467,7 +10467,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/lucifer",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Lucifer",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -10531,7 +10531,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/minnal-murali",
+        "url": "https://www.netflix.com/search?q=Minnal%20Murali",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -10540,7 +10540,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/minnal-murali",
+      "url": "https://www.netflix.com/search?q=Minnal%20Murali",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -10598,7 +10598,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=3nB8M9L2P5Q",
+        "url": "https://www.youtube.com/results?search_query=Sandesham%201991%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10607,7 +10607,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=3nB8M9L2P5Q",
+      "url": "https://www.youtube.com/results?search_query=Sandesham%201991%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -10666,7 +10666,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=7kM8P2L5N4B",
+        "url": "https://www.youtube.com/results?search_query=Kilukkam%201991%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10675,7 +10675,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=7kM8P2L5N4B",
+      "url": "https://www.youtube.com/results?search_query=Kilukkam%201991%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -10732,7 +10732,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=2nL9P8M4K3V",
+        "url": "https://www.youtube.com/results?search_query=Nadodikkattu%201987%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10741,7 +10741,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=2nL9P8M4K3V",
+      "url": "https://www.youtube.com/results?search_query=Nadodikkattu%201987%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -10802,7 +10802,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Spadikam%201995%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10811,7 +10811,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Spadikam%201995%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -10874,7 +10874,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=5nK9M2L7P4B",
+        "url": "https://www.youtube.com/results?search_query=Godfather%201991%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10883,7 +10883,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=5nK9M2L7P4B",
+      "url": "https://www.youtube.com/results?search_query=Godfather%201991%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -10942,7 +10942,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=8wK9L2P5N4M",
+        "url": "https://www.youtube.com/results?search_query=Chithram%201988%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -10951,7 +10951,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=8wK9L2P5N4M",
+      "url": "https://www.youtube.com/results?search_query=Chithram%201988%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11011,7 +11011,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=9vK2L8P5M3N",
+        "url": "https://www.youtube.com/results?search_query=Oru%20Vadakkan%20Veeragatha%201989%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11020,7 +11020,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=9vK2L8P5M3N",
+      "url": "https://www.youtube.com/results?search_query=Oru%20Vadakkan%20Veeragatha%201989%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11078,7 +11078,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=1nL9P8M4K3V",
+        "url": "https://www.youtube.com/results?search_query=Devasuram%201993%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11087,7 +11087,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=1nL9P8M4K3V",
+      "url": "https://www.youtube.com/results?search_query=Devasuram%201993%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11149,7 +11149,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/joji",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Joji",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -11158,7 +11158,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/joji",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Joji",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -11221,7 +11221,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/virus",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Virus",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -11230,7 +11230,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/virus",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Virus",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -11291,7 +11291,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/thondimuthal",
+        "url": "https://www.hotstar.com/in/search?q=Thondimuthalum%20Driksakshiyum",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -11300,7 +11300,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/thondimuthal",
+      "url": "https://www.hotstar.com/in/search?q=Thondimuthalum%20Driksakshiyum",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -11362,7 +11362,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/ustad-hotel",
+        "url": "https://www.hotstar.com/in/search?q=Ustad%20Hotel",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -11371,7 +11371,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/ustad-hotel",
+      "url": "https://www.hotstar.com/in/search?q=Ustad%20Hotel",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -11433,7 +11433,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=3nB8M9L2P5Q",
+        "url": "https://www.youtube.com/results?search_query=Charlie%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11442,7 +11442,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=3nB8M9L2P5Q",
+      "url": "https://www.youtube.com/results?search_query=Charlie%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11500,7 +11500,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=7kM8P2L5N4B",
+        "url": "https://www.youtube.com/results?search_query=Kireedam%201989%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11509,7 +11509,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=7kM8P2L5N4B",
+      "url": "https://www.youtube.com/results?search_query=Kireedam%201989%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11568,7 +11568,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=2nL9P8M4K3V",
+        "url": "https://www.youtube.com/results?search_query=In%20Harihar%20Nagar%201990%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11577,7 +11577,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=2nL9P8M4K3V",
+      "url": "https://www.youtube.com/results?search_query=In%20Harihar%20Nagar%201990%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11635,7 +11635,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Yavanika%201982%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11644,7 +11644,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Yavanika%201982%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11703,7 +11703,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=5nK9M2L7P4B",
+        "url": "https://www.youtube.com/results?search_query=Mathilukal%201990%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11712,7 +11712,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=5nK9M2L7P4B",
+      "url": "https://www.youtube.com/results?search_query=Mathilukal%201990%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11772,7 +11772,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=8wK9L2P5N4M",
+        "url": "https://www.youtube.com/results?search_query=Kaazhcha%202004%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11781,7 +11781,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=8wK9L2P5N4M",
+      "url": "https://www.youtube.com/results?search_query=Kaazhcha%202004%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11842,7 +11842,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=9vK2L8P5M3N",
+        "url": "https://www.youtube.com/results?search_query=Traffic%202011%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11851,7 +11851,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=9vK2L8P5M3N",
+      "url": "https://www.youtube.com/results?search_query=Traffic%202011%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11911,7 +11911,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=1nL9P8M4K3V",
+        "url": "https://www.youtube.com/results?search_query=Guru%201997%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11920,7 +11920,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=1nL9P8M4K3V",
+      "url": "https://www.youtube.com/results?search_query=Guru%201997%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -11978,7 +11978,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=6vN9K2L4P1W",
+        "url": "https://www.youtube.com/results?search_query=Meesha%20Madhavan%202002%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -11987,7 +11987,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=6vN9K2L4P1W",
+      "url": "https://www.youtube.com/results?search_query=Meesha%20Madhavan%202002%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12047,7 +12047,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=2nL9P8M4K3V",
+        "url": "https://www.youtube.com/results?search_query=C.I.D.%20Moosa%202003%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12056,7 +12056,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=2nL9P8M4K3V",
+      "url": "https://www.youtube.com/results?search_query=C.I.D.%20Moosa%202003%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12117,7 +12117,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/ayyappanum-koshiyum",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Ayyappanum%20Koshiyum",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -12126,7 +12126,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/ayyappanum-koshiyum",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Ayyappanum%20Koshiyum",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -12184,7 +12184,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Chotta%20Mumbai%202007%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12193,7 +12193,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Chotta%20Mumbai%202007%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12251,7 +12251,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=7kM8P2L5N4B",
+        "url": "https://www.youtube.com/results?search_query=Thanmathra%202005%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12260,7 +12260,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=7kM8P2L5N4B",
+      "url": "https://www.youtube.com/results?search_query=Thanmathra%202005%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12320,7 +12320,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Pather%20Panchali%201955%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12329,7 +12329,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Pather%20Panchali%201955%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12387,7 +12387,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Aparajito%201956%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12396,7 +12396,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Aparajito%201956%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12455,7 +12455,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Apur%20Sansar%201959%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12464,7 +12464,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Apur%20Sansar%201959%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12522,7 +12522,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Charulata%201964%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12531,7 +12531,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Charulata%201964%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12589,7 +12589,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Mahanagar%201963%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12598,7 +12598,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Mahanagar%201963%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12658,7 +12658,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Jalsaghar%201958%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12667,7 +12667,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Jalsaghar%201958%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12725,7 +12725,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Nayak%201966%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12734,7 +12734,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Nayak%201966%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12795,7 +12795,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Goopy%20Gyne%20Bagha%20Byne%201969%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12804,7 +12804,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Goopy%20Gyne%20Bagha%20Byne%201969%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12866,7 +12866,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Hirak%20Rajar%20Deshe%201980%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12875,7 +12875,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Hirak%20Rajar%20Deshe%201980%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -12937,7 +12937,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Sonar%20Kella%201974%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -12946,7 +12946,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Sonar%20Kella%201974%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13006,7 +13006,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Joi%20Baba%20Felunath%201979%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13015,7 +13015,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Joi%20Baba%20Felunath%201979%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13073,7 +13073,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Meghe%20Dhaka%20Tara%201960%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13082,7 +13082,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Meghe%20Dhaka%20Tara%201960%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13137,7 +13137,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Subarnarekha%201965%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13146,7 +13146,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Subarnarekha%201965%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13207,7 +13207,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/baishe-srabon",
+        "url": "https://www.hotstar.com/in/search?q=Baishe%20Srabon",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -13216,7 +13216,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/baishe-srabon",
+      "url": "https://www.hotstar.com/in/search?q=Baishe%20Srabon",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -13277,7 +13277,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/belaseshe",
+        "url": "https://www.jiocinema.com/search/Belaseshe",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -13286,7 +13286,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/belaseshe",
+      "url": "https://www.jiocinema.com/search/Belaseshe",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -13342,7 +13342,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Praktan%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13351,7 +13351,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Praktan%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13408,7 +13408,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/chotushkone",
+        "url": "https://www.hotstar.com/in/search?q=Chotushkone",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -13417,7 +13417,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/chotushkone",
+      "url": "https://www.hotstar.com/in/search?q=Chotushkone",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -13477,7 +13477,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Bhooter%20Bhabishyat%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13486,7 +13486,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Bhooter%20Bhabishyat%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13544,7 +13544,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Jaatishwar%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13553,7 +13553,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Jaatishwar%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13678,7 +13678,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Kony%201984%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13687,7 +13687,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Kony%201984%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13746,7 +13746,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Sharey%20Chuattar%201953%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13755,7 +13755,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Sharey%20Chuattar%201953%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13810,7 +13810,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Bhooter%20Raja%20Dilo%20Bor%201969%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13819,7 +13819,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Bhooter%20Raja%20Dilo%20Bor%201969%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13876,7 +13876,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Harano%20Sur%201957%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13885,7 +13885,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Harano%20Sur%201957%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -13943,7 +13943,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Saptapadi%201961%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -13952,7 +13952,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Saptapadi%201961%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14010,7 +14010,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Besh%20Korechi%20Prem%20Korechi%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14019,7 +14019,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Besh%20Korechi%20Prem%20Korechi%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14076,7 +14076,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Chhadmabeshi%201971%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14085,7 +14085,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Chhadmabeshi%201971%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14141,7 +14141,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Bhooter%20Raja%20Dilo%20Bor%202%201991%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14150,7 +14150,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Bhooter%20Raja%20Dilo%20Bor%202%201991%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14207,7 +14207,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Goynar%20Baksho%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14216,7 +14216,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Goynar%20Baksho%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14341,7 +14341,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Elar%20Char%20Adhyay%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14350,7 +14350,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Elar%20Char%20Adhyay%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14407,7 +14407,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Antaheen%202009%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14416,7 +14416,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Antaheen%202009%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14473,7 +14473,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Abohoman%202010%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14482,7 +14482,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Abohoman%202010%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14541,7 +14541,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Hemlock%20Society%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14550,7 +14550,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Hemlock%20Society%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14606,7 +14606,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/autograph",
+        "url": "https://www.hotstar.com/in/search?q=Autograph",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -14615,7 +14615,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/autograph",
+      "url": "https://www.hotstar.com/in/search?q=Autograph",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -14745,7 +14745,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Natrang%202010%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14754,7 +14754,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Natrang%202010%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14816,7 +14816,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Court%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14825,7 +14825,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Court%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -14954,7 +14954,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Harishchandrachi%20Factory%202009%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -14963,7 +14963,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Harishchandrachi%20Factory%202009%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15024,7 +15024,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Shwaas%202004%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15033,7 +15033,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Shwaas%202004%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15229,7 +15229,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Fandry%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15238,7 +15238,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Fandry%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15366,7 +15366,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Elizabeth%20Ekadashi%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15375,7 +15375,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Elizabeth%20Ekadashi%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15434,7 +15434,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Dombivali%20Fast%202005%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15443,7 +15443,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Dombivali%20Fast%202005%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15501,7 +15501,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Ashi%20Hi%20Banwa%20Banwi%201988%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15510,7 +15510,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Ashi%20Hi%20Banwa%20Banwi%201988%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15571,7 +15571,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/baipan-bhaari-deva",
+        "url": "https://www.jiocinema.com/search/Baipan%20Bhaari%20Deva",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -15580,7 +15580,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/baipan-bhaari-deva",
+      "url": "https://www.jiocinema.com/search/Baipan%20Bhaari%20Deva",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -15640,7 +15640,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/jhimma",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Jhimma",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -15649,7 +15649,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/jhimma",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Jhimma",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -15708,7 +15708,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/ved",
+        "url": "https://www.hotstar.com/in/search?q=Ved",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -15717,7 +15717,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/ved",
+      "url": "https://www.hotstar.com/in/search?q=Ved",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -15841,7 +15841,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Duniyadari%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15850,7 +15850,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Duniyadari%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15908,7 +15908,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Balgandharva%202011%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15917,7 +15917,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Balgandharva%202011%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -15974,7 +15974,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Pachhadlela%202004%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -15983,7 +15983,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Pachhadlela%202004%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16109,7 +16109,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/muramba",
+        "url": "https://www.netflix.com/search?q=Muramba",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -16118,7 +16118,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/muramba",
+      "url": "https://www.netflix.com/search?q=Muramba",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -16176,7 +16176,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Deool%202011%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16185,7 +16185,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Deool%202011%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16242,7 +16242,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Valu%202008%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16251,7 +16251,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Valu%202008%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16308,7 +16308,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/ghanekar",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Aani...%20Dr.%20Kashinath%20Ghanekar",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -16317,7 +16317,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/ghanekar",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Aani...%20Dr.%20Kashinath%20Ghanekar",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -16378,7 +16378,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Carry%20On%20Jatta%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16387,7 +16387,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Carry%20On%20Jatta%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16445,7 +16445,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Carry%20On%20Jatta%202%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16454,7 +16454,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Carry%20On%20Jatta%202%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16512,7 +16512,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/carry-on-jatta-3",
+        "url": "https://www.hotstar.com/in/search?q=Carry%20On%20Jatta%203",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -16521,7 +16521,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/carry-on-jatta-3",
+      "url": "https://www.hotstar.com/in/search?q=Carry%20On%20Jatta%203",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -16581,7 +16581,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Jatt%20%26%20Juliet%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16590,7 +16590,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Jatt%20%26%20Juliet%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16647,7 +16647,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Jatt%20%26%20Juliet%202%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16656,7 +16656,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Jatt%20%26%20Juliet%202%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16716,7 +16716,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Punjab%201984%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16725,7 +16725,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Punjab%201984%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16853,7 +16853,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Angrej%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16862,7 +16862,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Angrej%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16923,7 +16923,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Ardaas%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16932,7 +16932,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Ardaas%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -16990,7 +16990,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Rabb%20Da%20Radio%202017%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -16999,7 +16999,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Rabb%20Da%20Radio%202017%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17060,7 +17060,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/chal-mera-putt",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chal%20Mera%20Putt",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17069,7 +17069,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/chal-mera-putt",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chal%20Mera%20Putt",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -17126,7 +17126,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Nikka%20Zaildar%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17135,7 +17135,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Nikka%20Zaildar%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17193,7 +17193,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Bambukat%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17202,7 +17202,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Bambukat%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17260,7 +17260,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/sufna",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sufna",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17269,7 +17269,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/sufna",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sufna",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -17393,7 +17393,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Warning%202021%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17402,7 +17402,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Warning%202021%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17459,7 +17459,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Mar%20Gaye%20Oye%20Loko%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17468,7 +17468,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Mar%20Gaye%20Oye%20Loko%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17529,7 +17529,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/honsla-rakh",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Honsla%20Rakh",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17538,7 +17538,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/honsla-rakh",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Honsla%20Rakh",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -17595,7 +17595,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Gaddar%3A%20The%20First%20Patriotic%20Movie%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17604,7 +17604,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Gaddar%3A%20The%20First%20Patriotic%20Movie%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17662,7 +17662,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Dakuaan%20Da%20Munda%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17671,7 +17671,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Dakuaan%20Da%20Munda%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17731,7 +17731,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/hellaro",
+        "url": "https://www.jiocinema.com/search/Hellaro",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17740,7 +17740,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/hellaro",
+      "url": "https://www.jiocinema.com/search/Hellaro",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -17801,7 +17801,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Chello%20Divas%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17810,7 +17810,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Chello%20Divas%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -17873,7 +17873,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/chaal-jeevi-laiye",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chaal%20Jeevi%20Laiye!",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -17882,7 +17882,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/chaal-jeevi-laiye",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chaal%20Jeevi%20Laiye!",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -17940,7 +17940,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Wrong%20Side%20Raju%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -17949,7 +17949,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Wrong%20Side%20Raju%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18008,7 +18008,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Bey%20Yaar%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18017,7 +18017,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Bey%20Yaar%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18075,7 +18075,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Kevi%20Rite%20Jaish%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18084,7 +18084,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Kevi%20Rite%20Jaish%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18145,7 +18145,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Reva%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18154,7 +18154,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Reva%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18280,7 +18280,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/3-ekka",
+        "url": "https://www.jiocinema.com/search/3%20Ekka",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -18289,7 +18289,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/3-ekka",
+      "url": "https://www.jiocinema.com/search/3%20Ekka",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -18347,7 +18347,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Golkeri%202020%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18356,7 +18356,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Golkeri%202020%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18414,7 +18414,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Gujjubhai%20the%20Great%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18423,7 +18423,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Gujjubhai%20the%20Great%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18483,7 +18483,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/kasoombo",
+        "url": "https://www.jiocinema.com/search/Kasoombo",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -18492,7 +18492,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/kasoombo",
+      "url": "https://www.jiocinema.com/search/Kasoombo",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -18550,7 +18550,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/daman",
+        "url": "https://www.jiocinema.com/search/DAMaN",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -18559,7 +18559,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/daman",
+      "url": "https://www.jiocinema.com/search/DAMaN",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -18617,7 +18617,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Sala%20Budha%202013%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18626,7 +18626,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Sala%20Budha%202013%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18685,7 +18685,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Maya%20Miriga%201984%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18694,7 +18694,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Maya%20Miriga%201984%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18751,7 +18751,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Shesha%20Shrabana%201976%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18760,7 +18760,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Shesha%20Shrabana%201976%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18815,7 +18815,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Sita%20Bibaha%201936%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18824,7 +18824,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Sita%20Bibaha%201936%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18879,7 +18879,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Hello%20Arsi%202017%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18888,7 +18888,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Hello%20Arsi%202017%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -18948,7 +18948,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Pratikshya%202022%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -18957,7 +18957,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Pratikshya%202022%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19015,7 +19015,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Dhauli%20Express%202007%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19024,7 +19024,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Dhauli%20Express%202007%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19084,7 +19084,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Village%20Rockstars%202017%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19093,7 +19093,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Village%20Rockstars%202017%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19151,7 +19151,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Bulbul%20Can%20Sing%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19160,7 +19160,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Bulbul%20Can%20Sing%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19219,7 +19219,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Halodhia%20Choraye%20Baodhan%20Khai%201987%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19228,7 +19228,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Halodhia%20Choraye%20Baodhan%20Khai%201987%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19354,7 +19354,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/dr-bezbarua-2",
+        "url": "https://www.jiocinema.com/search/Dr.%20Bezbarua%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -19363,7 +19363,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/dr-bezbarua-2",
+      "url": "https://www.jiocinema.com/search/Dr.%20Bezbarua%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -19419,7 +19419,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Joymoti%201935%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19428,7 +19428,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Joymoti%201935%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19486,7 +19486,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Kothanodi%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19495,7 +19495,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Kothanodi%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19551,7 +19551,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Anuradha%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19560,7 +19560,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Anuradha%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19623,7 +19623,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Umrao%20Jaan%201981%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19632,7 +19632,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Umrao%20Jaan%201981%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19693,7 +19693,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Mirza%20Ghalib%201954%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19702,7 +19702,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Mirza%20Ghalib%201954%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19763,7 +19763,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Garm%20Hava%201974%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19772,7 +19772,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Garm%20Hava%201974%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19830,7 +19830,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Bazaar%201982%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19839,7 +19839,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Bazaar%201982%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19901,7 +19901,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Shatranj%20Ke%20Khilari%201977%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -19910,7 +19910,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Shatranj%20Ke%20Khilari%201977%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -19971,7 +19971,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/manto",
+        "url": "https://www.netflix.com/search?q=Manto",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -19980,7 +19980,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/manto",
+      "url": "https://www.netflix.com/search?q=Manto",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -20041,7 +20041,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Junoon%201978%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20050,7 +20050,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Junoon%201978%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20109,7 +20109,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Nachom-ia%20Kumpasar%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20118,7 +20118,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Nachom-ia%20Kumpasar%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20178,7 +20178,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=O%20Maria%202010%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20187,7 +20187,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=O%20Maria%202010%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20243,7 +20243,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Nirmon%201966%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20252,7 +20252,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Nirmon%201966%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20308,7 +20308,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Amchem%20Noxib%201963%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20317,7 +20317,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Amchem%20Noxib%201963%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20377,7 +20377,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Adi%20Shankaracharya%201983%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20386,7 +20386,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Adi%20Shankaracharya%201983%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20444,7 +20444,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Bhagavad%20Gita%201993%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20453,7 +20453,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Bhagavad%20Gita%201993%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20512,7 +20512,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Priyamanasam%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20521,7 +20521,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Priyamanasam%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20581,7 +20581,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/punyakoti",
+        "url": "https://www.netflix.com/search?q=Punyakoti",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -20590,7 +20590,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/punyakoti",
+      "url": "https://www.netflix.com/search?q=Punyakoti",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -20650,7 +20650,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Ganga%20Maiya%20Tohe%20Piyari%20Chadhaibo%201963%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20659,7 +20659,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Ganga%20Maiya%20Tohe%20Piyari%20Chadhaibo%201963%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20717,7 +20717,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Sasura%20Bada%20Paisawala%202004%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20726,7 +20726,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Sasura%20Bada%20Paisawala%202004%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20783,7 +20783,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Nirahua%20Hindustani%202014%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20792,7 +20792,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Nirahua%20Hindustani%202014%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20852,7 +20852,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Deswa%202011%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20861,7 +20861,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Deswa%202011%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20918,7 +20918,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Balam%20Ji%20Love%20You%202018%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20927,7 +20927,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Balam%20Ji%20Love%20You%202018%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -20986,7 +20986,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Ishanou%201990%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -20995,7 +20995,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Ishanou%201990%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21052,7 +21052,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Matamgi%20Manipur%201972%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21061,7 +21061,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Matamgi%20Manipur%201972%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21119,7 +21119,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Loktak%20Lairembee%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21128,7 +21128,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Loktak%20Lairembee%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21187,7 +21187,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Imagi%20Ningthem%201981%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21196,7 +21196,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Imagi%20Ningthem%201981%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21253,7 +21253,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Habba%20Khatoon%201970%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21262,7 +21262,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Habba%20Khatoon%201970%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21319,7 +21319,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=Mainz%20Raat%201964%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21328,7 +21328,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=Mainz%20Raat%201964%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21384,7 +21384,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Bed%20No.%2026%201976%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21393,7 +21393,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Bed%20No.%2026%201976%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21452,7 +21452,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=In%20the%20Shadow%20of%20Chinar%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21461,7 +21461,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=In%20the%20Shadow%20of%20Chinar%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21519,7 +21519,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Kalo%20Pothi%3A%20The%20Black%20Hen%202015%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21528,7 +21528,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Kalo%20Pothi%3A%20The%20Black%20Hen%202015%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21586,7 +21586,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=White%20Sun%202016%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21595,7 +21595,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=White%20Sun%202016%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21653,7 +21653,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Loot%202012%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21662,7 +21662,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Loot%202012%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21719,7 +21719,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Darpan%20Chhaya%202001%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21728,7 +21728,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Darpan%20Chhaya%202001%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21785,7 +21785,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Maitighar%201966%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21794,7 +21794,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Maitighar%201966%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21852,7 +21852,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=iHlBMKcg8nU",
+        "url": "https://www.youtube.com/results?search_query=The%20General%201926%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21861,7 +21861,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=iHlBMKcg8nU",
+      "url": "https://www.youtube.com/results?search_query=The%20General%201926%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21919,7 +21919,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=BM0I0jC38fE",
+        "url": "https://www.youtube.com/results?search_query=The%20Kid%201921%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21928,7 +21928,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=BM0I0jC38fE",
+      "url": "https://www.youtube.com/results?search_query=The%20Kid%201921%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -21986,7 +21986,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=HAPilyrEzC4",
+        "url": "https://www.youtube.com/results?search_query=Modern%20Times%201936%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -21995,7 +21995,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=HAPilyrEzC4",
+      "url": "https://www.youtube.com/results?search_query=Modern%20Times%201936%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22056,7 +22056,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Charade%201963%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22065,7 +22065,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Charade%201963%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22121,7 +22121,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=Night%20of%20the%20Living%20Dead%201968%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22130,7 +22130,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=Night%20of%20the%20Living%20Dead%201968%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22188,7 +22188,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=His%20Girl%20Friday%201940%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22197,7 +22197,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=His%20Girl%20Friday%201940%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22255,7 +22255,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=The%2039%20Steps%201935%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22264,7 +22264,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=The%2039%20Steps%201935%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22320,7 +22320,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=Carnival%20of%20Souls%201962%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22329,7 +22329,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=Carnival%20of%20Souls%201962%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22386,7 +22386,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=D.O.A.%201949%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22395,7 +22395,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=D.O.A.%201949%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22453,7 +22453,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+        "url": "https://www.youtube.com/results?search_query=It's%20a%20Wonderful%20Life%201946%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22462,7 +22462,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kR2bQjW5pLg",
+      "url": "https://www.youtube.com/results?search_query=It's%20a%20Wonderful%20Life%201946%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22518,7 +22518,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+        "url": "https://www.youtube.com/results?search_query=Brief%20Encounter%201945%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22527,7 +22527,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=4yW8K9D2L1M",
+      "url": "https://www.youtube.com/results?search_query=Brief%20Encounter%201945%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22584,7 +22584,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+        "url": "https://www.youtube.com/results?search_query=Gulliver's%20Travels%201939%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22593,7 +22593,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=jW2mP_9qL2A",
+      "url": "https://www.youtube.com/results?search_query=Gulliver's%20Travels%201939%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22649,7 +22649,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+        "url": "https://www.youtube.com/results?search_query=The%20Philadelphia%20Story%201940%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22658,7 +22658,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=qX3mL7Y9P4A",
+      "url": "https://www.youtube.com/results?search_query=The%20Philadelphia%20Story%201940%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22714,7 +22714,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+        "url": "https://www.youtube.com/results?search_query=Pride%20and%20Prejudice%201940%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22723,7 +22723,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=bL8M9K4D2Y1",
+      "url": "https://www.youtube.com/results?search_query=Pride%20and%20Prejudice%201940%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22780,7 +22780,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+        "url": "https://www.youtube.com/results?search_query=Make%20Way%20for%20Tomorrow%201937%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22789,7 +22789,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=wXWc0KxW3YQ",
+      "url": "https://www.youtube.com/results?search_query=Make%20Way%20for%20Tomorrow%201937%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22848,7 +22848,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+        "url": "https://www.youtube.com/results?search_query=The%20Red%20Balloon%201956%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22857,7 +22857,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=d_kS_jXGqY8",
+      "url": "https://www.youtube.com/results?search_query=The%20Red%20Balloon%201956%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22913,7 +22913,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Alice%20in%20Wonderland%201903%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -22922,7 +22922,7 @@ module.exports = [
       "type": "PUBLIC DOMAIN",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Alice%20in%20Wonderland%201903%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -22984,7 +22984,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/interstellar",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Interstellar",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -22993,7 +22993,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/interstellar",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Interstellar",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23052,7 +23052,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/good-will-hunting",
+        "url": "https://www.netflix.com/search?q=Good%20Will%20Hunting",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23061,7 +23061,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/good-will-hunting",
+      "url": "https://www.netflix.com/search?q=Good%20Will%20Hunting",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23122,7 +23122,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/la-la-land",
+        "url": "https://www.netflix.com/search?q=La%20La%20Land",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23131,7 +23131,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/la-la-land",
+      "url": "https://www.netflix.com/search?q=La%20La%20Land",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23191,7 +23191,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-prestige",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Prestige",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23200,7 +23200,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-prestige",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Prestige",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23261,7 +23261,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/grand-budapest",
+        "url": "https://www.hotstar.com/in/search?q=The%20Grand%20Budapest%20Hotel",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23270,7 +23270,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/grand-budapest",
+      "url": "https://www.hotstar.com/in/search?q=The%20Grand%20Budapest%20Hotel",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23330,7 +23330,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/shutter-island",
+        "url": "https://www.netflix.com/search?q=Shutter%20Island",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23339,7 +23339,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/shutter-island",
+      "url": "https://www.netflix.com/search?q=Shutter%20Island",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23400,7 +23400,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/knives-out",
+        "url": "https://www.netflix.com/search?q=Knives%20Out",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23409,7 +23409,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/knives-out",
+      "url": "https://www.netflix.com/search?q=Knives%20Out",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23469,7 +23469,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/glass-onion",
+        "url": "https://www.netflix.com/search?q=Glass%20Onion",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23478,7 +23478,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/glass-onion",
+      "url": "https://www.netflix.com/search?q=Glass%20Onion",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23540,7 +23540,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/dune-part-two",
+        "url": "https://www.jiocinema.com/search/Dune%3A%20Part%20Two",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23549,7 +23549,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/dune-part-two",
+      "url": "https://www.jiocinema.com/search/Dune%3A%20Part%20Two",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23610,7 +23610,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/spirited-away",
+        "url": "https://www.netflix.com/search?q=Spirited%20Away",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23619,7 +23619,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/spirited-away",
+      "url": "https://www.netflix.com/search?q=Spirited%20Away",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23679,7 +23679,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/totoro",
+        "url": "https://www.netflix.com/search?q=My%20Neighbor%20Totoro",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23688,7 +23688,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/totoro",
+      "url": "https://www.netflix.com/search?q=My%20Neighbor%20Totoro",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23747,7 +23747,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/a-silent-voice",
+        "url": "https://www.netflix.com/search?q=A%20Silent%20Voice",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23756,7 +23756,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/a-silent-voice",
+      "url": "https://www.netflix.com/search?q=A%20Silent%20Voice",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23817,7 +23817,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/paddington-2",
+        "url": "https://www.netflix.com/search?q=Paddington%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23826,7 +23826,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/paddington-2",
+      "url": "https://www.netflix.com/search?q=Paddington%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23887,7 +23887,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/inside-out-2",
+        "url": "https://www.hotstar.com/in/search?q=Inside%20Out%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23896,7 +23896,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/inside-out-2",
+      "url": "https://www.hotstar.com/in/search?q=Inside%20Out%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -23956,7 +23956,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/pursuit-of-happyness",
+        "url": "https://www.netflix.com/search?q=The%20Pursuit%20of%20Happyness",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -23965,7 +23965,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/pursuit-of-happyness",
+      "url": "https://www.netflix.com/search?q=The%20Pursuit%20of%20Happyness",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24022,7 +24022,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/room",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Room",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24031,7 +24031,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/room",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Room",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24088,7 +24088,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/moonlight",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Moonlight",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24097,7 +24097,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/moonlight",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Moonlight",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24153,7 +24153,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/10-things",
+        "url": "https://www.hotstar.com/in/search?q=10%20Things%20I%20Hate%20About%20You",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24162,7 +24162,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/10-things",
+      "url": "https://www.hotstar.com/in/search?q=10%20Things%20I%20Hate%20About%20You",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24220,7 +24220,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/about-time",
+        "url": "https://www.netflix.com/search?q=About%20Time",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24229,7 +24229,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/about-time",
+      "url": "https://www.netflix.com/search?q=About%20Time",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24288,7 +24288,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/before-sunrise",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Before%20Sunrise",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24297,7 +24297,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/before-sunrise",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Before%20Sunrise",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24357,7 +24357,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/catch-me-if-you-can",
+        "url": "https://www.netflix.com/search?q=Catch%20Me%20If%20You%20Can",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24366,7 +24366,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/catch-me-if-you-can",
+      "url": "https://www.netflix.com/search?q=Catch%20Me%20If%20You%20Can",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24426,7 +24426,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/chef",
+        "url": "https://www.netflix.com/search?q=Chef",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24435,7 +24435,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/chef",
+      "url": "https://www.netflix.com/search?q=Chef",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24497,7 +24497,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/deadpool-wolverine",
+        "url": "https://www.hotstar.com/in/search?q=Deadpool%20%26%20Wolverine",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24506,7 +24506,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/deadpool-wolverine",
+      "url": "https://www.hotstar.com/in/search?q=Deadpool%20%26%20Wolverine",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24567,7 +24567,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/enola-holmes",
+        "url": "https://www.netflix.com/search?q=Enola%20Holmes",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24576,7 +24576,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/enola-holmes",
+      "url": "https://www.netflix.com/search?q=Enola%20Holmes",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24637,7 +24637,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/intouchables",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Intouchables",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24646,7 +24646,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/intouchables",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Intouchables",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24706,7 +24706,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/stree-2",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Stree%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24715,7 +24715,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/stree-2",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Stree%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24777,7 +24777,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/pushpa-2",
+        "url": "https://www.netflix.com/search?q=Pushpa%202%3A%20The%20Rule",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24786,7 +24786,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/pushpa-2",
+      "url": "https://www.netflix.com/search?q=Pushpa%202%3A%20The%20Rule",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24848,7 +24848,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/leo",
+        "url": "https://www.netflix.com/search?q=Leo",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24857,7 +24857,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/leo",
+      "url": "https://www.netflix.com/search?q=Leo",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24916,7 +24916,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/bhool-bhulaiyaa-3",
+        "url": "https://www.netflix.com/search?q=Bhool%20Bhulaiyaa%203",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24925,7 +24925,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/bhool-bhulaiyaa-3",
+      "url": "https://www.netflix.com/search?q=Bhool%20Bhulaiyaa%203",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -24987,7 +24987,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/panchayat",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Panchayat",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -24996,7 +24996,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/panchayat",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Panchayat",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25058,7 +25058,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/chhaava",
+        "url": "https://www.jiocinema.com/search/Chhaava",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25067,7 +25067,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/chhaava",
+      "url": "https://www.jiocinema.com/search/Chhaava",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25193,7 +25193,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/raid-2",
+        "url": "https://www.jiocinema.com/search/Raid%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25202,7 +25202,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/raid-2",
+      "url": "https://www.jiocinema.com/search/Raid%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25260,7 +25260,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/sky-force",
+        "url": "https://www.jiocinema.com/search/Sky%20Force",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25269,7 +25269,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/sky-force",
+      "url": "https://www.jiocinema.com/search/Sky%20Force",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25397,7 +25397,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/toxic",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Toxic%3A%20A%20Fairy%20Tale%20for%20Grown-ups",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25406,7 +25406,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/toxic",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Toxic%3A%20A%20Fairy%20Tale%20for%20Grown-ups",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25467,7 +25467,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/war-2",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=War%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25476,7 +25476,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/war-2",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=War%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25600,7 +25600,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/bhooth-bangla",
+        "url": "https://www.jiocinema.com/search/Bhooth%20Bangla",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25609,7 +25609,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/bhooth-bangla",
+      "url": "https://www.jiocinema.com/search/Bhooth%20Bangla",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25668,7 +25668,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/dhamaal-4",
+        "url": "https://www.jiocinema.com/search/Dhamaal%204",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25677,7 +25677,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/dhamaal-4",
+      "url": "https://www.jiocinema.com/search/Dhamaal%204",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25735,7 +25735,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/dhurandhar",
+        "url": "https://www.netflix.com/search?q=Dhurandhar",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25744,7 +25744,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/dhurandhar",
+      "url": "https://www.netflix.com/search?q=Dhurandhar",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25799,7 +25799,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/dhurandhar-revenge",
+        "url": "https://www.netflix.com/search?q=Dhurandhar%3A%20Revenge",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25808,7 +25808,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/dhurandhar-revenge",
+      "url": "https://www.netflix.com/search?q=Dhurandhar%3A%20Revenge",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25866,7 +25866,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/housefull-5",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Housefull%205",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25875,7 +25875,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/housefull-5",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Housefull%205",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25932,7 +25932,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/kesari-2",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kesari%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -25941,7 +25941,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/kesari-2",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Kesari%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -25998,7 +25998,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/saiyaara",
+        "url": "https://www.netflix.com/search?q=Saiyaara",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26007,7 +26007,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/saiyaara",
+      "url": "https://www.netflix.com/search?q=Saiyaara",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26067,7 +26067,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/argo",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Argo",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26076,7 +26076,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/argo",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Argo",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26132,7 +26132,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/all-the-bright-places",
+        "url": "https://www.netflix.com/search?q=All%20the%20Bright%20Places",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26141,7 +26141,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/all-the-bright-places",
+      "url": "https://www.netflix.com/search?q=All%20the%20Bright%20Places",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26199,7 +26199,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/always-be-my-maybe",
+        "url": "https://www.netflix.com/search?q=Always%20Be%20My%20Maybe",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26208,7 +26208,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/always-be-my-maybe",
+      "url": "https://www.netflix.com/search?q=Always%20Be%20My%20Maybe",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26266,7 +26266,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/anyone-but-you",
+        "url": "https://www.netflix.com/search?q=Anyone%20But%20You",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26275,7 +26275,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/anyone-but-you",
+      "url": "https://www.netflix.com/search?q=Anyone%20But%20You",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26336,7 +26336,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/avatar-fire-ash",
+        "url": "https://www.hotstar.com/in/search?q=Avatar%3A%20Fire%20and%20Ash",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26345,7 +26345,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/avatar-fire-ash",
+      "url": "https://www.hotstar.com/in/search?q=Avatar%3A%20Fire%20and%20Ash",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26401,7 +26401,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/beautiful-boy",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Beautiful%20Boy",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26410,7 +26410,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/beautiful-boy",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Beautiful%20Boy",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26469,7 +26469,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-beekeeper",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Beekeeper",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26478,7 +26478,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-beekeeper",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Beekeeper",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26538,7 +26538,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-big-sick",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Big%20Sick",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26547,7 +26547,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-big-sick",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Big%20Sick",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26605,7 +26605,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/big",
+        "url": "https://www.hotstar.com/in/search?q=Big",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26614,7 +26614,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/big",
+      "url": "https://www.hotstar.com/in/search?q=Big",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26674,7 +26674,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/bird-box",
+        "url": "https://www.netflix.com/search?q=Bird%20Box",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26683,7 +26683,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/bird-box",
+      "url": "https://www.netflix.com/search?q=Bird%20Box",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26742,7 +26742,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/blue-miracle",
+        "url": "https://www.netflix.com/search?q=Blue%20Miracle",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26751,7 +26751,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/blue-miracle",
+      "url": "https://www.netflix.com/search?q=Blue%20Miracle",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26809,7 +26809,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-boy-who-harnessed-the-wind",
+        "url": "https://www.netflix.com/search?q=The%20Boy%20Who%20Harnessed%20the%20Wind",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26818,7 +26818,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-boy-who-harnessed-the-wind",
+      "url": "https://www.netflix.com/search?q=The%20Boy%20Who%20Harnessed%20the%20Wind",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26878,7 +26878,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/bridgerton",
+        "url": "https://www.netflix.com/search?q=Bridgerton",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26887,7 +26887,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/bridgerton",
+      "url": "https://www.netflix.com/search?q=Bridgerton",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -26944,7 +26944,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/brittany-runs",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Brittany%20Runs%20a%20Marathon",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -26953,7 +26953,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/brittany-runs",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Brittany%20Runs%20a%20Marathon",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27015,7 +27015,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/captain-america-brave-new-world",
+        "url": "https://www.hotstar.com/in/search?q=Captain%20America%3A%20Brave%20New%20World",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27024,7 +27024,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/captain-america-brave-new-world",
+      "url": "https://www.hotstar.com/in/search?q=Captain%20America%3A%20Brave%20New%20World",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27081,7 +27081,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/carry-on",
+        "url": "https://www.netflix.com/search?q=Carry-On",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27090,7 +27090,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/carry-on",
+      "url": "https://www.netflix.com/search?q=Carry-On",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27147,7 +27147,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/challengers",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Challengers",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27156,7 +27156,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/challengers",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Challengers",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27212,7 +27212,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/chemical-hearts",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chemical%20Hearts",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27221,7 +27221,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/chemical-hearts",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Chemical%20Hearts",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27281,7 +27281,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-crown",
+        "url": "https://www.netflix.com/search?q=The%20Crown",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27290,7 +27290,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-crown",
+      "url": "https://www.netflix.com/search?q=The%20Crown",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27350,7 +27350,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/damsel",
+        "url": "https://www.netflix.com/search?q=Damsel",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27359,7 +27359,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/damsel",
+      "url": "https://www.netflix.com/search?q=Damsel",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27420,7 +27420,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/demon-slayer",
+        "url": "https://www.netflix.com/search?q=Demon%20Slayer%3A%20Infinity%20Castle",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27429,7 +27429,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/demon-slayer",
+      "url": "https://www.netflix.com/search?q=Demon%20Slayer%3A%20Infinity%20Castle",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27489,7 +27489,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/despicable-me-4",
+        "url": "https://www.jiocinema.com/search/Despicable%20Me%204",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27498,7 +27498,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/despicable-me-4",
+      "url": "https://www.jiocinema.com/search/Despicable%20Me%204",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27627,7 +27627,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/fall-guy",
+        "url": "https://www.jiocinema.com/search/The%20Fall%20Guy",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27636,7 +27636,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/fall-guy",
+      "url": "https://www.jiocinema.com/search/The%20Fall%20Guy",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27698,7 +27698,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/fantastic-four-first-steps",
+        "url": "https://www.hotstar.com/in/search?q=The%20Fantastic%20Four%3A%20First%20Steps",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27707,7 +27707,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/fantastic-four-first-steps",
+      "url": "https://www.hotstar.com/in/search?q=The%20Fantastic%20Four%3A%20First%20Steps",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27766,7 +27766,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/fault-in-our-stars",
+        "url": "https://www.hotstar.com/in/search?q=The%20Fault%20in%20Our%20Stars",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27775,7 +27775,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/fault-in-our-stars",
+      "url": "https://www.hotstar.com/in/search?q=The%20Fault%20in%20Our%20Stars",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27833,7 +27833,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/feel-the-beat",
+        "url": "https://www.netflix.com/search?q=Feel%20the%20Beat",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27842,7 +27842,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/feel-the-beat",
+      "url": "https://www.netflix.com/search?q=Feel%20the%20Beat",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27898,7 +27898,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/five-feet-apart",
+        "url": "https://www.netflix.com/search?q=Five%20Feet%20Apart",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27907,7 +27907,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/five-feet-apart",
+      "url": "https://www.netflix.com/search?q=Five%20Feet%20Apart",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -27962,7 +27962,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/florida-project",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Florida%20Project",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -27971,7 +27971,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/florida-project",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Florida%20Project",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28028,7 +28028,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-fundamentals-of-caring",
+        "url": "https://www.netflix.com/search?q=The%20Fundamentals%20of%20Caring",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28037,7 +28037,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-fundamentals-of-caring",
+      "url": "https://www.netflix.com/search?q=The%20Fundamentals%20of%20Caring",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28096,7 +28096,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/furiosa",
+        "url": "https://www.jiocinema.com/search/Furiosa%3A%20A%20Mad%20Max%20Saga",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28105,7 +28105,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/furiosa",
+      "url": "https://www.jiocinema.com/search/Furiosa%3A%20A%20Mad%20Max%20Saga",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28165,7 +28165,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/gone-girl",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Gone%20Girl",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28174,7 +28174,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/gone-girl",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Gone%20Girl",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28234,7 +28234,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/green-mile",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Green%20Mile",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28243,7 +28243,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/green-mile",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Green%20Mile",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28301,7 +28301,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-half-of-it",
+        "url": "https://www.netflix.com/search?q=The%20Half%20of%20It",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28310,7 +28310,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-half-of-it",
+      "url": "https://www.netflix.com/search?q=The%20Half%20of%20It",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28371,7 +28371,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/hidden-figures",
+        "url": "https://www.hotstar.com/in/search?q=Hidden%20Figures",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28380,7 +28380,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/hidden-figures",
+      "url": "https://www.hotstar.com/in/search?q=Hidden%20Figures",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28441,7 +28441,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/dragon-live-action",
+        "url": "https://www.jiocinema.com/search/How%20to%20Train%20Your%20Dragon",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28450,7 +28450,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/dragon-live-action",
+      "url": "https://www.jiocinema.com/search/How%20to%20Train%20Your%20Dragon",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28506,7 +28506,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-idea-of-you",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Idea%20of%20You",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28515,7 +28515,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-idea-of-you",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Idea%20of%20You",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28576,7 +28576,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/if",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=IF",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28585,7 +28585,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/if",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=IF",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28646,7 +28646,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-imitation-game",
+        "url": "https://www.netflix.com/search?q=The%20Imitation%20Game",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28655,7 +28655,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-imitation-game",
+      "url": "https://www.netflix.com/search?q=The%20Imitation%20Game",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28713,7 +28713,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-iron-claw",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Iron%20Claw",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28722,7 +28722,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-iron-claw",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Iron%20Claw",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28779,7 +28779,7 @@ module.exports = [
       {
         "name": "YouTube",
         "type": "Free",
-        "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+        "url": "https://www.youtube.com/results?search_query=Jason%20and%20the%20Argonauts%201963%20full%20movie",
         "verified": true,
         "subscriptionRequired": false
       }
@@ -28788,7 +28788,7 @@ module.exports = [
       "type": "FREE TO WATCH",
       "provider": "YouTube",
       "region": "India & Global",
-      "url": "https://www.youtube.com/watch?v=kY0h_395_1g",
+      "url": "https://www.youtube.com/results?search_query=Jason%20and%20the%20Argonauts%201963%20full%20movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Verified legal viewing option."
     },
@@ -28847,7 +28847,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/julie-and-julia",
+        "url": "https://www.netflix.com/search?q=Julie%20%26%20Julia",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28856,7 +28856,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/julie-and-julia",
+      "url": "https://www.netflix.com/search?q=Julie%20%26%20Julia",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28916,7 +28916,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/jumanji",
+        "url": "https://www.netflix.com/search?q=Jumanji%3A%20Welcome%20to%20the%20Jungle",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28925,7 +28925,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/jumanji",
+      "url": "https://www.netflix.com/search?q=Jumanji%3A%20Welcome%20to%20the%20Jungle",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -28985,7 +28985,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/jurassic-park",
+        "url": "https://www.jiocinema.com/search/Jurassic%20Park",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -28994,7 +28994,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/jurassic-park",
+      "url": "https://www.jiocinema.com/search/Jurassic%20Park",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29054,7 +29054,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/jurassic-world-rebirth",
+        "url": "https://www.jiocinema.com/search/Jurassic%20World%20Rebirth",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29063,7 +29063,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/jurassic-world-rebirth",
+      "url": "https://www.jiocinema.com/search/Jurassic%20World%20Rebirth",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29123,7 +29123,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/kingdom-apes",
+        "url": "https://www.hotstar.com/in/search?q=Kingdom%20of%20the%20Planet%20of%20the%20Apes",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29132,7 +29132,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/kingdom-apes",
+      "url": "https://www.hotstar.com/in/search?q=Kingdom%20of%20the%20Planet%20of%20the%20Apes",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29193,7 +29193,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/kung-fu-panda-4",
+        "url": "https://www.jiocinema.com/search/Kung%20Fu%20Panda%204",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29202,7 +29202,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/kung-fu-panda-4",
+      "url": "https://www.jiocinema.com/search/Kung%20Fu%20Panda%204",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29259,7 +29259,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/late-night",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Late%20Night",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29268,7 +29268,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/late-night",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Late%20Night",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29328,7 +29328,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/leave-the-world-behind",
+        "url": "https://www.netflix.com/search?q=Leave%20the%20World%20Behind",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29337,7 +29337,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/leave-the-world-behind",
+      "url": "https://www.netflix.com/search?q=Leave%20the%20World%20Behind",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29398,7 +29398,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-lego-movie",
+        "url": "https://www.netflix.com/search?q=The%20Lego%20Movie",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29407,7 +29407,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-lego-movie",
+      "url": "https://www.netflix.com/search?q=The%20Lego%20Movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29469,7 +29469,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/lion",
+        "url": "https://www.netflix.com/search?q=Lion",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29478,7 +29478,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/lion",
+      "url": "https://www.netflix.com/search?q=Lion",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29537,7 +29537,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/little-miss-sunshine",
+        "url": "https://www.hotstar.com/in/search?q=Little%20Miss%20Sunshine",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29546,7 +29546,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/little-miss-sunshine",
+      "url": "https://www.hotstar.com/in/search?q=Little%20Miss%20Sunshine",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29606,7 +29606,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/lotr-fellowship",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Lord%20of%20the%20Rings%3A%20The%20Fellowship%20of%20the%20Ring",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29615,7 +29615,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/lotr-fellowship",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Lord%20of%20the%20Rings%3A%20The%20Fellowship%20of%20the%20Ring",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29673,7 +29673,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/love-at-first-sight",
+        "url": "https://www.netflix.com/search?q=Love%20at%20First%20Sight",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29682,7 +29682,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/love-at-first-sight",
+      "url": "https://www.netflix.com/search?q=Love%20at%20First%20Sight",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29738,7 +29738,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/love-rosie",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Love%2C%20Rosie",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29747,7 +29747,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/love-rosie",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Love%2C%20Rosie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29807,7 +29807,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/mad-max-fury-road",
+        "url": "https://www.jiocinema.com/search/Mad%20Max%3A%20Fury%20Road",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29816,7 +29816,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/mad-max-fury-road",
+      "url": "https://www.jiocinema.com/search/Mad%20Max%3A%20Fury%20Road",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29871,7 +29871,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/manchester-by-the-sea",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Manchester%20by%20the%20Sea",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29880,7 +29880,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/manchester-by-the-sea",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Manchester%20by%20the%20Sea",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -29937,7 +29937,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/map-of-tiny-perfect-things",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Map%20of%20Tiny%20Perfect%20Things",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -29946,7 +29946,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/map-of-tiny-perfect-things",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Map%20of%20Tiny%20Perfect%20Things",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30004,7 +30004,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/marriage-story",
+        "url": "https://www.netflix.com/search?q=Marriage%20Story",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30013,7 +30013,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/marriage-story",
+      "url": "https://www.netflix.com/search?q=Marriage%20Story",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30070,7 +30070,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/me-before-you",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Me%20Before%20You",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30079,7 +30079,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/me-before-you",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Me%20Before%20You",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30139,7 +30139,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/michael",
+        "url": "https://www.jiocinema.com/search/Michael",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30148,7 +30148,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/michael",
+      "url": "https://www.jiocinema.com/search/Michael",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30209,7 +30209,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/minecraft-movie",
+        "url": "https://www.jiocinema.com/search/A%20Minecraft%20Movie",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30218,7 +30218,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/minecraft-movie",
+      "url": "https://www.jiocinema.com/search/A%20Minecraft%20Movie",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30279,7 +30279,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/mission-impossible-dead-reckoning",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Mission%3A%20Impossible%20-%20Dead%20Reckoning",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30288,7 +30288,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/mission-impossible-dead-reckoning",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Mission%3A%20Impossible%20-%20Dead%20Reckoning",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30348,7 +30348,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/mission-impossible-final-reckoning",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Mission%3A%20Impossible%20-%20The%20Final%20Reckoning",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30357,7 +30357,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/mission-impossible-final-reckoning",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Mission%3A%20Impossible%20-%20The%20Final%20Reckoning",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30418,7 +30418,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-mitchells-vs-the-machines",
+        "url": "https://www.netflix.com/search?q=The%20Mitchells%20vs.%20the%20Machines",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30427,7 +30427,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-mitchells-vs-the-machines",
+      "url": "https://www.netflix.com/search?q=The%20Mitchells%20vs.%20the%20Machines",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30487,7 +30487,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/moana-2",
+        "url": "https://www.hotstar.com/in/search?q=Moana%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30496,7 +30496,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/moana-2",
+      "url": "https://www.hotstar.com/in/search?q=Moana%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30554,7 +30554,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/my-fault",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=My%20Fault",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30563,7 +30563,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/my-fault",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=My%20Fault",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30623,7 +30623,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/national-treasure",
+        "url": "https://www.hotstar.com/in/search?q=National%20Treasure",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30632,7 +30632,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/national-treasure",
+      "url": "https://www.hotstar.com/in/search?q=National%20Treasure",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30689,7 +30689,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/nerve",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Nerve",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30698,7 +30698,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/nerve",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Nerve",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30755,7 +30755,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/no-country-for-old-men",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=No%20Country%20for%20Old%20Men",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30764,7 +30764,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/no-country-for-old-men",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=No%20Country%20for%20Old%20Men",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30823,7 +30823,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-notebook",
+        "url": "https://www.netflix.com/search?q=The%20Notebook",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30832,7 +30832,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-notebook",
+      "url": "https://www.netflix.com/search?q=The%20Notebook",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30894,7 +30894,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/now-you-see-me",
+        "url": "https://www.netflix.com/search?q=Now%20You%20See%20Me",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30903,7 +30903,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/now-you-see-me",
+      "url": "https://www.netflix.com/search?q=Now%20You%20See%20Me",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -30959,7 +30959,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/one-day",
+        "url": "https://www.netflix.com/search?q=One%20Day",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -30968,7 +30968,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/one-day",
+      "url": "https://www.netflix.com/search?q=One%20Day",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31025,7 +31025,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/one-life",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=One%20Life",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31034,7 +31034,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/one-life",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=One%20Life",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31095,7 +31095,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/over-the-moon",
+        "url": "https://www.netflix.com/search?q=Over%20the%20Moon",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31104,7 +31104,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/over-the-moon",
+      "url": "https://www.netflix.com/search?q=Over%20the%20Moon",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31165,7 +31165,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/paddington",
+        "url": "https://www.netflix.com/search?q=Paddington",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31174,7 +31174,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/paddington",
+      "url": "https://www.netflix.com/search?q=Paddington",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31231,7 +31231,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/paterson",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Paterson",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31240,7 +31240,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/paterson",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Paterson",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31296,7 +31296,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-perfect-date",
+        "url": "https://www.netflix.com/search?q=The%20Perfect%20Date",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31305,7 +31305,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-perfect-date",
+      "url": "https://www.netflix.com/search?q=The%20Perfect%20Date",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31362,7 +31362,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-perks-of-being-a-wallflower",
+        "url": "https://www.netflix.com/search?q=The%20Perks%20of%20Being%20a%20Wallflower",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31371,7 +31371,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-perks-of-being-a-wallflower",
+      "url": "https://www.netflix.com/search?q=The%20Perks%20of%20Being%20a%20Wallflower",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31425,7 +31425,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/pieces-of-a-woman",
+        "url": "https://www.netflix.com/search?q=Pieces%20of%20a%20Woman",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31434,7 +31434,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/pieces-of-a-woman",
+      "url": "https://www.netflix.com/search?q=Pieces%20of%20a%20Woman",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31491,7 +31491,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/pride-and-prejudice",
+        "url": "https://www.netflix.com/search?q=Pride%20%26%20Prejudice",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31500,7 +31500,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/pride-and-prejudice",
+      "url": "https://www.netflix.com/search?q=Pride%20%26%20Prejudice",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31561,7 +31561,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-princess-bride",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Princess%20Bride",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31570,7 +31570,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-princess-bride",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Princess%20Bride",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31628,7 +31628,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/prisoners",
+        "url": "https://www.netflix.com/search?q=Prisoners",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31637,7 +31637,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/prisoners",
+      "url": "https://www.netflix.com/search?q=Prisoners",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31698,7 +31698,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/quiet-place-day-one",
+        "url": "https://www.jiocinema.com/search/A%20Quiet%20Place%3A%20Day%20One",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31707,7 +31707,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/quiet-place-day-one",
+      "url": "https://www.jiocinema.com/search/A%20Quiet%20Place%3A%20Day%20One",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31766,7 +31766,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/raiders-of-the-lost-ark",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Raiders%20of%20the%20Lost%20Ark",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31775,7 +31775,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/raiders-of-the-lost-ark",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Raiders%20of%20the%20Lost%20Ark",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31835,7 +31835,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/rebel-ridge",
+        "url": "https://www.netflix.com/search?q=Rebel%20Ridge",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31844,7 +31844,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/rebel-ridge",
+      "url": "https://www.netflix.com/search?q=Rebel%20Ridge",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31901,7 +31901,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/red-white-royal-blue",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Red%2C%20White%20%26%20Royal%20Blue",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31910,7 +31910,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/red-white-royal-blue",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Red%2C%20White%20%26%20Royal%20Blue",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -31966,7 +31966,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/run-sweetheart-run",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Run%20Sweetheart%20Run",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -31975,7 +31975,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/run-sweetheart-run",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Run%20Sweetheart%20Run",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32035,7 +32035,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/school-of-rock",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=School%20of%20Rock",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32044,7 +32044,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/school-of-rock",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=School%20of%20Rock",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32104,7 +32104,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/se7en",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Se7en",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32113,7 +32113,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/se7en",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Se7en",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32173,7 +32173,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-sea-beast",
+        "url": "https://www.netflix.com/search?q=The%20Sea%20Beast",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32182,7 +32182,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-sea-beast",
+      "url": "https://www.netflix.com/search?q=The%20Sea%20Beast",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32239,7 +32239,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/searching",
+        "url": "https://www.netflix.com/search?q=Searching",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32248,7 +32248,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/searching",
+      "url": "https://www.netflix.com/search?q=Searching",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32308,7 +32308,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/secret-life-of-pets",
+        "url": "https://www.jiocinema.com/search/The%20Secret%20Life%20of%20Pets",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32317,7 +32317,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/secret-life-of-pets",
+      "url": "https://www.jiocinema.com/search/The%20Secret%20Life%20of%20Pets",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32375,7 +32375,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/set-it-up",
+        "url": "https://www.netflix.com/search?q=Set%20It%20Up",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32384,7 +32384,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/set-it-up",
+      "url": "https://www.netflix.com/search?q=Set%20It%20Up",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32441,7 +32441,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/a-simple-favor",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=A%20Simple%20Favor",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32450,7 +32450,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/a-simple-favor",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=A%20Simple%20Favor",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32511,7 +32511,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/sing-2",
+        "url": "https://www.jiocinema.com/search/Sing%202",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32520,7 +32520,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/sing-2",
+      "url": "https://www.jiocinema.com/search/Sing%202",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32578,7 +32578,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/sinners",
+        "url": "https://www.jiocinema.com/search/Sinners",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32587,7 +32587,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/sinners",
+      "url": "https://www.jiocinema.com/search/Sinners",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32648,7 +32648,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/soul",
+        "url": "https://www.hotstar.com/in/search?q=Soul",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32657,7 +32657,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/soul",
+      "url": "https://www.hotstar.com/in/search?q=Soul",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32715,7 +32715,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/sound-of-metal",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sound%20of%20Metal",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32724,7 +32724,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/sound-of-metal",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sound%20of%20Metal",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32784,7 +32784,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/source-code",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Source%20Code",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32793,7 +32793,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/source-code",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Source%20Code",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32854,7 +32854,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/spider-man-brand-new-day",
+        "url": "https://www.hotstar.com/in/search?q=Spider-Man%3A%20Brand%20New%20Day",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32863,7 +32863,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/spider-man-brand-new-day",
+      "url": "https://www.hotstar.com/in/search?q=Spider-Man%3A%20Brand%20New%20Day",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32923,7 +32923,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/superman",
+        "url": "https://www.jiocinema.com/search/Superman",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32932,7 +32932,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/superman",
+      "url": "https://www.jiocinema.com/search/Superman",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -32989,7 +32989,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/sylvies-love",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sylvie's%20Love",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -32998,7 +32998,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/sylvies-love",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Sylvie's%20Love",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33059,7 +33059,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-adam-project",
+        "url": "https://www.netflix.com/search?q=The%20Adam%20Project",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33068,7 +33068,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-adam-project",
+      "url": "https://www.netflix.com/search?q=The%20Adam%20Project",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33129,7 +33129,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/the-bad-guys",
+        "url": "https://www.jiocinema.com/search/The%20Bad%20Guys",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33138,7 +33138,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/the-bad-guys",
+      "url": "https://www.jiocinema.com/search/The%20Bad%20Guys",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33196,7 +33196,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-guilty",
+        "url": "https://www.netflix.com/search?q=The%20Guilty",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33205,7 +33205,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-guilty",
+      "url": "https://www.netflix.com/search?q=The%20Guilty",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33263,7 +33263,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-intern",
+        "url": "https://www.netflix.com/search?q=The%20Intern",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33272,7 +33272,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-intern",
+      "url": "https://www.netflix.com/search?q=The%20Intern",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33332,7 +33332,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/the-martian",
+        "url": "https://www.hotstar.com/in/search?q=The%20Martian",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33341,7 +33341,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/the-martian",
+      "url": "https://www.hotstar.com/in/search?q=The%20Martian",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33398,7 +33398,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-odyssey",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Odyssey",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33407,7 +33407,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-odyssey",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Odyssey",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33465,7 +33465,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/the-voyeurs",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Voyeurs",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33474,7 +33474,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/the-voyeurs",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=The%20Voyeurs",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33532,7 +33532,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-theory-of-everything",
+        "url": "https://www.netflix.com/search?q=The%20Theory%20of%20Everything",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33541,7 +33541,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-theory-of-everything",
+      "url": "https://www.netflix.com/search?q=The%20Theory%20of%20Everything",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33598,7 +33598,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/things-heard-and-seen",
+        "url": "https://www.netflix.com/search?q=Things%20Heard%20%26%20Seen",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33607,7 +33607,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/things-heard-and-seen",
+      "url": "https://www.netflix.com/search?q=Things%20Heard%20%26%20Seen",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33666,7 +33666,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/thirteen-lives",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Thirteen%20Lives",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33675,7 +33675,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/thirteen-lives",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Thirteen%20Lives",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33737,7 +33737,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/thunderbolts",
+        "url": "https://www.hotstar.com/in/search?q=Thunderbolts*",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33746,7 +33746,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/thunderbolts",
+      "url": "https://www.hotstar.com/in/search?q=Thunderbolts*",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33805,7 +33805,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/to-all-the-boys",
+        "url": "https://www.netflix.com/search?q=To%20All%20the%20Boys%20I've%20Loved%20Before",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33814,7 +33814,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/to-all-the-boys",
+      "url": "https://www.netflix.com/search?q=To%20All%20the%20Boys%20I've%20Loved%20Before",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33872,7 +33872,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/tokyo-vice",
+        "url": "https://www.jiocinema.com/search/Tokyo%20Vice",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33881,7 +33881,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/tokyo-vice",
+      "url": "https://www.jiocinema.com/search/Tokyo%20Vice",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -33940,7 +33940,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/troop-zero",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Troop%20Zero",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -33949,7 +33949,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/troop-zero",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Troop%20Zero",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34009,7 +34009,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/turning-red",
+        "url": "https://www.hotstar.com/in/search?q=Turning%20Red",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34018,7 +34018,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/turning-red",
+      "url": "https://www.hotstar.com/in/search?q=Turning%20Red",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34075,7 +34075,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/walk-to-remember",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=A%20Walk%20to%20Remember",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34084,7 +34084,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/walk-to-remember",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=A%20Walk%20to%20Remember",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34143,7 +34143,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/walter-mitty",
+        "url": "https://www.hotstar.com/in/search?q=The%20Secret%20Life%20of%20Walter%20Mitty",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34152,7 +34152,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/walter-mitty",
+      "url": "https://www.hotstar.com/in/search?q=The%20Secret%20Life%20of%20Walter%20Mitty",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34211,7 +34211,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/war-of-the-worlds",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=War%20of%20the%20Worlds",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34220,7 +34220,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/war-of-the-worlds",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=War%20of%20the%20Worlds",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34277,7 +34277,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/the-weekend-away",
+        "url": "https://www.netflix.com/search?q=The%20Weekend%20Away",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34286,7 +34286,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/the-weekend-away",
+      "url": "https://www.netflix.com/search?q=The%20Weekend%20Away",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34347,7 +34347,7 @@ module.exports = [
       {
         "name": "JioCinema",
         "type": "Subscription",
-        "url": "https://www.jiocinema.com/movies/wicked",
+        "url": "https://www.jiocinema.com/search/Wicked",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34356,7 +34356,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.jiocinema.com/movies/wicked",
+      "url": "https://www.jiocinema.com/search/Wicked",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34416,7 +34416,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/wonder",
+        "url": "https://www.netflix.com/search?q=Wonder",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34425,7 +34425,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/wonder",
+      "url": "https://www.netflix.com/search?q=Wonder",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34484,7 +34484,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/yes-day",
+        "url": "https://www.netflix.com/search?q=Yes%20Day",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34493,7 +34493,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/yes-day",
+      "url": "https://www.netflix.com/search?q=Yes%20Day",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34553,7 +34553,7 @@ module.exports = [
       {
         "name": "Netflix",
         "type": "Subscription",
-        "url": "https://www.netflix.com/title/you",
+        "url": "https://www.netflix.com/search?q=You",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34562,7 +34562,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.netflix.com/title/you",
+      "url": "https://www.netflix.com/search?q=You",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34619,7 +34619,7 @@ module.exports = [
       {
         "name": "Amazon Prime Video",
         "type": "Subscription",
-        "url": "https://www.primevideo.com/detail/zodiac",
+        "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Zodiac",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34628,7 +34628,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.primevideo.com/detail/zodiac",
+      "url": "https://www.primevideo.com/search/ref=atv_nb_sr?phrase=Zodiac",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },
@@ -34690,7 +34690,7 @@ module.exports = [
       {
         "name": "Disney+ Hotstar",
         "type": "Subscription",
-        "url": "https://www.hotstar.com/movies/zootopia",
+        "url": "https://www.hotstar.com/in/search?q=Zootopia",
         "verified": true,
         "subscriptionRequired": true
       }
@@ -34699,7 +34699,7 @@ module.exports = [
       "type": "Subscription Required",
       "provider": "Licensed Digital Partner",
       "region": "India & Global",
-      "url": "https://www.hotstar.com/movies/zootopia",
+      "url": "https://www.hotstar.com/in/search?q=Zootopia",
       "verifiedDate": "2026-01-15T00:00:00.000Z",
       "notes": "Subscription required to stream."
     },

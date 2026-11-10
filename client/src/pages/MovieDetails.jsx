@@ -28,10 +28,7 @@ import {
 } from 'lucide-react';
 import { movieMatchesPlatform, getDirectMovieWatchUrl } from '../utils/platformFilter';
 
-const getPlatformWatchUrl = (movie, platformName = '', rawUrl = '') => {
-  if (rawUrl && typeof rawUrl === 'string' && rawUrl.startsWith('http') && !rawUrl.includes('google.com/search')) {
-    return rawUrl;
-  }
+const getPlatformWatchUrl = (movie, platformName = '') => {
   return getDirectMovieWatchUrl(movie, platformName);
 };
 

@@ -107,20 +107,22 @@ const MovieCard = ({ movie }) => {
 
   return (
     <article className="movie-card group">
-      <Link to={movieLink} className="movie-card-poster-wrapper">
-        <img
-          src={movie.poster}
-          alt={movie.title}
-          loading="lazy"
-          className="movie-card-poster"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400';
-          }}
-        />
-
-        {/* Top Gradient Vignette */}
-        <div className="poster-top-vignette" />
+      {/* Poster Wrapper with clean, non-nested links */}
+      <div className="movie-card-poster-wrapper">
+        <Link to={movieLink} className="poster-image-link" aria-label={`View details for ${movie.title}`}>
+          <img
+            src={movie.poster}
+            alt={movie.title}
+            loading="lazy"
+            className="movie-card-poster"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400';
+            }}
+          />
+          {/* Top Gradient Vignette */}
+          <div className="poster-top-vignette" />
+        </Link>
 
         {/* Availability Badge */}
         {renderBadge()}
@@ -146,7 +148,6 @@ const MovieCard = ({ movie }) => {
             href={directWatchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
             className="quick-action-btn"
             title={watchInfo.label}
           >
@@ -174,14 +175,21 @@ const MovieCard = ({ movie }) => {
           )}
         </div>
 
-        {/* Hover Play Overlay */}
-        <div className="poster-play-overlay">
+        {/* Direct Watch Stream Overlay */}
+        <a
+          href={directWatchUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="poster-play-overlay"
+          title={watchInfo.label}
+        >
           <div className="play-icon-circle">
             <Play size={18} fill="#fff" className="translate-x-0.5" />
           </div>
-        </div>
-      </Link>
+        </a>
+      </div>
 
+      {/* Card Content & Action Buttons */}
       <div className="movie-card-content">
         <Link to={movieLink}>
           <h3 className="movie-card-title" title={movie.title}>
@@ -203,7 +211,6 @@ const MovieCard = ({ movie }) => {
             href={directWatchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
             className="direct-stream-link"
             style={{ borderColor: `${watchInfo.color}60` }}
           >
@@ -247,6 +254,12 @@ const MovieCard = ({ movie }) => {
           background: #090c15;
           display: block;
         }
+        .poster-image-link {
+          display: block;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
         .movie-card-poster {
           width: 100%;
           height: 100%;
@@ -279,6 +292,7 @@ const MovieCard = ({ movie }) => {
           align-items: center;
           gap: 0.25rem;
           text-transform: uppercase;
+          pointer-events: none;
         }
         .badge-dot {
           width: 5px;
@@ -351,6 +365,7 @@ const MovieCard = ({ movie }) => {
           border: 1px solid rgba(255, 255, 255, 0.15);
           border-radius: 6px;
           backdrop-filter: blur(6px);
+          pointer-events: none;
         }
         .movie-rating-badge {
           position: absolute;
@@ -368,12 +383,13 @@ const MovieCard = ({ movie }) => {
           font-size: 0.7rem;
           font-weight: 800;
           color: #fff;
+          pointer-events: none;
         }
         .movie-quick-actions {
           position: absolute;
           bottom: 0.55rem;
           right: 0.55rem;
-          z-index: 3;
+          z-index: 4;
           display: flex;
           gap: 0.35rem;
           opacity: 0;
@@ -408,6 +424,8 @@ const MovieCard = ({ movie }) => {
           place-items: center;
           opacity: 0;
           transition: opacity 0.3s ease;
+          z-index: 3;
+          cursor: pointer;
         }
         .movie-card:hover .poster-play-overlay {
           opacity: 1;
