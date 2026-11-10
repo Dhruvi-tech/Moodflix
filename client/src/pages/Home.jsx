@@ -293,37 +293,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 2: PLATFORM PREFERENCE QUICK BAR ──────────────── */}
-      <section className="container mb-12">
-        <div className="p-5 md:p-6 rounded-2xl bg-gradient-to-r from-[#18122B]/90 via-[#241442]/80 to-[#18122B]/90 border border-[#9d4edd]/30 shadow-xl flex flex-col md:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-4 text-left">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#9d4edd]/30 to-[#f72585]/30 border border-[#9d4edd]/40 flex items-center justify-center text-2xl flex-shrink-0">
-              📺
-            </div>
-            <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#f72585]">
-                Your Platform Filter
-              </span>
-              <h3 className="text-lg font-bold text-white">
-                {preferences.freeOnly
-                  ? 'Showing Free Movies Only (No Subscription Required)'
-                  : `Watching on: ${preferences.platforms?.join(', ') || 'Free Movies First'}`}
-              </h3>
-              <p className="text-xs text-gray-300">
-                You can change platforms anytime. We never assume you have paid streaming subscriptions.
-              </p>
-            </div>
+      {/* ── SECTION 2: COMPACT PLATFORM FILTER BAR ────────────────── */}
+      <section className="container mb-10">
+        <div className="py-2.5 px-4 sm:px-5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md flex flex-wrap items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
+            <span className="text-gray-400">Watching on:</span>
+            <span className="font-bold text-white px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/10">
+              {preferences.freeOnly
+                ? '🆓 Free Movies Only (No Subscriptions)'
+                : preferences.platforms?.join(', ') || 'Free Movies First'}
+            </span>
           </div>
 
-          <div className="flex items-center gap-3 w-full md:w-auto">
-            <button
-              onClick={openPrefModal}
-              className="w-full md:w-auto px-5 py-2.5 rounded-xl text-xs md:text-sm font-bold bg-[#9d4edd]/20 border border-[#9d4edd]/40 text-[#e0aaff] hover:bg-[#9d4edd]/30 transition-all flex items-center justify-center gap-2"
-            >
-              <Settings size={16} />
-              <span>Change Platform Preferences</span>
-            </button>
-          </div>
+          <button
+            onClick={openPrefModal}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all"
+          >
+            <Settings size={13} />
+            <span>Change Platforms</span>
+          </button>
         </div>
       </section>
 
