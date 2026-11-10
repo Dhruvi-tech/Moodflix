@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%">
+  <defs>
+    <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6">
+        <animate attributeName="stop-color" values="#3b82f6;#ec4899;#3b82f6" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" stop-color="#8b5cf6">
+        <animate attributeName="stop-color" values="#8b5cf6;#f43f5e;#8b5cf6" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#10b981">
+        <animate attributeName="stop-color" values="#10b981;#3b82f6;#10b981" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  
+  <style>
+    .title-text {
+      font-family: 'Outfit', 'Inter', system-ui, sans-serif;
+      font-weight: 900;
+      font-size: 80px;
+      fill: url(#logoGrad);
+    }
+    .emoji-icon {
+      animation: float 3s ease-in-out infinite;
+      transform-origin: 240px 100px;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(5deg); }
+      100% { transform: translateY(0px) rotate(0deg); }
+    }
+  </style>
+
+  <g transform="translate(200, 125)">
+    <text x="0" y="0" font-size="84" class="emoji-icon">🎭</text>
+    <text x="120" y="-12" class="title-text">MoodFlix</text>
+  </g>
+</svg>

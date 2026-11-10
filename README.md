@@ -1,92 +1,47 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="MoodFlix Logo" width="600" />
+  <img src="assets/logo.svg" alt="MoodFlix Logo" width="550" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <strong>Mood-Based Free Movie Discovery Platform — Full-Stack MERN Architecture</strong><br />
+  <em>CS3301 Full Stack Development — CIE-3 Technical Milestone</em>
 </p>
 
 <p align="center">
-  <a href="#-the-moods">The Moods</a> •
-  <a href="#-key-features">Key Features</a> •
-  <a href="#-vibe-gallery">Vibe Gallery</a> •
-  <a href="#-getting-started">Getting Started</a> •
-  <a href="#-project-architecture">Architecture</a>
+  <img src="https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 18" />
+  <img src="https://img.shields.io/badge/Vite_5-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" />
+  <img src="https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB Atlas" />
+  <img src="https://img.shields.io/badge/JWT_Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" alt="JWT" />
 </p>
 
 <p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-## 📖 Introduction
-
-**MoodFlix** is a serverless, interactive web application designed to recommend movies based on your current emotional state. Whether you want to boost a happy mood, dive into an intense thriller, or relax with a comforting chill vibe, MoodFlix uses a lightweight client-side filter engine to curate the perfect watchlist instantly.
-
-Built entirely using **Vanilla HTML5, CSS3, and JavaScript**, the app demonstrates responsive design, clean modular components, and polished micro-animations.
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-<img src="assets/header-moods.svg" alt="The Moods" width="800" />
-
-MoodFlix categorizes recommendations into six distinct emotional palettes, designed to fit your current state of mind:
-
-| Mood | Vibe Tagline |
-| :---: | :--- |
-| **☀️ Happy** | Wholesome, feel-good films to lift your spirits and make you smile. |
-| **🌧️ Sad** | Deep, emotional stories with heart and poignant narrative arcs. |
-| **🔪 Thriller** | High-stakes suspense, mysteries, and jaw-dropping plot twists. |
-| **💫 Romantic** | Lighthearted, cozy, and heartwarming tales of connection. |
-| **🌙 Chill** | Relaxing, easy-going movies to help you wind down after a long day. |
-| **⚡ Adventurous** | Action-packed exploration, fantasy quests, and epic journeys. |
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-<img src="assets/header-features.svg" alt="Key Features" width="800" />
-
-### 🎬 **Smart Recommendation Engine**
-- Filters and loads customized movie recommendations dynamically upon clicking a mood.
-- Displays rich media cards showing movie titles, release years, genre tags, platform availability (Netflix, Prime Video, YouTube), and concise summaries.
-
-### 🔔 **Polished UI & Micro-Animations**
-- Custom-designed glassmorphism components with soft gradient backgrounds.
-- Responsive navigation bar with active scrolling shadow effects and a modular mobile hamburger menu.
-- Smooth transitions and hover animations on the interactive mood selector cards.
-
-<p align="center">
-  <img src="assets/divider.svg" alt="Divider" width="800" />
-</p>
-
-<img src="assets/header-gallery.svg" alt="Vibe Gallery" width="800" />
-
-Here is a visual preview of some premium movie recommendations you will discover:
-
-<p align="center">
-  <img src="assets/posters/little-miss-sunshine.jpg" width="220" alt="Little Miss Sunshine" style="border-radius: 8px; margin: 10px;" />
-  <img src="assets/posters/spirited-away.jpg" width="220" alt="Spirited Away" style="border-radius: 8px; margin: 10px;" />
-  <img src="assets/posters/lotr-fellowship.jpg" width="220" alt="Lord of the Rings" style="border-radius: 8px; margin: 10px;" />
+  <a href="#-project-overview">Overview</a> •
+  <a href="#-full-stack-architecture">Architecture</a> •
+  <a href="#-12-mood-palettes">The 12 Moods</a> •
+  <a href="#-100-legal-free-streaming-pledge">Free Streaming Pledge</a> •
+  <a href="#-api-endpoints-reference">REST APIs</a> •
+  <a href="#-local-installation--quick-start">Quick Start</a> •
+  <a href="#-cloud-deployment-guide">Cloud Deployment</a> •
+  <a href="#-team--contributors">Team</a>
 </p>
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />
 </p>
 
-<img src="assets/header-start.svg" alt="Getting Started" width="800" />
+## 📖 Project Overview
 
-Getting MoodFlix running locally on your computer takes less than 5 seconds.
+**MoodFlix** is an intelligent, mood-based legal free movie discovery platform. Transformed from an initial Vanilla prototype into a professional full-stack **MERN (MongoDB, Express, React, Node.js)** web application, MoodFlix curates cinema strictly matching how the viewer feels *right now* while guaranteeing **100% legal, zero-subscription viewing links**.
 
-### **Run Instantly:**
-1. Clone or download this repository to your computer.
-2. Locate the file **`index.html`** in the root folder.
-3. **Double-click `index.html`** to launch the platform instantly in your browser!
+Unlike commercial streaming services that trap consumers in subscription paywalls ($15–$25/month), MoodFlix catalogs verified **Public Domain masterpieces, authorized studio releases (YouTube Movies Free), and licensed ad-supported digital broadcasts (Plex TV / Tubi)**.
 
-> [!TIP]
-> **VS Code Live Server:** For the absolute best development experience (complete with hot-reloading and accurate responsiveness testing), right-click `index.html` and select **Open with Live Server**.
+### Core Objectives
+1. **Eliminate Streaming Fatigue:** Replace 25 minutes of aimless catalog scrolling with a 1-click emotional vibe selection.
+2. **Promote Film Heritage & Zero Piracy:** Exclusively index legally free movies from accredited digital archives and verified studio channels with recorded verification timestamps.
+3. **Enterprise-Grade MERN Architecture:** Modular React + Vite frontend communicating with a scalable Express REST API and a MongoDB Atlas persistent cloud database.
+4. **Interactive User Engagement:** Role-based authentication (User & Admin), persistent watchlists, favourites, community reviews with average star ratings, and real-time viewing history.
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />
@@ -94,55 +49,238 @@ Getting MoodFlix running locally on your computer takes less than 5 seconds.
 
 <img src="assets/header-architecture.svg" alt="Project Architecture" width="800" />
 
-The exact repository files and directory layout are structured as follows:
+## 🏛️ Full-Stack Architecture
+
+MoodFlix adheres to strict separation of concerns across a modern 3-tier MERN stack:
 
 ```
 Moodflix/
-├── .gitignore              ← Git ignore configuration rules
-├── HOW_TO_RUN.txt          ← Plaintext quick-start usage guidelines
-├── LICENSE                 ← Project open-source license permissions
-├── README.md               ← Project documentation (this file)
-├── index.html              ← Main HTML document skeleton and UI container
-├── assets/
-│   ├── divider.svg         ← Animated gradient divider line
-│   ├── logo.svg            ← Animated text logo
-│   ├── header-moods.svg        ← Animated section header (The Moods)
-│   ├── header-features.svg     ← Animated section header (Key Features)
-│   ├── header-gallery.svg      ← Animated section header (Vibe Gallery)
-│   ├── header-start.svg        ← Animated section header (Getting Started)
-│   ├── header-architecture.svg ← Animated section header (Architecture)
-│   ├── header-walkthrough.svg  ← Animated section header (Walkthrough)
-│   ├── header-contributors.svg  ← Animated section header (Contributors)
-│   └── posters/            ← Local movie poster image repository (.jpg)
-├── css/
-│   ├── components.css      ← Toast banners & movie recommendation card layout
-│   ├── layout.css          ← Core grid layout, header, footer, & navigation bar
-│   ├── mood-picker.css     ← Mood selection grid, glassmorphic cards, and hover FX
-│   └── variables.css       ← Theme colors, custom design tokens, and root styles
-└── js/
-    ├── components.js       ← Dynamic HTML template parsing & DOM element factories
-    ├── layout.js           ← Mobile navigation drawer handler & navbar scroll shadow
-    ├── mood-engine.js      ← Main recommendations filter & alert handlers
-    └── movie-data.js       ← Local structured movie list object database
+├── client/                     ← React + Vite SPA Frontend
+│   ├── public/                 ← Static posters & brand SVG assets
+│   ├── src/
+│   │   ├── components/         ← Reusable UI (Navbar, Footer, MovieCard, MoodChip, etc.)
+│   │   ├── context/            ← React Context (AuthContext, WatchlistContext)
+│   │   ├── pages/              ← 13 Cinematic Views (Home, Explore, Details, Admin, etc.)
+│   │   ├── services/           ← Central Axios API instance with JWT interceptor
+│   │   ├── styles/             ← Dark cinematic design tokens & responsive CSS
+│   │   ├── App.jsx             ← React Router DOM routing & protected guards
+│   │   └── main.jsx            ← Client entry point
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── vercel.json             ← Production SPA rewrites for Vercel
+│   └── .env.example
+├── server/                     ← Node.js & Express REST Backend
+│   ├── src/
+│   │   ├── config/             ← MongoDB Atlas connection handler
+│   │   ├── controllers/        ← Modular business logic (Auth, Movie, Review, Admin)
+│   │   ├── middleware/         ← JWT protection, Role authorization, Central error handler
+│   │   ├── models/             ← Mongoose Schemas (User, Movie, Review, Watchlist, etc.)
+│   │   ├── routes/             ← Express REST API routes
+│   │   ├── seed/               ← Database seed script with 29+ verified free movies
+│   │   ├── app.js              ← Express middleware & CORS configuration
+│   │   └── server.js           ← HTTP listener & server bootstrap
+│   ├── tests/                  ← Automated Node.js integration test suite
+│   ├── package.json
+│   └── .env.example
+├── render.yaml                 ← Production Blueprint for Render Cloud Backend
+├── vercel.json                 ← Monorepo Vercel configuration
+├── IMPLEMENTATION_REPORT.md    ← Exhaustive technical audit & verification log
+└── README.md                   ← Project documentation (this file)
 ```
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />
 </p>
 
-<img src="assets/header-walkthrough.svg" alt="Interactive Walkthrough" width="800" />
+<img src="assets/header-moods.svg" alt="The 12 Moods" width="800" />
 
-Experience all the features of MoodFlix by trying these quick steps:
+## 🎭 The 12 Mood Palettes
 
-1. **Scroll Reveal**: Click the **Pick your mood** CTA button in the hero banner. The viewport will scroll smoothly to the interactive grid.
-2. **Select Vibe**: Select **Happy** or **Thriller**. Watch the movie recommendation container slide into view.
-3. **Mobile Layout**: Open DevTools (`F12`), switch to mobile view, and tap the hamburger icon to toggle the slide-out navigation menu.
+MoodFlix categorizes free cinema into twelve distinct emotional states using deterministic metadata matching (genres, emotional tone, pace, and themes):
+
+| Mood | Emoji | Accent Color | Vibe Tagline | Sample Curated Film |
+| :--- | :---: | :---: | :--- | :--- |
+| **Happy** | ☀️ | `#f5c518` | Feel-good wholesome films to lift your spirits and make you smile | *The General* (1926) |
+| **Sad** | 🌧️ | `#6b9bd1` | Deep, poignant narratives with emotional resonance and heart | *Make Way for Tomorrow* (1937) |
+| **Thriller** | 🔪 | `#ef4444` | High-stakes suspense, mysteries, and pulse-pounding twists | *The 39 Steps* (1935) |
+| **Romantic** | 💫 | `#f472b6` | Cozy, heartwarming, and sweet tales of love and connection | *His Girl Friday* (1940) |
+| **Chill** | 🌙 | `#34d399` | Relaxing, zen cinema to unwind after a demanding day | *Paterson* (2016) |
+| **Adventurous** | ⚡ | `#fb923c` | Action-packed exploration, fantastical quests, and epic journeys | *Jason and the Argonauts* (1963) |
+| **Horror** | 👻 | `#a855f7` | Spine-chilling dread, supernatural terror, and classic monsters | *Night of the Living Dead* (1968) |
+| **Comedy** | 😂 | `#eab308` | Laugh-out-loud humor, witty satire, and joyful misadventures | *School of Rock* (2003) |
+| **Inspirational** | 🌟 | `#38bdf8` | Triumphant true stories of courage, ingenuity, and moral strength | *The Boy Who Harnessed the Wind* (2019) |
+| **Mystery** | 🕵️ | `#818cf8` | Clever whodunits, investigative puzzles, and enigmas | *Charade* (1963) |
+| **Feel-Good** | 🌈 | `#10b981` | Warm, comforting cinema that leaves you with a glowing heart | *Paddington 2* (2017) |
+| **Emotional** | 🎭 | `#f43f5e` | Powerful dramatic journeys that touch the deepest soul | *Wonder* (2017) |
+
+<p align="center">
+  <img src="assets/divider.svg" alt="Divider" width="800" />
+</p>
+
+## 🛡️ 100% Legal Free Streaming Pledge
+
+**Zero Commercial Subscriptions:** All references to paid subscription platforms (Netflix, Amazon Prime Video, Disney+) have been completely removed.
+
+Every movie card on MoodFlix features an authenticated free availability badge:
+1. **Public Domain:** Works whose copyrights have expired or were never formally registered (e.g. Charlie Chaplin, Buster Keaton, George A. Romero). Freely hosted by the **Internet Archive**, **Library of Congress**, and **Wikimedia**.
+2. **Free Official Streaming:** Officially uploaded and licensed full-length films streamed at no cost by verified studio channels (e.g. **YouTube Movies Free**, **Cult Cinema Classics**, **Mosfilm Official**, **BFI National Archive**).
+3. **Ad-Supported Free:** Licensed commercial releases provided legally for free viewing with brief ad sponsors on verified digital networks (e.g. **Plex TV**, **Tubi Free**).
+
+Every movie record tracks:
+- `freeAvailability.type`: Legal category
+- `freeAvailability.provider`: Host name
+- `freeAvailability.region`: Geographic availability (Global / IN / US)
+- `freeAvailability.url`: Direct verified viewing link
+- `freeAvailability.verifiedDate`: Verification audit date
+
+<p align="center">
+  <img src="assets/divider.svg" alt="Divider" width="800" />
+</p>
+
+## 📡 REST API Endpoints Reference
+
+All backend endpoints are prefixed with `/api` and return standardized JSON responses:
+
+### 1. Authentication (`/api/auth`)
+- `POST /api/auth/register` — Public registration (strictly creates `user` role)
+- `POST /api/auth/login` — Authenticates email/password; returns signed JWT & user profile
+- `GET /api/auth/me` — Protected: Returns current session user
+- `PUT /api/auth/profile` — Protected: Updates name, avatar, and mood preferences
+- `PUT /api/auth/change-password` — Protected: Verifies current password and updates hash
+
+### 2. Movies & Recommendations (`/api/movies`)
+- `GET /api/movies` — Paginated catalog with multi-filter query params (`genre`, `mood`, `availabilityType`, `minRating`, `sort`, `search`)
+- `GET /api/movies/:id` — Single movie by MongoDB ID + 4 similar recommendations
+- `GET /api/movies/slug/:slug` — Single movie by clean URL slug
+- `GET /api/movies/mood/:mood` — Tailored recommendations matching selected mood with why-it-matches explanation
+- `GET /api/movies/search?q=term` — Fast search suggestions matching title, cast, director, or genres
+- `GET /api/movies/featured` — Featured cinematic highlights for hero carousel
+
+### 3. Moods Engine (`/api/moods`)
+- `GET /api/moods` — Returns all 12 moods with emojis, accent colors, taglines, and live database movie counts
+
+### 4. User Watchlist & Favourites (`/api`)
+- `GET /api/watchlist` — Protected: Returns saved watchlist movies
+- `POST /api/watchlist/:movieId` — Protected: Adds movie (enforces unique constraint)
+- `DELETE /api/watchlist/:movieId` — Protected: Removes movie from watchlist
+- `GET /api/favourites` — Protected: Returns favourite movies
+- `POST /api/favourites/:movieId` — Protected: Adds movie to favourites
+- `DELETE /api/favourites/:movieId` — Protected: Removes movie from favourites
+
+### 5. Viewing History (`/api/history`)
+- `GET /api/history` — Protected: Returns recently viewed films with relative timestamps
+- `POST /api/history/:movieId` — Protected: Upserts viewing timestamp & increments movie view count
+- `DELETE /api/history` — Protected: Clears viewing history log
+
+### 6. Audience Reviews (`/api/reviews`)
+- `GET /api/reviews/movie/:movieId` — Public: Returns reviews with author profile & average rating
+- `POST /api/reviews/movie/:movieId` — Protected: Posts star rating (1-5) and comment (1 review per user)
+- `PUT /api/reviews/:id` — Protected: Author edits their review (auto-recalculates average)
+- `DELETE /api/reviews/:id` — Protected: Author or Admin deletes review
+
+### 7. Administrator Governance (`/api/admin`)
+- `GET /api/admin/dashboard` — Admin: Real-time metrics (total movies, users, reviews, availability breakdown)
+- `GET /api/admin/users` — Admin: User accounts list
+- `GET /api/admin/reviews` — Admin: All reviews for moderation
+- `POST /api/admin/movies` — Admin: Add verified free movie
+- `PUT /api/admin/movies/:id` — Admin: Edit movie & update free viewing link
+- `DELETE /api/admin/movies/:id` — Admin: Delete movie and cascade purge user references
+
+### 8. System Health
+- `GET /api/health` — Cloud health monitor reporting uptime, service name, and timestamp
+
+<p align="center">
+  <img src="assets/divider.svg" alt="Divider" width="800" />
+</p>
+
+## 💻 Local Installation & Quick Start
+
+### Prerequisites
+- **Node.js:** v18.0.0 or later (v24.13.0 verified)
+- **npm:** v9.0.0 or later (v11.6.2 verified)
+- **MongoDB:** Local MongoDB server running on port 27017 or a MongoDB Atlas URI
+
+### Step-by-Step Setup
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Dhruvi-tech/Moodflix.git
+cd Moodflix
+
+# 2. Setup and install Backend dependencies
+cd server
+npm install
+cp .env.example .env
+
+# 3. Seed the MongoDB Database
+# This seeds 29+ free movies across all 12 moods, an Admin account, and a Demo user
+npm run seed
+
+# 4. Run Backend Integration Tests
+npm test
+# (All 17 tests will run and pass)
+
+# 5. Start Backend REST API Server (runs on http://localhost:5000)
+npm start
+
+# 6. Open a second terminal for the React Frontend
+cd ../client
+npm install
+cp .env.example .env
+
+# 7. Start Vite Development Server (runs on http://localhost:5173)
+npm run dev
+```
+
+### Pre-Configured Test Accounts
+
+| Account Type | Email Address | Password | Permissions |
+| :--- | :--- | :--- | :--- |
+| **Administrator** | `admin@moodflix.com` | `Admin@123456` | Full platform access, Admin dashboard, Add/Edit/Delete movies, Review moderation |
+| **Demo User** | `dhruvi@moodflix.com` | `User@123456` | Standard user, Watchlist, Favourites, Reviews, History, Profile updates |
+
+*(Note: The Login page includes convenient **1-Click Quick Login** buttons for instant evaluator demonstration!)*
+
+<p align="center">
+  <img src="assets/divider.svg" alt="Divider" width="800" />
+</p>
+
+## 🚀 Cloud Deployment Guide
+
+MoodFlix is engineered for zero-friction cloud deployment across **MongoDB Atlas**, **Render**, and **Vercel**:
+
+### 1. Database — MongoDB Atlas
+1. Create a free cluster on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+2. Create database user credentials and allow IP access (`0.0.0.0/0`).
+3. Obtain the connection string: `mongodb+srv://<username>:<password>@cluster.mongodb.net/moodflix?retryWrites=true&w=majority`.
+
+### 2. Backend — Render
+1. Create a new Web Service on [Render](https://render.com) linked to this repository.
+2. Root Directory: `server`.
+3. Build Command: `npm install`.
+4. Start Command: `npm start`.
+5. Health Check Path: `/api/health`.
+6. Add Environment Variables:
+   - `NODE_ENV`: `production`
+   - `MONGO_URI`: *Your MongoDB Atlas connection string*
+   - `JWT_SECRET`: *A secure random secret*
+   - `CLIENT_URL`: *Your Vercel frontend URL*
+
+### 3. Frontend — Vercel
+1. Import repository into [Vercel](https://vercel.com).
+2. Root Directory: `client`.
+3. Framework Preset: `Vite`.
+4. Add Environment Variable:
+   - `VITE_API_URL`: *Your Render backend URL + `/api` (e.g. `https://moodflix-api.onrender.com/api`)*
+5. Deploy! `client/vercel.json` ensures all client-side routes redirect seamlessly to `index.html`.
 
 <p align="center">
   <img src="assets/divider.svg" alt="Divider" width="800" />
 </p>
 
 <img src="assets/header-contributors.svg" alt="Contributors" width="800" />
+
+## 👥 Team & Contributors
 
 <table align="center" style="border-collapse: collapse; border: none; margin-top: 20px;">
   <tr style="border: none;">
@@ -166,3 +304,8 @@ Experience all the features of MoodFlix by trying these quick steps:
     </td>
   </tr>
 </table>
+
+---
+
+## 📜 License
+Distributed under the MIT License. See [LICENSE](LICENSE) for details.

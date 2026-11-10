@@ -1,0 +1,28 @@
+{
+  "name": "moodflix-monorepo",
+  "version": "2.0.0",
+  "description": "MoodFlix — Mood-Based Free Movie Discovery Platform (Full-Stack MERN Architecture)",
+  "scripts": {
+    "seed": "npm run seed --prefix server",
+    "test:server": "npm test --prefix server",
+    "server": "npm start --prefix server",
+    "server:dev": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "client:build": "npm run build --prefix client",
+    "build": "npm run client:build",
+    "start": "node server/src/server.js"
+  },
+  "keywords": [
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "node",
+    "movie-recommender",
+    "free-movies",
+    "public-domain",
+    "cs3301"
+  ],
+  "author": "Dhruvi Mittal",
+  "license": "MIT"
+}
