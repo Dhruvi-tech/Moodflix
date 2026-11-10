@@ -119,6 +119,7 @@ const getMovies = async (req, res, next) => {
     }
 
     const query = {};
+    const andConditions = [];
 
     if (shouldFilterFree) {
       query.isFree = true;
@@ -134,10 +135,12 @@ const getMovies = async (req, res, next) => {
       if (pLower === 'free') {
         query.isFree = true;
       } else {
-        query.$or = [
-          { primaryPlatform: { $regex: platform, $options: 'i' } },
-          { 'platforms.name': { $regex: platform, $options: 'i' } },
-        ];
+        andConditions.push({
+          $or: [
+            { primaryPlatform: { $regex: platform, $options: 'i' } },
+            { 'platforms.name': { $regex: platform, $options: 'i' } },
+          ],
+        });
       }
     }
     if (isIndian !== undefined && isIndian !== '') {
@@ -150,10 +153,12 @@ const getMovies = async (req, res, next) => {
       query.moodTags = { $in: [mood.toLowerCase()] };
     }
     if (language && language !== 'All') {
-      query.$or = [
-        { languages: { $in: [new RegExp(language, 'i')] } },
-        { originalLanguage: { $regex: language, $options: 'i' } },
-      ];
+      andConditions.push({
+        $or: [
+          { languages: { $in: [new RegExp(language, 'i')] } },
+          { originalLanguage: { $regex: language, $options: 'i' } },
+        ],
+      });
     }
     if (minRating) {
       query['ratings.value'] = { $gte: Number(minRating) };
@@ -162,11 +167,17 @@ const getMovies = async (req, res, next) => {
       query.releaseYear = Number(releaseYear);
     }
     if (search) {
-      query.$or = [
-        { title: { $regex: search, $options: 'i' } },
-        { director: { $regex: search, $options: 'i' } },
-        { cast: { $in: [new RegExp(search, 'i')] } },
-      ];
+      andConditions.push({
+        $or: [
+          { title: { $regex: search, $options: 'i' } },
+          { director: { $regex: search, $options: 'i' } },
+          { cast: { $in: [new RegExp(search, 'i')] } },
+        ],
+      });
+    }
+
+    if (andConditions.length > 0) {
+      query.$and = andConditions;
     }
 
     let sortObj = { viewsCount: -1 };
@@ -307,12 +318,26 @@ const getMoviesByMood = async (req, res, next) => {
       });
     }
 
-    const { limit = 10, language, genre } = req.query;
+    const { limit = 10, language, genre, platform, freeOnly } = req.query;
 
     if (!isDBReady()) {
       let filtered = seedMovies.filter((m) => m.moodTags?.includes(moodId));
+      if (freeOnly === 'true' || freeOnly === true) {
+        filtered = filtered.filter((m) => m.isFree === true);
+      }
+      if (platform && platform !== 'All') {
+        const pLower = platform.toLowerCase();
+        if (pLower === 'free') {
+          filtered = filtered.filter((m) => m.isFree === true);
+        } else {
+          filtered = filtered.filter((m) =>
+            m.primaryPlatform?.toLowerCase().includes(pLower) ||
+            m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower))
+          );
+        }
+      }
       if (language && language !== 'All') {
-        filtered = filtered.filter((m) => m.languages?.some((l) => l.toLowerCase() === language.toLowerCase()));
+        filtered = filtered.filter((m) => m.languages?.some((l) => l.toLowerCase() === language.toLowerCase()) || m.originalLanguage?.toLowerCase() === language.toLowerCase());
       }
       if (genre && genre !== 'All') {
         filtered = filtered.filter((m) => m.genres?.some((g) => g.toLowerCase() === genre.toLowerCase()));
@@ -326,11 +351,37 @@ const getMoviesByMood = async (req, res, next) => {
     }
 
     const query = { moodTags: moodId };
+    const andConditions = [];
+
+    if (freeOnly === 'true' || freeOnly === true) {
+      query.isFree = true;
+    }
+    if (platform && platform !== 'All') {
+      const pLower = platform.toLowerCase();
+      if (pLower === 'free') {
+        query.isFree = true;
+      } else {
+        andConditions.push({
+          $or: [
+            { primaryPlatform: { $regex: platform, $options: 'i' } },
+            { 'platforms.name': { $regex: platform, $options: 'i' } },
+          ],
+        });
+      }
+    }
     if (language && language !== 'All') {
-      query.languages = { $in: [new RegExp(language, 'i')] };
+      andConditions.push({
+        $or: [
+          { languages: { $in: [new RegExp(language, 'i')] } },
+          { originalLanguage: { $regex: language, $options: 'i' } },
+        ],
+      });
     }
     if (genre && genre !== 'All') {
       query.genres = { $in: [new RegExp(genre, 'i')] };
+    }
+    if (andConditions.length > 0) {
+      query.$and = andConditions;
     }
 
     const movies = await Movie.find(query)

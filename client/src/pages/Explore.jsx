@@ -90,14 +90,48 @@ const AVAILABILITY_STATUSES = [
 export default function Explore() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Filters state initialized from URL query params
+  // Filters state initialized from URL query params or user stored preference
   const [search, setSearch] = useState(searchParams.get('search') || searchParams.get('q') || '');
   const [genre, setGenre] = useState(searchParams.get('genre') || 'All');
   const [mood, setMood] = useState(searchParams.get('mood') || 'All');
-  const [platform, setPlatform] = useState(searchParams.get('platform') || 'All');
+  const [platform, setPlatform] = useState(() => {
+    const qp = searchParams.get('platform');
+    if (qp) return qp;
+    try {
+      const saved = localStorage.getItem('moodflix_platform_pref');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.freeOnly) return 'Free';
+        if (parsed.platforms?.length === 1 && parsed.platforms[0] !== 'all') {
+          const map = {
+            free: 'Free',
+            youtube: 'YouTube',
+            netflix: 'Netflix',
+            prime: 'Amazon Prime Video',
+            hotstar: 'Hotstar',
+            jiocinema: 'JioCinema',
+          };
+          return map[parsed.platforms[0].toLowerCase()] || parsed.platforms[0];
+        }
+      }
+    } catch {}
+    return 'All';
+  });
   const [language, setLanguage] = useState(searchParams.get('language') || 'All');
   const [availabilityStatus, setAvailabilityStatus] = useState(searchParams.get('availabilityStatus') || 'All');
-  const [freeOnly, setFreeOnly] = useState(searchParams.get('freeOnly') === 'true');
+  const [freeOnly, setFreeOnly] = useState(() => {
+    const qp = searchParams.get('freeOnly');
+    if (qp !== null) return qp === 'true';
+    try {
+      const saved = localStorage.getItem('moodflix_platform_pref');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.freeOnly) return true;
+        if (parsed.platforms?.length === 1 && parsed.platforms[0] !== 'free') return false;
+      }
+    } catch {}
+    return false;
+  });
   const [isIndian, setIsIndian] = useState(searchParams.get('isIndian') === 'true');
   const [minRating, setMinRating] = useState(searchParams.get('minRating') || '');
   const [sort, setSort] = useState(searchParams.get('sort') || 'popularity');
@@ -136,16 +170,19 @@ export default function Explore() {
         } else {
           // Client-side fallback filter
           let pool = [...fallbackMovies];
-          if (freeOnly) pool = pool.filter((m) => m.isFree === true);
           if (platform !== 'All') {
-            if (platform === 'Free') pool = pool.filter((m) => m.isFree === true);
-            else {
+            const pLower = platform.toLowerCase();
+            if (pLower === 'free') {
+              pool = pool.filter((m) => m.isFree === true || m.availabilityStatus === 'FREE TO WATCH' || m.availabilityStatus === 'PUBLIC DOMAIN');
+            } else {
               pool = pool.filter(
                 (m) =>
-                  m.primaryPlatform?.toLowerCase().includes(platform.toLowerCase()) ||
-                  m.platforms?.some((p) => p.name?.toLowerCase().includes(platform.toLowerCase()))
+                  m.primaryPlatform?.toLowerCase().includes(pLower) ||
+                  m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower))
               );
             }
+          } else if (freeOnly) {
+            pool = pool.filter((m) => m.isFree === true || m.availabilityStatus === 'FREE TO WATCH' || m.availabilityStatus === 'PUBLIC DOMAIN');
           }
           if (language !== 'All') {
             pool = pool.filter(
@@ -210,7 +247,11 @@ export default function Explore() {
             key={plat}
             onClick={() => {
               setPlatform(plat);
-              if (plat === 'Free') setFreeOnly(true);
+              if (plat === 'Free') {
+                setFreeOnly(true);
+              } else {
+                setFreeOnly(false);
+              }
               setPage(1);
             }}
             className={`px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all ${

@@ -31,11 +31,10 @@ function AppContent() {
   const [isSurpriseModalOpen, setIsSurpriseModalOpen] = useState(false);
 
   useEffect(() => {
-    // Check first-time visit
-    const saved = localStorage.getItem('moodflix_platform_pref');
-    if (!saved) {
-      const timer = setTimeout(() => setIsPrefModalOpen(true), 800);
-      return () => clearTimeout(timer);
+    // Ask platform preference at first place on first visit
+    const answered = localStorage.getItem('moodflix_pref_answered');
+    if (!answered) {
+      setIsPrefModalOpen(true);
     }
   }, []);
 

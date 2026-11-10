@@ -161,7 +161,21 @@ api.interceptors.response.use(
       if (url.includes('/movies/mood/')) {
         const moodPart = url.split('/movies/mood/')[1]?.split('?')[0]?.toLowerCase();
         const moodMeta = FALLBACK_MOODS.find((m) => m.id === moodPart) || FALLBACK_MOODS[0];
-        const movies = fallbackMovies.filter((m) => m.moodTags?.includes(moodPart));
+        const params = new URLSearchParams(url.split('?')[1] || '');
+        const platform = params.get('platform');
+        let movies = fallbackMovies.filter((m) => m.moodTags?.includes(moodPart));
+        if (platform && platform !== 'All') {
+          const pLower = platform.toLowerCase();
+          if (pLower === 'free') {
+            movies = movies.filter((m) => m.isFree === true || m.availabilityStatus === 'FREE TO WATCH' || m.availabilityStatus === 'PUBLIC DOMAIN');
+          } else {
+            movies = movies.filter(
+              (m) =>
+                m.primaryPlatform?.toLowerCase().includes(pLower) ||
+                m.platforms?.some((p) => p.name?.toLowerCase().includes(pLower))
+            );
+          }
+        }
         return Promise.resolve({
           data: {
             success: true,

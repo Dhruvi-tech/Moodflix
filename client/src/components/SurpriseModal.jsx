@@ -28,19 +28,47 @@ function getPlatformWatchUrl(movie, platform, rawUrl) {
 
 const QUICK_MOODS = ['Any', 'happy', 'thriller', 'romantic', 'chill', 'comedy', 'inspirational', 'adventurous'];
 const QUICK_LANGS = ['Any', 'Hindi', 'Telugu', 'Tamil', 'Malayalam', 'Kannada', 'Bengali', 'English'];
+const QUICK_PLATFORMS = [
+  { id: 'free', label: '🆓 Free Only' },
+  { id: 'youtube', label: '▶️ YouTube' },
+  { id: 'netflix', label: '🎬 Netflix' },
+  { id: 'prime', label: '🍿 Prime Video' },
+  { id: 'hotstar', label: '⭐ Hotstar' },
+  { id: 'jiocinema', label: '📺 JioCinema' },
+  { id: 'all', label: '🌐 All Platforms' },
+];
 
 export default function SurpriseModal({ isOpen, onClose }) {
   const [mood, setMood] = useState('Any');
   const [language, setLanguage] = useState('Any');
-  const [freeOnly, setFreeOnly] = useState(true);
+  const [platform, setPlatform] = useState(() => {
+    try {
+      const saved = localStorage.getItem('moodflix_platform_pref');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.freeOnly) return 'free';
+        if (parsed.platforms?.length === 1 && parsed.platforms[0] !== 'all') {
+          return parsed.platforms[0].toLowerCase();
+        }
+      }
+    } catch {}
+    return 'free';
+  });
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [isSpinning, setIsSpinning] = useState(false);
   const [spinIndex, setSpinIndex] = useState(0);
 
-  // Pick a candidate pool
+  // Pick a candidate pool strictly matching the chosen platform
   const getCandidates = () => {
     return fallbackMovies.filter((m) => {
-      if (freeOnly && !m.isFree && m.availabilityType === 'subscription') return false;
+      if (platform === 'free') {
+        if (!m.isFree && m.availabilityType === 'subscription') return false;
+      } else if (platform !== 'all') {
+        const match =
+          m.primaryPlatform?.toLowerCase().includes(platform) ||
+          m.platforms?.some((p) => p.name?.toLowerCase().includes(platform));
+        if (!match) return false;
+      }
       if (mood !== 'Any' && !m.moodTags?.includes(mood.toLowerCase())) return false;
       if (language !== 'Any') {
         const hasLang =
@@ -141,18 +169,18 @@ export default function SurpriseModal({ isOpen, onClose }) {
           </div>
 
           <div className="flex items-center justify-between">
-            <span className="text-gray-400 font-medium">Availability:</span>
-            <button
-              type="button"
-              onClick={() => setFreeOnly(!freeOnly)}
-              className={`px-2 py-0.5 rounded text-[11px] font-bold border transition-colors ${
-                freeOnly
-                  ? 'bg-emerald-500/20 border-emerald-400 text-emerald-300'
-                  : 'bg-purple-500/20 border-purple-400 text-purple-300'
-              }`}
+            <span className="text-gray-400 font-medium">Platform:</span>
+            <select
+              value={platform}
+              onChange={(e) => setPlatform(e.target.value)}
+              className="bg-[#151c30] border border-white/10 rounded-md px-2 py-1 text-white text-xs focus:outline-none focus:border-purple-400"
             >
-              {freeOnly ? '🆓 Free Only' : '🌐 All Platforms'}
-            </button>
+              {QUICK_PLATFORMS.map((p) => (
+                <option key={p.id} value={p.id}>
+                  {p.label}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
 

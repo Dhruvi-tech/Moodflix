@@ -39,16 +39,26 @@ const INDIAN_LANGUAGES = [
   'Urdu',
 ];
 
+const DIRECT_PLATFORMS = [
+  { id: 'free-only', label: 'Free Movies Only', icon: '🆓' },
+  { id: 'youtube', label: 'YouTube', icon: '▶️' },
+  { id: 'netflix', label: 'Netflix', icon: '🎬' },
+  { id: 'prime', label: 'Amazon Prime', icon: '🍿' },
+  { id: 'hotstar', label: 'Disney+ Hotstar', icon: '⭐' },
+  { id: 'jiocinema', label: 'JioCinema', icon: '📺' },
+  { id: 'all', label: 'Show Everything', icon: '🌐' },
+];
+
 const FREE_SUBCATEGORIES = [
-  { id: 'all-free', label: 'All Free Movies' },
-  { id: 'free-indian', label: 'Free Indian Cinema' },
+  { id: 'all-free', label: 'All Titles' },
+  { id: 'free-indian', label: 'Indian Cinema' },
   { id: 'free-hindi', label: 'Hindi Classics' },
   { id: 'free-kannada', label: 'Kannada' },
   { id: 'free-telugu', label: 'Telugu' },
   { id: 'free-tamil', label: 'Tamil' },
   { id: 'free-malayalam', label: 'Malayalam' },
   { id: 'free-bengali', label: 'Bengali' },
-  { id: 'free-comedy', label: 'Free Comedy' },
+  { id: 'free-comedy', label: 'Comedy' },
   { id: 'free-public-domain', label: 'Public Domain' },
 ];
 
@@ -89,6 +99,130 @@ export default function Home() {
     return () => window.removeEventListener('platform-preferences-updated', handlePrefUpdate);
   }, []);
 
+  // Strict movie matcher: Checks if a movie is available on the user's selected platform
+  const movieMatchesPlatform = (m) => {
+    if (!m) return false;
+    if (preferences.freeOnly) {
+      return (
+        m.isFree === true ||
+        m.availabilityType === 'free' ||
+        m.availabilityType === 'free-with-ads' ||
+        m.availabilityType === 'public-domain' ||
+        m.availabilityStatus === 'FREE TO WATCH' ||
+        m.availabilityStatus === 'PUBLIC DOMAIN'
+      );
+    }
+    const plats = preferences.platforms || ['free'];
+    if (plats.includes('all')) return true;
+
+    return plats.some((p) => {
+      const pLower = p.toLowerCase();
+      if (pLower === 'free') {
+        return (
+          m.isFree === true ||
+          m.availabilityType === 'free' ||
+          m.availabilityStatus === 'FREE TO WATCH' ||
+          m.availabilityStatus === 'PUBLIC DOMAIN'
+        );
+      }
+      if (pLower === 'youtube') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('youtube') ||
+          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('youtube')) ||
+          (m.isFree && !m.primaryPlatform)
+        );
+      }
+      if (pLower === 'netflix') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('netflix') ||
+          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('netflix'))
+        );
+      }
+      if (pLower === 'prime' || pLower === 'amazon') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('prime') ||
+          m.primaryPlatform?.toLowerCase().includes('amazon') ||
+          m.platforms?.some(
+            (plat) =>
+              plat.name?.toLowerCase().includes('prime') ||
+              plat.name?.toLowerCase().includes('amazon')
+          )
+        );
+      }
+      if (pLower === 'hotstar' || pLower === 'disney') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('hotstar') ||
+          m.primaryPlatform?.toLowerCase().includes('disney') ||
+          m.platforms?.some(
+            (plat) =>
+              plat.name?.toLowerCase().includes('hotstar') ||
+              plat.name?.toLowerCase().includes('disney')
+          )
+        );
+      }
+      if (pLower === 'jiocinema' || pLower === 'jio') {
+        return (
+          m.primaryPlatform?.toLowerCase().includes('jio') ||
+          m.platforms?.some((plat) => plat.name?.toLowerCase().includes('jio'))
+        );
+      }
+      return (
+        m.primaryPlatform?.toLowerCase().includes(pLower) ||
+        m.platforms?.some((plat) => plat.name?.toLowerCase().includes(pLower))
+      );
+    });
+  };
+
+  const isFreeOnly = preferences.freeOnly;
+  const activeSinglePlatform = !isFreeOnly && preferences.platforms?.length === 1 && preferences.platforms[0] !== 'all' ? preferences.platforms[0] : null;
+
+  const platformDisplayTitle = (() => {
+    if (isFreeOnly) return 'FREE MOVIES — WATCH WITHOUT A SUBSCRIPTION';
+    if (!activeSinglePlatform) return 'FEATURED MOVIES ACROSS ALL PLATFORMS';
+    const map = {
+      netflix: 'NETFLIX MOVIES — STREAM ON NETFLIX',
+      prime: 'AMAZON PRIME VIDEO — STREAM ON PRIME',
+      youtube: 'YOUTUBE MOVIES — WATCH ON YOUTUBE',
+      hotstar: 'DISNEY+ HOTSTAR — STREAM ON HOTSTAR',
+      jiocinema: 'JIOCINEMA — STREAM ON JIOCINEMA',
+    };
+    return map[activeSinglePlatform.toLowerCase()] || `${activeSinglePlatform.toUpperCase()} MOVIES`;
+  })();
+
+  const platformBadgeText = (() => {
+    if (isFreeOnly) return '100% Free Legal Streaming';
+    if (!activeSinglePlatform) return 'Multi-Platform Discovery';
+    const map = {
+      netflix: 'Stream on Netflix',
+      prime: 'Stream on Prime Video',
+      youtube: 'Watch on YouTube',
+      hotstar: 'Stream on Disney+ Hotstar',
+      jiocinema: 'Stream on JioCinema',
+    };
+    return map[activeSinglePlatform.toLowerCase()] || `Available on ${activeSinglePlatform}`;
+  })();
+
+  const platformSubtext = (() => {
+    if (isFreeOnly) return 'Watch completely free legally on official YouTube channels, public domain archives, and verified free streaming networks.';
+    if (!activeSinglePlatform) return 'Explore movies available across Free, YouTube, Netflix, Prime Video, Hotstar, and JioCinema.';
+    return `Exclusively showing titles verified and streamable on ${platformBadgeText.replace('Stream on ', '').replace('Watch on ', '')}. Zero other platforms mixed.`;
+  })();
+
+  const handleDirectPlatformSelect = (platId) => {
+    let newPref;
+    if (platId === 'free-only') {
+      newPref = { platforms: ['free'], freeOnly: true, answered: true };
+    } else if (platId === 'all') {
+      newPref = { platforms: ['all'], freeOnly: false, answered: true };
+    } else {
+      newPref = { platforms: [platId], freeOnly: false, answered: true };
+    }
+    setPreferences(newPref);
+    localStorage.setItem('moodflix_platform_pref', JSON.stringify(newPref));
+    localStorage.setItem('moodflix_pref_answered', 'true');
+    window.dispatchEvent(new CustomEvent('platform-preferences-updated', { detail: newPref }));
+  };
+
   // Fetch moods metadata from API or fallback
   useEffect(() => {
     api.get('/moods')
@@ -100,27 +234,39 @@ export default function Home() {
       .catch(() => {});
   }, []);
 
-  // Fetch movies for selected mood
+  // Fetch movies for selected mood strictly matching platform
   useEffect(() => {
     setLoadingMoodMovies(true);
-    api.get(`/movies/mood/${selectedMood}?limit=6`)
+    const platParam = isFreeOnly
+      ? 'Free'
+      : activeSinglePlatform
+      ? activeSinglePlatform
+      : 'All';
+
+    api.get(`/movies/mood/${selectedMood}?limit=12&platform=${platParam}`)
       .then((res) => {
         if (res.data.success && res.data.movies?.length) {
-          setMoodMovies(res.data.movies);
+          const matching = res.data.movies.filter(movieMatchesPlatform);
+          if (matching.length > 0) {
+            setMoodMovies(matching.slice(0, 6));
+          } else {
+            const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood) && movieMatchesPlatform(m));
+            setMoodMovies(fb.slice(0, 6));
+          }
           setMoodMeta(res.data.mood || moods.find((m) => m.id === selectedMood) || FALLBACK_MOODS[0]);
         } else {
-          const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
+          const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood) && movieMatchesPlatform(m));
           setMoodMovies(fb.slice(0, 6));
           setMoodMeta(moods.find((m) => m.id === selectedMood) || FALLBACK_MOODS[0]);
         }
       })
       .catch(() => {
-        const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood));
+        const fb = fallbackMovies.filter((m) => m.moodTags?.includes(selectedMood) && movieMatchesPlatform(m));
         setMoodMovies(fb.slice(0, 6));
         setMoodMeta(moods.find((m) => m.id === selectedMood) || FALLBACK_MOODS[0]);
       })
       .finally(() => setLoadingMoodMovies(false));
-  }, [selectedMood, moods]);
+  }, [selectedMood, moods, preferences]);
 
   // Fetch user viewing history
   useEffect(() => {
@@ -135,95 +281,85 @@ export default function Home() {
     }
   }, [user]);
 
-  // Filter free movies according to subcategory chip
-  const getFreeSectionMovies = () => {
-    let freePool = fallbackMovies.filter((m) => m.isFree === true);
+  // Showcase section movies strictly filtered by platform and subcategory
+  const getShowcaseMovies = () => {
+    let pool = fallbackMovies.filter(movieMatchesPlatform);
     if (freeSubcat === 'free-indian') {
-      return freePool.filter((m) => m.isIndianCinema).slice(0, 8);
+      return pool.filter((m) => m.isIndianCinema).slice(0, 8);
     }
     if (freeSubcat === 'free-hindi') {
-      return freePool.filter((m) => m.languages?.includes('Hindi')).slice(0, 8);
+      return pool.filter((m) => m.languages?.includes('Hindi')).slice(0, 8);
     }
     if (freeSubcat === 'free-kannada') {
-      return freePool.filter((m) => m.languages?.includes('Kannada')).slice(0, 8);
+      return pool.filter((m) => m.languages?.includes('Kannada')).slice(0, 8);
     }
     if (freeSubcat === 'free-telugu') {
-      return freePool.filter((m) => m.languages?.includes('Telugu')).slice(0, 8);
+      return pool.filter((m) => m.languages?.includes('Telugu')).slice(0, 8);
     }
     if (freeSubcat === 'free-tamil') {
-      return freePool.filter((m) => m.languages?.includes('Tamil')).slice(0, 8);
+      return pool.filter((m) => m.languages?.includes('Tamil')).slice(0, 8);
     }
     if (freeSubcat === 'free-malayalam') {
-      return freePool.filter((m) => m.languages?.includes('Malayalam')).slice(0, 8);
+      return pool.filter((m) => m.languages?.includes('Malayalam')).slice(0, 8);
     }
     if (freeSubcat === 'free-bengali') {
-      return freePool.filter((m) => m.languages?.includes('Bengali')).slice(0, 8);
+      return pool.filter((m) => m.languages?.includes('Bengali')).slice(0, 8);
     }
     if (freeSubcat === 'free-comedy') {
-      return freePool.filter((m) => m.genres?.includes('Comedy')).slice(0, 8);
+      return pool.filter((m) => m.genres?.includes('Comedy')).slice(0, 8);
     }
     if (freeSubcat === 'free-public-domain') {
-      return freePool.filter((m) => m.availabilityStatus === 'PUBLIC DOMAIN').slice(0, 8);
+      return pool.filter((m) => m.availabilityStatus === 'PUBLIC DOMAIN').slice(0, 8);
     }
-    return freePool.slice(0, 8);
+    return pool.slice(0, 8);
   };
 
   // Section 5: Popular Indian Movies
   const popularIndianMovies = fallbackMovies
-    .filter((m) => m.isIndianCinema && (m.ratings?.value >= 7.8 || m.featured))
+    .filter((m) => m.isIndianCinema && movieMatchesPlatform(m))
     .slice(0, 8);
 
-  // Section 6: Language-based movies
-  const languageTabMovies = fallbackMovies
-    .filter((m) =>
-      m.languages?.some((l) => l.toLowerCase() === selectedLanguageTab.toLowerCase()) ||
-      m.originalLanguage?.toLowerCase() === selectedLanguageTab.toLowerCase()
-    )
+  // Section 6: Language-based movies strictly on platform
+  const langFiltered = fallbackMovies.filter(
+    (m) =>
+      (m.languages?.some((l) => l.toLowerCase() === selectedLanguageTab.toLowerCase()) ||
+       m.originalLanguage?.toLowerCase() === selectedLanguageTab.toLowerCase()) &&
+      movieMatchesPlatform(m)
+  );
+  const languageTabMovies = langFiltered.length > 0
+    ? langFiltered.slice(0, 8)
+    : fallbackMovies.filter((m) => m.isIndianCinema && movieMatchesPlatform(m)).slice(0, 8);
+
+  // Section 7: Hindi Cinema
+  const hindiMovies = fallbackMovies
+    .filter((m) => m.languages?.includes('Hindi') && movieMatchesPlatform(m))
     .slice(0, 8);
 
-  // Section 7: Free Hindi Movies
-  const freeHindiMovies = fallbackMovies
-    .filter((m) => m.isFree && m.languages?.includes('Hindi'))
-    .slice(0, 8);
-
-  // Section 8: Free Regional Cinema
-  const freeRegionalMovies = fallbackMovies
+  // Section 8: Regional Cinema
+  const regionalMovies = fallbackMovies
     .filter(
       (m) =>
-        m.isFree &&
         m.isIndianCinema &&
         m.originalLanguage !== 'Hindi' &&
-        m.languages?.some((l) => ['Kannada', 'Tamil', 'Telugu', 'Malayalam', 'Bengali', 'Marathi', 'Gujarati', 'Odia', 'Assamese'].includes(l))
+        m.languages?.some((l) => ['Kannada', 'Tamil', 'Telugu', 'Malayalam', 'Bengali', 'Marathi', 'Gujarati', 'Odia', 'Assamese'].includes(l)) &&
+        movieMatchesPlatform(m)
     )
     .slice(0, 8);
 
-  // Section 9: Free YouTube Movies
-  const freeYoutubeMovies = fallbackMovies
-    .filter((m) => m.isFree && (m.primaryPlatform === 'YouTube' || m.platforms?.some((p) => p.name === 'YouTube')))
+  // Section 9: Featured Platform Highlights / YouTube Movies
+  const platformHighlightMovies = fallbackMovies
+    .filter((m) => (m.ratings?.value >= 8.0 || m.featured) && movieMatchesPlatform(m))
     .slice(0, 8);
 
   // Section 10: Trending Movies
   const trendingMovies = fallbackMovies
-    .filter((m) => m.ratings?.value >= 8.0)
+    .filter((m) => (m.ratings?.value >= 7.8 || m.viewsCount > 10000) && movieMatchesPlatform(m))
     .slice(0, 8);
 
   // Section 11: Smart Recommendations
-  const smartRecommendations = (() => {
-    let pool = fallbackMovies;
-    if (preferences.freeOnly) {
-      pool = pool.filter((m) => m.isFree);
-    } else if (preferences.platforms?.length && !preferences.platforms.includes('all')) {
-      pool = pool.filter((m) =>
-        preferences.platforms.some(
-          (p) =>
-            m.primaryPlatform?.toLowerCase().includes(p) ||
-            m.platforms?.some((plat) => plat.name?.toLowerCase().includes(p)) ||
-            (p === 'free' && m.isFree)
-        )
-      );
-    }
-    return pool.slice(0, 8);
-  })();
+  const smartRecommendations = fallbackMovies
+    .filter(movieMatchesPlatform)
+    .slice(0, 8);
 
   const openPrefModal = () => {
     window.dispatchEvent(new CustomEvent('open-platform-preferences'));
@@ -300,51 +436,88 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 2: COMPACT PLATFORM FILTER BAR ────────────────── */}
-      <section className="container mb-10">
-        <div className="py-2.5 px-4 sm:px-5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md flex flex-wrap items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0"></span>
-            <span className="text-gray-400">Watching on:</span>
-            <span className="font-bold text-white px-2.5 py-0.5 rounded-lg bg-white/10 border border-white/10">
-              {preferences.freeOnly
-                ? '🆓 Free Movies Only (No Subscriptions)'
-                : preferences.platforms?.join(', ') || 'Free Movies First'}
-            </span>
+      {/* ── SECTION 2: INTERACTIVE PLATFORM PREFERENCE SELECTOR ──────── */}
+      <section className="container mb-10 animate-fade-in">
+        <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#11192e] via-[#0d1322] to-[#131c33] border border-purple-500/35 backdrop-blur-md shadow-2xl">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-3">
+            <div>
+              <div className="flex items-center gap-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-xs uppercase font-extrabold tracking-wider text-pink-400">
+                  Where would you prefer to watch your movies?
+                </span>
+              </div>
+              <p className="text-xs text-gray-300 mt-0.5">
+                Select your platform to filter the entire site. Only movies verified on your selected platform will appear.
+              </p>
+            </div>
+
+            <button
+              onClick={openPrefModal}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all flex-shrink-0"
+            >
+              <Settings size={13} />
+              <span>More Preferences</span>
+            </button>
           </div>
 
-          <button
-            onClick={openPrefModal}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold text-purple-300 hover:text-white bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 transition-all"
-          >
-            <Settings size={13} />
-            <span>Change Platforms</span>
-          </button>
+          {/* 1-Click Direct Platform Selection Chips */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+            {DIRECT_PLATFORMS.map((plat) => {
+              const active =
+                (plat.id === 'free-only' && preferences.freeOnly) ||
+                (plat.id === 'all' && !preferences.freeOnly && preferences.platforms?.includes('all')) ||
+                (!preferences.freeOnly && preferences.platforms?.length === 1 && preferences.platforms[0] === plat.id);
+
+              return (
+                <button
+                  key={plat.id}
+                  onClick={() => handleDirectPlatformSelect(plat.id)}
+                  className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 whitespace-nowrap ${
+                    active
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-600/30 ring-2 ring-purple-400 scale-105'
+                      : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
+                  }`}
+                >
+                  <span>{plat.icon}</span>
+                  <span>{plat.label}</span>
+                  {active && <span className="text-[10px] ml-0.5">✓</span>}
+                </button>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      {/* ── SECTION 3: FREE MOVIES — WATCH WITHOUT A SUBSCRIPTION ───── */}
+      {/* ── SECTION 3: DYNAMIC PLATFORM SHOWCASE ───────────────────── */}
       <section id="free-movies" className="container mb-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-3">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider border border-emerald-500/40 mb-2">
+            <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border mb-2 ${
+              isFreeOnly
+                ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40'
+                : 'bg-purple-500/20 text-purple-300 border-purple-500/40'
+            }`}>
               <CheckCircle size={14} />
-              <span>100% Free Legal Streaming</span>
+              <span>{platformBadgeText}</span>
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-white">
-              FREE MOVIES — WATCH WITHOUT A SUBSCRIPTION
+              {platformDisplayTitle}
             </h2>
             <p className="text-sm text-gray-300 mt-1 max-w-xl">
-              Watch completely free legally on official YouTube channels, public domain archives, and verified free streaming networks.
+              {platformSubtext}
             </p>
           </div>
-          <Link to="/explore?freeOnly=true" className="btn btn-sm btn-outline text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/20 self-start md:self-auto">
-            <span>Explore All 220+ Free Movies</span>
+          <Link
+            to={`/explore?${isFreeOnly ? 'freeOnly=true' : activeSinglePlatform ? `platform=${encodeURIComponent(activeSinglePlatform)}` : ''}`}
+            className="btn btn-sm btn-outline text-emerald-300 border-emerald-500/40 hover:bg-emerald-500/20 self-start md:self-auto"
+          >
+            <span>Explore All Titles</span>
             <ArrowRight size={14} />
           </Link>
         </div>
 
-        {/* Free Subcategory Chips */}
+        {/* Dynamic Subcategory Chips */}
         <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-none">
           {FREE_SUBCATEGORIES.map((chip) => (
             <button
@@ -352,7 +525,7 @@ export default function Home() {
               onClick={() => setFreeSubcat(chip.id)}
               className={`px-4 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all ${
                 freeSubcat === chip.id
-                  ? 'bg-emerald-500 text-black shadow-lg shadow-emerald-500/25 font-bold'
+                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25 font-bold'
                   : 'bg-white/5 border border-white/10 text-gray-300 hover:bg-white/10 hover:text-white'
               }`}
             >
@@ -361,9 +534,9 @@ export default function Home() {
           ))}
         </div>
 
-        {/* Free Movies Grid */}
+        {/* Showcase Movies Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-          {getFreeSectionMovies().map((movie) => (
+          {getShowcaseMovies().map((movie) => (
             <MovieCard key={movie._id || movie.slug} movie={movie} />
           ))}
         </div>
@@ -490,71 +663,89 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── SECTION 7: FREE HINDI MOVIES ─────────────────────────── */}
+      {/* ── SECTION 7: HINDI CINEMA ON YOUR PLATFORM ─────────────── */}
       <section className="container mb-16">
         <div className="flex items-center justify-between mb-6">
           <div>
             <span className="text-emerald-400 text-xs font-bold uppercase tracking-wider block mb-1">
-              🆓 No Subscription Required
+              {isFreeOnly ? '🆓 No Subscription Required' : `🎬 Available on ${platformBadgeText.replace('Stream on ', '').replace('Watch on ', '')}`}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Free Hindi Movies</h2>
-            <p className="text-xs sm:text-sm text-gray-300">Immortal Hindi classics and comedies legally available on YouTube and public platforms.</p>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">
+              {isFreeOnly ? 'Free Hindi Movies' : `${platformBadgeText.replace('Stream on ', '').replace('Watch on ', '')} Hindi Cinema`}
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-300">
+              {isFreeOnly
+                ? 'Immortal Hindi classics and comedies legally available on YouTube and public platforms.'
+                : `Hindi blockbusters and critically acclaimed stories streamable on ${platformBadgeText.replace('Stream on ', '').replace('Watch on ', '')}.`}
+            </p>
           </div>
-          <Link to="/explore?language=Hindi&freeOnly=true" className="btn btn-sm btn-outline">
-            <span>View All Hindi Free</span>
+          <Link to={`/explore?language=Hindi&${isFreeOnly ? 'freeOnly=true' : activeSinglePlatform ? `platform=${encodeURIComponent(activeSinglePlatform)}` : ''}`} className="btn btn-sm btn-outline">
+            <span>View All Hindi Titles</span>
             <ArrowRight size={14} />
           </Link>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-          {freeHindiMovies.map((movie) => (
+          {hindiMovies.map((movie) => (
             <MovieCard key={movie._id || movie.slug} movie={movie} />
           ))}
         </div>
       </section>
 
-      {/* ── SECTION 8: FREE REGIONAL CINEMA ───────────────────────── */}
+      {/* ── SECTION 8: REGIONAL CINEMA ON YOUR PLATFORM ────────────── */}
       <section className="container mb-16">
         <div className="flex items-center justify-between mb-6">
           <div>
             <span className="text-emerald-400 text-xs font-bold uppercase tracking-wider block mb-1">
-              🆓 South Indian & Regional Gems
+              {isFreeOnly ? '🆓 South Indian & Regional Gems' : `⭐ Regional Cinema on ${platformBadgeText.replace('Stream on ', '').replace('Watch on ', '')}`}
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Free Regional Cinema</h2>
-            <p className="text-xs sm:text-sm text-gray-300">Explore Kannada, Tamil, Telugu, Malayalam, Bengali & Marathi cinema without paying subscriptions.</p>
+            <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">
+              {isFreeOnly ? 'Free Regional Cinema' : `${platformBadgeText.replace('Stream on ', '').replace('Watch on ', '')} Regional Cinema`}
+            </h2>
+            <p className="text-xs sm:text-sm text-gray-300">
+              {isFreeOnly
+                ? 'Explore Kannada, Tamil, Telugu, Malayalam, Bengali & Marathi cinema without paying subscriptions.'
+                : `South Indian and regional masterworks available on your selected platform.`}
+            </p>
           </div>
-          <Link to="/explore?freeOnly=true&isIndian=true" className="btn btn-sm btn-outline">
-            <span>All Regional Free</span>
+          <Link to={`/explore?isIndian=true&${isFreeOnly ? 'freeOnly=true' : activeSinglePlatform ? `platform=${encodeURIComponent(activeSinglePlatform)}` : ''}`} className="btn btn-sm btn-outline">
+            <span>All Regional Titles</span>
             <ArrowRight size={14} />
           </Link>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-          {freeRegionalMovies.map((movie) => (
+          {regionalMovies.map((movie) => (
             <MovieCard key={movie._id || movie.slug} movie={movie} />
           ))}
         </div>
       </section>
 
-      {/* ── SECTION 9: FREE YOUTUBE MOVIES ────────────────────────── */}
+      {/* ── SECTION 9: PLATFORM HIGHLIGHTS / YOUTUBE MOVIES ────────── */}
       <section className="container mb-16">
-        <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-red-950/40 via-red-900/20 to-black/60 border border-red-500/30">
+        <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-purple-950/40 via-purple-900/20 to-black/60 border border-purple-500/30">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-red-400 text-xs font-bold uppercase tracking-wider mb-1">
+              <div className="inline-flex items-center gap-1.5 text-pink-400 text-xs font-bold uppercase tracking-wider mb-1">
                 <Play size={14} fill="currentColor" />
-                <span>YouTube Official Cinema</span>
+                <span>Verified Streaming Highlights</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">Free Full YouTube Movies</h2>
-              <p className="text-xs sm:text-sm text-gray-300">Uploaded legally by production houses and official public broadcast networks.</p>
+              <h2 className="text-2xl sm:text-3xl font-bold font-serif text-white">
+                {isFreeOnly ? 'Free Full YouTube Movies' : `Top Rated on ${platformBadgeText.replace('Stream on ', '').replace('Watch on ', '')}`}
+              </h2>
+              <p className="text-xs sm:text-sm text-gray-300">
+                {isFreeOnly
+                  ? 'Uploaded legally by production houses and official public broadcast networks.'
+                  : `Top-rated cinematic selections available on your chosen streaming service.`}
+              </p>
             </div>
-            <Link to="/explore?platform=YouTube&freeOnly=true" className="btn btn-sm bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2 rounded-xl">
-              <span>View All YouTube Movies</span>
+            <Link to={`/explore?sort=rating&${isFreeOnly ? 'freeOnly=true' : activeSinglePlatform ? `platform=${encodeURIComponent(activeSinglePlatform)}` : ''}`} className="btn btn-sm bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-95 text-white font-bold px-4 py-2 rounded-xl">
+              <span>View All Highlights</span>
             </Link>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
-            {freeYoutubeMovies.map((movie) => (
+            {platformHighlightMovies.map((movie) => (
               <MovieCard key={movie._id || movie.slug} movie={movie} />
             ))}
           </div>
